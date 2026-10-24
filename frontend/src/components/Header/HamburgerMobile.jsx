@@ -115,16 +115,6 @@ const HamburgerMobile = ({
               >
                 <i className="fa-regular fa-user"></i> Login / Signup
               </button>
-              <button
-                type="button"
-                className="btn-mobile-admin"
-                onClick={() => {
-                  handleMouseClick();
-                  openAuthModal("admin");
-                }}
-              >
-                <i className="fa-solid fa-shield-halved"></i> Admin
-              </button>
             </div>
           )}
         </div>
@@ -392,15 +382,14 @@ const HamburgerMobile = ({
           {/* Admin link if logged in as admin */}
           {isAdmin && (
             <li className="mobile-nav-link-row">
-              <a
-                href="http://localhost:5174/admin"
-                target="_blank"
-                rel="noreferrer"
+              {/* Shown only to signed-in admins; /admin works on the live site too. */}
+              <Link
+                to="/admin"
                 onClick={handleNavClick}
                 style={{ color: "var(--accent-terracotta, var(--ribbon))", fontWeight: "600" }}
               >
-                <i className="fa-solid fa-shield-halved"></i> Admin Portal ↗ (Port 5174)
-              </a>
+                <i className="fa-solid fa-shield-halved" aria-hidden="true"></i> Admin dashboard
+              </Link>
             </li>
           )}
 

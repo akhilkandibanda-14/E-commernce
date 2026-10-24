@@ -328,17 +328,6 @@ const HeaderProfileBtn = ({ cart, handleMouseClick }) => {
                   >
                     <i className="fa-regular fa-user"></i> Customer Sign In
                   </button>
-
-                  <button
-                    type="button"
-                    className="btn-dropdown-admin"
-                    onClick={() => {
-                      openAuthModal("admin");
-                      setMenuOpen(false);
-                    }}
-                  >
-                    <i className="fa-solid fa-shield-halved"></i> Store Admin Portal
-                  </button>
                 </div>
 
                 <div className="dropdown-divider"></div>
@@ -357,17 +346,6 @@ const HeaderProfileBtn = ({ cart, handleMouseClick }) => {
                       title="user@giftingwellness.com"
                     >
                       👤 Customer Demo
-                    </button>
-                    <button
-                      type="button"
-                      className="btn-quick-pill"
-                      onClick={() => {
-                        quickLogin("admin");
-                        setMenuOpen(false);
-                      }}
-                      title="admin@giftingwellness.com"
-                    >
-                      🛡️ Admin Demo
                     </button>
                   </div>
                 </div>

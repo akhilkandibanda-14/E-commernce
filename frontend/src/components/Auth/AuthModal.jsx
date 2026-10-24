@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useAuth } from "../../context/AuthContext";
-import { useNavigate } from "react-router-dom";
-import { DEMO_LOGIN_ENABLED } from "../../utils/env";
+import { useLocation, useNavigate } from "react-router-dom";
+import { DEMO_LOGIN_ENABLED, isAdminSignInContext } from "../../utils/env";
 
 const AuthModal = () => {
   const {
@@ -19,6 +19,13 @@ const AuthModal = () => {
   } = useAuth();
 
   const navigate = useNavigate();
+  const location = useLocation();
+  const showAdminTab = isAdminSignInContext(location.pathname);
+
+  // On the shop pages the admin tab doesn't exist; fall back to customer sign-in.
+  useEffect(() => {
+    if (!showAdminTab && authModalTab === "admin") setAuthModalTab("user");
+  }, [showAdminTab, authModalTab, setAuthModalTab]);
 
   // Form states
   const [email, setEmail] = useState("");
@@ -144,13 +151,15 @@ const AuthModal = () => {
           >
             <i className="fa-regular fa-user"></i> Customer Sign In
           </button>
-          <button
-            type="button"
-            className={`auth-tab-btn admin-tab ${authModalTab === "admin" ? "active" : ""}`}
-            onClick={() => handleTabChange("admin")}
-          >
-            <i className="fa-solid fa-shield-halved"></i> Admin Portal
-          </button>
+          {showAdminTab && (
+            <button
+              type="button"
+              className={`auth-tab-btn admin-tab ${authModalTab === "admin" ? "active" : ""}`}
+              onClick={() => handleTabChange("admin")}
+            >
+              <i className="fa-solid fa-shield-halved"></i> Admin Portal
+            </button>
+          )}
           <button
             type="button"
             className={`auth-tab-btn ${authModalTab === "register" ? "active" : ""}`}

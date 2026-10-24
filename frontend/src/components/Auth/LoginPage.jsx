@@ -9,7 +9,9 @@ const LoginPage = () => {
   const [searchParams] = useSearchParams();
 
   // Mode: 'user' | 'admin' | 'register'
-  const initialMode = searchParams.get("mode") || (window.location.pathname.includes("admin") ? "admin" : "user");
+  // The shop's sign-in page is for customers only; admins sign in from /admin.
+  const requestedMode = searchParams.get("mode");
+  const initialMode = requestedMode === "register" ? "register" : "user";
   const [mode, setMode] = useState(initialMode);
   const redirectPath = searchParams.get("redirect") || (mode === "admin" ? "/admin" : "/");
 
@@ -115,16 +117,6 @@ const LoginPage = () => {
                 }}
               >
                 Customer Sign In
-              </button>
-              <button
-                type="button"
-                className={`login-tab admin-tab ${mode === "admin" ? "active" : ""}`}
-                onClick={() => {
-                  setMode("admin");
-                  setErrorMsg("");
-                }}
-              >
-                <i className="fa-solid fa-lock"></i> Admin Portal
               </button>
               <button
                 type="button"

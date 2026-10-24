@@ -324,6 +324,26 @@ test.describe("Admin access", () => {
     // production bundle check lives in the build verification step.
   });
 
+  test("shop pages offer no admin sign-in, but /admin still does", async ({ page }) => {
+    await clearStorage(page);
+    await page.goto("/");
+    await expect(page.locator("header, .top-announcement-bar").getByRole("button", { name: /admin/i })).toHaveCount(0);
+    await page.locator(".header-avatar-btn").click();
+    await expect(page.locator(".header-account-dropdown").getByText(/admin/i)).toHaveCount(0);
+    await page.keyboard.press("Escape");
+
+    await page.locator(".top-announcement-bar").getByRole("button", { name: /Login/ }).click();
+    await expect(page.locator(".auth-tabs-nav").getByRole("button", { name: /Admin/ })).toHaveCount(0);
+
+    await page.goto("/login?mode=admin");
+    await expect(page.locator(".login-tabs").getByRole("button", { name: /Admin/ })).toHaveCount(0);
+
+    // Typing /admin directly still reaches the admin sign-in (needed on the live site).
+    await page.goto("/admin");
+    await page.getByRole("button", { name: "Enter Admin Credentials" }).click();
+    await expect(page.locator(".auth-tabs-nav").getByRole("button", { name: /Admin/ })).toBeVisible();
+  });
+
   test("admin portal loads for the seeded admin account", async ({ page }) => {
     await page.goto("http://localhost:5174/");
     await page.evaluate(() => localStorage.clear());

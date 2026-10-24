@@ -107,14 +107,6 @@ const Header = ({ cart, removeFromCart }) => {
                   >
                     <i className="fa-regular fa-user"></i> Login / Signup
                   </button>
-                  <span className="top-auth-pipe">|</span>
-                  <button
-                    type="button"
-                    onClick={() => openAuthModal("admin")}
-                    className="top-auth-btn top-admin-btn"
-                  >
-                    <i className="fa-solid fa-shield-halved"></i> Admin
-                  </button>
                 </>
               ) : (
                 <span className="top-auth-logged">
