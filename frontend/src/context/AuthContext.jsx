@@ -1,8 +1,17 @@
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useState, useEffect, useCallback, useRef } from "react";
 import ClerkBridge from "./ClerkBridge.jsx";
 import { DEMO_LOGIN_ENABLED } from "../utils/env";
 
 const AuthContext = createContext(null);
+
+const isSameUser = (a, b) =>
+  Boolean(a && b) &&
+  a.id === b.id &&
+  a.email === b.email &&
+  a.name === b.name &&
+  a.avatar === b.avatar &&
+  a.role === b.role &&
+  a.isClerk === b.isClerk;
 
 const STORAGE_KEY_USER = "shop_auth_user";
 const STORAGE_KEY_TOKEN = "shop_auth_token";
@@ -80,16 +89,22 @@ export const AuthProvider = ({ children, clerkEnabled = false }) => {
     };
   }, []);
 
-  // Bridge Clerk state changes into unified Auth state
-  const handleClerkStateChange = ({ user: cUser, token: cToken, isSignedIn }) => {
+  // Bridge Clerk state changes into unified Auth state.
+  // Must be stable and must skip no-op updates: ClerkBridge re-syncs whenever this
+  // callback changes, so a new function or a new user object on every render made
+  // sign-in and sign-out loop forever and freeze the page.
+  const userRef = useRef(user);
+  userRef.current = user;
+
+  const handleClerkStateChange = useCallback(({ user: cUser, token: cToken, isSignedIn }) => {
     if (isSignedIn && cUser) {
-      setUser(cUser);
-      setToken(cToken);
-    } else if (!isSignedIn && user?.isClerk) {
+      setUser((prev) => (isSameUser(prev, cUser) ? prev : cUser));
+      setToken((prev) => (prev === cToken ? prev : cToken));
+    } else if (!isSignedIn && userRef.current?.isClerk) {
       setUser(null);
       setToken(null);
     }
-  };
+  }, []);
 
   const openAuthModal = (tab = "user") => {
     setAuthModalTab(tab);

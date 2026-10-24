@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useUser, useAuth as useClerkAuth, useClerk } from "@clerk/clerk-react";
 
 /**
@@ -24,9 +24,22 @@ export const ClerkBridge = ({ onClerkStateChange, registerClerkActions }) => {
     }
   }, [clerk, signOut, registerClerkActions]);
 
-  // Synchronize Clerk user identity & JWT session token with AuthContext
+  // Keep the latest callback in a ref so a new function identity never re-triggers the sync.
+  const onChangeRef = useRef(onClerkStateChange);
+  onChangeRef.current = onClerkStateChange;
+
+  // Synchronize Clerk user identity & JWT session token with AuthContext.
+  // Keyed on the user id and profile timestamp (not the user object) so it runs once per
+  // real change: sign-in, sign-out, profile edit.
+  const clerkUserId = clerkUser?.id;
+  const clerkUserUpdatedAt = clerkUser?.updatedAt?.getTime?.() ?? null;
+
   useEffect(() => {
-    if (!isLoaded) return;
+    if (!isLoaded) return undefined;
+    let cancelled = false;
+    const onClerkStateChange = (state) => {
+      if (!cancelled) onChangeRef.current?.(state);
+    };
 
     if (isSignedIn && clerkUser) {
       getToken()
@@ -64,7 +77,13 @@ export const ClerkBridge = ({ onClerkStateChange, registerClerkActions }) => {
         isSignedIn: false,
       });
     }
-  }, [isLoaded, isSignedIn, clerkUser, getToken, onClerkStateChange]);
+    // Ignore a token that resolves after the session already changed (e.g. sign-out mid-request).
+    return () => {
+      cancelled = true;
+    };
+    // clerkUser is read inside but intentionally keyed by id/updatedAt to avoid re-running on new object identities.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isLoaded, isSignedIn, clerkUserId, clerkUserUpdatedAt, getToken]);
 
   return null;
 };
