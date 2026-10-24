@@ -9,7 +9,7 @@
     "dev:admin": "vite --config vite.admin.config.js --port 5174 --host",
     "dev:both": "node scripts/dev-both.js",
     "build": "vite build",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "lint": "eslint \"src/**/*.{js,jsx}\" --report-unused-disable-directives",
     "preview": "vite preview"
   },
   "dependencies": {

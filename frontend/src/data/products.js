@@ -1,6 +1,384 @@
 // Auto-generated production catalog containing all products from corporate PDF catalogues
 export const PRODUCTS_DATA = [
   {
+    "id": 1792842552000,
+    "sku": "PRD-552000",
+    "brand": "SHOP.CO",
+    "title": "Updated Secure Shirt",
+    "price": 320,
+    "originalPrice": 250,
+    "discountPercent": 0,
+    "category": "casual",
+    "subcategory": "",
+    "style": "corporate",
+    "rating": {
+      "rate": 5,
+      "count": 1
+    },
+    "isNew": true,
+    "isBestSeller": false,
+    "moq": 1,
+    "deliveryDays": "3–5 Days",
+    "unitLabel": "piece",
+    "priceNote": "Standard retail price",
+    "description": "Original Test Shirt crafted with premium attention to detail. Perfect addition to your collection.",
+    "features": [
+      "Premium quality material and craftsmanship",
+      "Durable, long-lasting construction",
+      "Official warranty and hassle-free returns"
+    ],
+    "specs": {
+      "Brand": "SHOP.CO",
+      "Category": "casual",
+      "Subcategory": "Standard",
+      "Style": "Corporate",
+      "Warranty": "1 Year Official Guarantee"
+    },
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "#000000",
+      "#4F46E5"
+    ],
+    "image": "/introImageCompressed.jfif",
+    "img": "/introImageCompressed.jfif",
+    "images": [
+      "/introImageCompressed.jfif"
+    ],
+    "createdAt": "2026-10-24T11:49:12.000Z",
+    "createdBy": "admin@shop.co",
+    "updatedAt": "2026-10-24T11:49:12.014Z",
+    "updatedBy": "admin@shop.co"
+  },
+  {
+    "id": 1792841980519,
+    "sku": "PRD-980519",
+    "brand": "SHOP.CO",
+    "title": "Updated Secure Shirt",
+    "price": 320,
+    "originalPrice": 250,
+    "discountPercent": 0,
+    "category": "casual",
+    "subcategory": "",
+    "style": "corporate",
+    "rating": {
+      "rate": 5,
+      "count": 1
+    },
+    "isNew": true,
+    "isBestSeller": false,
+    "moq": 1,
+    "deliveryDays": "3–5 Days",
+    "unitLabel": "piece",
+    "priceNote": "Standard retail price",
+    "description": "Original Test Shirt crafted with premium attention to detail. Perfect addition to your collection.",
+    "features": [
+      "Premium quality material and craftsmanship",
+      "Durable, long-lasting construction",
+      "Official warranty and hassle-free returns"
+    ],
+    "specs": {
+      "Brand": "SHOP.CO",
+      "Category": "casual",
+      "Subcategory": "Standard",
+      "Style": "Corporate",
+      "Warranty": "1 Year Official Guarantee"
+    },
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "#000000",
+      "#4F46E5"
+    ],
+    "image": "/introImageCompressed.jfif",
+    "img": "/introImageCompressed.jfif",
+    "images": [
+      "/introImageCompressed.jfif"
+    ],
+    "createdAt": "2026-10-24T11:39:40.519Z",
+    "createdBy": "admin@shop.co",
+    "updatedAt": "2026-10-24T11:39:40.532Z",
+    "updatedBy": "admin@shop.co"
+  },
+  {
+    "id": 1792841127957,
+    "sku": "PRD-127957",
+    "brand": "SHOP.CO",
+    "title": "Updated Secure Shirt",
+    "price": 320,
+    "originalPrice": 250,
+    "discountPercent": 0,
+    "category": "casual",
+    "subcategory": "",
+    "style": "corporate",
+    "rating": {
+      "rate": 5,
+      "count": 1
+    },
+    "isNew": true,
+    "isBestSeller": false,
+    "moq": 1,
+    "deliveryDays": "3–5 Days",
+    "unitLabel": "piece",
+    "priceNote": "Standard retail price",
+    "description": "Original Test Shirt crafted with premium attention to detail. Perfect addition to your collection.",
+    "features": [
+      "Premium quality material and craftsmanship",
+      "Durable, long-lasting construction",
+      "Official warranty and hassle-free returns"
+    ],
+    "specs": {
+      "Brand": "SHOP.CO",
+      "Category": "casual",
+      "Subcategory": "Standard",
+      "Style": "Corporate",
+      "Warranty": "1 Year Official Guarantee"
+    },
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "#000000",
+      "#4F46E5"
+    ],
+    "image": "/introImageCompressed.jfif",
+    "img": "/introImageCompressed.jfif",
+    "images": [
+      "/introImageCompressed.jfif"
+    ],
+    "createdAt": "2026-10-24T11:25:27.957Z",
+    "createdBy": "admin@shop.co",
+    "updatedAt": "2026-10-24T11:25:27.972Z",
+    "updatedBy": "admin@shop.co"
+  },
+  {
+    "id": 1792833164547,
+    "sku": "PRD-164547",
+    "brand": "SHOP.CO",
+    "title": "Updated Secure Shirt",
+    "price": 320,
+    "originalPrice": 250,
+    "discountPercent": 0,
+    "category": "casual",
+    "subcategory": "",
+    "style": "corporate",
+    "rating": {
+      "rate": 5,
+      "count": 1
+    },
+    "isNew": true,
+    "isBestSeller": false,
+    "moq": 1,
+    "deliveryDays": "3–5 Days",
+    "unitLabel": "piece",
+    "priceNote": "Standard retail price",
+    "description": "Original Test Shirt crafted with premium attention to detail. Perfect addition to your collection.",
+    "features": [
+      "Premium quality material and craftsmanship",
+      "Durable, long-lasting construction",
+      "Official warranty and hassle-free returns"
+    ],
+    "specs": {
+      "Brand": "SHOP.CO",
+      "Category": "casual",
+      "Subcategory": "Standard",
+      "Style": "Corporate",
+      "Warranty": "1 Year Official Guarantee"
+    },
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "#000000",
+      "#4F46E5"
+    ],
+    "image": "/introImageCompressed.jfif",
+    "img": "/introImageCompressed.jfif",
+    "images": [
+      "/introImageCompressed.jfif"
+    ],
+    "createdAt": "2026-10-24T09:12:44.547Z",
+    "createdBy": "admin@shop.co",
+    "updatedAt": "2026-10-24T09:12:44.559Z",
+    "updatedBy": "admin@shop.co"
+  },
+  {
+    "id": 1792831654935,
+    "sku": "PRD-654935",
+    "brand": "SHOP.CO",
+    "title": "Updated Secure Shirt",
+    "price": 320,
+    "originalPrice": 250,
+    "discountPercent": 0,
+    "category": "casual",
+    "subcategory": "",
+    "style": "corporate",
+    "rating": {
+      "rate": 5,
+      "count": 1
+    },
+    "isNew": true,
+    "isBestSeller": false,
+    "moq": 1,
+    "deliveryDays": "3–5 Days",
+    "unitLabel": "piece",
+    "priceNote": "Standard retail price",
+    "description": "Original Test Shirt crafted with premium attention to detail. Perfect addition to your collection.",
+    "features": [
+      "Premium quality material and craftsmanship",
+      "Durable, long-lasting construction",
+      "Official warranty and hassle-free returns"
+    ],
+    "specs": {
+      "Brand": "SHOP.CO",
+      "Category": "casual",
+      "Subcategory": "Standard",
+      "Style": "Corporate",
+      "Warranty": "1 Year Official Guarantee"
+    },
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "#000000",
+      "#4F46E5"
+    ],
+    "image": "/introImageCompressed.jfif",
+    "img": "/introImageCompressed.jfif",
+    "images": [
+      "/introImageCompressed.jfif"
+    ],
+    "createdAt": "2026-10-24T08:47:34.935Z",
+    "createdBy": "admin@shop.co",
+    "updatedAt": "2026-10-24T08:47:34.947Z",
+    "updatedBy": "admin@shop.co"
+  },
+  {
+    "id": 1792828500131,
+    "sku": "PRD-500131",
+    "brand": "SHOP.CO",
+    "title": "Updated Secure Shirt",
+    "price": 320,
+    "originalPrice": 250,
+    "discountPercent": 0,
+    "category": "casual",
+    "subcategory": "",
+    "style": "corporate",
+    "rating": {
+      "rate": 5,
+      "count": 1
+    },
+    "isNew": true,
+    "isBestSeller": false,
+    "moq": 1,
+    "deliveryDays": "3–5 Days",
+    "unitLabel": "piece",
+    "priceNote": "Standard retail price",
+    "description": "Original Test Shirt crafted with premium attention to detail. Perfect addition to your collection.",
+    "features": [
+      "Premium quality material and craftsmanship",
+      "Durable, long-lasting construction",
+      "Official warranty and hassle-free returns"
+    ],
+    "specs": {
+      "Brand": "SHOP.CO",
+      "Category": "casual",
+      "Subcategory": "Standard",
+      "Style": "Corporate",
+      "Warranty": "1 Year Official Guarantee"
+    },
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "#000000",
+      "#4F46E5"
+    ],
+    "image": "/introImageCompressed.jfif",
+    "img": "/introImageCompressed.jfif",
+    "images": [
+      "/introImageCompressed.jfif"
+    ],
+    "createdAt": "2026-10-24T07:55:00.131Z",
+    "createdBy": "admin@shop.co",
+    "updatedAt": "2026-10-24T07:55:00.143Z",
+    "updatedBy": "admin@shop.co"
+  },
+  {
+    "id": 1792828282041,
+    "sku": "PRD-282041",
+    "brand": "SHOP.CO",
+    "title": "Updated Secure Shirt",
+    "price": 320,
+    "originalPrice": 250,
+    "discountPercent": 0,
+    "category": "casual",
+    "subcategory": "",
+    "style": "corporate",
+    "rating": {
+      "rate": 5,
+      "count": 1
+    },
+    "isNew": true,
+    "isBestSeller": false,
+    "moq": 1,
+    "deliveryDays": "3–5 Days",
+    "unitLabel": "piece",
+    "priceNote": "Standard retail price",
+    "description": "Original Test Shirt crafted with premium attention to detail. Perfect addition to your collection.",
+    "features": [
+      "Premium quality material and craftsmanship",
+      "Durable, long-lasting construction",
+      "Official warranty and hassle-free returns"
+    ],
+    "specs": {
+      "Brand": "SHOP.CO",
+      "Category": "casual",
+      "Subcategory": "Standard",
+      "Style": "Corporate",
+      "Warranty": "1 Year Official Guarantee"
+    },
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "#000000",
+      "#4F46E5"
+    ],
+    "image": "/introImageCompressed.jfif",
+    "img": "/introImageCompressed.jfif",
+    "images": [
+      "/introImageCompressed.jfif"
+    ],
+    "createdAt": "2026-10-24T07:51:22.041Z",
+    "createdBy": "admin@shop.co",
+    "updatedAt": "2026-10-24T07:51:22.055Z",
+    "updatedBy": "admin@shop.co"
+  },
+  {
     "id": 1792746334325,
     "sku": "PRD-628154",
     "brand": "Atelier",
@@ -41,10 +419,10 @@ export const PRODUCTS_DATA = [
       "#000000",
       "#4F46E5"
     ],
-    "image": "/uploads/prod-1792746314843-05fe685b.jpg",
-    "img": "/uploads/prod-1792746314843-05fe685b.jpg",
+    "image": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&auto=format&fit=crop&q=80",
+    "img": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&auto=format&fit=crop&q=80",
     "images": [
-      "/uploads/prod-1792746314843-05fe685b.jpg"
+      "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&auto=format&fit=crop&q=80"
     ],
     "createdAt": "2026-10-23T09:05:34.325Z",
     "createdBy": "admin@shop.co"
@@ -680,56 +1058,6 @@ export const PRODUCTS_DATA = [
     "updatedBy": "admin@shop.co"
   },
   {
-    "id": 1792690622954,
-    "sku": "PRD-638557",
-    "brand": "SHOP.CO",
-    "title": "cbjv",
-    "price": 1000,
-    "originalPrice": 1500,
-    "discountPercent": 33,
-    "category": "men's clothing",
-    "style": "corporate",
-    "rating": {
-      "rate": 5,
-      "count": 1
-    },
-    "isNew": true,
-    "isBestSeller": false,
-    "moq": 1,
-    "deliveryDays": "3–5 Days",
-    "unitLabel": "piece",
-    "priceNote": "Standard retail price",
-    "description": "cbjv crafted with premium attention to detail. Perfect addition to your collection.",
-    "features": [
-      "Premium quality material and craftsmanship",
-      "Durable, long-lasting construction",
-      "Official warranty and hassle-free returns"
-    ],
-    "specs": {
-      "Brand": "SHOP.CO",
-      "Category": "men's clothing",
-      "Style": "corporate",
-      "Warranty": "1 Year Official Guarantee"
-    },
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL"
-    ],
-    "colors": [
-      "#000000",
-      "#4F46E5"
-    ],
-    "image": "/uploads/prod-1792690620033-1e1255fa.png",
-    "img": "/uploads/prod-1792690620033-1e1255fa.png",
-    "images": [
-      "/uploads/prod-1792690620033-1e1255fa.png"
-    ],
-    "createdAt": "2026-10-22T17:37:02.954Z",
-    "createdBy": "admin@shop.co"
-  },
-  {
     "id": 1792688945468,
     "sku": "PRD-945468",
     "brand": "SHOP.CO",
@@ -834,56 +1162,6 @@ export const PRODUCTS_DATA = [
     "updatedBy": "admin@shop.co"
   },
   {
-    "id": 1792685243386,
-    "sku": "PRD-722711",
-    "brand": "puma",
-    "title": "cbjv",
-    "price": 1000,
-    "originalPrice": 1500,
-    "discountPercent": 33,
-    "category": "men's clothing",
-    "style": "casual",
-    "rating": {
-      "rate": 5,
-      "count": 1
-    },
-    "isNew": true,
-    "isBestSeller": false,
-    "moq": 1,
-    "deliveryDays": "3–5 Days",
-    "unitLabel": "piece",
-    "priceNote": "Standard retail price",
-    "description": "cbjv crafted with premium attention to detail. Perfect addition to your collection.",
-    "features": [
-      "Premium quality material and craftsmanship",
-      "Durable, long-lasting construction",
-      "Official warranty and hassle-free returns"
-    ],
-    "specs": {
-      "Brand": "puma",
-      "Category": "men's clothing",
-      "Style": "casual",
-      "Warranty": "1 Year Official Guarantee"
-    },
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL"
-    ],
-    "colors": [
-      "#000000",
-      "#4F46E5"
-    ],
-    "image": "/uploads/prod-1792685239190-a5ea0bd5.png",
-    "img": "/uploads/prod-1792685239190-a5ea0bd5.png",
-    "images": [
-      "/uploads/prod-1792685239190-a5ea0bd5.png"
-    ],
-    "createdAt": "2026-10-22T16:07:23.386Z",
-    "createdBy": "admin@shop.co"
-  },
-  {
     "id": 1792684727598,
     "sku": "PRD-727598",
     "brand": "SHOP.CO",
@@ -934,56 +1212,6 @@ export const PRODUCTS_DATA = [
     "createdBy": "admin@shop.co",
     "updatedAt": "2026-10-22T15:58:47.603Z",
     "updatedBy": "admin@shop.co"
-  },
-  {
-    "id": 1792684628775,
-    "sku": "PRD-304261",
-    "brand": "SHOP.CO",
-    "title": "djcbacsj",
-    "price": 500,
-    "originalPrice": 1000,
-    "discountPercent": 50,
-    "category": "men's clothing",
-    "style": "casual",
-    "rating": {
-      "rate": 5,
-      "count": 1
-    },
-    "isNew": true,
-    "isBestSeller": false,
-    "moq": 1,
-    "deliveryDays": "3–5 Days",
-    "unitLabel": "piece",
-    "priceNote": "Standard retail price",
-    "description": "djcbacsj crafted with premium attention to detail. Perfect addition to your collection.",
-    "features": [
-      "Premium quality material and craftsmanship",
-      "Durable, long-lasting construction",
-      "Official warranty and hassle-free returns"
-    ],
-    "specs": {
-      "Brand": "SHOP.CO",
-      "Category": "men's clothing",
-      "Style": "casual",
-      "Warranty": "1 Year Official Guarantee"
-    },
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL"
-    ],
-    "colors": [
-      "#000000",
-      "#4F46E5"
-    ],
-    "image": "/uploads/prod-1792684619475-f3ae2e53.png",
-    "img": "/uploads/prod-1792684619475-f3ae2e53.png",
-    "images": [
-      "/uploads/prod-1792684619475-f3ae2e53.png"
-    ],
-    "createdAt": "2026-10-22T15:57:08.775Z",
-    "createdBy": "admin@shop.co"
   },
   {
     "id": 1792684490358,
@@ -1093,7 +1321,7 @@ export const PRODUCTS_DATA = [
     "id": 1792682633372,
     "sku": "PRD-160064",
     "brand": "SHOP.CO",
-    "title": "shirt",
+    "title": "Executive Oxford Formal Shirt",
     "price": 500,
     "originalPrice": 7000,
     "discountPercent": 93,
@@ -1131,19 +1359,19 @@ export const PRODUCTS_DATA = [
       "#000000",
       "#4F46E5"
     ],
-    "img": "C:\\Users\\akhil\\Pictures\\Screenshots\\Screenshot 2026-10-22 205235.png",
+    "img": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600&auto=format&fit=crop&q=80",
     "images": [
-      "C:\\Users\\akhil\\Pictures\\Screenshots\\Screenshot 2026-10-22 205235.png"
+      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600&auto=format&fit=crop&q=80"
     ],
     "createdAt": "2026-10-22T15:23:53.372Z",
     "createdBy": "admin@shop.co",
-    "image": "C:\\Users\\akhil\\Pictures\\Screenshots\\Screenshot 2026-10-22 205235.png"
+    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600&auto=format&fit=crop&q=80"
   },
   {
     "id": 1792682364686,
     "sku": "PRD-543828",
     "brand": "puma",
-    "title": "shirt",
+    "title": "Puma Performance Team Jersey",
     "price": 500,
     "originalPrice": 700,
     "discountPercent": 29,
@@ -1181,13 +1409,13 @@ export const PRODUCTS_DATA = [
       "#000000",
       "#4F46E5"
     ],
-    "img": "C:\\Users\\akhil\\Downloads\\PUMA-x-ASTON-MARTIN-ARAMCO-F1®-TEAM-Men's-Replica-Stroll-Tee.avif",
+    "img": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=600&auto=format&fit=crop&q=80",
     "images": [
-      "C:\\Users\\akhil\\Downloads\\PUMA-x-ASTON-MARTIN-ARAMCO-F1®-TEAM-Men's-Replica-Stroll-Tee.avif"
+      "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=600&auto=format&fit=crop&q=80"
     ],
     "createdAt": "2026-10-22T15:19:24.687Z",
     "createdBy": "admin@shop.co",
-    "image": "C:\\Users\\akhil\\Downloads\\PUMA-x-ASTON-MARTIN-ARAMCO-F1®-TEAM-Men's-Replica-Stroll-Tee.avif"
+    "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=600&auto=format&fit=crop&q=80"
   },
   {
     "id": 1792681571834,
@@ -2262,8 +2490,8 @@ export const PRODUCTS_DATA = [
     "sku": "MS-MEN-02-WHIT",
     "brand": "Marks & Spencer",
     "title": "M&S Classic Cotton Polo T-Shirt - White",
-    "price": 1899.0,
-    "originalPrice": 1899.0,
+    "price": 1899,
+    "originalPrice": 1899,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -2313,13 +2541,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1899.0
+        "unitPrice": 1899
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 1899.0
+        "unitPrice": 1899
       },
       {
         "minQty": 100,
@@ -2375,8 +2603,8 @@ export const PRODUCTS_DATA = [
     "sku": "MS-MEN-03-ROYA",
     "brand": "Marks & Spencer",
     "title": "M&S Classic Cotton Polo T-Shirt - Royal Blue",
-    "price": 1899.0,
-    "originalPrice": 1899.0,
+    "price": 1899,
+    "originalPrice": 1899,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -2426,13 +2654,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1899.0
+        "unitPrice": 1899
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 1899.0
+        "unitPrice": 1899
       },
       {
         "minQty": 100,
@@ -2488,8 +2716,8 @@ export const PRODUCTS_DATA = [
     "sku": "MS-MEN-04-RED",
     "brand": "Marks & Spencer",
     "title": "M&S Classic Cotton Polo T-Shirt - Red",
-    "price": 1899.0,
-    "originalPrice": 1899.0,
+    "price": 1899,
+    "originalPrice": 1899,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -2539,13 +2767,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1899.0
+        "unitPrice": 1899
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 1899.0
+        "unitPrice": 1899
       },
       {
         "minQty": 100,
@@ -2601,8 +2829,8 @@ export const PRODUCTS_DATA = [
     "sku": "MS-MEN-05-NAVY",
     "brand": "Marks & Spencer",
     "title": "M&S Classic Cotton Polo T-Shirt - Navy Blue",
-    "price": 1899.0,
-    "originalPrice": 1899.0,
+    "price": 1899,
+    "originalPrice": 1899,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -2652,13 +2880,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1899.0
+        "unitPrice": 1899
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 1899.0
+        "unitPrice": 1899
       },
       {
         "minQty": 100,
@@ -2714,8 +2942,8 @@ export const PRODUCTS_DATA = [
     "sku": "MS-MEN-06-BLAC",
     "brand": "Marks & Spencer",
     "title": "M&S Classic Cotton Polo T-Shirt - Black",
-    "price": 1899.0,
-    "originalPrice": 1899.0,
+    "price": 1899,
+    "originalPrice": 1899,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -2765,13 +2993,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1899.0
+        "unitPrice": 1899
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 1899.0
+        "unitPrice": 1899
       },
       {
         "minQty": 100,
@@ -2827,8 +3055,8 @@ export const PRODUCTS_DATA = [
     "sku": "MS-MEN-07-AQUA",
     "brand": "Marks & Spencer",
     "title": "M&S Classic Cotton Polo T-Shirt - Aqua Blue",
-    "price": 1899.0,
-    "originalPrice": 1899.0,
+    "price": 1899,
+    "originalPrice": 1899,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -2878,13 +3106,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1899.0
+        "unitPrice": 1899
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 1899.0
+        "unitPrice": 1899
       },
       {
         "minQty": 100,
@@ -2940,8 +3168,8 @@ export const PRODUCTS_DATA = [
     "sku": "MS-MEN-08-PLUM",
     "brand": "Marks & Spencer",
     "title": "M&S Classic Cotton Polo T-Shirt - Plum",
-    "price": 1899.0,
-    "originalPrice": 1899.0,
+    "price": 1899,
+    "originalPrice": 1899,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -2991,13 +3219,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1899.0
+        "unitPrice": 1899
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 1899.0
+        "unitPrice": 1899
       },
       {
         "minQty": 100,
@@ -3053,8 +3281,8 @@ export const PRODUCTS_DATA = [
     "sku": "MS-MEN-09-SKYB",
     "brand": "Marks & Spencer",
     "title": "M&S Classic Cotton Polo T-Shirt - Sky Blue",
-    "price": 1899.0,
-    "originalPrice": 1899.0,
+    "price": 1899,
+    "originalPrice": 1899,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -3104,13 +3332,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1899.0
+        "unitPrice": 1899
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 1899.0
+        "unitPrice": 1899
       },
       {
         "minQty": 100,
@@ -3166,8 +3394,8 @@ export const PRODUCTS_DATA = [
     "sku": "MS-MEN-10-NAVY",
     "brand": "Marks & Spencer",
     "title": "M&S Jacquard Knit Collar T-Shirt - Navy Blue",
-    "price": 1899.0,
-    "originalPrice": 1899.0,
+    "price": 1899,
+    "originalPrice": 1899,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -3217,13 +3445,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1899.0
+        "unitPrice": 1899
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 1899.0
+        "unitPrice": 1899
       },
       {
         "minQty": 100,
@@ -3279,8 +3507,8 @@ export const PRODUCTS_DATA = [
     "sku": "MS-MEN-11-WHIT",
     "brand": "Marks & Spencer",
     "title": "M&S Jacquard Knit Collar T-Shirt - White",
-    "price": 1899.0,
-    "originalPrice": 1899.0,
+    "price": 1899,
+    "originalPrice": 1899,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -3330,13 +3558,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1899.0
+        "unitPrice": 1899
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 1899.0
+        "unitPrice": 1899
       },
       {
         "minQty": 100,
@@ -3392,8 +3620,8 @@ export const PRODUCTS_DATA = [
     "sku": "MS-MEN-12-BLAC",
     "brand": "Marks & Spencer",
     "title": "M&S Jacquard Knit Collar T-Shirt - Black",
-    "price": 1899.0,
-    "originalPrice": 1899.0,
+    "price": 1899,
+    "originalPrice": 1899,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -3443,13 +3671,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1899.0
+        "unitPrice": 1899
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 1899.0
+        "unitPrice": 1899
       },
       {
         "minQty": 100,
@@ -3505,8 +3733,8 @@ export const PRODUCTS_DATA = [
     "sku": "MS-MEN-13-WHIT",
     "brand": "Marks & Spencer",
     "title": "M&S Classic Cotton Polo T-Shirt - White",
-    "price": 1699.0,
-    "originalPrice": 1699.0,
+    "price": 1699,
+    "originalPrice": 1699,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -3556,13 +3784,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1699.0
+        "unitPrice": 1699
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 1699.0
+        "unitPrice": 1699
       },
       {
         "minQty": 100,
@@ -3618,8 +3846,8 @@ export const PRODUCTS_DATA = [
     "sku": "MS-MEN-14-SEAB",
     "brand": "Marks & Spencer",
     "title": "M&S Classic Cotton Polo T-Shirt - Sea Blue",
-    "price": 1699.0,
-    "originalPrice": 1699.0,
+    "price": 1699,
+    "originalPrice": 1699,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -3669,13 +3897,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1699.0
+        "unitPrice": 1699
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 1699.0
+        "unitPrice": 1699
       },
       {
         "minQty": 100,
@@ -3731,8 +3959,8 @@ export const PRODUCTS_DATA = [
     "sku": "MS-MEN-15-BLAC",
     "brand": "Marks & Spencer",
     "title": "M&S Classic Cotton Polo T-Shirt - Black",
-    "price": 1699.0,
-    "originalPrice": 1699.0,
+    "price": 1699,
+    "originalPrice": 1699,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -3782,13 +4010,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1699.0
+        "unitPrice": 1699
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 1699.0
+        "unitPrice": 1699
       },
       {
         "minQty": 100,
@@ -3844,8 +4072,8 @@ export const PRODUCTS_DATA = [
     "sku": "MS-MEN-16-NAVY",
     "brand": "Marks & Spencer",
     "title": "M&S Classic Cotton Polo T-Shirt - Navy Blue",
-    "price": 1699.0,
-    "originalPrice": 1699.0,
+    "price": 1699,
+    "originalPrice": 1699,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -3895,13 +4123,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1699.0
+        "unitPrice": 1699
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 1699.0
+        "unitPrice": 1699
       },
       {
         "minQty": 100,
@@ -3957,8 +4185,8 @@ export const PRODUCTS_DATA = [
     "sku": "MS-MEN-17-PETR",
     "brand": "Marks & Spencer",
     "title": "M&S Classic Cotton Polo T-Shirt - Petrol",
-    "price": 1699.0,
-    "originalPrice": 1699.0,
+    "price": 1699,
+    "originalPrice": 1699,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -4008,13 +4236,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1699.0
+        "unitPrice": 1699
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 1699.0
+        "unitPrice": 1699
       },
       {
         "minQty": 100,
@@ -4070,8 +4298,8 @@ export const PRODUCTS_DATA = [
     "sku": "MS-MEN-18-BERR",
     "brand": "Marks & Spencer",
     "title": "M&S Classic Cotton Polo T-Shirt - Berry",
-    "price": 1699.0,
-    "originalPrice": 1699.0,
+    "price": 1699,
+    "originalPrice": 1699,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -4121,13 +4349,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1699.0
+        "unitPrice": 1699
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 1699.0
+        "unitPrice": 1699
       },
       {
         "minQty": 100,
@@ -4183,8 +4411,8 @@ export const PRODUCTS_DATA = [
     "sku": "MS-MEN-19-GREY",
     "brand": "Marks & Spencer",
     "title": "M&S Classic Cotton Polo T-Shirt - Grey",
-    "price": 1699.0,
-    "originalPrice": 1699.0,
+    "price": 1699,
+    "originalPrice": 1699,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -4234,13 +4462,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1699.0
+        "unitPrice": 1699
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 1699.0
+        "unitPrice": 1699
       },
       {
         "minQty": 100,
@@ -4296,8 +4524,8 @@ export const PRODUCTS_DATA = [
     "sku": "MS-MEN-20-DARK",
     "brand": "Marks & Spencer",
     "title": "M&S Classic Crew Round Neck T-Shirt - Dark Khakhi",
-    "price": 1299.0,
-    "originalPrice": 1299.0,
+    "price": 1299,
+    "originalPrice": 1299,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -4347,13 +4575,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1299.0
+        "unitPrice": 1299
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 1299.0
+        "unitPrice": 1299
       },
       {
         "minQty": 100,
@@ -4409,8 +4637,8 @@ export const PRODUCTS_DATA = [
     "sku": "MS-MEN-21-TEAL",
     "brand": "Marks & Spencer",
     "title": "M&S Classic Crew Round Neck T-Shirt - Teal",
-    "price": 1299.0,
-    "originalPrice": 1299.0,
+    "price": 1299,
+    "originalPrice": 1299,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -4460,13 +4688,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1299.0
+        "unitPrice": 1299
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 1299.0
+        "unitPrice": 1299
       },
       {
         "minQty": 100,
@@ -4522,8 +4750,8 @@ export const PRODUCTS_DATA = [
     "sku": "MS-MEN-22-BLAC",
     "brand": "Marks & Spencer",
     "title": "M&S Classic Crew Round Neck T-Shirt - Black",
-    "price": 1299.0,
-    "originalPrice": 1299.0,
+    "price": 1299,
+    "originalPrice": 1299,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -4573,13 +4801,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1299.0
+        "unitPrice": 1299
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 1299.0
+        "unitPrice": 1299
       },
       {
         "minQty": 100,
@@ -4635,8 +4863,8 @@ export const PRODUCTS_DATA = [
     "sku": "MS-MEN-23-CHAR",
     "brand": "Marks & Spencer",
     "title": "M&S Classic Crew Round Neck T-Shirt - Charcoal Grey",
-    "price": 1299.0,
-    "originalPrice": 1299.0,
+    "price": 1299,
+    "originalPrice": 1299,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -4686,13 +4914,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1299.0
+        "unitPrice": 1299
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 1299.0
+        "unitPrice": 1299
       },
       {
         "minQty": 100,
@@ -4748,8 +4976,8 @@ export const PRODUCTS_DATA = [
     "sku": "MS-MEN-24-NAVY",
     "brand": "Marks & Spencer",
     "title": "M&S Classic Crew Round Neck T-Shirt - Navy Blue",
-    "price": 1299.0,
-    "originalPrice": 1299.0,
+    "price": 1299,
+    "originalPrice": 1299,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -4799,13 +5027,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1299.0
+        "unitPrice": 1299
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 1299.0
+        "unitPrice": 1299
       },
       {
         "minQty": 100,
@@ -4861,8 +5089,8 @@ export const PRODUCTS_DATA = [
     "sku": "MS-MEN-25-WHIT",
     "brand": "Marks & Spencer",
     "title": "M&S Classic Crew Round Neck T-Shirt - White",
-    "price": 1299.0,
-    "originalPrice": 1299.0,
+    "price": 1299,
+    "originalPrice": 1299,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -4912,13 +5140,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1299.0
+        "unitPrice": 1299
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 1299.0
+        "unitPrice": 1299
       },
       {
         "minQty": 100,
@@ -4974,8 +5202,8 @@ export const PRODUCTS_DATA = [
     "sku": "MS-MEN-26-DENI",
     "brand": "Marks & Spencer",
     "title": "M&S Premium Fleece Sweatshirt - Denim Blue",
-    "price": 3299.0,
-    "originalPrice": 3299.0,
+    "price": 3299,
+    "originalPrice": 3299,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -5025,13 +5253,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 3299.0
+        "unitPrice": 3299
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 3299.0
+        "unitPrice": 3299
       },
       {
         "minQty": 100,
@@ -5087,8 +5315,8 @@ export const PRODUCTS_DATA = [
     "sku": "MS-MEN-27-DENI",
     "brand": "Marks & Spencer",
     "title": "M&S Premium Fleece Sweatshirt - Denim Blue",
-    "price": 3299.0,
-    "originalPrice": 3299.0,
+    "price": 3299,
+    "originalPrice": 3299,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -5138,13 +5366,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 3299.0
+        "unitPrice": 3299
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 3299.0
+        "unitPrice": 3299
       },
       {
         "minQty": 100,
@@ -5200,8 +5428,8 @@ export const PRODUCTS_DATA = [
     "sku": "MS-MEN-28-CHAR",
     "brand": "Marks & Spencer",
     "title": "M&S Zip-Front Hoodie Jacket - Charcoal Grey",
-    "price": 3999.0,
-    "originalPrice": 3999.0,
+    "price": 3999,
+    "originalPrice": 3999,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -5251,13 +5479,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 3999.0
+        "unitPrice": 3999
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 3999.0
+        "unitPrice": 3999
       },
       {
         "minQty": 100,
@@ -5313,8 +5541,8 @@ export const PRODUCTS_DATA = [
     "sku": "MS-MEN-29-BLAC",
     "brand": "Marks & Spencer",
     "title": "M&S High Neck Sweatshirt - Black",
-    "price": 3499.0,
-    "originalPrice": 3499.0,
+    "price": 3499,
+    "originalPrice": 3499,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -5364,13 +5592,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 3499.0
+        "unitPrice": 3499
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 3499.0
+        "unitPrice": 3499
       },
       {
         "minQty": 100,
@@ -5426,8 +5654,8 @@ export const PRODUCTS_DATA = [
     "sku": "MS-FOR-30-WHIT",
     "brand": "Marks & Spencer",
     "title": "M&S Tailored Formal Shirt - White",
-    "price": 2999.0,
-    "originalPrice": 2999.0,
+    "price": 2999,
+    "originalPrice": 2999,
     "discountPercent": 15,
     "category": "formal",
     "subcategory": "formal",
@@ -5477,13 +5705,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 100,
@@ -5539,8 +5767,8 @@ export const PRODUCTS_DATA = [
     "sku": "MS-FOR-31-LIGH",
     "brand": "Marks & Spencer",
     "title": "M&S Tailored Formal Shirt - Light Blue",
-    "price": 2999.0,
-    "originalPrice": 2999.0,
+    "price": 2999,
+    "originalPrice": 2999,
     "discountPercent": 15,
     "category": "formal",
     "subcategory": "formal",
@@ -5590,13 +5818,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 100,
@@ -5652,8 +5880,8 @@ export const PRODUCTS_DATA = [
     "sku": "SSL2-DN-8300",
     "brand": "Scott",
     "title": "Scott 300 GSM Sweatshirt Without Zip - Black",
-    "price": 2999.0,
-    "originalPrice": 2999.0,
+    "price": 2999,
+    "originalPrice": 2999,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -5702,13 +5930,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 100,
@@ -5764,8 +5992,8 @@ export const PRODUCTS_DATA = [
     "sku": "SSHZ1-DN-8400",
     "brand": "Scott",
     "title": "Scott 300 GSM Sweatshirt With Zip - Black",
-    "price": 2999.0,
-    "originalPrice": 2999.0,
+    "price": 2999,
+    "originalPrice": 2999,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -5814,13 +6042,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 100,
@@ -5876,8 +6104,8 @@ export const PRODUCTS_DATA = [
     "sku": "SSL4-DN-8300",
     "brand": "Scott",
     "title": "Scott 300 GSM Sweatshirt Without Zip - Charcoal Grey",
-    "price": 2999.0,
-    "originalPrice": 2999.0,
+    "price": 2999,
+    "originalPrice": 2999,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -5926,13 +6154,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 100,
@@ -5988,8 +6216,8 @@ export const PRODUCTS_DATA = [
     "sku": "SSLZ1-DN-8325",
     "brand": "Scott",
     "title": "Scott 300 GSM Sweatshirt With Zip - Charcoal Grey",
-    "price": 2999.0,
-    "originalPrice": 2999.0,
+    "price": 2999,
+    "originalPrice": 2999,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -6038,13 +6266,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 100,
@@ -6100,8 +6328,8 @@ export const PRODUCTS_DATA = [
     "sku": "SSL5-DN-8300",
     "brand": "Scott",
     "title": "Scott 300 GSM Sweatshirt Without Zip - Grey Milange",
-    "price": 2999.0,
-    "originalPrice": 2999.0,
+    "price": 2999,
+    "originalPrice": 2999,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -6150,13 +6378,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 100,
@@ -6212,8 +6440,8 @@ export const PRODUCTS_DATA = [
     "sku": "SSLZ3-DN-8325",
     "brand": "Scott",
     "title": "Scott 300 GSM Sweatshirt With Zip - Grey Milange",
-    "price": 2999.0,
-    "originalPrice": 2999.0,
+    "price": 2999,
+    "originalPrice": 2999,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -6262,13 +6490,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 100,
@@ -6324,8 +6552,8 @@ export const PRODUCTS_DATA = [
     "sku": "SSL6-DN-8300",
     "brand": "Scott",
     "title": "Scott 300 GSM Sweatshirt Without Zip - Navy Blue",
-    "price": 2999.0,
-    "originalPrice": 2999.0,
+    "price": 2999,
+    "originalPrice": 2999,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -6374,13 +6602,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 100,
@@ -6436,8 +6664,8 @@ export const PRODUCTS_DATA = [
     "sku": "SSLZ9-DN-8325",
     "brand": "Scott",
     "title": "Scott 300 GSM Sweatshirt With Zip - Navy Blue",
-    "price": 2999.0,
-    "originalPrice": 2999.0,
+    "price": 2999,
+    "originalPrice": 2999,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -6486,13 +6714,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 100,
@@ -6548,8 +6776,8 @@ export const PRODUCTS_DATA = [
     "sku": "SSH3-DN-8400",
     "brand": "Scott",
     "title": "Scott 400 GSM Sweatshirt Without Zip - Navy Blue",
-    "price": 2999.0,
-    "originalPrice": 2999.0,
+    "price": 2999,
+    "originalPrice": 2999,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -6598,13 +6826,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 100,
@@ -6660,8 +6888,8 @@ export const PRODUCTS_DATA = [
     "sku": "SSHZ8-DN-8425",
     "brand": "Scott",
     "title": "Scott 400 GSM Sweatshirt With Zip - Navy Blue",
-    "price": 2999.0,
-    "originalPrice": 2999.0,
+    "price": 2999,
+    "originalPrice": 2999,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -6710,13 +6938,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 100,
@@ -6772,8 +7000,8 @@ export const PRODUCTS_DATA = [
     "sku": "SSH4-DN-8400",
     "brand": "Scott",
     "title": "Scott 400 GSM Sweatshirt Without Zip - Charcoal Grey",
-    "price": 2999.0,
-    "originalPrice": 2999.0,
+    "price": 2999,
+    "originalPrice": 2999,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -6822,13 +7050,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 100,
@@ -6884,8 +7112,8 @@ export const PRODUCTS_DATA = [
     "sku": "SSHZ1-DN-8425",
     "brand": "Scott",
     "title": "Scott 400 GSM Sweatshirt With Zip - Charcoal Grey",
-    "price": 2999.0,
-    "originalPrice": 2999.0,
+    "price": 2999,
+    "originalPrice": 2999,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -6934,13 +7162,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 100,
@@ -6996,8 +7224,8 @@ export const PRODUCTS_DATA = [
     "sku": "SSH5-DN-8400",
     "brand": "Scott",
     "title": "Scott 400 GSM Sweatshirt Without Zip - Charcoal Grey",
-    "price": 2999.0,
-    "originalPrice": 2999.0,
+    "price": 2999,
+    "originalPrice": 2999,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -7046,13 +7274,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 100,
@@ -7108,8 +7336,8 @@ export const PRODUCTS_DATA = [
     "sku": "SSHZ10-DN-8425",
     "brand": "Scott",
     "title": "Scott 400 GSM Sweatshirt With Zip - Charcoal Grey",
-    "price": 2999.0,
-    "originalPrice": 2999.0,
+    "price": 2999,
+    "originalPrice": 2999,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -7158,13 +7386,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 100,
@@ -7220,8 +7448,8 @@ export const PRODUCTS_DATA = [
     "sku": "SSH6-DN-8400",
     "brand": "Scott",
     "title": "Scott 400 GSM Sweatshirt Without Zip - Navy Blue",
-    "price": 2999.0,
-    "originalPrice": 2999.0,
+    "price": 2999,
+    "originalPrice": 2999,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -7270,13 +7498,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 100,
@@ -7332,8 +7560,8 @@ export const PRODUCTS_DATA = [
     "sku": "SSHZ11-DN-8425",
     "brand": "Scott",
     "title": "Scott 400 GSM Sweatshirt With Zip - Navy Blue",
-    "price": 2999.0,
-    "originalPrice": 2999.0,
+    "price": 2999,
+    "originalPrice": 2999,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -7382,13 +7610,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 100,
@@ -7444,8 +7672,8 @@ export const PRODUCTS_DATA = [
     "sku": "SSHZ9-DN-8425",
     "brand": "Scott",
     "title": "Scott 400 GSM Sweatshirt With Zip - Bottle Green",
-    "price": 2999.0,
-    "originalPrice": 2999.0,
+    "price": 2999,
+    "originalPrice": 2999,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -7493,13 +7721,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 100,
@@ -7555,8 +7783,8 @@ export const PRODUCTS_DATA = [
     "sku": "SSHZ12-DN-8425",
     "brand": "Scott",
     "title": "Scott 400 GSM Sweatshirt With Zip - Bottle Green",
-    "price": 2999.0,
-    "originalPrice": 2999.0,
+    "price": 2999,
+    "originalPrice": 2999,
     "discountPercent": 15,
     "category": "Apparel",
     "subcategory": "casual",
@@ -7604,13 +7832,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 100,
@@ -7666,8 +7894,8 @@ export const PRODUCTS_DATA = [
     "sku": "SHF-VFM-9428",
     "brand": "Sheaffer",
     "title": "Sheaffer VFM Coffee Edition Ballpoint Pen & Matt Brown Notebook Gift Set",
-    "price": 3250.0,
-    "originalPrice": 3250.0,
+    "price": 3250,
+    "originalPrice": 3250,
     "discountPercent": 15,
     "category": "Luxury Pens & Gifts",
     "subcategory": "corporate",
@@ -7714,19 +7942,19 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 3250.0
+        "unitPrice": 3250
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 3250.0
+        "unitPrice": 3250
       },
       {
         "minQty": 100,
         "maxQty": 499,
         "label": "Bulk Tier (100–499)",
-        "unitPrice": 2990.0
+        "unitPrice": 2990
       },
       {
         "minQty": 500,
@@ -7776,8 +8004,8 @@ export const PRODUCTS_DATA = [
     "sku": "WP36093",
     "brand": "Sheaffer",
     "title": "Sheaffer Expressions 100 9376 Gradient Ballpoint Pen & Notebook Gift Set",
-    "price": 3300.0,
-    "originalPrice": 3300.0,
+    "price": 3300,
+    "originalPrice": 3300,
     "discountPercent": 15,
     "category": "Luxury Pens & Gifts",
     "subcategory": "corporate",
@@ -7823,25 +8051,25 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 3300.0
+        "unitPrice": 3300
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 3300.0
+        "unitPrice": 3300
       },
       {
         "minQty": 100,
         "maxQty": 499,
         "label": "Bulk Tier (100–499)",
-        "unitPrice": 3036.0
+        "unitPrice": 3036
       },
       {
         "minQty": 500,
         "maxQty": 9999,
         "label": "Enterprise Tier (500+)",
-        "unitPrice": 2805.0
+        "unitPrice": 2805
       }
     ],
     "brandingOptions": [
@@ -7885,8 +8113,8 @@ export const PRODUCTS_DATA = [
     "sku": "CRS-SKYLARK-A5",
     "brand": "Cross",
     "title": "Cross Skylark A5 Diary with Luxury Rollerball Agenda Pen",
-    "price": 4999.0,
-    "originalPrice": 4999.0,
+    "price": 4999,
+    "originalPrice": 4999,
     "discountPercent": 15,
     "category": "Luxury Pens & Gifts",
     "subcategory": "corporate",
@@ -7933,13 +8161,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 4999.0
+        "unitPrice": 4999
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 4999.0
+        "unitPrice": 4999
       },
       {
         "minQty": 100,
@@ -7995,8 +8223,8 @@ export const PRODUCTS_DATA = [
     "sku": "WTR-PHILEAS-BLK",
     "brand": "Waterman",
     "title": "Waterman Phileas Laque Black Gold Trim Rollerball Pen & Blue Notebook",
-    "price": 6300.0,
-    "originalPrice": 6300.0,
+    "price": 6300,
+    "originalPrice": 6300,
     "discountPercent": 15,
     "category": "Luxury Pens & Gifts",
     "subcategory": "corporate",
@@ -8043,25 +8271,25 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 6300.0
+        "unitPrice": 6300
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 6300.0
+        "unitPrice": 6300
       },
       {
         "minQty": 100,
         "maxQty": 499,
         "label": "Bulk Tier (100–499)",
-        "unitPrice": 5796.0
+        "unitPrice": 5796
       },
       {
         "minQty": 500,
         "maxQty": 9999,
         "label": "Enterprise Tier (500+)",
-        "unitPrice": 5355.0
+        "unitPrice": 5355
       }
     ],
     "brandingOptions": [
@@ -8105,8 +8333,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-AIR-138",
     "brand": "boAt",
     "title": "boAt Airdopes 138",
-    "price": 2990.0,
-    "originalPrice": 2990.0,
+    "price": 2990,
+    "originalPrice": 2990,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "casual",
@@ -8152,13 +8380,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2990.0
+        "unitPrice": 2990
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 2990.0
+        "unitPrice": 2990
       },
       {
         "minQty": 100,
@@ -8214,8 +8442,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-AIR-138PRO",
     "brand": "boAt",
     "title": "boAt Airdopes 138 Pro",
-    "price": 2990.0,
-    "originalPrice": 2990.0,
+    "price": 2990,
+    "originalPrice": 2990,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "casual",
@@ -8262,13 +8490,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2990.0
+        "unitPrice": 2990
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 2990.0
+        "unitPrice": 2990
       },
       {
         "minQty": 100,
@@ -8324,8 +8552,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-AIR-213",
     "brand": "boAt",
     "title": "boAt Airdopes 213",
-    "price": 3290.0,
-    "originalPrice": 3290.0,
+    "price": 3290,
+    "originalPrice": 3290,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "casual",
@@ -8371,13 +8599,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 3290.0
+        "unitPrice": 3290
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 3290.0
+        "unitPrice": 3290
       },
       {
         "minQty": 100,
@@ -8433,8 +8661,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-AIR-PRIMO",
     "brand": "boAt",
     "title": "boAt Airdopes Primo",
-    "price": 4490.0,
-    "originalPrice": 4490.0,
+    "price": 4490,
+    "originalPrice": 4490,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "casual",
@@ -8480,13 +8708,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 4490.0
+        "unitPrice": 4490
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 4490.0
+        "unitPrice": 4490
       },
       {
         "minQty": 100,
@@ -8542,8 +8770,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-AIR-148",
     "brand": "boAt",
     "title": "boAt Airdopes 148",
-    "price": 4490.0,
-    "originalPrice": 4490.0,
+    "price": 4490,
+    "originalPrice": 4490,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "casual",
@@ -8589,13 +8817,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 4490.0
+        "unitPrice": 4490
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 4490.0
+        "unitPrice": 4490
       },
       {
         "minQty": 100,
@@ -8651,8 +8879,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-AIR-JOY",
     "brand": "boAt",
     "title": "boAt Airdopes Joy",
-    "price": 4999.0,
-    "originalPrice": 4999.0,
+    "price": 4999,
+    "originalPrice": 4999,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "casual",
@@ -8698,13 +8926,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 4999.0
+        "unitPrice": 4999
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 4999.0
+        "unitPrice": 4999
       },
       {
         "minQty": 100,
@@ -8760,8 +8988,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-AIR-141ANC",
     "brand": "boAt",
     "title": "boAt Airdopes 141 ANC",
-    "price": 5990.0,
-    "originalPrice": 5990.0,
+    "price": 5990,
+    "originalPrice": 5990,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "casual",
@@ -8807,13 +9035,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 5990.0
+        "unitPrice": 5990
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 5990.0
+        "unitPrice": 5990
       },
       {
         "minQty": 100,
@@ -8869,8 +9097,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-AIR-161ANC",
     "brand": "boAt",
     "title": "boAt Airdopes 161 ANC",
-    "price": 5999.0,
-    "originalPrice": 5999.0,
+    "price": 5999,
+    "originalPrice": 5999,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "casual",
@@ -8916,13 +9144,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 5999.0
+        "unitPrice": 5999
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 5999.0
+        "unitPrice": 5999
       },
       {
         "minQty": 100,
@@ -8978,8 +9206,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-AIR-800",
     "brand": "boAt",
     "title": "boAt Airdopes 800",
-    "price": 6490.0,
-    "originalPrice": 6490.0,
+    "price": 6490,
+    "originalPrice": 6490,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "casual",
@@ -9025,13 +9253,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 6490.0
+        "unitPrice": 6490
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 6490.0
+        "unitPrice": 6490
       },
       {
         "minQty": 100,
@@ -9087,8 +9315,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-AIR-191ANC",
     "brand": "boAt",
     "title": "boAt Airdopes 191 ANC",
-    "price": 6990.0,
-    "originalPrice": 6990.0,
+    "price": 6990,
+    "originalPrice": 6990,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "casual",
@@ -9134,13 +9362,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 6990.0
+        "unitPrice": 6990
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 6990.0
+        "unitPrice": 6990
       },
       {
         "minQty": 100,
@@ -9196,8 +9424,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-AIR-800OWS",
     "brand": "boAt",
     "title": "boAt Airdopes 800 OWS",
-    "price": 7990.0,
-    "originalPrice": 7990.0,
+    "price": 7990,
+    "originalPrice": 7990,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "casual",
@@ -9243,13 +9471,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 7990.0
+        "unitPrice": 7990
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 7990.0
+        "unitPrice": 7990
       },
       {
         "minQty": 100,
@@ -9305,8 +9533,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-NIR-ION",
     "brand": "boAt",
     "title": "boAt Nirvana Ion",
-    "price": 2990.0,
-    "originalPrice": 2990.0,
+    "price": 2990,
+    "originalPrice": 2990,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "casual",
@@ -9352,13 +9580,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2990.0
+        "unitPrice": 2990
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 2990.0
+        "unitPrice": 2990
       },
       {
         "minQty": 100,
@@ -9414,8 +9642,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-NIR-IONANC",
     "brand": "boAt",
     "title": "boAt Nirvana Ion ANC",
-    "price": 2990.0,
-    "originalPrice": 2990.0,
+    "price": 2990,
+    "originalPrice": 2990,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "casual",
@@ -9461,13 +9689,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2990.0
+        "unitPrice": 2990
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 2990.0
+        "unitPrice": 2990
       },
       {
         "minQty": 100,
@@ -9523,8 +9751,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-NIR-CRYSTL",
     "brand": "boAt",
     "title": "boAt Nirvana Crystl",
-    "price": 10990.0,
-    "originalPrice": 10990.0,
+    "price": 10990,
+    "originalPrice": 10990,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "casual",
@@ -9570,13 +9798,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 10990.0
+        "unitPrice": 10990
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 10990.0
+        "unitPrice": 10990
       },
       {
         "minQty": 100,
@@ -9632,8 +9860,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-NIR-IONANCPRO",
     "brand": "boAt",
     "title": "boAt Nirvana Ion ANC Pro",
-    "price": 13990.0,
-    "originalPrice": 13990.0,
+    "price": 13990,
+    "originalPrice": 13990,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "casual",
@@ -9679,13 +9907,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 13990.0
+        "unitPrice": 13990
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 13990.0
+        "unitPrice": 13990
       },
       {
         "minQty": 100,
@@ -9741,8 +9969,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-NIR-IVY",
     "brand": "boAt",
     "title": "boAt Nirvana Ivy",
-    "price": 17990.0,
-    "originalPrice": 17990.0,
+    "price": 17990,
+    "originalPrice": 17990,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "casual",
@@ -9787,13 +10015,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 17990.0
+        "unitPrice": 17990
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 17990.0
+        "unitPrice": 17990
       },
       {
         "minQty": 100,
@@ -9849,8 +10077,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-ROC-109",
     "brand": "boAt",
     "title": "boAt Rockerz 109",
-    "price": 2490.0,
-    "originalPrice": 2490.0,
+    "price": 2490,
+    "originalPrice": 2490,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "casual",
@@ -9896,13 +10124,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2490.0
+        "unitPrice": 2490
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 2490.0
+        "unitPrice": 2490
       },
       {
         "minQty": 100,
@@ -9958,8 +10186,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-ROC-258PRO",
     "brand": "boAt",
     "title": "boAt Rockerz 258 Pro",
-    "price": 3990.0,
-    "originalPrice": 3990.0,
+    "price": 3990,
+    "originalPrice": 3990,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "casual",
@@ -10005,13 +10233,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 3990.0
+        "unitPrice": 3990
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 3990.0
+        "unitPrice": 3990
       },
       {
         "minQty": 100,
@@ -10067,8 +10295,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-ROC-SUMMIT",
     "brand": "boAt",
     "title": "boAt Rockerz Summit",
-    "price": 4490.0,
-    "originalPrice": 4490.0,
+    "price": 4490,
+    "originalPrice": 4490,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "casual",
@@ -10114,13 +10342,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 4490.0
+        "unitPrice": 4490
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 4490.0
+        "unitPrice": 4490
       },
       {
         "minQty": 100,
@@ -10176,8 +10404,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-ROC-425",
     "brand": "boAt",
     "title": "boAt Rockerz 425",
-    "price": 2990.0,
-    "originalPrice": 2990.0,
+    "price": 2990,
+    "originalPrice": 2990,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "casual",
@@ -10223,13 +10451,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2990.0
+        "unitPrice": 2990
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 2990.0
+        "unitPrice": 2990
       },
       {
         "minQty": 100,
@@ -10285,8 +10513,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-ROC-450",
     "brand": "boAt",
     "title": "boAt Rockerz 450",
-    "price": 3990.0,
-    "originalPrice": 3990.0,
+    "price": 3990,
+    "originalPrice": 3990,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "casual",
@@ -10332,13 +10560,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 3990.0
+        "unitPrice": 3990
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 3990.0
+        "unitPrice": 3990
       },
       {
         "minQty": 100,
@@ -10394,8 +10622,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-ROC-550",
     "brand": "boAt",
     "title": "boAt Rockerz 550",
-    "price": 4999.0,
-    "originalPrice": 4999.0,
+    "price": 4999,
+    "originalPrice": 4999,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "casual",
@@ -10441,13 +10669,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 4999.0
+        "unitPrice": 4999
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 4999.0
+        "unitPrice": 4999
       },
       {
         "minQty": 100,
@@ -10503,8 +10731,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-NIR-EUTOPIA",
     "brand": "boAt",
     "title": "boAt Nirvana Eutopia",
-    "price": 7490.0,
-    "originalPrice": 7490.0,
+    "price": 7490,
+    "originalPrice": 7490,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "casual",
@@ -10550,13 +10778,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 7490.0
+        "unitPrice": 7490
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 7490.0
+        "unitPrice": 7490
       },
       {
         "minQty": 100,
@@ -10612,8 +10840,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-ROC-255ANC",
     "brand": "boAt",
     "title": "boAt Rockerz 255 ANC",
-    "price": 6990.0,
-    "originalPrice": 6990.0,
+    "price": 6990,
+    "originalPrice": 6990,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "casual",
@@ -10659,13 +10887,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 6990.0
+        "unitPrice": 6990
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 6990.0
+        "unitPrice": 6990
       },
       {
         "minQty": 100,
@@ -10721,8 +10949,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-STO-UNO",
     "brand": "boAt",
     "title": "boAt Stone Uno",
-    "price": 1990.0,
-    "originalPrice": 1990.0,
+    "price": 1990,
+    "originalPrice": 1990,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "casual",
@@ -10768,13 +10996,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1990.0
+        "unitPrice": 1990
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 1990.0
+        "unitPrice": 1990
       },
       {
         "minQty": 100,
@@ -10830,8 +11058,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-STO-190PRO",
     "brand": "boAt",
     "title": "boAt Stone 190 Pro",
-    "price": 2990.0,
-    "originalPrice": 2990.0,
+    "price": 2990,
+    "originalPrice": 2990,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "casual",
@@ -10877,13 +11105,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2990.0
+        "unitPrice": 2990
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 2990.0
+        "unitPrice": 2990
       },
       {
         "minQty": 100,
@@ -10939,8 +11167,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-STO-358",
     "brand": "boAt",
     "title": "boAt Stone 358",
-    "price": 3490.0,
-    "originalPrice": 3490.0,
+    "price": 3490,
+    "originalPrice": 3490,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "casual",
@@ -10986,13 +11214,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 3490.0
+        "unitPrice": 3490
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 3490.0
+        "unitPrice": 3490
       },
       {
         "minQty": 100,
@@ -11048,8 +11276,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-STO-108",
     "brand": "boAt",
     "title": "boAt Stone 108",
-    "price": 2990.0,
-    "originalPrice": 2990.0,
+    "price": 2990,
+    "originalPrice": 2990,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "casual",
@@ -11095,13 +11323,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2990.0
+        "unitPrice": 2990
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 2990.0
+        "unitPrice": 2990
       },
       {
         "minQty": 100,
@@ -11157,8 +11385,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-STO-208",
     "brand": "boAt",
     "title": "boAt Stone 208",
-    "price": 4999.0,
-    "originalPrice": 4999.0,
+    "price": 4999,
+    "originalPrice": 4999,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "casual",
@@ -11204,13 +11432,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 4999.0
+        "unitPrice": 4999
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 4999.0
+        "unitPrice": 4999
       },
       {
         "minQty": 100,
@@ -11266,8 +11494,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-STO-358PRO",
     "brand": "boAt",
     "title": "boAt Stone 358 Pro",
-    "price": 4990.0,
-    "originalPrice": 4990.0,
+    "price": 4990,
+    "originalPrice": 4990,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "casual",
@@ -11313,13 +11541,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 4990.0
+        "unitPrice": 4990
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 4990.0
+        "unitPrice": 4990
       },
       {
         "minQty": 100,
@@ -11375,8 +11603,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-AAV-ASPIRE",
     "brand": "boAt",
     "title": "boAt Aavante Bar Aspire",
-    "price": 3490.0,
-    "originalPrice": 3490.0,
+    "price": 3490,
+    "originalPrice": 3490,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "casual",
@@ -11422,13 +11650,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 3490.0
+        "unitPrice": 3490
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 3490.0
+        "unitPrice": 3490
       },
       {
         "minQty": 100,
@@ -11484,8 +11712,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-AAV-GROOVE",
     "brand": "boAt",
     "title": "boAt Aavante Bar Groove",
-    "price": 3990.0,
-    "originalPrice": 3990.0,
+    "price": 3990,
+    "originalPrice": 3990,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "casual",
@@ -11531,13 +11759,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 3990.0
+        "unitPrice": 3990
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 3990.0
+        "unitPrice": 3990
       },
       {
         "minQty": 100,
@@ -11593,8 +11821,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-AAV-600",
     "brand": "boAt",
     "title": "boAt Aavante Bar 600",
-    "price": 5990.0,
-    "originalPrice": 5990.0,
+    "price": 5990,
+    "originalPrice": 5990,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "casual",
@@ -11640,13 +11868,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 5990.0
+        "unitPrice": 5990
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 5990.0
+        "unitPrice": 5990
       },
       {
         "minQty": 100,
@@ -11702,8 +11930,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-AAV-JOY",
     "brand": "boAt",
     "title": "boAt Aavante Bar Joy",
-    "price": 5999.0,
-    "originalPrice": 5999.0,
+    "price": 5999,
+    "originalPrice": 5999,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "casual",
@@ -11749,13 +11977,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 5999.0
+        "unitPrice": 5999
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 5999.0
+        "unitPrice": 5999
       },
       {
         "minQty": 100,
@@ -11811,8 +12039,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-PAR-63PRO",
     "brand": "boAt",
     "title": "boAt Party Pal 63 Pro",
-    "price": 12990.0,
-    "originalPrice": 12990.0,
+    "price": 12990,
+    "originalPrice": 12990,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "casual",
@@ -11858,13 +12086,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 12990.0
+        "unitPrice": 12990
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 12990.0
+        "unitPrice": 12990
       },
       {
         "minQty": 100,
@@ -11920,8 +12148,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-PAR-390",
     "brand": "boAt",
     "title": "boAt Party Pal 390",
-    "price": 34990.0,
-    "originalPrice": 34990.0,
+    "price": 34990,
+    "originalPrice": 34990,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "casual",
@@ -11967,13 +12195,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 34990.0
+        "unitPrice": 34990
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 34990.0
+        "unitPrice": 34990
       },
       {
         "minQty": 100,
@@ -12029,8 +12257,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-STO-LUMOS",
     "brand": "boAt",
     "title": "boAt Stone Lumos",
-    "price": 14990.0,
-    "originalPrice": 14990.0,
+    "price": 14990,
+    "originalPrice": 14990,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "casual",
@@ -12076,13 +12304,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 14990.0
+        "unitPrice": 14990
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 14990.0
+        "unitPrice": 14990
       },
       {
         "minQty": 100,
@@ -12138,8 +12366,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-STO-BEAM",
     "brand": "boAt",
     "title": "boAt Stone Beam",
-    "price": 4990.0,
-    "originalPrice": 4990.0,
+    "price": 4990,
+    "originalPrice": 4990,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "casual",
@@ -12185,13 +12413,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 4990.0
+        "unitPrice": 4990
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 4990.0
+        "unitPrice": 4990
       },
       {
         "minQty": 100,
@@ -12247,8 +12475,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-PAR-600",
     "brand": "boAt",
     "title": "boAt Party Pal 600",
-    "price": 12990.0,
-    "originalPrice": 12990.0,
+    "price": 12990,
+    "originalPrice": 12990,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "casual",
@@ -12294,13 +12522,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 12990.0
+        "unitPrice": 12990
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 12990.0
+        "unitPrice": 12990
       },
       {
         "minQty": 100,
@@ -12356,8 +12584,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-AAV-2400PRO",
     "brand": "boAt",
     "title": "boAt Aavante Bar 2400 Pro",
-    "price": 24990.0,
-    "originalPrice": 24990.0,
+    "price": 24990,
+    "originalPrice": 24990,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "casual",
@@ -12403,13 +12631,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 24990.0
+        "unitPrice": 24990
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 24990.0
+        "unitPrice": 24990
       },
       {
         "minQty": 100,
@@ -12465,8 +12693,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-WAV-MAGMA",
     "brand": "boAt",
     "title": "boAt Wave Magma",
-    "price": 6990.0,
-    "originalPrice": 6990.0,
+    "price": 6990,
+    "originalPrice": 6990,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "corporate",
@@ -12512,13 +12740,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 6990.0
+        "unitPrice": 6990
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 6990.0
+        "unitPrice": 6990
       },
       {
         "minQty": 100,
@@ -12574,8 +12802,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-WAV-ASTRA3",
     "brand": "boAt",
     "title": "boAt Wave Astra 3",
-    "price": 8499.0,
-    "originalPrice": 8499.0,
+    "price": 8499,
+    "originalPrice": 8499,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "corporate",
@@ -12621,13 +12849,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 8499.0
+        "unitPrice": 8499
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 8499.0
+        "unitPrice": 8499
       },
       {
         "minQty": 100,
@@ -12683,8 +12911,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-ENI-GEM",
     "brand": "boAt",
     "title": "boAt Enigma Gem",
-    "price": 8499.0,
-    "originalPrice": 8499.0,
+    "price": 8499,
+    "originalPrice": 8499,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "corporate",
@@ -12730,13 +12958,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 8499.0
+        "unitPrice": 8499
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 8499.0
+        "unitPrice": 8499
       },
       {
         "minQty": 100,
@@ -12792,8 +13020,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-ULT-EMBER",
     "brand": "boAt",
     "title": "boAt Ultima Ember",
-    "price": 8999.0,
-    "originalPrice": 8999.0,
+    "price": 8999,
+    "originalPrice": 8999,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "corporate",
@@ -12839,13 +13067,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 8999.0
+        "unitPrice": 8999
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 8999.0
+        "unitPrice": 8999
       },
       {
         "minQty": 100,
@@ -12901,8 +13129,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-ULT-PRIME",
     "brand": "boAt",
     "title": "boAt Ultima Prime",
-    "price": 8999.0,
-    "originalPrice": 8999.0,
+    "price": 8999,
+    "originalPrice": 8999,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "corporate",
@@ -12948,13 +13176,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 8999.0
+        "unitPrice": 8999
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 8999.0
+        "unitPrice": 8999
       },
       {
         "minQty": 100,
@@ -13010,8 +13238,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-ULT-REGAL",
     "brand": "boAt",
     "title": "boAt Ultima Regal",
-    "price": 6990.0,
-    "originalPrice": 6990.0,
+    "price": 6990,
+    "originalPrice": 6990,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "corporate",
@@ -13057,13 +13285,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 6990.0
+        "unitPrice": 6990
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 6990.0
+        "unitPrice": 6990
       },
       {
         "minQty": 100,
@@ -13119,8 +13347,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-SMA-TAG",
     "brand": "boAt",
     "title": "boAt Smart Tag Tag",
-    "price": 4999.0,
-    "originalPrice": 4999.0,
+    "price": 4999,
+    "originalPrice": 4999,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "corporate",
@@ -13166,13 +13394,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 4999.0
+        "unitPrice": 4999
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 4999.0
+        "unitPrice": 4999
       },
       {
         "minQty": 100,
@@ -13228,8 +13456,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-SMA-ACTIVEPLUS",
     "brand": "boAt",
     "title": "boAt Smart Ring Active Plus",
-    "price": 9999.0,
-    "originalPrice": 9999.0,
+    "price": 9999,
+    "originalPrice": 9999,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "corporate",
@@ -13275,13 +13503,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 9999.0
+        "unitPrice": 9999
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 9999.0
+        "unitPrice": 9999
       },
       {
         "minQty": 100,
@@ -13337,8 +13565,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-POW-300",
     "brand": "boAt",
     "title": "boAt Powerbank 300",
-    "price": 2999.0,
-    "originalPrice": 2999.0,
+    "price": 2999,
+    "originalPrice": 2999,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "corporate",
@@ -13384,13 +13612,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 100,
@@ -13446,8 +13674,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-POW-300LITE",
     "brand": "boAt",
     "title": "boAt Powerbank 300 Lite",
-    "price": 3990.0,
-    "originalPrice": 3990.0,
+    "price": 3990,
+    "originalPrice": 3990,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "corporate",
@@ -13493,13 +13721,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 3990.0
+        "unitPrice": 3990
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 3990.0
+        "unitPrice": 3990
       },
       {
         "minQty": 100,
@@ -13555,8 +13783,8 @@ export const PRODUCTS_DATA = [
     "sku": "BOAT-POW-400",
     "brand": "boAt",
     "title": "boAt Powerbank 400",
-    "price": 4499.0,
-    "originalPrice": 4499.0,
+    "price": 4499,
+    "originalPrice": 4499,
     "discountPercent": 15,
     "category": "Audio & Wearables",
     "subcategory": "corporate",
@@ -13602,13 +13830,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 4499.0
+        "unitPrice": 4499
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 4499.0
+        "unitPrice": 4499
       },
       {
         "minQty": 100,
@@ -13665,7 +13893,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Dryfiit Tshirt - Black",
     "price": 1279.2,
-    "originalPrice": 1599.0,
+    "originalPrice": 1599,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -13718,7 +13946,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1599.0
+        "unitPrice": 1599
       },
       {
         "minQty": 25,
@@ -13781,7 +14009,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Dryfiit Tshirt - Cool Navy",
     "price": 1279.2,
-    "originalPrice": 1599.0,
+    "originalPrice": 1599,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -13834,7 +14062,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1599.0
+        "unitPrice": 1599
       },
       {
         "minQty": 25,
@@ -13897,7 +14125,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Dryfiit Tshirt - White",
     "price": 1279.2,
-    "originalPrice": 1599.0,
+    "originalPrice": 1599,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -13950,7 +14178,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1599.0
+        "unitPrice": 1599
       },
       {
         "minQty": 25,
@@ -14013,7 +14241,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Dryfiit Tshirt - Grey",
     "price": 1279.2,
-    "originalPrice": 1599.0,
+    "originalPrice": 1599,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -14066,7 +14294,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1599.0
+        "unitPrice": 1599
       },
       {
         "minQty": 25,
@@ -14129,7 +14357,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Dryfiit Tshirt - Red",
     "price": 1279.2,
-    "originalPrice": 1599.0,
+    "originalPrice": 1599,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -14181,7 +14409,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1599.0
+        "unitPrice": 1599
       },
       {
         "minQty": 25,
@@ -14244,7 +14472,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Dryfiit Tshirt - Red",
     "price": 1439.2,
-    "originalPrice": 1799.0,
+    "originalPrice": 1799,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -14296,7 +14524,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1799.0
+        "unitPrice": 1799
       },
       {
         "minQty": 25,
@@ -14359,7 +14587,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Dryfiit Tshirt - Blue",
     "price": 1439.2,
-    "originalPrice": 1799.0,
+    "originalPrice": 1799,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -14411,7 +14639,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1799.0
+        "unitPrice": 1799
       },
       {
         "minQty": 25,
@@ -14474,7 +14702,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Dryfiit Tshirt - Grey",
     "price": 1439.2,
-    "originalPrice": 1799.0,
+    "originalPrice": 1799,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -14526,7 +14754,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1799.0
+        "unitPrice": 1799
       },
       {
         "minQty": 25,
@@ -14589,7 +14817,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Dryfiit Tshirt - Cool Navy",
     "price": 1439.2,
-    "originalPrice": 1799.0,
+    "originalPrice": 1799,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -14641,7 +14869,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1799.0
+        "unitPrice": 1799
       },
       {
         "minQty": 25,
@@ -14704,7 +14932,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Dryfiit Tshirt - White",
     "price": 1439.2,
-    "originalPrice": 1799.0,
+    "originalPrice": 1799,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -14756,7 +14984,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1799.0
+        "unitPrice": 1799
       },
       {
         "minQty": 25,
@@ -14819,7 +15047,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Dryfiit Tshirt - Blue",
     "price": 1279.2,
-    "originalPrice": 1599.0,
+    "originalPrice": 1599,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -14871,7 +15099,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1599.0
+        "unitPrice": 1599
       },
       {
         "minQty": 25,
@@ -14934,7 +15162,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Dryfiit Tshirt - Yellow",
     "price": 1279.2,
-    "originalPrice": 1599.0,
+    "originalPrice": 1599,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -14986,7 +15214,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1599.0
+        "unitPrice": 1599
       },
       {
         "minQty": 25,
@@ -15049,7 +15277,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Clima Lite Tshirt - Navy",
     "price": 1599.2,
-    "originalPrice": 1999.0,
+    "originalPrice": 1999,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -15101,7 +15329,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1999.0
+        "unitPrice": 1999
       },
       {
         "minQty": 25,
@@ -15164,7 +15392,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Clima Lite Tshirt - Grey",
     "price": 1599.2,
-    "originalPrice": 1999.0,
+    "originalPrice": 1999,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -15216,7 +15444,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1999.0
+        "unitPrice": 1999
       },
       {
         "minQty": 25,
@@ -15279,7 +15507,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Clima Lite Tshirt - B Royal Blue",
     "price": 1599.2,
-    "originalPrice": 1999.0,
+    "originalPrice": 1999,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -15331,7 +15559,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1999.0
+        "unitPrice": 1999
       },
       {
         "minQty": 25,
@@ -15394,7 +15622,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Clima Lite Tshirt - Black / White",
     "price": 1599.2,
-    "originalPrice": 1999.0,
+    "originalPrice": 1999,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -15446,7 +15674,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1999.0
+        "unitPrice": 1999
       },
       {
         "minQty": 25,
@@ -15509,7 +15737,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Clima Lite Tshirt - White / Black",
     "price": 1599.2,
-    "originalPrice": 1999.0,
+    "originalPrice": 1999,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -15561,7 +15789,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1999.0
+        "unitPrice": 1999
       },
       {
         "minQty": 25,
@@ -15624,7 +15852,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Clima Lite Tshirt - Yellow",
     "price": 1599.2,
-    "originalPrice": 1999.0,
+    "originalPrice": 1999,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -15676,7 +15904,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1999.0
+        "unitPrice": 1999
       },
       {
         "minQty": 25,
@@ -15739,7 +15967,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Round Neck Tshirt - Cat Syello",
     "price": 1279.2,
-    "originalPrice": 1599.0,
+    "originalPrice": 1599,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -15791,7 +16019,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1599.0
+        "unitPrice": 1599
       },
       {
         "minQty": 25,
@@ -15854,7 +16082,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Round Neck Tshirt - Cat Eneblu",
     "price": 1279.2,
-    "originalPrice": 1599.0,
+    "originalPrice": 1599,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -15906,7 +16134,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1599.0
+        "unitPrice": 1599
       },
       {
         "minQty": 25,
@@ -15969,7 +16197,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Round Neck Tshirt - Navy",
     "price": 1279.2,
-    "originalPrice": 1599.0,
+    "originalPrice": 1599,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -16021,7 +16249,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1599.0
+        "unitPrice": 1599
       },
       {
         "minQty": 25,
@@ -16084,7 +16312,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Round Neck Tshirt - Orange",
     "price": 1279.2,
-    "originalPrice": 1599.0,
+    "originalPrice": 1599,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -16136,7 +16364,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1599.0
+        "unitPrice": 1599
       },
       {
         "minQty": 25,
@@ -16199,7 +16427,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Round Neck Cotton Tshirt - Shoe Blue",
     "price": 1199.2,
-    "originalPrice": 1499.0,
+    "originalPrice": 1499,
     "discountPercent": 20,
     "category": "Footwear",
     "subcategory": "Sports & Lifestyle Shoes",
@@ -16251,7 +16479,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1499.0
+        "unitPrice": 1499
       },
       {
         "minQty": 25,
@@ -16314,7 +16542,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Round Neck Cotton Tshirt - Black",
     "price": 1199.2,
-    "originalPrice": 1499.0,
+    "originalPrice": 1499,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -16366,7 +16594,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1499.0
+        "unitPrice": 1499
       },
       {
         "minQty": 25,
@@ -16429,7 +16657,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Round Neck Cotton Tshirt - CRoyal",
     "price": 1199.2,
-    "originalPrice": 1499.0,
+    "originalPrice": 1499,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -16481,7 +16709,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1499.0
+        "unitPrice": 1499
       },
       {
         "minQty": 25,
@@ -16544,7 +16772,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Round Neck Cotton Tshirt - ReaBlue",
     "price": 1199.2,
-    "originalPrice": 1499.0,
+    "originalPrice": 1499,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -16596,7 +16824,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1499.0
+        "unitPrice": 1499
       },
       {
         "minQty": 25,
@@ -16659,7 +16887,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Round Neck Cotton Tshirt - White",
     "price": 1199.2,
-    "originalPrice": 1499.0,
+    "originalPrice": 1499,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -16711,7 +16939,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1499.0
+        "unitPrice": 1499
       },
       {
         "minQty": 25,
@@ -16774,7 +17002,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Poly Cotton Tshirt - Navy",
     "price": 1599.2,
-    "originalPrice": 1999.0,
+    "originalPrice": 1999,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -16826,7 +17054,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1999.0
+        "unitPrice": 1999
       },
       {
         "minQty": 25,
@@ -16889,7 +17117,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Poly Cotton Tshirt - Black",
     "price": 1599.2,
-    "originalPrice": 1999.0,
+    "originalPrice": 1999,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -16941,7 +17169,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1999.0
+        "unitPrice": 1999
       },
       {
         "minQty": 25,
@@ -17004,7 +17232,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Poly Cotton Tshirt - Black",
     "price": 1839.2,
-    "originalPrice": 2299.0,
+    "originalPrice": 2299,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -17056,7 +17284,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2299.0
+        "unitPrice": 2299
       },
       {
         "minQty": 25,
@@ -17119,7 +17347,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Poly Cotton Tshirt - C Navy",
     "price": 1839.2,
-    "originalPrice": 2299.0,
+    "originalPrice": 2299,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -17171,7 +17399,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2299.0
+        "unitPrice": 2299
       },
       {
         "minQty": 25,
@@ -17234,7 +17462,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Poly Cotton Tshirt - Green",
     "price": 1839.2,
-    "originalPrice": 2299.0,
+    "originalPrice": 2299,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -17286,7 +17514,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2299.0
+        "unitPrice": 2299
       },
       {
         "minQty": 25,
@@ -17349,7 +17577,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Poly Cotton Tshirt - White",
     "price": 1839.2,
-    "originalPrice": 2299.0,
+    "originalPrice": 2299,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -17401,7 +17629,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2299.0
+        "unitPrice": 2299
       },
       {
         "minQty": 25,
@@ -17464,7 +17692,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Poly Cotton Tshirt - Tac Blue",
     "price": 1599.2,
-    "originalPrice": 1999.0,
+    "originalPrice": 1999,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -17516,7 +17744,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1999.0
+        "unitPrice": 1999
       },
       {
         "minQty": 25,
@@ -17579,7 +17807,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Poly Cotton Tshirt - Blue",
     "price": 1599.2,
-    "originalPrice": 1999.0,
+    "originalPrice": 1999,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -17631,7 +17859,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1999.0
+        "unitPrice": 1999
       },
       {
         "minQty": 25,
@@ -17694,7 +17922,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Poly Cotton Tshirt - Green",
     "price": 1839.2,
-    "originalPrice": 2299.0,
+    "originalPrice": 2299,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -17746,7 +17974,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2299.0
+        "unitPrice": 2299
       },
       {
         "minQty": 25,
@@ -17809,7 +18037,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Poly Cotton Tshirt - Haze Coral",
     "price": 1839.2,
-    "originalPrice": 2299.0,
+    "originalPrice": 2299,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -17861,7 +18089,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2299.0
+        "unitPrice": 2299
       },
       {
         "minQty": 25,
@@ -17924,7 +18152,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Poly Cotton Tshirt - Nobel Maroon",
     "price": 1839.2,
-    "originalPrice": 2299.0,
+    "originalPrice": 2299,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -17976,7 +18204,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2299.0
+        "unitPrice": 2299
       },
       {
         "minQty": 25,
@@ -18039,7 +18267,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Poly Cotton Tshirt - Cool Navy",
     "price": 1839.2,
-    "originalPrice": 2299.0,
+    "originalPrice": 2299,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -18091,7 +18319,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2299.0
+        "unitPrice": 2299
       },
       {
         "minQty": 25,
@@ -18154,7 +18382,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Poly Cotton Tshirt - White",
     "price": 1839.2,
-    "originalPrice": 2299.0,
+    "originalPrice": 2299,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -18206,7 +18434,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2299.0
+        "unitPrice": 2299
       },
       {
         "minQty": 25,
@@ -18269,7 +18497,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Poly Cotton Tshirt - Black",
     "price": 1839.2,
-    "originalPrice": 2299.0,
+    "originalPrice": 2299,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -18321,7 +18549,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2299.0
+        "unitPrice": 2299
       },
       {
         "minQty": 25,
@@ -18384,7 +18612,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Poly Cotton Tshirt - White",
     "price": 1839.2,
-    "originalPrice": 2299.0,
+    "originalPrice": 2299,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -18436,7 +18664,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2299.0
+        "unitPrice": 2299
       },
       {
         "minQty": 25,
@@ -18499,7 +18727,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Poly Cotton Tshirt - Red",
     "price": 1839.2,
-    "originalPrice": 2299.0,
+    "originalPrice": 2299,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -18551,7 +18779,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2299.0
+        "unitPrice": 2299
       },
       {
         "minQty": 25,
@@ -18614,7 +18842,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Poly Cotton Tshirt - Rea Blue",
     "price": 1839.2,
-    "originalPrice": 2299.0,
+    "originalPrice": 2299,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -18666,7 +18894,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2299.0
+        "unitPrice": 2299
       },
       {
         "minQty": 25,
@@ -18729,7 +18957,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Poly Cotton Tshirt - Shoblue / Training",
     "price": 1839.2,
-    "originalPrice": 2299.0,
+    "originalPrice": 2299,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -18781,7 +19009,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2299.0
+        "unitPrice": 2299
       },
       {
         "minQty": 25,
@@ -18844,7 +19072,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Poly Cotton Tshirt - White",
     "price": 1999.2,
-    "originalPrice": 2499.0,
+    "originalPrice": 2499,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -18896,7 +19124,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2499.0
+        "unitPrice": 2499
       },
       {
         "minQty": 25,
@@ -18959,7 +19187,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Poly Cotton Tshirt - Blue",
     "price": 1999.2,
-    "originalPrice": 2499.0,
+    "originalPrice": 2499,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -19011,7 +19239,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2499.0
+        "unitPrice": 2499
       },
       {
         "minQty": 25,
@@ -19074,7 +19302,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas 100% Cotton Tipping Tshirt - Grey",
     "price": 1599.2,
-    "originalPrice": 1999.0,
+    "originalPrice": 1999,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Polo T-Shirts",
@@ -19126,7 +19354,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1999.0
+        "unitPrice": 1999
       },
       {
         "minQty": 25,
@@ -19189,7 +19417,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas 100% Cotton Tipping Tshirt - CWhite",
     "price": 1599.2,
-    "originalPrice": 1999.0,
+    "originalPrice": 1999,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Polo T-Shirts",
@@ -19241,7 +19469,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1999.0
+        "unitPrice": 1999
       },
       {
         "minQty": 25,
@@ -19304,7 +19532,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas 100% Cotton Tipping Tshirt - CNavy",
     "price": 1599.2,
-    "originalPrice": 1999.0,
+    "originalPrice": 1999,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Polo T-Shirts",
@@ -19356,7 +19584,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1999.0
+        "unitPrice": 1999
       },
       {
         "minQty": 25,
@@ -19419,7 +19647,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas 100% Cotton Tipping Tshirt - CGreen",
     "price": 1599.2,
-    "originalPrice": 1999.0,
+    "originalPrice": 1999,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Polo T-Shirts",
@@ -19471,7 +19699,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1999.0
+        "unitPrice": 1999
       },
       {
         "minQty": 25,
@@ -19534,7 +19762,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas 100% Cotton Tipping Tshirt - CRoyal",
     "price": 1599.2,
-    "originalPrice": 1999.0,
+    "originalPrice": 1999,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Polo T-Shirts",
@@ -19586,7 +19814,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1999.0
+        "unitPrice": 1999
       },
       {
         "minQty": 25,
@@ -19649,7 +19877,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas 100% Cotton Tipping Tshirt - Powred",
     "price": 1599.2,
-    "originalPrice": 1999.0,
+    "originalPrice": 1999,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Polo T-Shirts",
@@ -19701,7 +19929,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1999.0
+        "unitPrice": 1999
       },
       {
         "minQty": 25,
@@ -19764,7 +19992,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Poly Cotton Tshirt - Grey",
     "price": 1839.2,
-    "originalPrice": 2299.0,
+    "originalPrice": 2299,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -19816,7 +20044,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2299.0
+        "unitPrice": 2299
       },
       {
         "minQty": 25,
@@ -19879,7 +20107,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Poly Cotton Tshirt - BRoyal",
     "price": 1839.2,
-    "originalPrice": 2299.0,
+    "originalPrice": 2299,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -19931,7 +20159,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2299.0
+        "unitPrice": 2299
       },
       {
         "minQty": 25,
@@ -19994,7 +20222,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Poly Cotton Tshirt - Conavy",
     "price": 1839.2,
-    "originalPrice": 2299.0,
+    "originalPrice": 2299,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -20046,7 +20274,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2299.0
+        "unitPrice": 2299
       },
       {
         "minQty": 25,
@@ -20109,7 +20337,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Poly Cotton Tshirt - White",
     "price": 1839.2,
-    "originalPrice": 2299.0,
+    "originalPrice": 2299,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -20161,7 +20389,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2299.0
+        "unitPrice": 2299
       },
       {
         "minQty": 25,
@@ -20224,7 +20452,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Poly Cotton Tshirt - Clesky",
     "price": 1839.2,
-    "originalPrice": 2299.0,
+    "originalPrice": 2299,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -20276,7 +20504,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2299.0
+        "unitPrice": 2299
       },
       {
         "minQty": 25,
@@ -20339,7 +20567,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Poly Cotton Tshirt - Black",
     "price": 1839.2,
-    "originalPrice": 2299.0,
+    "originalPrice": 2299,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -20391,7 +20619,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2299.0
+        "unitPrice": 2299
       },
       {
         "minQty": 25,
@@ -20454,7 +20682,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Jacket - Black  / White",
     "price": 2879.2,
-    "originalPrice": 3599.0,
+    "originalPrice": 3599,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Jackets & Hoodies",
@@ -20506,7 +20734,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 3599.0
+        "unitPrice": 3599
       },
       {
         "minQty": 25,
@@ -20569,7 +20797,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Jacket - Navy / White",
     "price": 2879.2,
-    "originalPrice": 3599.0,
+    "originalPrice": 3599,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Jackets & Hoodies",
@@ -20621,7 +20849,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 3599.0
+        "unitPrice": 3599
       },
       {
         "minQty": 25,
@@ -20684,7 +20912,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Jacket - Bright Blue / White",
     "price": 2879.2,
-    "originalPrice": 3599.0,
+    "originalPrice": 3599,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Jackets & Hoodies",
@@ -20736,7 +20964,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 3599.0
+        "unitPrice": 3599
       },
       {
         "minQty": 25,
@@ -20799,7 +21027,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Track Top - Navy",
     "price": 2399.2,
-    "originalPrice": 2999.0,
+    "originalPrice": 2999,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Tracksuits & Pants",
@@ -20850,7 +21078,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 25,
@@ -20913,7 +21141,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Track Top - Black",
     "price": 2399.2,
-    "originalPrice": 2999.0,
+    "originalPrice": 2999,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Tracksuits & Pants",
@@ -20964,7 +21192,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 25,
@@ -21027,7 +21255,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Hoodie Jacket - Black / White",
     "price": 3679.2,
-    "originalPrice": 4599.0,
+    "originalPrice": 4599,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Jackets & Hoodies",
@@ -21079,7 +21307,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 4599.0
+        "unitPrice": 4599
       },
       {
         "minQty": 25,
@@ -21142,7 +21370,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Hoodie Jacket - Med Grey",
     "price": 3679.2,
-    "originalPrice": 4599.0,
+    "originalPrice": 4599,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Jackets & Hoodies",
@@ -21194,7 +21422,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 4599.0
+        "unitPrice": 4599
       },
       {
         "minQty": 25,
@@ -21257,7 +21485,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Hoodie Jacket - Trace Cargo / Black",
     "price": 3679.2,
-    "originalPrice": 4599.0,
+    "originalPrice": 4599,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Jackets & Hoodies",
@@ -21309,7 +21537,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 4599.0
+        "unitPrice": 4599
       },
       {
         "minQty": 25,
@@ -21372,7 +21600,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Hoodie Jacket - Cool Navy / White",
     "price": 3679.2,
-    "originalPrice": 4599.0,
+    "originalPrice": 4599,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Jackets & Hoodies",
@@ -21424,7 +21652,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 4599.0
+        "unitPrice": 4599
       },
       {
         "minQty": 25,
@@ -21487,7 +21715,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Track Suit - Black  / White",
     "price": 3199.2,
-    "originalPrice": 3999.0,
+    "originalPrice": 3999,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Tracksuits & Pants",
@@ -21538,7 +21766,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 3999.0
+        "unitPrice": 3999
       },
       {
         "minQty": 25,
@@ -21601,7 +21829,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Track Suit - Navy / White",
     "price": 3199.2,
-    "originalPrice": 3999.0,
+    "originalPrice": 3999,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Tracksuits & Pants",
@@ -21652,7 +21880,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 3999.0
+        "unitPrice": 3999
       },
       {
         "minQty": 25,
@@ -21715,7 +21943,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Track Suit - White",
     "price": 4479.2,
-    "originalPrice": 5599.0,
+    "originalPrice": 5599,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Tracksuits & Pants",
@@ -21766,7 +21994,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 5599.0
+        "unitPrice": 5599
       },
       {
         "minQty": 25,
@@ -21829,7 +22057,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Track Suit - Navy",
     "price": 4479.2,
-    "originalPrice": 5599.0,
+    "originalPrice": 5599,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Tracksuits & Pants",
@@ -21880,7 +22108,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 5599.0
+        "unitPrice": 5599
       },
       {
         "minQty": 25,
@@ -21943,7 +22171,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Track Suit - Black",
     "price": 4479.2,
-    "originalPrice": 5599.0,
+    "originalPrice": 5599,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Tracksuits & Pants",
@@ -21994,7 +22222,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 5599.0
+        "unitPrice": 5599
       },
       {
         "minQty": 25,
@@ -22057,7 +22285,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Dryfit Cap - RED",
     "price": 799.2,
-    "originalPrice": 999.0,
+    "originalPrice": 999,
     "discountPercent": 20,
     "category": "Accessories",
     "subcategory": "Headwear & Caps",
@@ -22108,7 +22336,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 999.0
+        "unitPrice": 999
       },
       {
         "minQty": 25,
@@ -22171,7 +22399,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Dryfit Cap - Blue",
     "price": 799.2,
-    "originalPrice": 999.0,
+    "originalPrice": 999,
     "discountPercent": 20,
     "category": "Accessories",
     "subcategory": "Headwear & Caps",
@@ -22222,7 +22450,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 999.0
+        "unitPrice": 999
       },
       {
         "minQty": 25,
@@ -22285,7 +22513,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Dryfit Cap - Black",
     "price": 799.2,
-    "originalPrice": 999.0,
+    "originalPrice": 999,
     "discountPercent": 20,
     "category": "Accessories",
     "subcategory": "Headwear & Caps",
@@ -22336,7 +22564,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 999.0
+        "unitPrice": 999
       },
       {
         "minQty": 25,
@@ -22399,7 +22627,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Dryfit Cap - White",
     "price": 799.2,
-    "originalPrice": 999.0,
+    "originalPrice": 999,
     "discountPercent": 20,
     "category": "Accessories",
     "subcategory": "Headwear & Caps",
@@ -22450,7 +22678,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 999.0
+        "unitPrice": 999
       },
       {
         "minQty": 25,
@@ -22513,7 +22741,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Dryfit Cap - Black",
     "price": 639.2,
-    "originalPrice": 799.0,
+    "originalPrice": 799,
     "discountPercent": 20,
     "category": "Accessories",
     "subcategory": "Headwear & Caps",
@@ -22564,7 +22792,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 799.0
+        "unitPrice": 799
       },
       {
         "minQty": 25,
@@ -22627,7 +22855,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Dryfit Cap - White",
     "price": 559.2,
-    "originalPrice": 699.0,
+    "originalPrice": 699,
     "discountPercent": 20,
     "category": "Accessories",
     "subcategory": "Headwear & Caps",
@@ -22678,7 +22906,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 699.0
+        "unitPrice": 699
       },
       {
         "minQty": 25,
@@ -22741,7 +22969,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Dryfit Cap - Neon Orange",
     "price": 559.2,
-    "originalPrice": 699.0,
+    "originalPrice": 699,
     "discountPercent": 20,
     "category": "Accessories",
     "subcategory": "Headwear & Caps",
@@ -22792,7 +23020,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 699.0
+        "unitPrice": 699
       },
       {
         "minQty": 25,
@@ -22855,7 +23083,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Cotton Cap - Navy",
     "price": 1199.2,
-    "originalPrice": 1499.0,
+    "originalPrice": 1499,
     "discountPercent": 20,
     "category": "Accessories",
     "subcategory": "Headwear & Caps",
@@ -22906,7 +23134,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1499.0
+        "unitPrice": 1499
       },
       {
         "minQty": 25,
@@ -22969,7 +23197,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Cotton Cap - Orange",
     "price": 1199.2,
-    "originalPrice": 1499.0,
+    "originalPrice": 1499,
     "discountPercent": 20,
     "category": "Accessories",
     "subcategory": "Headwear & Caps",
@@ -23020,7 +23248,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1499.0
+        "unitPrice": 1499
       },
       {
         "minQty": 25,
@@ -23083,7 +23311,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Cotton Cap - Black / White",
     "price": 1199.2,
-    "originalPrice": 1499.0,
+    "originalPrice": 1499,
     "discountPercent": 20,
     "category": "Accessories",
     "subcategory": "Headwear & Caps",
@@ -23134,7 +23362,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1499.0
+        "unitPrice": 1499
       },
       {
         "minQty": 25,
@@ -23197,7 +23425,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Cotton Cap - Night Marine",
     "price": 639.2,
-    "originalPrice": 799.0,
+    "originalPrice": 799,
     "discountPercent": 20,
     "category": "Accessories",
     "subcategory": "Headwear & Caps",
@@ -23248,7 +23476,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 799.0
+        "unitPrice": 799
       },
       {
         "minQty": 25,
@@ -23311,7 +23539,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Cotton Cap - Black",
     "price": 639.2,
-    "originalPrice": 799.0,
+    "originalPrice": 799,
     "discountPercent": 20,
     "category": "Accessories",
     "subcategory": "Headwear & Caps",
@@ -23362,7 +23590,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 799.0
+        "unitPrice": 799
       },
       {
         "minQty": 25,
@@ -23425,7 +23653,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Cotton Cap - Corang",
     "price": 639.2,
-    "originalPrice": 799.0,
+    "originalPrice": 799,
     "discountPercent": 20,
     "category": "Accessories",
     "subcategory": "Headwear & Caps",
@@ -23476,7 +23704,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 799.0
+        "unitPrice": 799
       },
       {
         "minQty": 25,
@@ -23539,7 +23767,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Cotton Cap - White",
     "price": 639.2,
-    "originalPrice": 799.0,
+    "originalPrice": 799,
     "discountPercent": 20,
     "category": "Accessories",
     "subcategory": "Headwear & Caps",
@@ -23590,7 +23818,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 799.0
+        "unitPrice": 799
       },
       {
         "minQty": 25,
@@ -23653,7 +23881,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Cap - Black",
     "price": 639.2,
-    "originalPrice": 799.0,
+    "originalPrice": 799,
     "discountPercent": 20,
     "category": "Accessories",
     "subcategory": "Headwear & Caps",
@@ -23704,7 +23932,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 799.0
+        "unitPrice": 799
       },
       {
         "minQty": 25,
@@ -23767,7 +23995,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Cap - CWhite",
     "price": 799.2,
-    "originalPrice": 999.0,
+    "originalPrice": 999,
     "discountPercent": 20,
     "category": "Accessories",
     "subcategory": "Headwear & Caps",
@@ -23818,7 +24046,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 999.0
+        "unitPrice": 999
       },
       {
         "minQty": 25,
@@ -23881,7 +24109,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Socks - White",
     "price": 159.2,
-    "originalPrice": 199.0,
+    "originalPrice": 199,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -23933,7 +24161,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 199.0
+        "unitPrice": 199
       },
       {
         "minQty": 25,
@@ -23996,7 +24224,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Socks - MGREY/WHITE/BLACK",
     "price": 719.2,
-    "originalPrice": 899.0,
+    "originalPrice": 899,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -24048,7 +24276,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 899.0
+        "unitPrice": 899
       },
       {
         "minQty": 25,
@@ -24111,7 +24339,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Socks - MGSOGR",
     "price": 319.2,
-    "originalPrice": 399.0,
+    "originalPrice": 399,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -24163,7 +24391,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 399.0
+        "unitPrice": 399
       },
       {
         "minQty": 25,
@@ -24226,7 +24454,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Socks - NMARIN",
     "price": 319.2,
-    "originalPrice": 399.0,
+    "originalPrice": 399,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -24278,7 +24506,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 399.0
+        "unitPrice": 399
       },
       {
         "minQty": 25,
@@ -24341,7 +24569,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Socks - WHITE",
     "price": 319.2,
-    "originalPrice": 399.0,
+    "originalPrice": 399,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -24393,7 +24621,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 399.0
+        "unitPrice": 399
       },
       {
         "minQty": 25,
@@ -24456,7 +24684,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Socks - White",
     "price": 239.2,
-    "originalPrice": 299.0,
+    "originalPrice": 299,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -24508,7 +24736,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 299.0
+        "unitPrice": 299
       },
       {
         "minQty": 25,
@@ -24571,7 +24799,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Socks - Dark Navy",
     "price": 239.2,
-    "originalPrice": 299.0,
+    "originalPrice": 299,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -24623,7 +24851,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 299.0
+        "unitPrice": 299
       },
       {
         "minQty": 25,
@@ -24686,7 +24914,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Trio Socks - Conavy / Black / CWhite",
     "price": 479.2,
-    "originalPrice": 599.0,
+    "originalPrice": 599,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -24738,7 +24966,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 599.0
+        "unitPrice": 599
       },
       {
         "minQty": 25,
@@ -24801,7 +25029,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Socks - WONCLA",
     "price": 423.2,
-    "originalPrice": 529.0,
+    "originalPrice": 529,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -24853,7 +25081,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 529.0
+        "unitPrice": 529
       },
       {
         "minQty": 25,
@@ -24916,7 +25144,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Socks - White",
     "price": 143.2,
-    "originalPrice": 179.0,
+    "originalPrice": 179,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -24968,7 +25196,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 179.0
+        "unitPrice": 179
       },
       {
         "minQty": 25,
@@ -25031,7 +25259,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Socks - Corhtr/White/Black",
     "price": 519.2,
-    "originalPrice": 649.0,
+    "originalPrice": 649,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -25083,7 +25311,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 649.0
+        "unitPrice": 649
       },
       {
         "minQty": 25,
@@ -25146,7 +25374,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Socks - GML/WHT/BLK",
     "price": 463.2,
-    "originalPrice": 579.0,
+    "originalPrice": 579,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -25198,7 +25426,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 579.0
+        "unitPrice": 579
       },
       {
         "minQty": 25,
@@ -25261,7 +25489,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Socks - Black",
     "price": 143.2,
-    "originalPrice": 179.0,
+    "originalPrice": 179,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -25313,7 +25541,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 179.0
+        "unitPrice": 179
       },
       {
         "minQty": 25,
@@ -25376,7 +25604,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Socks - NAVY PEONY / WHITE / GREY MEL",
     "price": 463.2,
-    "originalPrice": 579.0,
+    "originalPrice": 579,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -25428,7 +25656,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 579.0
+        "unitPrice": 579
       },
       {
         "minQty": 25,
@@ -25491,7 +25719,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Wrist Band - White",
     "price": 639.2,
-    "originalPrice": 799.0,
+    "originalPrice": 799,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -25543,7 +25771,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 799.0
+        "unitPrice": 799
       },
       {
         "minQty": 25,
@@ -25606,7 +25834,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Waist Pouch",
     "price": 639.2,
-    "originalPrice": 799.0,
+    "originalPrice": 799,
     "discountPercent": 20,
     "category": "Bags & Luggage",
     "subcategory": "Backpacks & Duffles",
@@ -25658,7 +25886,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 799.0
+        "unitPrice": 799
       },
       {
         "minQty": 25,
@@ -25721,7 +25949,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Back Pack",
     "price": 1839.2,
-    "originalPrice": 2299.0,
+    "originalPrice": 2299,
     "discountPercent": 20,
     "category": "Bags & Luggage",
     "subcategory": "Backpacks & Duffles",
@@ -25773,7 +26001,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2299.0
+        "unitPrice": 2299
       },
       {
         "minQty": 25,
@@ -25836,7 +26064,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Back Pack - DKBLUE/BRCYAN",
     "price": 2399.2,
-    "originalPrice": 2999.0,
+    "originalPrice": 2999,
     "discountPercent": 20,
     "category": "Bags & Luggage",
     "subcategory": "Backpacks & Duffles",
@@ -25888,7 +26116,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 25,
@@ -25951,7 +26179,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Back Pack - CBROWN",
     "price": 2399.2,
-    "originalPrice": 2999.0,
+    "originalPrice": 2999,
     "discountPercent": 20,
     "category": "Bags & Luggage",
     "subcategory": "Backpacks & Duffles",
@@ -26003,7 +26231,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 25,
@@ -26066,7 +26294,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Back Pack - DMARIN/BRCYAN",
     "price": 1599.2,
-    "originalPrice": 1999.0,
+    "originalPrice": 1999,
     "discountPercent": 20,
     "category": "Bags & Luggage",
     "subcategory": "Backpacks & Duffles",
@@ -26118,7 +26346,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1999.0
+        "unitPrice": 1999
       },
       {
         "minQty": 25,
@@ -26181,7 +26409,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Bag - CONAVY/SESOYE",
     "price": 1599.2,
-    "originalPrice": 1999.0,
+    "originalPrice": 1999,
     "discountPercent": 20,
     "category": "Bags & Luggage",
     "subcategory": "Backpacks & Duffles",
@@ -26233,7 +26461,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1999.0
+        "unitPrice": 1999
       },
       {
         "minQty": 25,
@@ -26296,7 +26524,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Bag - KHAKI/BLACK",
     "price": 1599.2,
-    "originalPrice": 1999.0,
+    "originalPrice": 1999,
     "discountPercent": 20,
     "category": "Bags & Luggage",
     "subcategory": "Backpacks & Duffles",
@@ -26348,7 +26576,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1999.0
+        "unitPrice": 1999
       },
       {
         "minQty": 25,
@@ -26411,7 +26639,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Bag - BLACK/SESOYE",
     "price": 1279.2,
-    "originalPrice": 1599.0,
+    "originalPrice": 1599,
     "discountPercent": 20,
     "category": "Bags & Luggage",
     "subcategory": "Backpacks & Duffles",
@@ -26463,7 +26691,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1599.0
+        "unitPrice": 1599
       },
       {
         "minQty": 25,
@@ -26526,7 +26754,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Bag - HEMP/BLACK",
     "price": 1279.2,
-    "originalPrice": 1599.0,
+    "originalPrice": 1599,
     "discountPercent": 20,
     "category": "Bags & Luggage",
     "subcategory": "Backpacks & Duffles",
@@ -26578,7 +26806,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1599.0
+        "unitPrice": 1599
       },
       {
         "minQty": 25,
@@ -26641,7 +26869,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Bag - BETSCA/BLACK",
     "price": 1279.2,
-    "originalPrice": 1599.0,
+    "originalPrice": 1599,
     "discountPercent": 20,
     "category": "Bags & Luggage",
     "subcategory": "Backpacks & Duffles",
@@ -26693,7 +26921,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1599.0
+        "unitPrice": 1599
       },
       {
         "minQty": 25,
@@ -26756,7 +26984,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Bag - BLACK/WHITE",
     "price": 2399.2,
-    "originalPrice": 2999.0,
+    "originalPrice": 2999,
     "discountPercent": 20,
     "category": "Bags & Luggage",
     "subcategory": "Backpacks & Duffles",
@@ -26808,7 +27036,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 25,
@@ -26871,7 +27099,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Bag - CARDBO / BROWN",
     "price": 2399.2,
-    "originalPrice": 2999.0,
+    "originalPrice": 2999,
     "discountPercent": 20,
     "category": "Bags & Luggage",
     "subcategory": "Backpacks & Duffles",
@@ -26923,7 +27151,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 25,
@@ -26986,7 +27214,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Bag - Blue",
     "price": 1199.2,
-    "originalPrice": 1499.0,
+    "originalPrice": 1499,
     "discountPercent": 20,
     "category": "Bags & Luggage",
     "subcategory": "Backpacks & Duffles",
@@ -27038,7 +27266,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1499.0
+        "unitPrice": 1499
       },
       {
         "minQty": 25,
@@ -27101,7 +27329,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Bag - Blue",
     "price": 1839.2,
-    "originalPrice": 2299.0,
+    "originalPrice": 2299,
     "discountPercent": 20,
     "category": "Bags & Luggage",
     "subcategory": "Backpacks & Duffles",
@@ -27153,7 +27381,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2299.0
+        "unitPrice": 2299
       },
       {
         "minQty": 25,
@@ -27216,7 +27444,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Bag with shoes case - Red / Black",
     "price": 1999.2,
-    "originalPrice": 2499.0,
+    "originalPrice": 2499,
     "discountPercent": 20,
     "category": "Footwear",
     "subcategory": "Sports & Lifestyle Shoes",
@@ -27268,7 +27496,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2499.0
+        "unitPrice": 2499
       },
       {
         "minQty": 25,
@@ -27331,7 +27559,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Bag with shoes case - Blue / Black",
     "price": 1999.2,
-    "originalPrice": 2499.0,
+    "originalPrice": 2499,
     "discountPercent": 20,
     "category": "Footwear",
     "subcategory": "Sports & Lifestyle Shoes",
@@ -27383,7 +27611,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2499.0
+        "unitPrice": 2499
       },
       {
         "minQty": 25,
@@ -27446,7 +27674,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Sipper Bottle",
     "price": 639.2,
-    "originalPrice": 799.0,
+    "originalPrice": 799,
     "discountPercent": 20,
     "category": "Drinkware",
     "subcategory": "Sipper Bottles",
@@ -27497,7 +27725,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 799.0
+        "unitPrice": 799
       },
       {
         "minQty": 25,
@@ -27560,7 +27788,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Sipper Bottle",
     "price": 639.2,
-    "originalPrice": 799.0,
+    "originalPrice": 799,
     "discountPercent": 20,
     "category": "Drinkware",
     "subcategory": "Sipper Bottles",
@@ -27611,7 +27839,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 799.0
+        "unitPrice": 799
       },
       {
         "minQty": 25,
@@ -27674,7 +27902,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Sipper Bottle - ROYBLU / WHITE / VIVR",
     "price": 639.2,
-    "originalPrice": 799.0,
+    "originalPrice": 799,
     "discountPercent": 20,
     "category": "Drinkware",
     "subcategory": "Sipper Bottles",
@@ -27725,7 +27953,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 799.0
+        "unitPrice": 799
       },
       {
         "minQty": 25,
@@ -27788,7 +28016,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Duramo Shoes",
     "price": 5279.2,
-    "originalPrice": 6599.0,
+    "originalPrice": 6599,
     "discountPercent": 20,
     "category": "Footwear",
     "subcategory": "Sports & Lifestyle Shoes",
@@ -27840,7 +28068,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 6599.0
+        "unitPrice": 6599
       },
       {
         "minQty": 25,
@@ -27903,7 +28131,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Shoes Stain Smith",
     "price": 7199.2,
-    "originalPrice": 8999.0,
+    "originalPrice": 8999,
     "discountPercent": 20,
     "category": "Footwear",
     "subcategory": "Sports & Lifestyle Shoes",
@@ -27955,7 +28183,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 8999.0
+        "unitPrice": 8999
       },
       {
         "minQty": 25,
@@ -28018,7 +28246,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Shoes",
     "price": 3839.2,
-    "originalPrice": 4799.0,
+    "originalPrice": 4799,
     "discountPercent": 20,
     "category": "Footwear",
     "subcategory": "Sports & Lifestyle Shoes",
@@ -28070,7 +28298,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 4799.0
+        "unitPrice": 4799
       },
       {
         "minQty": 25,
@@ -28133,7 +28361,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Shoes",
     "price": 4799.2,
-    "originalPrice": 5999.0,
+    "originalPrice": 5999,
     "discountPercent": 20,
     "category": "Footwear",
     "subcategory": "Sports & Lifestyle Shoes",
@@ -28185,7 +28413,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 5999.0
+        "unitPrice": 5999
       },
       {
         "minQty": 25,
@@ -28248,7 +28476,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Samba Shoes",
     "price": 9599.2,
-    "originalPrice": 11999.0,
+    "originalPrice": 11999,
     "discountPercent": 20,
     "category": "Footwear",
     "subcategory": "Sports & Lifestyle Shoes",
@@ -28300,7 +28528,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 11999.0
+        "unitPrice": 11999
       },
       {
         "minQty": 25,
@@ -28363,7 +28591,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Samba Shoes",
     "price": 9599.2,
-    "originalPrice": 11999.0,
+    "originalPrice": 11999,
     "discountPercent": 20,
     "category": "Footwear",
     "subcategory": "Sports & Lifestyle Shoes",
@@ -28415,7 +28643,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 11999.0
+        "unitPrice": 11999
       },
       {
         "minQty": 25,
@@ -28478,7 +28706,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Cloudfoam Comfy Shoes",
     "price": 3999.2,
-    "originalPrice": 4999.0,
+    "originalPrice": 4999,
     "discountPercent": 20,
     "category": "Footwear",
     "subcategory": "Sports & Lifestyle Shoes",
@@ -28530,7 +28758,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 4999.0
+        "unitPrice": 4999
       },
       {
         "minQty": 25,
@@ -28593,7 +28821,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Samba OG shoes",
     "price": 8799.2,
-    "originalPrice": 10999.0,
+    "originalPrice": 10999,
     "discountPercent": 20,
     "category": "Footwear",
     "subcategory": "Sports & Lifestyle Shoes",
@@ -28645,7 +28873,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 10999.0
+        "unitPrice": 10999
       },
       {
         "minQty": 25,
@@ -28708,7 +28936,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Shoes",
     "price": 2399.2,
-    "originalPrice": 2999.0,
+    "originalPrice": 2999,
     "discountPercent": 20,
     "category": "Footwear",
     "subcategory": "Sports & Lifestyle Shoes",
@@ -28760,7 +28988,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 25,
@@ -28823,7 +29051,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Shoes",
     "price": 2399.2,
-    "originalPrice": 2999.0,
+    "originalPrice": 2999,
     "discountPercent": 20,
     "category": "Footwear",
     "subcategory": "Sports & Lifestyle Shoes",
@@ -28875,7 +29103,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 25,
@@ -28938,7 +29166,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Shoes",
     "price": 2399.2,
-    "originalPrice": 2999.0,
+    "originalPrice": 2999,
     "discountPercent": 20,
     "category": "Footwear",
     "subcategory": "Sports & Lifestyle Shoes",
@@ -28990,7 +29218,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 25,
@@ -29053,7 +29281,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Shoes",
     "price": 2399.2,
-    "originalPrice": 2999.0,
+    "originalPrice": 2999,
     "discountPercent": 20,
     "category": "Footwear",
     "subcategory": "Sports & Lifestyle Shoes",
@@ -29105,7 +29333,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 25,
@@ -29168,7 +29396,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Shoes",
     "price": 2879.2,
-    "originalPrice": 3599.0,
+    "originalPrice": 3599,
     "discountPercent": 20,
     "category": "Footwear",
     "subcategory": "Sports & Lifestyle Shoes",
@@ -29220,7 +29448,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 3599.0
+        "unitPrice": 3599
       },
       {
         "minQty": 25,
@@ -29283,7 +29511,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Shoes",
     "price": 2879.2,
-    "originalPrice": 3599.0,
+    "originalPrice": 3599,
     "discountPercent": 20,
     "category": "Footwear",
     "subcategory": "Sports & Lifestyle Shoes",
@@ -29335,7 +29563,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 3599.0
+        "unitPrice": 3599
       },
       {
         "minQty": 25,
@@ -29398,7 +29626,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Shoes",
     "price": 2879.2,
-    "originalPrice": 3599.0,
+    "originalPrice": 3599,
     "discountPercent": 20,
     "category": "Footwear",
     "subcategory": "Sports & Lifestyle Shoes",
@@ -29450,7 +29678,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 3599.0
+        "unitPrice": 3599
       },
       {
         "minQty": 25,
@@ -29513,7 +29741,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Shoes",
     "price": 2879.2,
-    "originalPrice": 3599.0,
+    "originalPrice": 3599,
     "discountPercent": 20,
     "category": "Footwear",
     "subcategory": "Sports & Lifestyle Shoes",
@@ -29565,7 +29793,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 3599.0
+        "unitPrice": 3599
       },
       {
         "minQty": 25,
@@ -29628,7 +29856,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Cloudfoam Shoes",
     "price": 4799.2,
-    "originalPrice": 5999.0,
+    "originalPrice": 5999,
     "discountPercent": 20,
     "category": "Footwear",
     "subcategory": "Sports & Lifestyle Shoes",
@@ -29680,7 +29908,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 5999.0
+        "unitPrice": 5999
       },
       {
         "minQty": 25,
@@ -29743,7 +29971,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Shoes Adispree 6.0",
     "price": 3439.2,
-    "originalPrice": 4299.0,
+    "originalPrice": 4299,
     "discountPercent": 20,
     "category": "Footwear",
     "subcategory": "Sports & Lifestyle Shoes",
@@ -29795,7 +30023,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 4299.0
+        "unitPrice": 4299
       },
       {
         "minQty": 25,
@@ -29858,7 +30086,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Shorts - Black",
     "price": 1439.2,
-    "originalPrice": 1799.0,
+    "originalPrice": 1799,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -29910,7 +30138,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1799.0
+        "unitPrice": 1799
       },
       {
         "minQty": 25,
@@ -29973,7 +30201,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Shorts - Danasl",
     "price": 1439.2,
-    "originalPrice": 1799.0,
+    "originalPrice": 1799,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -30025,7 +30253,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1799.0
+        "unitPrice": 1799
       },
       {
         "minQty": 25,
@@ -30088,7 +30316,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Shorts - ROYBLU",
     "price": 1839.2,
-    "originalPrice": 2299.0,
+    "originalPrice": 2299,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -30140,7 +30368,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2299.0
+        "unitPrice": 2299
       },
       {
         "minQty": 25,
@@ -30203,7 +30431,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Shorts - Black / White",
     "price": 1839.2,
-    "originalPrice": 2299.0,
+    "originalPrice": 2299,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -30255,7 +30483,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2299.0
+        "unitPrice": 2299
       },
       {
         "minQty": 25,
@@ -30318,7 +30546,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Shorts - LEGINK",
     "price": 1839.2,
-    "originalPrice": 2299.0,
+    "originalPrice": 2299,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -30370,7 +30598,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2299.0
+        "unitPrice": 2299
       },
       {
         "minQty": 25,
@@ -30433,7 +30661,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Shorts - White",
     "price": 1279.2,
-    "originalPrice": 1599.0,
+    "originalPrice": 1599,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -30485,7 +30713,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1599.0
+        "unitPrice": 1599
       },
       {
         "minQty": 25,
@@ -30548,7 +30776,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Track Pant - Navy",
     "price": 1839.2,
-    "originalPrice": 2299.0,
+    "originalPrice": 2299,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Tracksuits & Pants",
@@ -30599,7 +30827,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2299.0
+        "unitPrice": 2299
       },
       {
         "minQty": 25,
@@ -30662,7 +30890,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Track Pant - Black",
     "price": 1839.2,
-    "originalPrice": 2299.0,
+    "originalPrice": 2299,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Tracksuits & Pants",
@@ -30713,7 +30941,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2299.0
+        "unitPrice": 2299
       },
       {
         "minQty": 25,
@@ -30776,7 +31004,7 @@ export const PRODUCTS_DATA = [
     "brand": "Adidas",
     "title": "Adidas Sport Apparel JD8045",
     "price": 3199.2,
-    "originalPrice": 3999.0,
+    "originalPrice": 3999,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -30828,7 +31056,7 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 3999.0
+        "unitPrice": 3999
       },
       {
         "minQty": 25,
@@ -30890,8 +31118,8 @@ export const PRODUCTS_DATA = [
     "sku": "PUMA-690440-02",
     "brand": "Puma",
     "title": "Puma Polyester Poplin Wrinkle-Free Polo - White",
-    "price": 1439.0,
-    "originalPrice": 1799.0,
+    "price": 1439,
+    "originalPrice": 1799,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Polo T-Shirts",
@@ -30942,13 +31170,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1799.0
+        "unitPrice": 1799
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 1439.0
+        "unitPrice": 1439
       },
       {
         "minQty": 100,
@@ -30994,8 +31222,8 @@ export const PRODUCTS_DATA = [
     "sku": "PUMA-690440-01",
     "brand": "Puma",
     "title": "Puma Polyester Poplin Wrinkle-Free Polo - Black",
-    "price": 1439.0,
-    "originalPrice": 1799.0,
+    "price": 1439,
+    "originalPrice": 1799,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Polo T-Shirts",
@@ -31046,13 +31274,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1799.0
+        "unitPrice": 1799
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 1439.0
+        "unitPrice": 1439
       },
       {
         "minQty": 100,
@@ -31098,8 +31326,8 @@ export const PRODUCTS_DATA = [
     "sku": "PUMA-690440-06",
     "brand": "Puma",
     "title": "Puma Polyester Poplin Wrinkle-Free Polo - Navy Blue",
-    "price": 1439.0,
-    "originalPrice": 1799.0,
+    "price": 1439,
+    "originalPrice": 1799,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Polo T-Shirts",
@@ -31150,13 +31378,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1799.0
+        "unitPrice": 1799
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 1439.0
+        "unitPrice": 1439
       },
       {
         "minQty": 100,
@@ -31202,8 +31430,8 @@ export const PRODUCTS_DATA = [
     "sku": "PUMA-HOOD-03",
     "brand": "Puma",
     "title": "Puma Essentials Fleece Pullover Hoodie - Heather Grey",
-    "price": 2079.0,
-    "originalPrice": 2599.0,
+    "price": 2079,
+    "originalPrice": 2599,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Jackets & Hoodies",
@@ -31254,13 +31482,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2599.0
+        "unitPrice": 2599
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 2079.0
+        "unitPrice": 2079
       },
       {
         "minQty": 100,
@@ -31306,8 +31534,8 @@ export const PRODUCTS_DATA = [
     "sku": "PUMA-TEE-04",
     "brand": "Puma",
     "title": "Puma Performance Active Dry Training Tee - Royal Blue",
-    "price": 1039.0,
-    "originalPrice": 1299.0,
+    "price": 1039,
+    "originalPrice": 1299,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -31358,13 +31586,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1299.0
+        "unitPrice": 1299
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 1039.0
+        "unitPrice": 1039
       },
       {
         "minQty": 100,
@@ -31410,8 +31638,8 @@ export const PRODUCTS_DATA = [
     "sku": "PUMA-PNT-05",
     "brand": "Puma",
     "title": "Puma Clean Fleece Sweatpants Trackpant - Charcoal",
-    "price": 1839.0,
-    "originalPrice": 2299.0,
+    "price": 1839,
+    "originalPrice": 2299,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Tracksuits & Pants",
@@ -31462,13 +31690,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2299.0
+        "unitPrice": 2299
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 1839.0
+        "unitPrice": 1839
       },
       {
         "minQty": 100,
@@ -31514,8 +31742,8 @@ export const PRODUCTS_DATA = [
     "sku": "RBK-VEC-POLO-NV",
     "brand": "Reebok",
     "title": "Reebok Vector Core Training Polo - Navy",
-    "price": 1399.0,
-    "originalPrice": 1799.0,
+    "price": 1399,
+    "originalPrice": 1799,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Polo T-Shirts",
@@ -31560,13 +31788,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1799.0
+        "unitPrice": 1799
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 1399.0
+        "unitPrice": 1399
       },
       {
         "minQty": 100,
@@ -31612,8 +31840,8 @@ export const PRODUCTS_DATA = [
     "sku": "RBK-SPD-TEE-BK",
     "brand": "Reebok",
     "title": "Reebok Speedwick Moisture-Wicking Crew Tee - Black",
-    "price": 999.0,
-    "originalPrice": 1299.0,
+    "price": 999,
+    "originalPrice": 1299,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -31658,13 +31886,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1299.0
+        "unitPrice": 1299
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 999.0
+        "unitPrice": 999
       },
       {
         "minQty": 100,
@@ -31710,8 +31938,8 @@ export const PRODUCTS_DATA = [
     "sku": "RBK-SHO-01",
     "brand": "Reebok",
     "title": "Reebok Workout Ready 7-Inch Athletic Shorts",
-    "price": 1199.0,
-    "originalPrice": 1499.0,
+    "price": 1199,
+    "originalPrice": 1499,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Shorts",
@@ -31756,13 +31984,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1499.0
+        "unitPrice": 1499
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 1199.0
+        "unitPrice": 1199
       },
       {
         "minQty": 100,
@@ -31808,8 +32036,8 @@ export const PRODUCTS_DATA = [
     "sku": "RBK-SHOE-CLUBC",
     "brand": "Reebok",
     "title": "Reebok Classics Club C 85 Vintage Court Shoes",
-    "price": 4799.0,
-    "originalPrice": 5999.0,
+    "price": 4799,
+    "originalPrice": 5999,
     "discountPercent": 20,
     "category": "Footwear",
     "subcategory": "Sports & Lifestyle Shoes",
@@ -31854,13 +32082,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 5999.0
+        "unitPrice": 5999
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 4799.0
+        "unitPrice": 4799
       },
       {
         "minQty": 100,
@@ -31906,8 +32134,8 @@ export const PRODUCTS_DATA = [
     "sku": "RBK-BAG-DUF",
     "brand": "Reebok",
     "title": "Reebok Active Core Large Corporate Gym Duffle Bag",
-    "price": 1599.0,
-    "originalPrice": 1999.0,
+    "price": 1599,
+    "originalPrice": 1999,
     "discountPercent": 20,
     "category": "Bags & Luggage",
     "subcategory": "Backpacks & Duffles",
@@ -31952,13 +32180,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1999.0
+        "unitPrice": 1999
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 1599.0
+        "unitPrice": 1599
       },
       {
         "minQty": 100,
@@ -32004,8 +32232,8 @@ export const PRODUCTS_DATA = [
     "sku": "RBK-JKT-ONE",
     "brand": "Reebok",
     "title": "Reebok One Series Windbreaker Running Jacket",
-    "price": 2799.0,
-    "originalPrice": 3499.0,
+    "price": 2799,
+    "originalPrice": 3499,
     "discountPercent": 20,
     "category": "Apparel",
     "subcategory": "Jackets & Hoodies",
@@ -32050,13 +32278,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 3499.0
+        "unitPrice": 3499
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 2799.0
+        "unitPrice": 2799
       },
       {
         "minQty": 100,
@@ -32102,8 +32330,8 @@ export const PRODUCTS_DATA = [
     "sku": "SWM-TRL-CABIN",
     "brand": "Swiss Military",
     "title": "Swiss Military Hard-Shell 55cm Cabin Trolley Bag",
-    "price": 3999.0,
-    "originalPrice": 5499.0,
+    "price": 3999,
+    "originalPrice": 5499,
     "discountPercent": 25,
     "category": "Bags & Luggage",
     "subcategory": "Luggage & Trolleys",
@@ -32149,13 +32377,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 5499.0
+        "unitPrice": 5499
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 3999.0
+        "unitPrice": 3999
       },
       {
         "minQty": 100,
@@ -32201,8 +32429,8 @@ export const PRODUCTS_DATA = [
     "sku": "SWM-BPK-30L",
     "brand": "Swiss Military",
     "title": "Swiss Military Executive 30L Multi-Compartment Laptop Backpack",
-    "price": 2499.0,
-    "originalPrice": 3499.0,
+    "price": 2499,
+    "originalPrice": 3499,
     "discountPercent": 25,
     "category": "Bags & Luggage",
     "subcategory": "Backpacks & Duffles",
@@ -32248,13 +32476,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 3499.0
+        "unitPrice": 3499
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 2499.0
+        "unitPrice": 2499
       },
       {
         "minQty": 100,
@@ -32300,8 +32528,8 @@ export const PRODUCTS_DATA = [
     "sku": "SWM-TOOL-12IN1",
     "brand": "Swiss Military",
     "title": "Swiss Military 12-in-1 Tactical Multi-Tool Utility Knife Set",
-    "price": 1299.0,
-    "originalPrice": 1899.0,
+    "price": 1299,
+    "originalPrice": 1899,
     "discountPercent": 25,
     "category": "Accessories",
     "subcategory": "Executive Tools",
@@ -32347,13 +32575,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1899.0
+        "unitPrice": 1899
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 1299.0
+        "unitPrice": 1299
       },
       {
         "minQty": 100,
@@ -32399,8 +32627,8 @@ export const PRODUCTS_DATA = [
     "sku": "SWM-FLASK-750",
     "brand": "Swiss Military",
     "title": "Swiss Military Double-Wall Stainless Steel Vacuum Thermal Flask 750ml",
-    "price": 1099.0,
-    "originalPrice": 1599.0,
+    "price": 1099,
+    "originalPrice": 1599,
     "discountPercent": 25,
     "category": "Drinkware",
     "subcategory": "Thermal Flasks",
@@ -32446,13 +32674,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1599.0
+        "unitPrice": 1599
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 1099.0
+        "unitPrice": 1099
       },
       {
         "minQty": 100,
@@ -32498,8 +32726,8 @@ export const PRODUCTS_DATA = [
     "sku": "SWM-JKT-WIND",
     "brand": "Swiss Military",
     "title": "Swiss Military All-Weather Waterproof Hooded Windcheater Jacket",
-    "price": 2799.0,
-    "originalPrice": 3799.0,
+    "price": 2799,
+    "originalPrice": 3799,
     "discountPercent": 25,
     "category": "Apparel",
     "subcategory": "Jackets & Hoodies",
@@ -32545,13 +32773,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 3799.0
+        "unitPrice": 3799
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 2799.0
+        "unitPrice": 2799
       },
       {
         "minQty": 100,
@@ -32597,8 +32825,8 @@ export const PRODUCTS_DATA = [
     "sku": "SWM-FOLIO-PU",
     "brand": "Swiss Military",
     "title": "Swiss Military Executive PU Leather Document Portfolio Folder",
-    "price": 899.0,
-    "originalPrice": 1299.0,
+    "price": 899,
+    "originalPrice": 1299,
     "discountPercent": 25,
     "category": "Corporate",
     "subcategory": "Stationery & Portfolios",
@@ -32644,13 +32872,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1299.0
+        "unitPrice": 1299
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 899.0
+        "unitPrice": 899
       },
       {
         "minQty": 100,
@@ -32696,8 +32924,8 @@ export const PRODUCTS_DATA = [
     "sku": "JJ-CHINO-KHK",
     "brand": "Jack & Jones",
     "title": "Jack & Jones Premium Marco Stretch Chinos - Khaki",
-    "price": 1999.0,
-    "originalPrice": 2799.0,
+    "price": 1999,
+    "originalPrice": 2799,
     "discountPercent": 25,
     "category": "Apparel",
     "subcategory": "Chinos & Trousers",
@@ -32747,13 +32975,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2799.0
+        "unitPrice": 2799
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 1999.0
+        "unitPrice": 1999
       },
       {
         "minQty": 100,
@@ -32799,8 +33027,8 @@ export const PRODUCTS_DATA = [
     "sku": "JJ-SHIRT-SKY",
     "brand": "Jack & Jones",
     "title": "Jack & Jones Oxford Button-Down Formal Shirt - Sky Blue",
-    "price": 1699.0,
-    "originalPrice": 2299.0,
+    "price": 1699,
+    "originalPrice": 2299,
     "discountPercent": 25,
     "category": "Apparel",
     "subcategory": "Formal Shirts",
@@ -32850,13 +33078,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2299.0
+        "unitPrice": 2299
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 1699.0
+        "unitPrice": 1699
       },
       {
         "minQty": 100,
@@ -32902,8 +33130,8 @@ export const PRODUCTS_DATA = [
     "sku": "JJ-POLO-NAVY",
     "brand": "Jack & Jones",
     "title": "Jack & Jones Classic Pique Cotton Polo - Navy",
-    "price": 1299.0,
-    "originalPrice": 1799.0,
+    "price": 1299,
+    "originalPrice": 1799,
     "discountPercent": 25,
     "category": "Apparel",
     "subcategory": "Polo T-Shirts",
@@ -32953,13 +33181,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1799.0
+        "unitPrice": 1799
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 1299.0
+        "unitPrice": 1299
       },
       {
         "minQty": 100,
@@ -33005,8 +33233,8 @@ export const PRODUCTS_DATA = [
     "sku": "VM-BLZ-BLK",
     "brand": "Vero Moda",
     "title": "Vero Moda Single-Breasted Executive Blazer - Black",
-    "price": 2999.0,
-    "originalPrice": 3999.0,
+    "price": 2999,
+    "originalPrice": 3999,
     "discountPercent": 25,
     "category": "Apparel",
     "subcategory": "Blazers & Suits",
@@ -33056,13 +33284,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 3999.0
+        "unitPrice": 3999
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 100,
@@ -33108,8 +33336,8 @@ export const PRODUCTS_DATA = [
     "sku": "VM-TRN-BEI",
     "brand": "Vero Moda",
     "title": "Vero Moda Lightweight Classic Trench Coat - Beige",
-    "price": 3799.0,
-    "originalPrice": 4999.0,
+    "price": 3799,
+    "originalPrice": 4999,
     "discountPercent": 25,
     "category": "Apparel",
     "subcategory": "Jackets & Hoodies",
@@ -33159,13 +33387,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 4999.0
+        "unitPrice": 4999
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 3799.0
+        "unitPrice": 3799
       },
       {
         "minQty": 100,
@@ -33211,8 +33439,8 @@ export const PRODUCTS_DATA = [
     "sku": "VM-DRS-NAVY",
     "brand": "Vero Moda",
     "title": "Vero Moda Pleated Day Dress - Navy Floral",
-    "price": 2299.0,
-    "originalPrice": 2999.0,
+    "price": 2299,
+    "originalPrice": 2999,
     "discountPercent": 25,
     "category": "Apparel",
     "subcategory": "Dresses",
@@ -33262,13 +33490,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 2299.0
+        "unitPrice": 2299
       },
       {
         "minQty": 100,
@@ -33314,8 +33542,8 @@ export const PRODUCTS_DATA = [
     "sku": "UCB-POLO-GRN",
     "brand": "United Colors of Benetton",
     "title": "UCB Signature Pique Cotton Polo - Forest Green",
-    "price": 1499.0,
-    "originalPrice": 1999.0,
+    "price": 1499,
+    "originalPrice": 1999,
     "discountPercent": 25,
     "category": "Apparel",
     "subcategory": "Polo T-Shirts",
@@ -33364,13 +33592,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1999.0
+        "unitPrice": 1999
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 1499.0
+        "unitPrice": 1499
       },
       {
         "minQty": 100,
@@ -33416,8 +33644,8 @@ export const PRODUCTS_DATA = [
     "sku": "UCB-POLO-RED",
     "brand": "United Colors of Benetton",
     "title": "UCB Signature Pique Cotton Polo - Bright Red",
-    "price": 1499.0,
-    "originalPrice": 1999.0,
+    "price": 1499,
+    "originalPrice": 1999,
     "discountPercent": 25,
     "category": "Apparel",
     "subcategory": "Polo T-Shirts",
@@ -33466,13 +33694,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1999.0
+        "unitPrice": 1999
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 1499.0
+        "unitPrice": 1499
       },
       {
         "minQty": 100,
@@ -33518,8 +33746,8 @@ export const PRODUCTS_DATA = [
     "sku": "UCB-SWT-BLK",
     "brand": "United Colors of Benetton",
     "title": "UCB Heritage Colorblock Crewneck Sweatshirt - Navy/White",
-    "price": 2299.0,
-    "originalPrice": 2999.0,
+    "price": 2299,
+    "originalPrice": 2999,
     "discountPercent": 25,
     "category": "Apparel",
     "subcategory": "Sweatshirts",
@@ -33568,13 +33796,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2999.0
+        "unitPrice": 2999
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 2299.0
+        "unitPrice": 2299
       },
       {
         "minQty": 100,
@@ -33620,8 +33848,8 @@ export const PRODUCTS_DATA = [
     "sku": "UCB-CHINO-SND",
     "brand": "United Colors of Benetton",
     "title": "UCB Slim Fit Stretch Cotton Chinos - Desert Sand",
-    "price": 1999.0,
-    "originalPrice": 2699.0,
+    "price": 1999,
+    "originalPrice": 2699,
     "discountPercent": 25,
     "category": "Apparel",
     "subcategory": "Chinos & Trousers",
@@ -33670,13 +33898,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 2699.0
+        "unitPrice": 2699
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 1999.0
+        "unitPrice": 1999
       },
       {
         "minQty": 100,
@@ -33722,8 +33950,8 @@ export const PRODUCTS_DATA = [
     "sku": "UCB-BAG-WKD",
     "brand": "United Colors of Benetton",
     "title": "UCB Heavy Canvas Overnight Weekender Travel Bag",
-    "price": 2499.0,
-    "originalPrice": 3299.0,
+    "price": 2499,
+    "originalPrice": 3299,
     "discountPercent": 25,
     "category": "Bags & Luggage",
     "subcategory": "Backpacks & Duffles",
@@ -33768,13 +33996,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 3299.0
+        "unitPrice": 3299
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 2499.0
+        "unitPrice": 2499
       },
       {
         "minQty": 100,
@@ -33820,8 +34048,8 @@ export const PRODUCTS_DATA = [
     "sku": "UCB-TEE-WHT",
     "brand": "United Colors of Benetton",
     "title": "UCB Ultra-Soft Bio-Washed V-Neck T-Shirt - Pure White",
-    "price": 899.0,
-    "originalPrice": 1199.0,
+    "price": 899,
+    "originalPrice": 1199,
     "discountPercent": 25,
     "category": "Apparel",
     "subcategory": "Performance T-Shirts",
@@ -33870,13 +34098,13 @@ export const PRODUCTS_DATA = [
         "minQty": 1,
         "maxQty": 24,
         "label": "Sample Order (1–24)",
-        "unitPrice": 1199.0
+        "unitPrice": 1199
       },
       {
         "minQty": 25,
         "maxQty": 99,
         "label": "Corporate Tier (25–99)",
-        "unitPrice": 899.0
+        "unitPrice": 899
       },
       {
         "minQty": 100,

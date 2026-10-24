@@ -182,7 +182,7 @@ export function parseCSVToProducts(text) {
 
   for (let i = 0; i < rows.length; i++) {
     const row = rows[i];
-    const rowNum = i + 2; // 1-based index including header
+    const _rowNum = i + 2; // 1-based index including header
     const product = {};
 
     for (let j = 0; j < headers.length; j++) {

@@ -3,33 +3,33 @@
     "id": "usr_admin_01",
     "name": "Store Administrator",
     "email": "admin@shop.co",
-    "passwordHash": "$2b$10$LouNEt/cFLFWEePYYc4tuOE1ZFrPDi1oL2/r/Pcb6kN2nhId2m5AC",
+    "passwordHash": "$2b$10$kT/1sjEzey/VAeWzQecoR.dp.N9Ej/d3/wWxuMCsIA0iH.cO87wUO",
     "role": "admin",
-    "createdAt": "2026-10-24T11:49:22.352Z"
+    "createdAt": "2026-10-24T13:37:34.407Z"
   },
   {
     "id": "usr_admin_02",
     "name": "Store Administrator",
     "email": "admin@giftingwellness.com",
-    "passwordHash": "$2b$10$A9rUvCyurw72qzlb5qaNFu01iRg19ykMCXYWPGQ0d/.8G9KtkGwQa",
+    "passwordHash": "$2b$10$TK7cO3E82JliNwIqVwQu6OQcPbIbzLzO7ODjoVmC1N.mUzNkJYTDC",
     "role": "admin",
-    "createdAt": "2026-10-24T11:49:22.407Z"
+    "createdAt": "2026-10-24T13:37:34.462Z"
   },
   {
     "id": "usr_user_01",
     "name": "Alex Morgan",
     "email": "user@shop.co",
-    "passwordHash": "$2b$10$MRsFImVE/0D9SuHXDc5NBu6nvvrCWx/KooFwtiUhiCJ.Ku/sY1WFC",
+    "passwordHash": "$2b$10$IxNYT54XF8CEqfC2cRUW..z1U6rQetPtiidBYHwUAcxTXYByi9Mvm",
     "role": "user",
-    "createdAt": "2026-10-24T11:49:22.464Z"
+    "createdAt": "2026-10-24T13:37:34.516Z"
   },
   {
     "id": "usr_user_02",
     "name": "Corporate Client",
     "email": "user@giftingwellness.com",
-    "passwordHash": "$2b$10$ODSLW2ctja2okK7WJYfEt.pDSeUIDHsI5rxB4SiVNWBLjHLkYqGDy",
+    "passwordHash": "$2b$10$VWc1ZX6EU8QfvMNRLzUty.lCIqL.7L8d6hIsZsEIjiCvR71s5y4Ta",
     "role": "user",
-    "createdAt": "2026-10-24T11:49:22.519Z"
+    "createdAt": "2026-10-24T13:37:34.571Z"
   },
   {
     "id": "usr_1792782378733_863",
@@ -750,5 +750,75 @@
     "company": "",
     "phone": "",
     "createdAt": "2026-10-24T11:49:23.717Z"
+  },
+  {
+    "id": "usr_1792849051279_156",
+    "name": "Customer B",
+    "email": "cust_b_1792849051279@test.com",
+    "passwordHash": "$2b$10$8kCjeJJ4ZttpG0SGk/do5uQz5Ml/BrPVEq1RET4ruYrm82qOh10YK",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-24T13:37:31.337Z"
+  },
+  {
+    "id": "usr_1792849054794_511",
+    "name": "Privilege Escalation Attacker",
+    "email": "attacker_1792849054791@test.com",
+    "passwordHash": "$2b$10$.u0VxT5Pppd870mD8olmGeC/FqYM/0r0RAEiO1dU5U9.bysOpxTHG",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-24T13:37:34.858Z"
+  },
+  {
+    "id": "usr_1792849055454_141",
+    "name": "User 0",
+    "email": "reg_limit_1792849055450_0@test.com",
+    "passwordHash": "$2b$10$1Uw/8QQZAiYmoTSPyQMSfewcMarwepwfzOB4SUMBkQQLe282P0xM6",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-24T13:37:35.510Z"
+  },
+  {
+    "id": "usr_1792849055514_48",
+    "name": "User 1",
+    "email": "reg_limit_1792849055512_1@test.com",
+    "passwordHash": "$2b$10$8RJdlpP2LkEVl5d3XsVaLOlQnLTjr82kVAobZE1XRpRsTzOBeJHhG",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-24T13:37:35.569Z"
+  },
+  {
+    "id": "usr_1792849055572_113",
+    "name": "User 2",
+    "email": "reg_limit_1792849055571_2@test.com",
+    "passwordHash": "$2b$10$XUJhA4wHkvTaqsE7vPj1NeqAXwPfr646aYEEihfHf.V/bXpy4z9e6",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-24T13:37:35.627Z"
+  },
+  {
+    "id": "usr_1792849055630_251",
+    "name": "User 3",
+    "email": "reg_limit_1792849055629_3@test.com",
+    "passwordHash": "$2b$10$qDqqJ74YIG7JGAIkLZidWukSUXW5jBbH8V5x4CyMIryDd4ZUVDmwy",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-24T13:37:35.685Z"
+  },
+  {
+    "id": "usr_1792849055688_295",
+    "name": "User 4",
+    "email": "reg_limit_1792849055688_4@test.com",
+    "passwordHash": "$2b$10$dgomEmEOpm90K0TjKQbpseTR6rlk4cNx9ZdqnutFR7u7CmGL8BiG2",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-24T13:37:35.743Z"
   }
 ]

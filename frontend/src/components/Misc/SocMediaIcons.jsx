@@ -3,21 +3,40 @@ const SocMediaIcons = () => {
     <div>
       <a
         target="_blank"
-        href="https://github.com/kiknalex/"
-        aria-label="Github"
-       className="soc-icon-link">
-        <i className="fa-brands fa-github fa-lg"></i>
-      </a>
-      <a target="_blank" href="https://www.facebook.com/" aria-label="Facebook" className="soc-icon-link">
-        <i className="fa-brands fa-facebook-f fa-lg"></i>
-      </a>
-      <a target="_blank" href="https://twitter.com/" aria-label="Twitter" className="soc-icon-link">
-        <i className="fa-brands fa-twitter fa-lg"></i>
-      </a>
-      <a target="_blank" href="https://www.instagram.com/" aria-label="Instagram" className="soc-icon-link">
+        rel="noreferrer"
+        href="https://instagram.com/giftingwellness"
+        aria-label="Instagram"
+        className="soc-icon-link"
+      >
         <i className="fa-brands fa-instagram fa-lg"></i>
       </a>
-      
+      <a
+        target="_blank"
+        rel="noreferrer"
+        href="https://facebook.com/giftingwellness"
+        aria-label="Facebook"
+        className="soc-icon-link"
+      >
+        <i className="fa-brands fa-facebook-f fa-lg"></i>
+      </a>
+      <a
+        target="_blank"
+        rel="noreferrer"
+        href="https://linkedin.com/company/giftingwellness"
+        aria-label="LinkedIn"
+        className="soc-icon-link"
+      >
+        <i className="fa-brands fa-linkedin-in fa-lg"></i>
+      </a>
+      <a
+        target="_blank"
+        rel="noreferrer"
+        href="https://wa.me/919121299914"
+        aria-label="WhatsApp Support"
+        className="soc-icon-link"
+      >
+        <i className="fa-brands fa-whatsapp fa-lg"></i>
+      </a>
     </div>
   );
 };

@@ -1,5 +1,59 @@
 [
   {
+    "id": 1792849044969,
+    "sku": "PRD-044969",
+    "brand": "SHOP.CO",
+    "title": "Updated Secure Shirt",
+    "price": 320,
+    "originalPrice": 250,
+    "discountPercent": 0,
+    "category": "casual",
+    "subcategory": "",
+    "style": "corporate",
+    "rating": {
+      "rate": 5,
+      "count": 1
+    },
+    "isNew": true,
+    "isBestSeller": false,
+    "moq": 1,
+    "deliveryDays": "3–5 Days",
+    "unitLabel": "piece",
+    "priceNote": "Standard retail price",
+    "description": "Original Test Shirt crafted with premium attention to detail. Perfect addition to your collection.",
+    "features": [
+      "Premium quality material and craftsmanship",
+      "Durable, long-lasting construction",
+      "Official warranty and hassle-free returns"
+    ],
+    "specs": {
+      "Brand": "SHOP.CO",
+      "Category": "casual",
+      "Subcategory": "Standard",
+      "Style": "Corporate",
+      "Warranty": "1 Year Official Guarantee"
+    },
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "#000000",
+      "#4F46E5"
+    ],
+    "image": "/introImageCompressed.jfif",
+    "img": "/introImageCompressed.jfif",
+    "images": [
+      "/introImageCompressed.jfif"
+    ],
+    "createdAt": "2026-10-24T13:37:24.969Z",
+    "createdBy": "admin@shop.co",
+    "updatedAt": "2026-10-24T13:37:24.984Z",
+    "updatedBy": "admin@shop.co"
+  },
+  {
     "id": 1792842552000,
     "sku": "PRD-552000",
     "brand": "SHOP.CO",
@@ -418,10 +472,10 @@
       "#000000",
       "#4F46E5"
     ],
-    "image": "/uploads/prod-1792746314843-05fe685b.jpg",
-    "img": "/uploads/prod-1792746314843-05fe685b.jpg",
+    "image": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&auto=format&fit=crop&q=80",
+    "img": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&auto=format&fit=crop&q=80",
     "images": [
-      "/uploads/prod-1792746314843-05fe685b.jpg"
+      "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&auto=format&fit=crop&q=80"
     ],
     "createdAt": "2026-10-23T09:05:34.325Z",
     "createdBy": "admin@shop.co"
@@ -1057,56 +1111,6 @@
     "updatedBy": "admin@shop.co"
   },
   {
-    "id": 1792690622954,
-    "sku": "PRD-638557",
-    "brand": "SHOP.CO",
-    "title": "cbjv",
-    "price": 1000,
-    "originalPrice": 1500,
-    "discountPercent": 33,
-    "category": "men's clothing",
-    "style": "corporate",
-    "rating": {
-      "rate": 5,
-      "count": 1
-    },
-    "isNew": true,
-    "isBestSeller": false,
-    "moq": 1,
-    "deliveryDays": "3–5 Days",
-    "unitLabel": "piece",
-    "priceNote": "Standard retail price",
-    "description": "cbjv crafted with premium attention to detail. Perfect addition to your collection.",
-    "features": [
-      "Premium quality material and craftsmanship",
-      "Durable, long-lasting construction",
-      "Official warranty and hassle-free returns"
-    ],
-    "specs": {
-      "Brand": "SHOP.CO",
-      "Category": "men's clothing",
-      "Style": "corporate",
-      "Warranty": "1 Year Official Guarantee"
-    },
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL"
-    ],
-    "colors": [
-      "#000000",
-      "#4F46E5"
-    ],
-    "image": "/uploads/prod-1792690620033-1e1255fa.png",
-    "img": "/uploads/prod-1792690620033-1e1255fa.png",
-    "images": [
-      "/uploads/prod-1792690620033-1e1255fa.png"
-    ],
-    "createdAt": "2026-10-22T17:37:02.954Z",
-    "createdBy": "admin@shop.co"
-  },
-  {
     "id": 1792688945468,
     "sku": "PRD-945468",
     "brand": "SHOP.CO",
@@ -1211,56 +1215,6 @@
     "updatedBy": "admin@shop.co"
   },
   {
-    "id": 1792685243386,
-    "sku": "PRD-722711",
-    "brand": "puma",
-    "title": "cbjv",
-    "price": 1000,
-    "originalPrice": 1500,
-    "discountPercent": 33,
-    "category": "men's clothing",
-    "style": "casual",
-    "rating": {
-      "rate": 5,
-      "count": 1
-    },
-    "isNew": true,
-    "isBestSeller": false,
-    "moq": 1,
-    "deliveryDays": "3–5 Days",
-    "unitLabel": "piece",
-    "priceNote": "Standard retail price",
-    "description": "cbjv crafted with premium attention to detail. Perfect addition to your collection.",
-    "features": [
-      "Premium quality material and craftsmanship",
-      "Durable, long-lasting construction",
-      "Official warranty and hassle-free returns"
-    ],
-    "specs": {
-      "Brand": "puma",
-      "Category": "men's clothing",
-      "Style": "casual",
-      "Warranty": "1 Year Official Guarantee"
-    },
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL"
-    ],
-    "colors": [
-      "#000000",
-      "#4F46E5"
-    ],
-    "image": "/uploads/prod-1792685239190-a5ea0bd5.png",
-    "img": "/uploads/prod-1792685239190-a5ea0bd5.png",
-    "images": [
-      "/uploads/prod-1792685239190-a5ea0bd5.png"
-    ],
-    "createdAt": "2026-10-22T16:07:23.386Z",
-    "createdBy": "admin@shop.co"
-  },
-  {
     "id": 1792684727598,
     "sku": "PRD-727598",
     "brand": "SHOP.CO",
@@ -1311,56 +1265,6 @@
     "createdBy": "admin@shop.co",
     "updatedAt": "2026-10-22T15:58:47.603Z",
     "updatedBy": "admin@shop.co"
-  },
-  {
-    "id": 1792684628775,
-    "sku": "PRD-304261",
-    "brand": "SHOP.CO",
-    "title": "djcbacsj",
-    "price": 500,
-    "originalPrice": 1000,
-    "discountPercent": 50,
-    "category": "men's clothing",
-    "style": "casual",
-    "rating": {
-      "rate": 5,
-      "count": 1
-    },
-    "isNew": true,
-    "isBestSeller": false,
-    "moq": 1,
-    "deliveryDays": "3–5 Days",
-    "unitLabel": "piece",
-    "priceNote": "Standard retail price",
-    "description": "djcbacsj crafted with premium attention to detail. Perfect addition to your collection.",
-    "features": [
-      "Premium quality material and craftsmanship",
-      "Durable, long-lasting construction",
-      "Official warranty and hassle-free returns"
-    ],
-    "specs": {
-      "Brand": "SHOP.CO",
-      "Category": "men's clothing",
-      "Style": "casual",
-      "Warranty": "1 Year Official Guarantee"
-    },
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL"
-    ],
-    "colors": [
-      "#000000",
-      "#4F46E5"
-    ],
-    "image": "/uploads/prod-1792684619475-f3ae2e53.png",
-    "img": "/uploads/prod-1792684619475-f3ae2e53.png",
-    "images": [
-      "/uploads/prod-1792684619475-f3ae2e53.png"
-    ],
-    "createdAt": "2026-10-22T15:57:08.775Z",
-    "createdBy": "admin@shop.co"
   },
   {
     "id": 1792684490358,
@@ -1470,7 +1374,7 @@
     "id": 1792682633372,
     "sku": "PRD-160064",
     "brand": "SHOP.CO",
-    "title": "shirt",
+    "title": "Executive Oxford Formal Shirt",
     "price": 500,
     "originalPrice": 7000,
     "discountPercent": 93,
@@ -1508,19 +1412,19 @@
       "#000000",
       "#4F46E5"
     ],
-    "img": "C:\\Users\\akhil\\Pictures\\Screenshots\\Screenshot 2026-10-22 205235.png",
+    "img": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600&auto=format&fit=crop&q=80",
     "images": [
-      "C:\\Users\\akhil\\Pictures\\Screenshots\\Screenshot 2026-10-22 205235.png"
+      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600&auto=format&fit=crop&q=80"
     ],
     "createdAt": "2026-10-22T15:23:53.372Z",
     "createdBy": "admin@shop.co",
-    "image": "C:\\Users\\akhil\\Pictures\\Screenshots\\Screenshot 2026-10-22 205235.png"
+    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600&auto=format&fit=crop&q=80"
   },
   {
     "id": 1792682364686,
     "sku": "PRD-543828",
     "brand": "puma",
-    "title": "shirt",
+    "title": "Puma Performance Team Jersey",
     "price": 500,
     "originalPrice": 700,
     "discountPercent": 29,
@@ -1558,13 +1462,13 @@
       "#000000",
       "#4F46E5"
     ],
-    "img": "C:\\Users\\akhil\\Downloads\\PUMA-x-ASTON-MARTIN-ARAMCO-F1®-TEAM-Men's-Replica-Stroll-Tee.avif",
+    "img": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=600&auto=format&fit=crop&q=80",
     "images": [
-      "C:\\Users\\akhil\\Downloads\\PUMA-x-ASTON-MARTIN-ARAMCO-F1®-TEAM-Men's-Replica-Stroll-Tee.avif"
+      "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=600&auto=format&fit=crop&q=80"
     ],
     "createdAt": "2026-10-22T15:19:24.687Z",
     "createdBy": "admin@shop.co",
-    "image": "C:\\Users\\akhil\\Downloads\\PUMA-x-ASTON-MARTIN-ARAMCO-F1®-TEAM-Men's-Replica-Stroll-Tee.avif"
+    "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=600&auto=format&fit=crop&q=80"
   },
   {
     "id": 1792681571834,
