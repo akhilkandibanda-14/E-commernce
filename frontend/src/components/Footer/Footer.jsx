@@ -19,7 +19,7 @@ const Footer = () => {
               />
               <div className="footer-brand-text-block">
                 <span className="logo-wordmark">Giftingwellness</span>
-                <span className="logo-subtitle">— Corporate Gifting Solutions —</span>
+                <span className="logo-subtitle">Corporate gifting solutions</span>
               </div>
             </Link>
             <p className="footer-brand-desc">
@@ -27,11 +27,11 @@ const Footer = () => {
             </p>
             <div className="footer-contact-snippet">
               <p>
-                <i className="fa-solid fa-phone" style={{ marginRight: "6px", color: "#b65c45" }}></i>
+                <i className="fa-solid fa-phone" style={{ marginRight: "6px", color: "var(--ribbon)" }}></i>
                 {contactInfo.phonePrimary}
               </p>
               <p>
-                <i className="fa-solid fa-envelope" style={{ marginRight: "6px", color: "#b65c45" }}></i>
+                <i className="fa-solid fa-envelope" style={{ marginRight: "6px", color: "var(--ribbon)" }}></i>
                 {contactInfo.emailBulk}
               </p>
             </div>
@@ -128,7 +128,7 @@ const Footer = () => {
 
           <div className="footer-payment-methods">
             <span className="payment-badge-text">
-              <i className="fa-solid fa-shield-halved" style={{ marginRight: "6px", color: "#10b981" }}></i>
+              <i className="fa-solid fa-shield-halved" style={{ marginRight: "6px", color: "var(--success)" }}></i>
               Official GST 18% Tax Billing · Pan-India Courier Dispatch
             </span>
           </div>

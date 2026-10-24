@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useAuth } from "../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
+import { DEMO_LOGIN_ENABLED } from "../../utils/env";
 
 const AuthModal = () => {
   const {
@@ -160,7 +161,7 @@ const AuthModal = () => {
         </div>
 
         {/* Quick Demo Login Callout */}
-        {authModalTab === "user" && (
+        {DEMO_LOGIN_ENABLED && authModalTab === "user" && (
           <div className="demo-callout customer-demo">
             <div className="demo-callout-info">
               <span className="demo-pill">Quick Demo</span>
@@ -192,12 +193,12 @@ const AuthModal = () => {
                     gap: "12px",
                     width: "100%",
                     padding: "12px 18px",
-                    background: "#ffffff",
-                    border: "1px solid #cbd5e1",
+                    background: "var(--paper)",
+                    border: "1px solid var(--line-strong)",
                     borderRadius: "10px",
                     fontSize: "14px",
                     fontWeight: "700",
-                    color: "#0f172a",
+                    color: "var(--ink)",
                     cursor: "pointer",
                     boxShadow: "0 1px 3px rgba(0,0,0,0.06)",
                     transition: "all 0.15s ease",
@@ -213,13 +214,13 @@ const AuthModal = () => {
                 </button>
 
                 <div style={{ display: "flex", alignItems: "center", margin: "4px 0" }}>
-                  <div style={{ flex: 1, height: "1px", background: "#e2e8f0" }}></div>
-                  <span style={{ padding: "0 10px", fontSize: "11px", color: "#94a3b8", textTransform: "uppercase", fontWeight: "600" }}>or with account email</span>
-                  <div style={{ flex: 1, height: "1px", background: "#e2e8f0" }}></div>
+                  <div style={{ flex: 1, height: "1px", background: "var(--line)" }}></div>
+                  <span style={{ padding: "0 10px", fontSize: "11px", color: "var(--muted)", textTransform: "uppercase", fontWeight: "600" }}>or with account email</span>
+                  <div style={{ flex: 1, height: "1px", background: "var(--line)" }}></div>
                 </div>
               </div>
             ) : (
-              <div style={{ background: "#f8fafc", border: "1px dashed #cbd5e1", padding: "10px 14px", borderRadius: "8px", fontSize: "12px", color: "#475569", display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+              <div style={{ background: "var(--ivory)", border: "1px dashed var(--line-strong)", padding: "10px 14px", borderRadius: "8px", fontSize: "12px", color: "var(--ink-soft)", display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
                 <i className="fa-brands fa-google" style={{ color: "#4285F4", fontSize: "15px" }}></i>
                 <span>Google & Clerk Login Ready: Add <code>VITE_CLERK_PUBLISHABLE_KEY</code> in <code>frontend/.env</code> to activate.</span>
               </div>
@@ -227,7 +228,7 @@ const AuthModal = () => {
           </div>
         )}
 
-        {authModalTab === "admin" && (
+        {DEMO_LOGIN_ENABLED && authModalTab === "admin" && (
           <div className="demo-callout admin-demo">
             <div className="demo-callout-info">
               <span className="demo-pill admin-pill">Admin Access</span>
@@ -250,7 +251,7 @@ const AuthModal = () => {
             <img
               src="/giftingwellness-logo.png"
               alt="Giftingwellness Logo"
-              style={{ width: "50px", height: "50px", borderRadius: "50%", objectFit: "contain", background: "#ffffff", boxShadow: "0 2px 8px rgba(0,0,0,0.08)" }}
+              style={{ width: "50px", height: "50px", borderRadius: "50%", objectFit: "contain", background: "var(--paper)", boxShadow: "0 2px 8px rgba(0,0,0,0.08)" }}
             />
           </div>
           <h2 id="auth-modal-title" className="auth-title">
@@ -343,7 +344,7 @@ const AuthModal = () => {
               <input
                 id="auth-password"
                 type={showPassword ? "text" : "password"}
-                placeholder={authModalTab === "admin" ? "admin123" : "••••••••"}
+                placeholder="••••••••"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 autoComplete={authModalTab === "register" ? "new-password" : "current-password"}
@@ -378,14 +379,14 @@ const AuthModal = () => {
             </div>
           )}
 
-          {authModalTab === "admin" && (
+          {DEMO_LOGIN_ENABLED && authModalTab === "admin" && (
             <div className="admin-hint-box">
               <i className="fa-solid fa-key"></i>
               <span>Default Credentials: <strong>admin@giftingwellness.com</strong> / <strong>admin123</strong></span>
             </div>
           )}
 
-          {authModalTab === "user" && (
+          {DEMO_LOGIN_ENABLED && authModalTab === "user" && (
             <div className="customer-hint-box">
               <i className="fa-solid fa-user-tag"></i>
               <span>Default Credentials: <strong>user@giftingwellness.com</strong> / <strong>user123</strong></span>

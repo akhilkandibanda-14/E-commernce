@@ -1,36 +1,85 @@
 @layer base {
   :root {
-    /* Luxury Palette Tokens */
-    --bg-primary: #F8F6F1;
-    --text-primary: #1C1C1C;
-    --accent-forest: #244B3C;
-    --accent-forest-hover: #1b382d;
-    --bg-secondary: #EAE4D9;
-    --border-light: #D8D4CC;
-    --border-subtle: #E8E4DC;
-    --accent-terracotta: #B65C45;
-    --white: #FFFFFF;
-    --muted-gray: #6B6760;
+    /* Gifting Wellness palette */
+    --ivory: #F6F2E9;          /* page canvas */
+    --paper: #FFFDF8;          /* cards, drawers, form fields */
+    --linen: #EDE6D6;          /* secondary surfaces, image wells */
+    --forest: #1E3B31;         /* primary actions, header, footer */
+    --forest-deep: #142A22;    /* primary hover */
+    --sage: #8FA38A;           /* quiet accents, selected chips */
+    --sage-tint: #E3E9DE;      /* success / selected backgrounds */
+    --champagne: #CBB27E;      /* ribbon rules and highlights (decorative only) */
+    --champagne-tint: #F2EAD7; /* announcement chips, hover wash */
+    --ink: #1D2421;            /* body text and headings */
+    --ink-soft: #3E4842;       /* secondary text */
+    --muted: #66706A;          /* captions, meta text (4.8:1 on ivory) */
+    --line: #DCD4C3;           /* borders */
+    --line-strong: #C2B8A3;    /* input borders, dividers that must be seen */
+    --ribbon: #B8322D;         /* logo red: discounts, wishlist, required marks */
+    --success: #2F6B4F;
+    --warning: #9A6212;
+    --danger: #B3261E;
+    --danger-tint: #F8E4E1;
+    --star: #B8892E;
 
-    /* Legacy mapping for backward compatibility */
+    /* Legacy names kept so older stylesheets pick up the palette */
+    --bg-primary: var(--ivory);
+    --bg-secondary: var(--linen);
+    --text-primary: var(--ink);
+    --accent-forest: var(--forest);
+    --accent-forest-hover: var(--forest-deep);
+    --border-light: var(--line);
+    --border-subtle: #E7E0D0;
+    --accent-terracotta: var(--ribbon);
+    --white: var(--paper);
+    --muted-gray: var(--muted);
     --background-color: var(--bg-primary);
     --hr-border-color: var(--border-light);
     --footer-subscribe-height: 160px;
 
     /* Typography */
-    --font-heading: 'Playfair Display', Georgia, serif;
-    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-heading: 'Newsreader', 'Iowan Old Style', Georgia, serif;
+    --font-body: 'Outfit', 'Segoe UI', system-ui, sans-serif;
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.375rem;
+    --text-2xl: 1.75rem;
+    --text-3xl: clamp(1.9rem, 1.4rem + 1.6vw, 2.6rem);
+    --text-display: clamp(2.4rem, 1.5rem + 3.6vw, 4.6rem);
 
-    /* Elevation */
-    --shadow-sm: 0 2px 8px rgba(28, 28, 28, 0.04);
-    --shadow-md: 0 8px 24px rgba(28, 28, 28, 0.06);
-    --shadow-lg: 0 16px 40px rgba(28, 28, 28, 0.09);
+    /* Spacing (4px base) */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 24px;
+    --space-6: 32px;
+    --space-7: 48px;
+    --space-8: 72px;
+    --space-9: 112px;
 
-    /* Radius */
+    /* Elevation: used only for things that float (drawers, menus, toasts) */
+    --shadow-sm: 0 1px 2px rgba(20, 42, 34, 0.06);
+    --shadow-md: 0 10px 28px rgba(20, 42, 34, 0.10);
+    --shadow-lg: 0 24px 60px rgba(20, 42, 34, 0.16);
+
+    /* Radius by hierarchy: controls small, media medium, the hero arch large */
     --radius-sm: 4px;
     --radius-md: 8px;
-    --radius-lg: 14px;
+    --radius-lg: 12px;
     --radius-full: 9999px;
+
+    /* Controls */
+    --control-h: 48px;
+    --control-h-sm: 40px;
+    --focus-ring: 0 0 0 2px var(--paper), 0 0 0 4px var(--forest);
+
+    /* Motion */
+    --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+    --dur-fast: 140ms;
+    --dur: 220ms;
   }
 
   *,
@@ -39,14 +88,21 @@
     box-sizing: border-box;
   }
 
+  html {
+    overflow-x: clip;
+  }
+
   body {
     font-family: var(--font-body);
+    font-size: var(--text-base);
     background-color: var(--bg-primary);
     color: var(--text-primary);
     margin: 0;
     line-height: 1.6;
+    overflow-x: clip;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-variant-numeric: lining-nums;
   }
 
   main {
@@ -56,10 +112,11 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     color: var(--text-primary);
-    font-weight: 600;
-    line-height: 1.25;
-    letter-spacing: -0.015em;
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
     margin: 0;
+    text-wrap: balance;
   }
   ul,
   li,
@@ -75,16 +132,73 @@
   a,
   button {
     all: unset;
+    /* all: unset also resets box-sizing; restore it so full-width buttons fit their container. */
+    box-sizing: border-box;
     cursor: pointer;
   }
   button {
     text-align: center;
+  }
+  button:disabled {
+    cursor: not-allowed;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  ::selection {
+    background: var(--champagne-tint);
+    color: var(--ink);
+  }
+
+  /* The resets above remove native outlines; restore a visible ring for keyboard users. */
+  :focus-visible {
+    outline: 2px solid var(--forest);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  .sr-only:focus-visible {
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    width: auto;
+    height: auto;
+    clip: auto;
+    padding: 10px 16px;
+    background: var(--forest);
+    color: var(--paper);
+    z-index: 1000;
+    border-radius: var(--radius-sm);
   }
 
   .ax-button {
     all: unset;
     outline: revert;
     box-sizing: border-box;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 
   @media (max-width: 1450px) {

@@ -10,20 +10,19 @@ const BrandStorySection = () => {
         <div className="brand-story-media">
           <div className="brand-story-img-container">
             <img
-              src={aboutUs?.image || "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=1000&q=80"}
-              alt="Giftingwellness bespoke corporate gift packaging studio"
+              src={aboutUs?.image || "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1000&q=80"}
+              alt="Kraft jute tote bag ready for logo printing"
               className="brand-story-img"
               loading="lazy"
             />
             <div className="brand-story-caption">
-              <span className="caption-year">{aboutUs?.captionYear || "EST. 2019 • HYDERABAD"}</span>
+              <span className="caption-year">{aboutUs?.captionYear || "Since 2019, Hyderabad"}</span>
               <span className="caption-detail">{aboutUs?.captionDetail || "Giftingwellness Corporate Solutions"}</span>
             </div>
           </div>
         </div>
 
         <div className="brand-story-content">
-          <span className="section-kicker">{aboutUs?.kicker || "About Giftingwellness"}</span>
           <h2 className="brand-story-title title">{aboutUs?.title || "Thoughtfully Chosen. Meaningfully Delivered."}</h2>
 
           <div className="brand-story-copy">
@@ -79,7 +78,7 @@ const BrandStorySection = () => {
 
           <div className="brand-story-cta-row" style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
             <Link to="/about" className="btn-luxury brand-story-btn">
-              Read About Us <i className="fa-solid fa-arrow-right"></i>
+              Read About Us
             </Link>
             <Link to={aboutUs?.buttonLink || "/products"} className="btn-luxury btn-outline brand-story-btn">
               {aboutUs?.buttonText || "Explore Corporate Catalog"}

@@ -1,5 +1,6 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import ClerkBridge from "./ClerkBridge.jsx";
+import { DEMO_LOGIN_ENABLED } from "../utils/env";
 
 const AuthContext = createContext(null);
 
@@ -155,6 +156,9 @@ export const AuthProvider = ({ children, clerkEnabled = false }) => {
 
   // One-click demo login (dev mode)
   const quickLogin = async (role = "user") => {
+    if (!DEMO_LOGIN_ENABLED) {
+      return { success: false, message: "Demo sign-in is only available in local development." };
+    }
     if (role === "admin") {
       try {
         return await login("admin@giftingwellness.com", "admin123", "admin");

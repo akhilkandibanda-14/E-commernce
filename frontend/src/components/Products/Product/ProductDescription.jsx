@@ -3,6 +3,7 @@ import SizeSelector, { normalizeSize } from "../SizeSelector";
 import StarRating from "../../Home/Reviews/StarRating";
 import AddToCart from "./AddToCart";
 import BulkQuoteModal from "./BulkQuoteModal";
+import { formatINR } from "../../../utils/format";
 
 const ProductDescription = ({
   details,
@@ -52,7 +53,6 @@ const ProductDescription = ({
   const originalPrice = details.originalPrice ? Number(details.originalPrice) : null;
   const ratingValue = details.rating?.rate || 4.9;
   const ratingCount = details.rating?.count || 320;
-  const currencySymbol = "₹";
 
   // Selected branding extra cost
   const brandingExtra =
@@ -93,16 +93,15 @@ const ProductDescription = ({
         {/* Pricing Row */}
         <div className="product-price-row-detail">
           <p className="product-price-current">
-            {currencySymbol}
-            {numPrice.toFixed(2)}
+            {formatINR(numPrice)}
             {details.unitLabel && (
               <span className="price-unit-label"> / {details.unitLabel}</span>
             )}
           </p>
           {originalPrice && originalPrice > numPrice && (
             <span className="product-price-original">
-              {currencySymbol}
-              {originalPrice.toFixed(2)}
+              <span className="sr-only">Was </span>
+              {formatINR(originalPrice)}
             </span>
           )}
           {details.discountPercent > 0 && (

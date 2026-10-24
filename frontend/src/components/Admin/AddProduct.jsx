@@ -541,7 +541,7 @@ const AddProduct = () => {
                   <div className="form-grid-3">
                     <div className="form-group">
                       <label htmlFor="prod-category">
-                        Category * <small style={{ fontWeight: 400, color: "#64748b" }}>(Mega Menu Section)</small>
+                        Category * <small style={{ fontWeight: 400, color: "var(--muted)" }}>(Mega Menu Section)</small>
                       </label>
                       <select
                         id="prod-category"
@@ -560,7 +560,7 @@ const AddProduct = () => {
 
                     <div className="form-group">
                       <label htmlFor="prod-subcategory">
-                        Subcategory * <small style={{ fontWeight: 500, color: "#244b3c" }}>({currentSubcategories.length} available for {category})</small>
+                        Subcategory * <small style={{ fontWeight: 500, color: "var(--forest)" }}>({currentSubcategories.length} available for {category})</small>
                       </label>
                       <select
                         id="prod-subcategory"
@@ -596,9 +596,9 @@ const AddProduct = () => {
                   </div>
 
                   {subcategory === "__custom__" && (
-                    <div className="form-group" style={{ marginTop: "12px", background: "#f8f6f1", padding: "12px 16px", borderRadius: "8px", border: "1px dashed #d8d4cc" }}>
+                    <div className="form-group" style={{ marginTop: "12px", background: "var(--ivory)", padding: "12px 16px", borderRadius: "8px", border: "1px dashed var(--line)" }}>
                       <label htmlFor="custom-subcategory" style={{ display: "flex", alignItems: "center", gap: "6px", fontWeight: 600 }}>
-                        <i className="fa-solid fa-pen-nib" style={{ color: "#244b3c" }}></i> Type Custom Subcategory Name *
+                        <i className="fa-solid fa-pen-nib" style={{ color: "var(--forest)" }}></i> Type Custom Subcategory Name *
                       </label>
                       <input
                         id="custom-subcategory"
@@ -609,7 +609,7 @@ const AddProduct = () => {
                         onChange={(e) => setCustomSubcategory(e.target.value)}
                         required={subcategory === "__custom__"}
                       />
-                      <small style={{ color: "#64748b", marginTop: "4px", display: "block" }}>
+                      <small style={{ color: "var(--muted)", marginTop: "4px", display: "block" }}>
                         Customers will be able to filter and find this product under this exact subcategory name.
                       </small>
                     </div>
@@ -704,7 +704,7 @@ const AddProduct = () => {
                       </span>
                     )}
                   </div>
-                  <hr style={{ margin: "14px 0 18px 0", border: "none", borderTop: "1px solid #f1f5f9" }} />
+                  <hr style={{ margin: "14px 0 18px 0", border: "none", borderTop: "1px solid var(--linen)" }} />
 
                   {/* Hidden file input for file picker dialog */}
                   <input

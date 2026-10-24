@@ -8,7 +8,6 @@ const GiftingServicesSection = () => {
     <section className="gifting-services-section" aria-label="Bespoke Gifting Services">
       <div className="container">
         <div className="section-header-editorial">
-          <span className="section-kicker">End-to-End Solutions</span>
           <h2 className="section-title-editorial title">Tailored Gifting Services</h2>
           <p className="section-subtitle-editorial">
             Comprehensive gifting management from concept curation and mockup proofs to packaging and doorstep distribution.
@@ -31,7 +30,7 @@ const GiftingServicesSection = () => {
 
               <div className="home-service-footer">
                 <Link to={srv.link} className="home-service-link">
-                  Explore Products <i className="fa-solid fa-arrow-right"></i>
+                  Explore Products
                 </Link>
               </div>
             </div>

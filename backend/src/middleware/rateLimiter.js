@@ -91,3 +91,10 @@ export const quoteRequestLimiter = createRateLimiter({
   max: 10,
   message: "Too many quote requests submitted. Please wait before submitting another inquiry.",
 });
+
+// Rate limiter for bulk enquiries and catalogue requests (10 per 15 minutes)
+export const enquiryLimiter = createRateLimiter({
+  windowMs: 15 * 60 * 1000,
+  max: 10,
+  message: "Too many enquiries submitted. Please wait before sending another.",
+});

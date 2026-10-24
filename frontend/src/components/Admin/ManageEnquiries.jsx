@@ -114,13 +114,13 @@ const ManageEnquiries = () => {
     switch (status) {
       case "quoted":
       case "accepted":
-        return { bg: "#ecfdf5", color: "#065f46", border: "#a7f3d0", label: status.toUpperCase() };
+        return { bg: "var(--sage-tint)", color: "var(--success)", border: "#a7f3d0", label: status.toUpperCase() };
       case "mockup_in_progress":
         return { bg: "#eff6ff", color: "#1e40af", border: "#bfdbfe", label: "MOCKUP IN PROGRESS" };
       case "closed":
-        return { bg: "#f1f5f9", color: "#475569", border: "#cbd5e1", label: "CLOSED" };
+        return { bg: "var(--linen)", color: "var(--ink-soft)", border: "var(--line-strong)", label: "CLOSED" };
       default:
-        return { bg: "#fef3c7", color: "#92400e", border: "#fde68a", label: "PENDING REVIEW" };
+        return { bg: "var(--champagne-tint)", color: "var(--warning)", border: "#fde68a", label: "PENDING REVIEW" };
     }
   };
 
@@ -159,7 +159,7 @@ const ManageEnquiries = () => {
           )}
 
           {/* Tab Selector & Search */}
-          <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: "14px", marginBottom: "20px", background: "#ffffff", padding: "16px", borderRadius: "12px", border: "1px solid #e2e8f0" }}>
+          <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: "14px", marginBottom: "20px", background: "var(--paper)", padding: "16px", borderRadius: "12px", border: "1px solid var(--line)" }}>
             <div style={{ display: "flex", gap: "10px" }}>
               <button
                 type="button"
@@ -168,8 +168,8 @@ const ManageEnquiries = () => {
                   padding: "10px 18px",
                   borderRadius: "8px",
                   border: "none",
-                  background: activeTab === "quotes" ? "#0d3b2e" : "#f1f5f9",
-                  color: activeTab === "quotes" ? "#ffffff" : "#334155",
+                  background: activeTab === "quotes" ? "var(--forest)" : "var(--linen)",
+                  color: activeTab === "quotes" ? "var(--paper)" : "var(--ink-soft)",
                   fontWeight: "700",
                   fontSize: "14px",
                   cursor: "pointer",
@@ -185,8 +185,8 @@ const ManageEnquiries = () => {
                   padding: "10px 18px",
                   borderRadius: "8px",
                   border: "none",
-                  background: activeTab === "enquiries" ? "#0d3b2e" : "#f1f5f9",
-                  color: activeTab === "enquiries" ? "#ffffff" : "#334155",
+                  background: activeTab === "enquiries" ? "var(--forest)" : "var(--linen)",
+                  color: activeTab === "enquiries" ? "var(--paper)" : "var(--ink-soft)",
                   fontWeight: "700",
                   fontSize: "14px",
                   cursor: "pointer",
@@ -203,24 +203,24 @@ const ManageEnquiries = () => {
                 placeholder="Search by company, email, ID..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                style={{ width: "100%", padding: "10px 14px 10px 36px", border: "1px solid #cbd5e1", borderRadius: "8px", fontSize: "14px" }}
+                style={{ width: "100%", padding: "10px 14px 10px 36px", border: "1px solid var(--line-strong)", borderRadius: "8px", fontSize: "14px" }}
               />
-              <i className="fa-solid fa-magnifying-glass" style={{ position: "absolute", left: "12px", top: "14px", color: "#94a3b8" }}></i>
+              <i className="fa-solid fa-magnifying-glass" style={{ position: "absolute", left: "12px", top: "14px", color: "var(--muted)" }}></i>
             </div>
           </div>
 
           {loading ? (
             <div style={{ textAlign: "center", padding: "60px 20px" }}>
-              <i className="fa-solid fa-circle-notch fa-spin fa-2x" style={{ color: "#0d3b2e" }}></i>
-              <p style={{ marginTop: "12px", color: "#64748b" }}>Loading inquiries...</p>
+              <i className="fa-solid fa-circle-notch fa-spin fa-2x" style={{ color: "var(--forest)" }}></i>
+              <p style={{ marginTop: "12px", color: "var(--muted)" }}>Loading inquiries...</p>
             </div>
           ) : activeTab === "quotes" ? (
             /* Quotes View */
             filteredQuotes.length === 0 ? (
-              <div style={{ textAlign: "center", padding: "60px 20px", background: "#ffffff", borderRadius: "12px", border: "1px solid #e2e8f0" }}>
-                <i className="fa-solid fa-clipboard-question fa-3x" style={{ color: "#cbd5e1", marginBottom: "16px" }}></i>
-                <h3 style={{ fontSize: "18px", color: "#1e293b", margin: "0 0 6px" }}>No bulk quotations requested yet</h3>
-                <p style={{ color: "#64748b", margin: 0 }}>Customer quote submissions from product pages will appear here in real-time.</p>
+              <div style={{ textAlign: "center", padding: "60px 20px", background: "var(--paper)", borderRadius: "12px", border: "1px solid var(--line)" }}>
+                <i className="fa-solid fa-clipboard-question fa-3x" style={{ color: "var(--line-strong)", marginBottom: "16px" }}></i>
+                <h3 style={{ fontSize: "18px", color: "var(--ink)", margin: "0 0 6px" }}>No bulk quotations requested yet</h3>
+                <p style={{ color: "var(--muted)", margin: 0 }}>Customer quote submissions from product pages will appear here in real-time.</p>
               </div>
             ) : (
               <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
@@ -230,17 +230,17 @@ const ManageEnquiries = () => {
                     <div
                       key={q.quoteId}
                       style={{
-                        background: "#ffffff",
+                        background: "var(--paper)",
                         borderRadius: "12px",
-                        border: "1px solid #e2e8f0",
+                        border: "1px solid var(--line)",
                         padding: "20px",
                         boxShadow: "0 2px 4px rgba(0,0,0,0.02)",
                       }}
                     >
-                      <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "flex-start", gap: "12px", borderBottom: "1px solid #f1f5f9", paddingBottom: "12px", marginBottom: "14px" }}>
+                      <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "flex-start", gap: "12px", borderBottom: "1px solid var(--linen)", paddingBottom: "12px", marginBottom: "14px" }}>
                         <div>
                           <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                            <h2 style={{ fontSize: "18px", fontWeight: "700", color: "#0f172a", margin: 0 }}>
+                            <h2 style={{ fontSize: "18px", fontWeight: "700", color: "var(--ink)", margin: 0 }}>
                               {q.companyName}
                             </h2>
                             <span
@@ -257,7 +257,7 @@ const ManageEnquiries = () => {
                               {badge.label}
                             </span>
                           </div>
-                          <span style={{ fontSize: "12px", color: "#64748b" }}>
+                          <span style={{ fontSize: "12px", color: "var(--muted)" }}>
                             Lead #{q.quoteId} · Requested on {new Date(q.createdAt).toLocaleString("en-IN", { dateStyle: "medium", timeStyle: "short" })}
                           </span>
                         </div>
@@ -267,8 +267,8 @@ const ManageEnquiries = () => {
                             href={`mailto:${q.contactEmail}?subject=Giftingwellness Quotation: ${encodeURIComponent(q.productTitle)}`}
                             style={{
                               padding: "8px 14px",
-                              background: "#f1f5f9",
-                              color: "#0f172a",
+                              background: "var(--linen)",
+                              color: "var(--ink)",
                               borderRadius: "8px",
                               fontSize: "13px",
                               fontWeight: "600",
@@ -288,7 +288,7 @@ const ManageEnquiries = () => {
                               style={{
                                 padding: "8px 14px",
                                 background: "#25d366",
-                                color: "#ffffff",
+                                color: "var(--paper)",
                                 borderRadius: "8px",
                                 fontSize: "13px",
                                 fontWeight: "600",
@@ -306,8 +306,8 @@ const ManageEnquiries = () => {
                             onClick={() => handleOpenEditQuote(q)}
                             style={{
                               padding: "8px 14px",
-                              background: "#0d3b2e",
-                              color: "#ffffff",
+                              background: "var(--forest)",
+                              color: "var(--paper)",
                               borderRadius: "8px",
                               border: "none",
                               fontSize: "13px",
@@ -322,43 +322,43 @@ const ManageEnquiries = () => {
 
                       {/* Quote Content Grid */}
                       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "16px" }}>
-                        <div style={{ background: "#f8fafc", padding: "14px", borderRadius: "8px" }}>
-                          <h4 style={{ fontSize: "12px", textTransform: "uppercase", color: "#64748b", margin: "0 0 6px" }}>Product & Quantity</h4>
-                          <p style={{ margin: "0 0 4px", fontWeight: "700", color: "#0f172a" }}>{q.productTitle}</p>
-                          <p style={{ margin: 0, fontSize: "13px", color: "#475569" }}>Quantity: <strong>{q.quantity} units</strong></p>
+                        <div style={{ background: "var(--ivory)", padding: "14px", borderRadius: "8px" }}>
+                          <h4 style={{ fontSize: "12px", textTransform: "uppercase", color: "var(--muted)", margin: "0 0 6px" }}>Product & Quantity</h4>
+                          <p style={{ margin: "0 0 4px", fontWeight: "700", color: "var(--ink)" }}>{q.productTitle}</p>
+                          <p style={{ margin: 0, fontSize: "13px", color: "var(--ink-soft)" }}>Quantity: <strong>{q.quantity} units</strong></p>
                           {q.estimatedTotal && (
-                            <p style={{ margin: "4px 0 0", fontSize: "13px", color: "#0d3b2e", fontWeight: "700" }}>
+                            <p style={{ margin: "4px 0 0", fontSize: "13px", color: "var(--forest)", fontWeight: "700" }}>
                               Est. Value: ₹{Number(q.estimatedTotal).toFixed(2)} (inc. 18% GST)
                             </p>
                           )}
                         </div>
 
-                        <div style={{ background: "#f8fafc", padding: "14px", borderRadius: "8px" }}>
-                          <h4 style={{ fontSize: "12px", textTransform: "uppercase", color: "#64748b", margin: "0 0 6px" }}>Branding Details</h4>
+                        <div style={{ background: "var(--ivory)", padding: "14px", borderRadius: "8px" }}>
+                          <h4 style={{ fontSize: "12px", textTransform: "uppercase", color: "var(--muted)", margin: "0 0 6px" }}>Branding Details</h4>
                           <p style={{ margin: "0 0 4px", fontSize: "13px" }}>Branding Method: <strong>{q.brandingOption || "UV Print"}</strong></p>
                           {q.customText && (
-                            <p style={{ margin: 0, fontSize: "13px", color: "#0d3b2e" }}>
+                            <p style={{ margin: 0, fontSize: "13px", color: "var(--forest)" }}>
                               Logo / Text: <strong>"{q.customText}"</strong>
                             </p>
                           )}
                           {q.notes && (
-                            <p style={{ margin: "6px 0 0", fontSize: "12px", color: "#64748b", fontStyle: "italic" }}>
+                            <p style={{ margin: "6px 0 0", fontSize: "12px", color: "var(--muted)", fontStyle: "italic" }}>
                               Notes: "{q.notes}"
                             </p>
                           )}
                         </div>
 
-                        <div style={{ background: "#f8fafc", padding: "14px", borderRadius: "8px" }}>
-                          <h4 style={{ fontSize: "12px", textTransform: "uppercase", color: "#64748b", margin: "0 0 6px" }}>Contact Person</h4>
-                          <p style={{ margin: "0 0 4px", fontWeight: "600", color: "#0f172a" }}>{q.contactName || "Corporate Buyer"}</p>
-                          <p style={{ margin: "0 0 4px", fontSize: "13px", color: "#475569" }}>{q.contactEmail}</p>
-                          {q.contactPhone && <p style={{ margin: 0, fontSize: "13px", color: "#475569" }}>{q.contactPhone}</p>}
-                          {q.pincode && <p style={{ margin: "4px 0 0", fontSize: "12px", color: "#64748b" }}>Pincode: {q.pincode}</p>}
+                        <div style={{ background: "var(--ivory)", padding: "14px", borderRadius: "8px" }}>
+                          <h4 style={{ fontSize: "12px", textTransform: "uppercase", color: "var(--muted)", margin: "0 0 6px" }}>Contact Person</h4>
+                          <p style={{ margin: "0 0 4px", fontWeight: "600", color: "var(--ink)" }}>{q.contactName || "Corporate Buyer"}</p>
+                          <p style={{ margin: "0 0 4px", fontSize: "13px", color: "var(--ink-soft)" }}>{q.contactEmail}</p>
+                          {q.contactPhone && <p style={{ margin: 0, fontSize: "13px", color: "var(--ink-soft)" }}>{q.contactPhone}</p>}
+                          {q.pincode && <p style={{ margin: "4px 0 0", fontSize: "12px", color: "var(--muted)" }}>Pincode: {q.pincode}</p>}
                         </div>
                       </div>
 
                       {q.adminNotes && (
-                        <div style={{ marginTop: "12px", padding: "10px", background: "#fefce8", border: "1px dashed #fef08a", borderRadius: "6px", fontSize: "13px", color: "#713f12" }}>
+                        <div style={{ marginTop: "12px", padding: "10px", background: "var(--champagne-tint)", border: "1px dashed #fef08a", borderRadius: "6px", fontSize: "13px", color: "#713f12" }}>
                           <strong>Internal Staff Note:</strong> {q.adminNotes}
                         </div>
                       )}
@@ -370,10 +370,10 @@ const ManageEnquiries = () => {
           ) : (
             /* General Enquiries View */
             filteredEnquiries.length === 0 ? (
-              <div style={{ textAlign: "center", padding: "60px 20px", background: "#ffffff", borderRadius: "12px", border: "1px solid #e2e8f0" }}>
-                <i className="fa-solid fa-inbox fa-3x" style={{ color: "#cbd5e1", marginBottom: "16px" }}></i>
-                <h3 style={{ fontSize: "18px", color: "#1e293b", margin: "0 0 6px" }}>No corporate enquiries yet</h3>
-                <p style={{ color: "#64748b", margin: 0 }}>Submissions from the header 'Bulk Enquiry' and lookbook download modals will appear here.</p>
+              <div style={{ textAlign: "center", padding: "60px 20px", background: "var(--paper)", borderRadius: "12px", border: "1px solid var(--line)" }}>
+                <i className="fa-solid fa-inbox fa-3x" style={{ color: "var(--line-strong)", marginBottom: "16px" }}></i>
+                <h3 style={{ fontSize: "18px", color: "var(--ink)", margin: "0 0 6px" }}>No corporate enquiries yet</h3>
+                <p style={{ color: "var(--muted)", margin: 0 }}>Submissions from the header 'Bulk Enquiry' and lookbook download modals will appear here.</p>
               </div>
             ) : (
               <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
@@ -381,19 +381,19 @@ const ManageEnquiries = () => {
                   <div
                     key={enq.enquiryId}
                     style={{
-                      background: "#ffffff",
+                      background: "var(--paper)",
                       borderRadius: "12px",
-                      border: "1px solid #e2e8f0",
+                      border: "1px solid var(--line)",
                       padding: "20px",
                       boxShadow: "0 2px 4px rgba(0,0,0,0.02)",
                     }}
                   >
                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "12px" }}>
                       <div>
-                        <h2 style={{ fontSize: "18px", fontWeight: "700", color: "#0f172a", margin: "0 0 4px" }}>
+                        <h2 style={{ fontSize: "18px", fontWeight: "700", color: "var(--ink)", margin: "0 0 4px" }}>
                           {enq.company || enq.name}
                         </h2>
-                        <span style={{ fontSize: "12px", color: "#64748b" }}>
+                        <span style={{ fontSize: "12px", color: "var(--muted)" }}>
                           Enquiry #{enq.enquiryId} · {new Date(enq.createdAt).toLocaleString("en-IN", { dateStyle: "medium", timeStyle: "short" })}
                         </span>
                       </div>
@@ -403,8 +403,8 @@ const ManageEnquiries = () => {
                           href={`mailto:${enq.email}?subject=Giftingwellness Corporate Gifting Enquiry`}
                           style={{
                             padding: "8px 14px",
-                            background: "#f1f5f9",
-                            color: "#0f172a",
+                            background: "var(--linen)",
+                            color: "var(--ink)",
                             borderRadius: "8px",
                             fontSize: "13px",
                             fontWeight: "600",
@@ -424,7 +424,7 @@ const ManageEnquiries = () => {
                             style={{
                               padding: "8px 14px",
                               background: "#25d366",
-                              color: "#ffffff",
+                              color: "var(--paper)",
                               borderRadius: "8px",
                               fontSize: "13px",
                               fontWeight: "600",
@@ -440,27 +440,27 @@ const ManageEnquiries = () => {
                       </div>
                     </div>
 
-                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "12px", background: "#f8fafc", padding: "14px", borderRadius: "8px", fontSize: "13px" }}>
+                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "12px", background: "var(--ivory)", padding: "14px", borderRadius: "8px", fontSize: "13px" }}>
                       <div>
-                        <span style={{ color: "#64748b" }}>Contact Person:</span>
+                        <span style={{ color: "var(--muted)" }}>Contact Person:</span>
                         <p style={{ margin: "2px 0 0", fontWeight: "600" }}>{enq.name}</p>
                       </div>
                       <div>
-                        <span style={{ color: "#64748b" }}>Category:</span>
+                        <span style={{ color: "var(--muted)" }}>Category:</span>
                         <p style={{ margin: "2px 0 0", fontWeight: "600" }}>{enq.category || "General Gifting"}</p>
                       </div>
                       <div>
-                        <span style={{ color: "#64748b" }}>Quantity Required:</span>
+                        <span style={{ color: "var(--muted)" }}>Quantity Required:</span>
                         <p style={{ margin: "2px 0 0", fontWeight: "600" }}>{enq.quantity || "100 units"}</p>
                       </div>
                       <div>
-                        <span style={{ color: "#64748b" }}>Custom Branding:</span>
+                        <span style={{ color: "var(--muted)" }}>Custom Branding:</span>
                         <p style={{ margin: "2px 0 0", fontWeight: "600" }}>{enq.customBranding || "Yes"}</p>
                       </div>
                     </div>
 
                     {enq.notes && (
-                      <p style={{ margin: "12px 0 0", fontSize: "13px", color: "#475569", background: "#f1f5f9", padding: "10px", borderRadius: "6px" }}>
+                      <p style={{ margin: "12px 0 0", fontSize: "13px", color: "var(--ink-soft)", background: "var(--linen)", padding: "10px", borderRadius: "6px" }}>
                         <strong>Requirements / Notes:</strong> {enq.notes}
                       </p>
                     )}
@@ -486,7 +486,7 @@ const ManageEnquiries = () => {
             >
               <div
                 style={{
-                  background: "#ffffff",
+                  background: "var(--paper)",
                   borderRadius: "14px",
                   maxWidth: "480px",
                   width: "100%",
@@ -495,13 +495,13 @@ const ManageEnquiries = () => {
                 }}
               >
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px" }}>
-                  <h3 style={{ margin: 0, fontSize: "18px", fontWeight: "700", color: "#0f172a" }}>
+                  <h3 style={{ margin: 0, fontSize: "18px", fontWeight: "700", color: "var(--ink)" }}>
                     Update Quote · #{editQuote.quoteId}
                   </h3>
                   <button
                     type="button"
                     onClick={() => setEditQuote(null)}
-                    style={{ background: "none", border: "none", fontSize: "18px", cursor: "pointer", color: "#94a3b8" }}
+                    style={{ background: "none", border: "none", fontSize: "18px", cursor: "pointer", color: "var(--muted)" }}
                   >
                     ✕
                   </button>
@@ -509,13 +509,13 @@ const ManageEnquiries = () => {
 
                 <form onSubmit={handleSaveQuoteStatus}>
                   <div style={{ marginBottom: "16px" }}>
-                    <label style={{ display: "block", fontSize: "13px", fontWeight: "600", color: "#334155", marginBottom: "6px" }}>
+                    <label style={{ display: "block", fontSize: "13px", fontWeight: "600", color: "var(--ink-soft)", marginBottom: "6px" }}>
                       Pipeline Status:
                     </label>
                     <select
                       value={quoteForm.status}
                       onChange={(e) => setQuoteForm({ ...quoteForm, status: e.target.value })}
-                      style={{ width: "100%", padding: "10px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "14px" }}
+                      style={{ width: "100%", padding: "10px", borderRadius: "8px", border: "1px solid var(--line-strong)", fontSize: "14px" }}
                     >
                       <option value="pending_review">Pending Review (New Lead)</option>
                       <option value="mockup_in_progress">Mockup In Progress (Design Team)</option>
@@ -526,7 +526,7 @@ const ManageEnquiries = () => {
                   </div>
 
                   <div style={{ marginBottom: "20px" }}>
-                    <label style={{ display: "block", fontSize: "13px", fontWeight: "600", color: "#334155", marginBottom: "6px" }}>
+                    <label style={{ display: "block", fontSize: "13px", fontWeight: "600", color: "var(--ink-soft)", marginBottom: "6px" }}>
                       Internal Staff Notes:
                     </label>
                     <textarea
@@ -534,7 +534,7 @@ const ManageEnquiries = () => {
                       placeholder="e.g. Shared quotation PDF via email at ₹310/pc for 250 units."
                       value={quoteForm.adminNotes}
                       onChange={(e) => setQuoteForm({ ...quoteForm, adminNotes: e.target.value })}
-                      style={{ width: "100%", padding: "10px", borderRadius: "8px", border: "1px solid #cbd5e1", fontSize: "14px" }}
+                      style={{ width: "100%", padding: "10px", borderRadius: "8px", border: "1px solid var(--line-strong)", fontSize: "14px" }}
                     />
                   </div>
 
@@ -542,14 +542,14 @@ const ManageEnquiries = () => {
                     <button
                       type="button"
                       onClick={() => setEditQuote(null)}
-                      style={{ padding: "10px 16px", borderRadius: "8px", border: "1px solid #cbd5e1", background: "#f8fafc", fontWeight: "600", cursor: "pointer" }}
+                      style={{ padding: "10px 16px", borderRadius: "8px", border: "1px solid var(--line-strong)", background: "var(--ivory)", fontWeight: "600", cursor: "pointer" }}
                     >
                       Cancel
                     </button>
                     <button
                       type="submit"
                       disabled={updating}
-                      style={{ padding: "10px 20px", borderRadius: "8px", border: "none", background: "#0d3b2e", color: "#ffffff", fontWeight: "600", cursor: "pointer" }}
+                      style={{ padding: "10px 20px", borderRadius: "8px", border: "none", background: "var(--forest)", color: "var(--paper)", fontWeight: "600", cursor: "pointer" }}
                     >
                       {updating ? "Saving..." : "Save Status"}
                     </button>

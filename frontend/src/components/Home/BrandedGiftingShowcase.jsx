@@ -8,7 +8,6 @@ const BrandedGiftingShowcase = () => {
     <section className="branded-showcase-section" aria-label="Authorized Brand Partners">
       <div className="container">
         <div className="section-header-editorial">
-          <span className="section-kicker">Authorized Corporate Partners</span>
           <h2 className="section-title-editorial title">{brands.length}+ Leading Brands for Corporate Gifting</h2>
           <p className="section-subtitle-editorial">
             Direct institutional pricing on India’s most trusted lifestyle, luggage, drinkware, and tech brands.

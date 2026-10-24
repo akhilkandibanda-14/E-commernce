@@ -397,7 +397,7 @@ const HamburgerMobile = ({
                 target="_blank"
                 rel="noreferrer"
                 onClick={handleNavClick}
-                style={{ color: "var(--accent-terracotta, #b65c45)", fontWeight: "600" }}
+                style={{ color: "var(--accent-terracotta, var(--ribbon))", fontWeight: "600" }}
               >
                 <i className="fa-solid fa-shield-halved"></i> Admin Portal ↗ (Port 5174)
               </a>

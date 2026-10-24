@@ -1,72 +1,78 @@
 import { useState } from "react";
+import { useAuth } from "../../context/AuthContext";
 
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+// Sends a catalogue request to the same enquiries inbox the sales team already works from.
 const NewsletterSection = () => {
+  const { token } = useAuth();
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState("idle"); // 'idle' | 'loading' | 'success' | 'error'
   const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    if (status === "loading") return;
     setErrorMessage("");
 
     const trimmed = email.trim().toLowerCase();
     if (!trimmed) {
       setStatus("error");
-      setErrorMessage("Please enter an email address.");
+      setErrorMessage("Enter your work email to receive the catalogue.");
       return;
     }
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(trimmed)) {
+    if (!EMAIL_REGEX.test(trimmed)) {
       setStatus("error");
-      setErrorMessage("Please enter a valid email address (e.g., name@example.com).");
+      setErrorMessage("Check the email address. It should look like name@company.com.");
       return;
-    }
-
-    // Duplicate subscription check via localStorage
-    try {
-      const stored = JSON.parse(localStorage.getItem("giftingwellness_newsletter_subscribers") || "[]");
-      if (stored.includes(trimmed)) {
-        setStatus("error");
-        setErrorMessage("This email is already subscribed to our gifting updates.");
-        return;
-      }
-    } catch {
-      // Ignore storage errors
     }
 
     setStatus("loading");
-    setTimeout(() => {
-      try {
-        const stored = JSON.parse(localStorage.getItem("giftingwellness_newsletter_subscribers") || "[]");
-        stored.push(trimmed);
-        localStorage.setItem("giftingwellness_newsletter_subscribers", JSON.stringify(stored));
-      } catch {
-        // Fallback
+    try {
+      const headers = { "Content-Type": "application/json" };
+      if (token) headers.Authorization = `Bearer ${token}`;
+      const res = await fetch("/api/enquiries", {
+        method: "POST",
+        headers,
+        body: JSON.stringify({
+          email: trimmed,
+          category: "Catalogue request",
+          notes: "Requested the corporate gifting catalogue from the home page.",
+        }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        setStatus("error");
+        setErrorMessage(data.message || "The request didn't go through. Try again in a moment.");
+        return;
       }
       setStatus("success");
-    }, 600);
+    } catch {
+      setStatus("error");
+      setErrorMessage("Couldn't reach the server. Check your connection and try again.");
+    }
   };
 
   return (
-    <section className="newsletter-editorial-section" aria-label="Newsletter Subscription">
+    <section className="newsletter-editorial-section" aria-labelledby="newsletter-title">
       <div className="container">
         <div className="newsletter-editorial-card">
-          <span className="newsletter-kicker">Corporate Lookbook 2026</span>
-          <h2 className="newsletter-headline title">Get Master Catalogues & Volume Slabs.</h2>
+          <h2 id="newsletter-title" className="newsletter-headline title">
+            Get the corporate catalogue
+          </h2>
           <p className="newsletter-subtext">
-            Subscribe to receive our latest 92-page PDF corporate gifting catalog, volume discount structures, and festive early-bird booking alerts.
+            Tell us where to send it. Our team emails the current catalogue with volume pricing,
+            usually within two working hours.
           </p>
 
           {status === "success" ? (
             <div className="newsletter-success-state" role="status">
               <div className="success-icon">
-                <i className="fa-solid fa-circle-check"></i>
+                <i className="fa-solid fa-circle-check" aria-hidden="true"></i>
               </div>
-              <h3 className="success-title">Catalogue Access Confirmed!</h3>
+              <h3 className="success-title">Request received</h3>
               <p className="success-desc">
-                Thank you! We have dispatched our 2026 Corporate Gifting Lookbook link to <strong>{email}</strong>. Use code{" "}
-                <span className="promo-code-pill">GIFT20</span> for volume discounts on your first corporate dispatch.
+                We&apos;ll send the catalogue to <strong>{email.trim()}</strong>.
               </p>
               <button
                 type="button"
@@ -77,7 +83,7 @@ const NewsletterSection = () => {
                 className="btn-luxury btn-outline"
                 style={{ marginTop: "16px" }}
               >
-                Subscribe another email
+                Send to another email
               </button>
             </div>
           ) : (
@@ -92,11 +98,12 @@ const NewsletterSection = () => {
                       setEmail(e.target.value);
                       if (status === "error") setStatus("idle");
                     }}
-                    placeholder="Enter your email address"
+                    placeholder="name@company.com"
                     className={`newsletter-input ${status === "error" ? "input-error" : ""}`}
-                    aria-label="Email address for newsletter"
+                    aria-label="Work email"
                     aria-invalid={status === "error"}
                     aria-describedby={status === "error" ? "newsletter-error" : undefined}
+                    autoComplete="email"
                     disabled={status === "loading"}
                     required
                   />
@@ -108,22 +115,22 @@ const NewsletterSection = () => {
                 >
                   {status === "loading" ? (
                     <>
-                      <i className="fa-solid fa-circle-notch fa-spin"></i> Subscribing...
+                      <i className="fa-solid fa-circle-notch fa-spin" aria-hidden="true"></i> Sending…
                     </>
                   ) : (
-                    <>Subscribe →</>
+                    "Send me the catalogue"
                   )}
                 </button>
               </div>
 
               {status === "error" && (
                 <p id="newsletter-error" className="newsletter-error-text" role="alert">
-                  <i className="fa-solid fa-circle-exclamation"></i> {errorMessage}
+                  <i className="fa-solid fa-circle-exclamation" aria-hidden="true"></i> {errorMessage}
                 </p>
               )}
 
               <p className="newsletter-privacy-note">
-                Local demonstration state. Unsubscribe at any time with no spam guaranteed.
+                We only use your email to send the catalogue and follow up on this request.
               </p>
             </form>
           )}

@@ -1,5 +1,6 @@
 import StarRating from "./Reviews/StarRating";
 
+// Placeholder copy until real client testimonials are supplied; labelled "Sample" on the page.
 const SAMPLE_TESTIMONIALS = [
   {
     id: 1,
@@ -38,13 +39,12 @@ const SAMPLE_TESTIMONIALS = [
 
 const CustomerTestimonials = () => {
   return (
-    <section className="testimonials-editorial-section" aria-label="Client Testimonials">
+    <section className="testimonials-editorial-section" aria-labelledby="testimonials-title">
       <div className="container">
         <div className="section-header-editorial">
-          <span className="section-kicker">Client Reflections</span>
-          <h2 className="section-title-editorial title">Trusted by 500+ Corporate Brands</h2>
+          <h2 id="testimonials-title" className="section-title-editorial title">What clients say</h2>
           <p className="section-subtitle-editorial">
-            Read verified experiences from HR leaders, corporate procurement teams, and founders across India.
+            The kind of orders we handle for HR, procurement and leadership teams.
           </p>
         </div>
 
@@ -53,10 +53,10 @@ const CustomerTestimonials = () => {
             <article key={t.id} className="testimonial-card-editorial">
               <div className="testimonial-rating-row">
                 <StarRating rating={t.rating} />
-                <span className="testimonial-sample-tag">Verified B2B Client</span>
+                <span className="testimonial-sample-tag">Sample</span>
               </div>
 
-              <h3 className="testimonial-headline">"{t.title}"</h3>
+              <h3 className="testimonial-headline">{t.title}</h3>
               <p className="testimonial-body">{t.comment}</p>
 
               <div className="testimonial-footer">
@@ -65,7 +65,7 @@ const CustomerTestimonials = () => {
                   <span className="author-location">{t.role} · {t.location}</span>
                 </div>
                 <span className="testimonial-item-tag">
-                  <i className="fa-solid fa-gift" style={{ marginRight: "4px", color: "#b65c45" }}></i>
+                  <i className="fa-solid fa-gift" style={{ marginRight: "4px", color: "var(--ribbon)" }} aria-hidden="true"></i>
                   {t.item}
                 </span>
               </div>

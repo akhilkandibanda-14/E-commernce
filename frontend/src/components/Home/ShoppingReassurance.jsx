@@ -44,7 +44,6 @@ const ShoppingReassurance = () => {
     <section className="shopping-reassurance-section" aria-label="Corporate Gifting Guarantees">
       <div className="container">
         <div className="reassurance-header">
-          <span className="section-kicker">Enterprise Assurance</span>
           <h2 className="reassurance-title title">Seamless Corporate Gifting, End-to-End</h2>
           <p className="reassurance-subtitle">
             From digital proofing to doorstep distribution, we manage every detail so you can focus on your business.
@@ -65,7 +64,7 @@ const ShoppingReassurance = () => {
               <p className="reassurance-card-detail">{p.detail}</p>
 
               <Link to={p.link} className="reassurance-card-link">
-                {p.actionText} <i className="fa-solid fa-arrow-right"></i>
+                {p.actionText}
               </Link>
             </div>
           ))}

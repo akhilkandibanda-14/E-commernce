@@ -107,7 +107,7 @@ const GiftingCategoriesMegaMenu = ({ isOpen, onClose, onOpenBulkModal }) => {
               className="btn-mega-view-all"
             >
               <span>View All {activeCategory.name}</span>
-              <i className="fa-solid fa-arrow-right"></i>
+             
             </Link>
           </div>
 

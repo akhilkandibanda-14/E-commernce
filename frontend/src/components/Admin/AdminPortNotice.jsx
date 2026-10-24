@@ -48,7 +48,7 @@ const AdminPortNotice = () => {
           <div className="port-box-card current">
             <div className="port-box-header">
               <span className="port-box-tag">Active User Port</span>
-              <span style={{ fontSize: "12px", color: "#64748b" }}>Read-Only Mode</span>
+              <span style={{ fontSize: "12px", color: "var(--muted)" }}>Read-Only Mode</span>
             </div>
             <h3 className="port-box-title">Port 5173</h3>
             <ul className="port-feature-list">
@@ -70,7 +70,7 @@ const AdminPortNotice = () => {
           <div className="port-box-card target">
             <div className="port-box-header">
               <span className="port-box-tag">Admin Management Port</span>
-              <span style={{ fontSize: "12px", color: "#166534", fontWeight: "600" }}>Full Access</span>
+              <span style={{ fontSize: "12px", color: "var(--success)", fontWeight: "600" }}>Full Access</span>
             </div>
             <h3 className="port-box-title">Port 5174</h3>
             <ul className="port-feature-list">

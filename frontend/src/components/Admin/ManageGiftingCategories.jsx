@@ -381,7 +381,7 @@ const ManageGiftingCategories = ({ showToast }) => {
                     )}
                   </div>
                   <h2 style={{ display: "flex", alignItems: "center", gap: "10px", marginTop: "6px" }}>
-                    <i className={activeCategory.icon || "fa-solid fa-gift"} style={{ color: "#f59e0b" }}></i>
+                    <i className={activeCategory.icon || "fa-solid fa-gift"} style={{ color: "var(--star)" }}></i>
                     {activeCategory.name}
                   </h2>
                 </div>
@@ -522,7 +522,7 @@ const ManageGiftingCategories = ({ showToast }) => {
             <div className="settings-card promo-banner-card" style={{ marginTop: "24px" }}>
               <div className="panel-header">
                 <h2>
-                  <i className="fa-solid fa-wand-magic-sparkles" style={{ color: "#f59e0b" }}></i> Bottom Corporate Branding Banner
+                  <i className="fa-solid fa-wand-magic-sparkles" style={{ color: "var(--star)" }}></i> Bottom Corporate Branding Banner
                 </h2>
                 <p>
                   Customize the promotional call-to-action strip shown at the bottom of the Mega Menu for <strong>{activeCategory.name}</strong>.
@@ -693,7 +693,7 @@ const ManageGiftingCategories = ({ showToast }) => {
                   placeholder="e.g. Jute Bag or Backpack"
                   className="form-input"
                 />
-                <small style={{ color: "#64748b", marginTop: "4px", display: "block" }}>
+                <small style={{ color: "var(--muted)", marginTop: "4px", display: "block" }}>
                   When customer clicks this subcategory, the catalog searches for this term.
                 </small>
               </div>

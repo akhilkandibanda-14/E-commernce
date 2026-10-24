@@ -73,7 +73,7 @@ const FestiveGiftsDropdown = ({ isOpen, onClose, onOpenBulkModal }) => {
                   onClick={onClose}
                   className="festive-btn-explore"
                 >
-                  Explore {festive.title} <i className="fa-solid fa-arrow-right"></i>
+                  Explore {festive.title}
                 </Link>
               </div>
             </div>

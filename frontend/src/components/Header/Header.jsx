@@ -8,10 +8,11 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import { useSiteContent } from "../../context/SiteContentContext";
+import { BULK_ENQUIRY_EVENT } from "../../utils/events";
 
 const Header = ({ cart, removeFromCart }) => {
   const { user, isAdmin, openAuthModal } = useAuth();
-  const { announcement, navigation } = useSiteContent();
+  const { announcement } = useSiteContent();
   const [mobileSearchShow, setMobileSearchShow] = useState(false);
   const [mobileMenuShow, setMobileMenuShow] = useState(false);
   const [showAnnouncement, setShowAnnouncement] = useState(true);
@@ -43,6 +44,13 @@ const Header = ({ cart, removeFromCart }) => {
   const handleOpenCatalogueModal = () => {
     setCatalogueModalOpen(true);
   };
+
+  // Page content (e.g. the home hero) can ask for the bulk enquiry form.
+  useEffect(() => {
+    const onOpen = (e) => handleOpenBulkModal(e.detail?.category);
+    window.addEventListener(BULK_ENQUIRY_EVENT, onOpen);
+    return () => window.removeEventListener(BULK_ENQUIRY_EVENT, onOpen);
+  }, []);
 
   return (
     <>
@@ -110,17 +118,19 @@ const Header = ({ cart, removeFromCart }) => {
                 </>
               ) : (
                 <span className="top-auth-logged">
-                  {isAdmin ? "🛡️ Admin Portal" : `👤 ${user.name.split(" ")[0]}`}
+                  <i className={isAdmin ? "fa-solid fa-shield-halved" : "fa-regular fa-user"} aria-hidden="true"></i>{" "}
+                  {isAdmin ? "Admin" : user.name.split(" ")[0]}
                 </span>
               )}
             </div>
 
             <button
+              type="button"
               onClick={() => setShowAnnouncement(false)}
               className="announcement-close-btn"
-              aria-label="Dismiss banner"
+              aria-label="Dismiss announcement"
             >
-              ✕
+              <i className="fa-solid fa-xmark" aria-hidden="true"></i>
             </button>
           </div>
         </div>
@@ -128,46 +138,53 @@ const Header = ({ cart, removeFromCart }) => {
 
       {/* Sticky Main Header */}
       <header className={`header-bg sticky-luxury-header gifting-header ${isScrolled ? "is-scrolled" : ""}`}>
-        <div className="container flex-header header gifting-header-container">
-          {/* Brand Logo & Mobile Hamburger Trigger */}
+        {/* Row 1: brand, search, saved items, bag, account */}
+        <div className="container gw-header-main">
           <div className="flex-title gifting-brand-wrapper">
             <button
+              type="button"
               onClick={() => handleMouseClick(setMobileMenuShow)}
               className="btn-profile btn-search btn-hamburger"
-              aria-label="Open mobile menu"
+              aria-label="Open menu"
+              aria-expanded={mobileMenuShow}
             >
-              <i className="fa-solid fa-bars" style={{ fontSize: "18px" }}></i>
+              <i className="fa-solid fa-bars" aria-hidden="true"></i>
             </button>
 
-            <Link to="/" className="luxury-brand-wordmark gifting-logo" aria-label="Giftingwellness Home">
+            <Link to="/" className="luxury-brand-wordmark gifting-logo" aria-label="Giftingwellness home">
               <img
                 src="/giftingwellness-logo.png"
-                alt="Giftingwellness Logo"
+                alt=""
                 className="brand-logo-img"
+                width="44"
+                height="44"
               />
-              <div className="brand-logo-text-block">
+              <span className="brand-logo-text-block">
                 <span className="brand-logo-text">Giftingwellness</span>
-                <span className="brand-logo-sub">
-                  <span className="sub-dash">—</span> Corporate Gifting Solutions <span className="sub-dash">—</span>
-                </span>
-              </div>
+                <span className="brand-logo-sub">Corporate gifting solutions</span>
+              </span>
             </Link>
           </div>
 
-          {/* Main Desktop Navigation Items */}
-          <HeaderCategories
-            onOpenBulkModal={handleOpenBulkModal}
-            onOpenCatalogueModal={handleOpenCatalogueModal}
-          />
-
-          {/* Right Header Controls: Search, Saved Items, Cart, Account */}
           <HeaderProfileBtn
             handleMouseClick={() => handleMouseClick(setMobileSearchShow)}
             cart={cart}
             removeFromCart={removeFromCart}
             onOpenBulkModal={handleOpenBulkModal}
           />
+        </div>
 
+        {/* Row 2: primary navigation (desktop) */}
+        <div className="gw-header-nav">
+          <div className="container">
+            <HeaderCategories
+              onOpenBulkModal={handleOpenBulkModal}
+              onOpenCatalogueModal={handleOpenCatalogueModal}
+            />
+          </div>
+        </div>
+
+        <div className="container">
           {/* Mobile Search Overlay */}
           <SearchMobile
             mobileSearchShow={mobileSearchShow}

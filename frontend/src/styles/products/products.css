@@ -1,13 +1,13 @@
 @layer component {
   .products-page {
-    background-color: var(--bg-primary, #f8f6f1);
+    background-color: var(--bg-primary, var(--ivory));
     padding-bottom: 120px;
-    font-family: var(--font-body, 'Inter', sans-serif);
+    font-family: var(--font-body);
   }
   .products-page h1,
   .products-page h2,
   .products-page h3 {
-    font-family: var(--font-heading, 'Playfair Display', serif);
+    font-family: var(--font-heading);
   }
   .products-container-grid {
     display: grid;
@@ -33,12 +33,12 @@
     align-items: center;
     padding-bottom: 28px;
     margin-bottom: 16px;
-    border-bottom: 1px solid var(--border-light, #d8d4cc);
+    border-bottom: 1px solid var(--border-light, var(--line));
   }
   .products-heading h1 {
     font-size: 28px;
     font-weight: 600;
-    color: var(--text-primary, #1c1c1c);
+    color: var(--text-primary, var(--ink));
   }
   .products-sort {
     display: flex;
@@ -47,15 +47,15 @@
   }
   .products-number {
     font-size: 14px;
-    color: #6b6760;
+    color: var(--muted);
   }
   .dropdown-sort-container {
     min-width: 160px;
     position: relative;
   }
   .dropdown-sort-container .btn-dropdown-sort {
-    background: #ffffff;
-    border: 1px solid var(--border-light, #d8d4cc);
+    background: var(--paper);
+    border: 1px solid var(--border-light, var(--line));
     border-radius: var(--radius-sm, 4px);
     padding: 8px 14px;
     font-size: 13px;
@@ -65,15 +65,15 @@
     justify-content: space-between;
     width: 100%;
     cursor: pointer;
-    color: var(--text-primary, #1c1c1c);
+    color: var(--text-primary, var(--ink));
   }
   .dropdown-sort {
     position: absolute;
     right: 0;
     top: calc(100% + 4px);
     display: none;
-    background-color: #ffffff;
-    border: 1px solid var(--border-light, #d8d4cc);
+    background-color: var(--paper);
+    border: 1px solid var(--border-light, var(--line));
     border-radius: var(--radius-sm, 4px);
     width: 100%;
     box-shadow: 0 8px 24px rgba(28, 28, 28, 0.08);
@@ -99,16 +99,16 @@
     background: transparent;
     cursor: pointer;
     transition: background 0.15s;
-    color: var(--text-primary, #1c1c1c);
+    color: var(--text-primary, var(--ink));
   }
   .dropdown-sort-list li button:hover {
-    background-color: var(--bg-secondary, #eae4d9);
+    background-color: var(--bg-secondary, var(--linen));
   }
 
   .pages-list-container {
     margin-top: 48px;
     padding-top: 24px;
-    border-top: 1px solid var(--border-light, #d8d4cc);
+    border-top: 1px solid var(--border-light, var(--line));
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -120,25 +120,25 @@
     gap: 6px;
   }
   .change-page {
-    border: 1px solid var(--border-light, #d8d4cc);
+    border: 1px solid var(--border-light, var(--line));
     border-radius: var(--radius-sm, 4px);
     padding: 8px 16px;
-    background: #ffffff;
-    color: var(--text-primary, #1c1c1c);
+    background: var(--paper);
+    color: var(--text-primary, var(--ink));
     font-size: 13px;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.18s ease;
   }
   .change-page:hover:not(:disabled) {
-    background-color: var(--bg-secondary, #eae4d9);
-    border-color: #c4c0b7;
+    background-color: var(--bg-secondary, var(--linen));
+    border-color: var(--line-strong);
   }
   .change-page:disabled {
-    color: #a8a49c;
-    border-color: #e5e2da;
+    color: var(--muted);
+    border-color: var(--line);
     cursor: not-allowed;
-    background: #faf9f6;
+    background: var(--ivory);
   }
   .page-number {
     width: 36px;
@@ -146,7 +146,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: #6b6760;
+    color: var(--muted);
     border-radius: var(--radius-sm, 4px);
     font-size: 13px;
     font-weight: 500;
@@ -154,11 +154,11 @@
     transition: all 0.18s;
   }
   .page-number:hover {
-    background-color: var(--bg-secondary, #eae4d9);
+    background-color: var(--bg-secondary, var(--linen));
   }
   .page-number-active {
-    color: #ffffff !important;
-    background-color: var(--accent-forest, #244b3c) !important;
+    color: var(--paper) !important;
+    background-color: var(--accent-forest, var(--forest)) !important;
     font-weight: 600;
   }
 

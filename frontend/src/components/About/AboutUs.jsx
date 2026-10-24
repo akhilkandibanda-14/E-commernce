@@ -262,12 +262,12 @@ const AboutUs = () => {
               </p>
             </div>
 
-            <div className="why-choose-card" style={{ background: "linear-gradient(135deg, #244b3c 0%, #152c24 100%)", color: "#ffffff" }}>
-              <div className="why-icon-box" style={{ background: "rgba(255,255,255,0.15)", color: "#ffffff" }}>
+            <div className="why-choose-card" style={{ background: "linear-gradient(135deg, var(--forest) 0%, var(--forest-deep) 100%)", color: "var(--paper)" }}>
+              <div className="why-icon-box" style={{ background: "rgba(255,255,255,0.15)", color: "var(--paper)" }}>
                 <i className="fa-solid fa-phone-volume"></i>
               </div>
-              <h3 style={{ color: "#ffffff" }}>Ready to Partner?</h3>
-              <p style={{ color: "#eae4d9" }}>
+              <h3 style={{ color: "var(--paper)" }}>Ready to Partner?</h3>
+              <p style={{ color: "var(--linen)" }}>
                 Our corporate gifting advisors will curate a tailored proposal and free digital mockups within 2 hours.
               </p>
               <button
@@ -276,10 +276,10 @@ const AboutUs = () => {
                 style={{
                   marginTop: "auto",
                   padding: "9px 18px",
-                  background: "#b65c45",
+                  background: "var(--ribbon)",
                   border: "none",
                   borderRadius: "4px",
-                  color: "#ffffff",
+                  color: "var(--paper)",
                   fontWeight: "600",
                   cursor: "pointer",
                   fontSize: "13px",

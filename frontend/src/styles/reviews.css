@@ -37,7 +37,7 @@
     justify-content: space-between;
   }
   .heading-carousel {
-    text-transform: uppercase;
+    text-transform: none;
   }
   .review-wrapper {
     width: 400px;

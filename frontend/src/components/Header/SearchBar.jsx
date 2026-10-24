@@ -137,15 +137,15 @@ const SearchBar = () => {
     <div className="search-bar-wrapper" ref={containerRef}>
       <form onSubmit={handleSubmit} role="search" className="search-bg flex-form">
         <button type="submit" className="btn-search" aria-label="Search">
-          <img src="/search-btn.png" className="btn-img" alt="search" />
+          <i className="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
         </button>
         <input
           ref={inputRef}
-          type="text"
+          type="search"
           name="search-product"
-          aria-label="Search Products"
+          aria-label="Search gifts"
           className="input-search"
-          placeholder="Search gifts, bottles, bags, gadgets, brands..."
+          placeholder="Search bottles, hampers, bags, brands"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           onKeyDown={handleKeyDown}

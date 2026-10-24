@@ -7,7 +7,7 @@ const ReviewCard = ({ text, firstName, lastNameLetter, company, rating }) => {
       <StarRating rating={rating || 5} />
       <h3 className="title--sm">
         {firstName} {lastNameLetter ? lastNameLetter.toUpperCase() + "." : ""}
-        <i className="fa-solid fa-circle-check fa-sm" style={{ color: "#10b981", marginLeft: "6px" }}></i>
+        <i className="fa-solid fa-circle-check fa-sm" style={{ color: "var(--success)", marginLeft: "6px" }}></i>
         {company && <span className="review-company-badge"> · {company}</span>}
       </h3>
       <p className="text--gray">{text}</p>

@@ -60,9 +60,9 @@ const Product = ({ addToCart }) => {
   if (productDetails.notFound) {
     return (
       <main className="container" style={{ padding: "80px 20px", textAlign: "center", minHeight: "50vh" }}>
-        <i className="fa-solid fa-gift fa-3x" style={{ color: "#cbd5e1", marginBottom: "16px" }}></i>
-        <h2 style={{ fontSize: "24px", fontWeight: "700", color: "#0f172a", margin: "0 0 8px" }}>Gift Item Not Found</h2>
-        <p style={{ color: "#64748b", margin: "0 0 24px" }}>
+        <i className="fa-solid fa-gift fa-3x" style={{ color: "var(--line-strong)", marginBottom: "16px" }}></i>
+        <h2 style={{ fontSize: "24px", fontWeight: "700", color: "var(--ink)", margin: "0 0 8px" }}>Gift Item Not Found</h2>
+        <p style={{ color: "var(--muted)", margin: "0 0 24px" }}>
           This product is no longer available or may have moved to a different gifting category.
         </p>
         <button
@@ -70,8 +70,8 @@ const Product = ({ addToCart }) => {
           onClick={() => navigate("/products")}
           style={{
             padding: "12px 24px",
-            background: "#0d3b2e",
-            color: "#ffffff",
+            background: "var(--forest)",
+            color: "var(--paper)",
             borderRadius: "24px",
             border: "none",
             fontWeight: "700",
@@ -111,6 +111,7 @@ const Product = ({ addToCart }) => {
             <Gallery
               mainImage={galleryImages[0]}
               images={galleryImages}
+              title={productDetails.title}
             />
           )}
           <ProductDescription

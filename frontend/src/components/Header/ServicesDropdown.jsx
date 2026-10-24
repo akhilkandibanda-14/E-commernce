@@ -43,7 +43,7 @@ const ServicesDropdown = ({ isOpen, onClose, onOpenBulkModal }) => {
                   onClick={onClose}
                   className="service-link-explore"
                 >
-                  Explore Catalog <i className="fa-solid fa-arrow-right"></i>
+                  Explore Catalog
                 </Link>
                 <button
                   type="button"

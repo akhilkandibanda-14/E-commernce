@@ -1,9 +1,21 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const SearchMobile = ({ mobileSearchShow, handleMouseClick }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const navigate = useNavigate();
+  const inputRef = useRef(null);
+
+  // Focus the field when the overlay opens; Escape closes it.
+  useEffect(() => {
+    if (!mobileSearchShow) return undefined;
+    inputRef.current?.focus();
+    const onKey = (e) => {
+      if (e.key === "Escape") handleMouseClick();
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [mobileSearchShow, handleMouseClick]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,23 +33,21 @@ const SearchMobile = ({ mobileSearchShow, handleMouseClick }) => {
       className={`mobile-search-container ${mobileSearchShow ? "opened" : ""}`}
     >
       <div className="mobile-search-close">
-        <button onClick={handleMouseClick} aria-label="close" type="button">
-          <i className="fa-solid fa-xmark fa-2xl"></i>
+        <button onClick={handleMouseClick} aria-label="Close search" type="button">
+          <i className="fa-solid fa-xmark fa-2xl" aria-hidden="true"></i>
         </button>
       </div>
       <div className="mobile-search">
-        <label htmlFor="search-product" hidden>
-          Search for items
-        </label>
         <button type="submit" className="btn-search" aria-label="Search">
-          <img src="/search-btn.png" className="btn-img" alt="search" />
+          <i className="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
         </button>
         <input
-          type="text"
+          ref={inputRef}
+          type="search"
           name="search-product"
           id="search-product"
-          aria-label="Search Products"
-          placeholder="Search gifts, bottles, bags, gadgets..."
+          aria-label="Search gifts"
+          placeholder="Search bottles, hampers, bags, brands"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />

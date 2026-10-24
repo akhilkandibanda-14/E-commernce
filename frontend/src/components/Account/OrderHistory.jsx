@@ -3,16 +3,16 @@ import { Link } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 
 const STATUS_MAP = {
-  confirmed: { label: "Confirmed", bg: "#ecfdf5", color: "#065f46", icon: "fa-circle-check" },
-  in_production: { label: "In Production / Custom Branding", bg: "#fef3c7", color: "#92400e", icon: "fa-industry" },
+  confirmed: { label: "Confirmed", bg: "var(--sage-tint)", color: "var(--success)", icon: "fa-circle-check" },
+  in_production: { label: "In Production / Custom Branding", bg: "var(--champagne-tint)", color: "var(--warning)", icon: "fa-industry" },
   dispatched: { label: "Dispatched", bg: "#eff6ff", color: "#1e40af", icon: "fa-truck-fast" },
-  delivered: { label: "Delivered", bg: "#f0fdf4", color: "#166534", icon: "fa-box-check" },
-  cancelled: { label: "Cancelled", bg: "#fef2f2", color: "#991b1b", icon: "fa-circle-xmark" },
-  pending: { label: "Pending", bg: "#fefce8", color: "#854d0e", icon: "fa-clock" },
-  pending_review: { label: "Pending Sales Review", bg: "#fefce8", color: "#854d0e", icon: "fa-clock" },
+  delivered: { label: "Delivered", bg: "var(--sage-tint)", color: "var(--success)", icon: "fa-box-check" },
+  cancelled: { label: "Cancelled", bg: "var(--danger-tint)", color: "var(--danger)", icon: "fa-circle-xmark" },
+  pending: { label: "Pending", bg: "var(--champagne-tint)", color: "#854d0e", icon: "fa-clock" },
+  pending_review: { label: "Pending Sales Review", bg: "var(--champagne-tint)", color: "#854d0e", icon: "fa-clock" },
   mockup_in_progress: { label: "Mockup in Progress", bg: "#eff6ff", color: "#1e40af", icon: "fa-wand-magic-sparkles" },
-  quoted: { label: "Quotation Ready", bg: "#f0fdf4", color: "#166534", icon: "fa-file-invoice" },
-  accepted: { label: "Quotation Accepted", bg: "#ecfdf5", color: "#065f46", icon: "fa-check-double" },
+  quoted: { label: "Quotation Ready", bg: "var(--sage-tint)", color: "var(--success)", icon: "fa-file-invoice" },
+  accepted: { label: "Quotation Accepted", bg: "var(--sage-tint)", color: "var(--success)", icon: "fa-check-double" },
 };
 
 const OrderHistory = () => {
@@ -67,10 +67,10 @@ const OrderHistory = () => {
   if (!token) {
     return (
       <main className="container" style={{ padding: "80px 20px", textAlign: "center", minHeight: "60vh" }}>
-        <div style={{ maxWidth: "480px", margin: "0 auto", background: "#ffffff", padding: "36px", borderRadius: "16px", border: "1px solid #e2e8f0", boxShadow: "0 4px 12px rgba(0,0,0,0.04)" }}>
-          <i className="fa-solid fa-lock fa-3x" style={{ color: "#0d3b2e", marginBottom: "16px" }}></i>
-          <h2 style={{ fontSize: "22px", fontWeight: "700", color: "#0f172a", margin: "0 0 8px" }}>Sign In to View Your Account</h2>
-          <p style={{ color: "#64748b", margin: "0 0 24px", fontSize: "14px" }}>
+        <div style={{ maxWidth: "480px", margin: "0 auto", background: "var(--paper)", padding: "36px", borderRadius: "16px", border: "1px solid var(--line)", boxShadow: "0 4px 12px rgba(0,0,0,0.04)" }}>
+          <i className="fa-solid fa-lock fa-3x" style={{ color: "var(--forest)", marginBottom: "16px" }}></i>
+          <h2 style={{ fontSize: "22px", fontWeight: "700", color: "var(--ink)", margin: "0 0 8px" }}>Sign In to View Your Account</h2>
+          <p style={{ color: "var(--muted)", margin: "0 0 24px", fontSize: "14px" }}>
             Sign in with your Google or customer account to track orders, review corporate bulk quotes, and monitor custom branding mockups.
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
@@ -80,9 +80,9 @@ const OrderHistory = () => {
                 onClick={() => openClerkSignIn({ initialHint: "oauth_google" })}
                 style={{
                   padding: "12px 24px",
-                  background: "#ffffff",
-                  color: "#1e293b",
-                  border: "1px solid #cbd5e1",
+                  background: "var(--paper)",
+                  color: "var(--ink)",
+                  border: "1px solid var(--line-strong)",
                   borderRadius: "24px",
                   fontWeight: "700",
                   fontSize: "14px",
@@ -102,8 +102,8 @@ const OrderHistory = () => {
               onClick={() => openAuthModal("user")}
               style={{
                 padding: "12px 28px",
-                background: "#0d3b2e",
-                color: "#ffffff",
+                background: "var(--forest)",
+                color: "var(--paper)",
                 borderRadius: "24px",
                 border: "none",
                 fontWeight: "700",
@@ -123,22 +123,22 @@ const OrderHistory = () => {
     <main className="container" style={{ padding: "40px 20px 80px", minHeight: "70vh" }}>
       {/* Breadcrumb / Title */}
       <div style={{ marginBottom: "28px" }}>
-        <span style={{ fontSize: "13px", color: "#64748b" }}>
-          <Link to="/" style={{ color: "#64748b", textDecoration: "none" }}>Home</Link> / My Account / Dashboard
+        <span style={{ fontSize: "13px", color: "var(--muted)" }}>
+          <Link to="/" style={{ color: "var(--muted)", textDecoration: "none" }}>Home</Link> / My Account / Dashboard
         </span>
         <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: "12px", marginTop: "8px" }}>
           <div>
-            <h1 style={{ fontSize: "28px", fontWeight: "800", color: "#0f172a", margin: "0 0 4px" }}>
+            <h1 style={{ fontSize: "28px", fontWeight: "800", color: "var(--ink)", margin: "0 0 4px" }}>
               Account Activity & Orders
             </h1>
-            <p style={{ color: "#64748b", margin: 0, fontSize: "14px" }}>
-              Signed in as <strong style={{ color: "#0d3b2e" }}>{user?.email || user?.name}</strong>
-              {user?.isClerk && <span style={{ marginLeft: "8px", background: "#ecfdf5", color: "#065f46", padding: "2px 8px", borderRadius: "12px", fontSize: "11px", fontWeight: "700" }}>Verified Account</span>}
+            <p style={{ color: "var(--muted)", margin: 0, fontSize: "14px" }}>
+              Signed in as <strong style={{ color: "var(--forest)" }}>{user?.email || user?.name}</strong>
+              {user?.isClerk && <span style={{ marginLeft: "8px", background: "var(--sage-tint)", color: "var(--success)", padding: "2px 8px", borderRadius: "12px", fontSize: "11px", fontWeight: "700" }}>Verified Account</span>}
             </p>
           </div>
 
           {/* Tab Selector */}
-          <div style={{ display: "flex", background: "#f1f5f9", padding: "4px", borderRadius: "10px", gap: "4px" }}>
+          <div style={{ display: "flex", background: "var(--linen)", padding: "4px", borderRadius: "10px", gap: "4px" }}>
             <button
               type="button"
               onClick={() => setActiveTab("orders")}
@@ -149,8 +149,8 @@ const OrderHistory = () => {
                 fontSize: "13px",
                 fontWeight: "700",
                 cursor: "pointer",
-                background: activeTab === "orders" ? "#0d3b2e" : "transparent",
-                color: activeTab === "orders" ? "#ffffff" : "#475569",
+                background: activeTab === "orders" ? "var(--forest)" : "transparent",
+                color: activeTab === "orders" ? "var(--paper)" : "var(--ink-soft)",
                 transition: "all 0.15s ease",
               }}
             >
@@ -168,8 +168,8 @@ const OrderHistory = () => {
                 fontSize: "13px",
                 fontWeight: "700",
                 cursor: "pointer",
-                background: activeTab === "quotes" ? "#0d3b2e" : "transparent",
-                color: activeTab === "quotes" ? "#ffffff" : "#475569",
+                background: activeTab === "quotes" ? "var(--forest)" : "transparent",
+                color: activeTab === "quotes" ? "var(--paper)" : "var(--ink-soft)",
                 transition: "all 0.15s ease",
               }}
             >
@@ -187,8 +187,8 @@ const OrderHistory = () => {
                 fontSize: "13px",
                 fontWeight: "700",
                 cursor: "pointer",
-                background: activeTab === "enquiries" ? "#0d3b2e" : "transparent",
-                color: activeTab === "enquiries" ? "#ffffff" : "#475569",
+                background: activeTab === "enquiries" ? "var(--forest)" : "transparent",
+                color: activeTab === "enquiries" ? "var(--paper)" : "var(--ink-soft)",
                 transition: "all 0.15s ease",
               }}
             >
@@ -201,16 +201,16 @@ const OrderHistory = () => {
 
       {loading ? (
         <div style={{ textAlign: "center", padding: "80px 20px" }}>
-          <i className="fa-solid fa-circle-notch fa-spin fa-2x" style={{ color: "#0d3b2e" }}></i>
-          <p style={{ marginTop: "12px", color: "#64748b" }}>Loading account records...</p>
+          <i className="fa-solid fa-circle-notch fa-spin fa-2x" style={{ color: "var(--forest)" }}></i>
+          <p style={{ marginTop: "12px", color: "var(--muted)" }}>Loading account records...</p>
         </div>
       ) : activeTab === "orders" ? (
         /* ORDERS TAB */
         orders.length === 0 ? (
-          <div style={{ textAlign: "center", padding: "80px 20px", background: "#ffffff", borderRadius: "16px", border: "1px solid #e2e8f0" }}>
-            <i className="fa-solid fa-bag-shopping fa-3x" style={{ color: "#cbd5e1", marginBottom: "16px" }}></i>
-            <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#1e293b", margin: "0 0 8px" }}>No orders placed yet</h3>
-            <p style={{ color: "#64748b", margin: "0 0 24px", fontSize: "14px" }}>
+          <div style={{ textAlign: "center", padding: "80px 20px", background: "var(--paper)", borderRadius: "16px", border: "1px solid var(--line)" }}>
+            <i className="fa-solid fa-bag-shopping fa-3x" style={{ color: "var(--line-strong)", marginBottom: "16px" }}></i>
+            <h3 style={{ fontSize: "20px", fontWeight: "700", color: "var(--ink)", margin: "0 0 8px" }}>No orders placed yet</h3>
+            <p style={{ color: "var(--muted)", margin: "0 0 24px", fontSize: "14px" }}>
               Explore our curated corporate gift sets, executive bottles, and festive wellness hampers.
             </p>
             <Link
@@ -218,8 +218,8 @@ const OrderHistory = () => {
               style={{
                 display: "inline-block",
                 padding: "12px 28px",
-                background: "#0d3b2e",
-                color: "#ffffff",
+                background: "var(--forest)",
+                color: "var(--paper)",
                 borderRadius: "24px",
                 textDecoration: "none",
                 fontWeight: "700",
@@ -237,18 +237,18 @@ const OrderHistory = () => {
                 <div
                   key={ord.orderId}
                   style={{
-                    background: "#ffffff",
+                    background: "var(--paper)",
                     borderRadius: "14px",
-                    border: "1px solid #e2e8f0",
+                    border: "1px solid var(--line)",
                     padding: "24px",
                     boxShadow: "0 2px 8px rgba(0,0,0,0.03)",
                   }}
                 >
                   {/* Order Top Bar */}
-                  <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: "12px", borderBottom: "1px solid #f1f5f9", paddingBottom: "16px", marginBottom: "16px" }}>
+                  <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: "12px", borderBottom: "1px solid var(--linen)", paddingBottom: "16px", marginBottom: "16px" }}>
                     <div>
                       <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                        <h2 style={{ fontSize: "18px", fontWeight: "700", color: "#0f172a", margin: 0 }}>
+                        <h2 style={{ fontSize: "18px", fontWeight: "700", color: "var(--ink)", margin: 0 }}>
                           Order #{ord.orderId}
                         </h2>
                         <span
@@ -267,14 +267,14 @@ const OrderHistory = () => {
                           <i className={`fa-solid ${statusInfo.icon}`}></i> {statusInfo.label}
                         </span>
                       </div>
-                      <span style={{ fontSize: "13px", color: "#64748b" }}>
+                      <span style={{ fontSize: "13px", color: "var(--muted)" }}>
                         Ordered on {new Date(ord.createdAt).toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" })}
                       </span>
                     </div>
 
                     <div style={{ textAlign: "right" }}>
-                      <span style={{ fontSize: "12px", color: "#64748b" }}>Total Paid</span>
-                      <p style={{ margin: 0, fontSize: "20px", fontWeight: "800", color: "#0d3b2e" }}>
+                      <span style={{ fontSize: "12px", color: "var(--muted)" }}>Total Paid</span>
+                      <p style={{ margin: 0, fontSize: "20px", fontWeight: "800", color: "var(--forest)" }}>
                         ₹{Number(ord.pricing?.total || 0).toFixed(2)}
                       </p>
                     </div>
@@ -288,7 +288,7 @@ const OrderHistory = () => {
                           <i className="fa-solid fa-truck-fast" style={{ marginRight: "6px" }}></i>
                           Shipped via {ord.tracking.courier || "Courier Partner"}
                         </span>
-                        <p style={{ margin: "2px 0 0", fontSize: "14px", fontWeight: "600", color: "#0f172a" }}>
+                        <p style={{ margin: "2px 0 0", fontSize: "14px", fontWeight: "600", color: "var(--ink)" }}>
                           Tracking / AWB Number: {ord.tracking.trackingNumber}
                         </p>
                       </div>
@@ -300,7 +300,7 @@ const OrderHistory = () => {
                           style={{
                             padding: "6px 14px",
                             background: "#1d4ed8",
-                            color: "#ffffff",
+                            color: "var(--paper)",
                             borderRadius: "6px",
                             fontSize: "13px",
                             fontWeight: "600",
@@ -314,7 +314,7 @@ const OrderHistory = () => {
                   )}
 
                   {/* Items */}
-                  <div style={{ border: "1px solid #f1f5f9", borderRadius: "10px", overflow: "hidden", marginBottom: "16px" }}>
+                  <div style={{ border: "1px solid var(--linen)", borderRadius: "10px", overflow: "hidden", marginBottom: "16px" }}>
                     {ord.items?.map((it, idx) => (
                       <div
                         key={idx}
@@ -323,7 +323,7 @@ const OrderHistory = () => {
                           alignItems: "center",
                           justifyContent: "space-between",
                           padding: "12px 16px",
-                          borderBottom: idx === ord.items.length - 1 ? "none" : "1px solid #f1f5f9",
+                          borderBottom: idx === ord.items.length - 1 ? "none" : "1px solid var(--line)",
                           gap: "12px",
                         }}
                       >
@@ -336,12 +336,12 @@ const OrderHistory = () => {
                             />
                           )}
                           <div>
-                            <p style={{ margin: 0, fontWeight: "600", fontSize: "14px", color: "#0f172a" }}>{it.title}</p>
-                            <span style={{ fontSize: "12px", color: "#64748b" }}>
+                            <p style={{ margin: 0, fontWeight: "600", fontSize: "14px", color: "var(--ink)" }}>{it.title}</p>
+                            <span style={{ fontSize: "12px", color: "var(--muted)" }}>
                               Size: {it.size || "Standard"} {it.selectedColor ? `· Color: ${it.selectedColor}` : ""} {it.selectedBranding ? `· ${it.selectedBranding.toUpperCase()} Print` : ""}
                             </span>
                             {it.customLogoText && (
-                              <p style={{ margin: "2px 0 0", fontSize: "12px", color: "#0d3b2e", fontWeight: "600" }}>
+                              <p style={{ margin: "2px 0 0", fontSize: "12px", color: "var(--forest)", fontWeight: "600" }}>
                                 Custom Branding: "{it.customLogoText}"
                               </p>
                             )}
@@ -349,8 +349,8 @@ const OrderHistory = () => {
                         </div>
 
                         <div style={{ textAlign: "right" }}>
-                          <span style={{ fontSize: "13px", color: "#64748b" }}>Qty: {it.quantity}</span>
-                          <p style={{ margin: 0, fontSize: "14px", fontWeight: "700", color: "#0d3b2e" }}>
+                          <span style={{ fontSize: "13px", color: "var(--muted)" }}>Qty: {it.quantity}</span>
+                          <p style={{ margin: 0, fontSize: "14px", fontWeight: "700", color: "var(--forest)" }}>
                             ₹{Number(it.lineTotal || it.quantity * it.price).toFixed(2)}
                           </p>
                         </div>
@@ -359,9 +359,9 @@ const OrderHistory = () => {
                   </div>
 
                   {/* Bottom Row: Delivery Address & Gifting Card */}
-                  <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "14px", fontSize: "13px", color: "#475569" }}>
+                  <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "14px", fontSize: "13px", color: "var(--ink-soft)" }}>
                     <div>
-                      <span style={{ fontWeight: "700", color: "#0f172a" }}>Delivery Address:</span>
+                      <span style={{ fontWeight: "700", color: "var(--ink)" }}>Delivery Address:</span>
                       <p style={{ margin: "4px 0 0" }}>
                         {ord.customer?.fullName}<br />
                         {ord.customer?.address}, {ord.customer?.city} - {ord.customer?.postalCode}
@@ -369,8 +369,8 @@ const OrderHistory = () => {
                     </div>
 
                     {ord.gifting?.isGift && (
-                      <div style={{ background: "#f8fafc", padding: "10px 14px", borderRadius: "8px", border: "1px dashed #cbd5e1" }}>
-                        <span style={{ fontWeight: "700", color: "#0d3b2e" }}>🎁 Gift Note:</span>
+                      <div style={{ background: "var(--ivory)", padding: "10px 14px", borderRadius: "8px", border: "1px dashed var(--line-strong)" }}>
+                        <span style={{ fontWeight: "700", color: "var(--forest)" }}>🎁 Gift Note:</span>
                         {ord.gifting?.recipientName && <p style={{ margin: "2px 0" }}>To: {ord.gifting.recipientName}</p>}
                         {ord.gifting?.giftMessage && <p style={{ margin: "2px 0", fontStyle: "italic" }}>"{ord.gifting.giftMessage}"</p>}
                       </div>
@@ -384,10 +384,10 @@ const OrderHistory = () => {
       ) : activeTab === "quotes" ? (
         /* QUOTES TAB */
         quotes.length === 0 ? (
-          <div style={{ textAlign: "center", padding: "80px 20px", background: "#ffffff", borderRadius: "16px", border: "1px solid #e2e8f0" }}>
-            <i className="fa-solid fa-comments-dollar fa-3x" style={{ color: "#cbd5e1", marginBottom: "16px" }}></i>
-            <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#1e293b", margin: "0 0 8px" }}>No bulk quotations requested yet</h3>
-            <p style={{ color: "#64748b", margin: "0 0 24px", fontSize: "14px" }}>
+          <div style={{ textAlign: "center", padding: "80px 20px", background: "var(--paper)", borderRadius: "16px", border: "1px solid var(--line)" }}>
+            <i className="fa-solid fa-comments-dollar fa-3x" style={{ color: "var(--line-strong)", marginBottom: "16px" }}></i>
+            <h3 style={{ fontSize: "20px", fontWeight: "700", color: "var(--ink)", margin: "0 0 8px" }}>No bulk quotations requested yet</h3>
+            <p style={{ color: "var(--muted)", margin: "0 0 24px", fontSize: "14px" }}>
               Request wholesale corporate pricing and free digital mockup samples on any product from our catalog.
             </p>
             <Link
@@ -395,8 +395,8 @@ const OrderHistory = () => {
               style={{
                 display: "inline-block",
                 padding: "12px 28px",
-                background: "#0d3b2e",
-                color: "#ffffff",
+                background: "var(--forest)",
+                color: "var(--paper)",
                 borderRadius: "24px",
                 textDecoration: "none",
                 fontWeight: "700",
@@ -414,9 +414,9 @@ const OrderHistory = () => {
                 <div
                   key={q.quoteId}
                   style={{
-                    background: "#ffffff",
+                    background: "var(--paper)",
                     borderRadius: "14px",
-                    border: "1px solid #e2e8f0",
+                    border: "1px solid var(--line)",
                     padding: "20px 24px",
                     boxShadow: "0 2px 6px rgba(0,0,0,0.02)",
                   }}
@@ -424,27 +424,27 @@ const OrderHistory = () => {
                   <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: "10px", marginBottom: "12px" }}>
                     <div>
                       <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                        <h3 style={{ margin: 0, fontSize: "16px", fontWeight: "700", color: "#0f172a" }}>
+                        <h3 style={{ margin: 0, fontSize: "16px", fontWeight: "700", color: "var(--ink)" }}>
                           {q.productTitle}
                         </h3>
                         <span style={{ background: statusInfo.bg, color: statusInfo.color, padding: "3px 10px", borderRadius: "12px", fontSize: "12px", fontWeight: "700" }}>
                           <i className={`fa-solid ${statusInfo.icon}`}></i> {statusInfo.label}
                         </span>
                       </div>
-                      <span style={{ fontSize: "12px", color: "#64748b" }}>
+                      <span style={{ fontSize: "12px", color: "var(--muted)" }}>
                         Quote #{q.quoteId} · Submitted on {new Date(q.createdAt).toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" })}
                       </span>
                     </div>
 
                     <div style={{ textAlign: "right" }}>
-                      <span style={{ fontSize: "12px", color: "#64748b" }}>Estimated Total</span>
-                      <p style={{ margin: 0, fontSize: "18px", fontWeight: "800", color: "#0d3b2e" }}>
+                      <span style={{ fontSize: "12px", color: "var(--muted)" }}>Estimated Total</span>
+                      <p style={{ margin: 0, fontSize: "18px", fontWeight: "800", color: "var(--forest)" }}>
                         {q.estimatedTotal ? `₹${Number(q.estimatedTotal).toLocaleString("en-IN")}` : "Custom Quote"}
                       </p>
                     </div>
                   </div>
 
-                  <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "10px", background: "#f8fafc", padding: "12px", borderRadius: "8px", fontSize: "13px", color: "#334155" }}>
+                  <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "10px", background: "var(--ivory)", padding: "12px", borderRadius: "8px", fontSize: "13px", color: "var(--ink-soft)" }}>
                     <div>
                       <strong>Quantity Requested:</strong> {q.quantity} units
                     </div>
@@ -460,13 +460,13 @@ const OrderHistory = () => {
                   </div>
 
                   {q.customText && (
-                    <p style={{ margin: "10px 0 0", fontSize: "13px", color: "#0d3b2e", fontWeight: "600" }}>
+                    <p style={{ margin: "10px 0 0", fontSize: "13px", color: "var(--forest)", fontWeight: "600" }}>
                       Branding Inscription: "{q.customText}"
                     </p>
                   )}
 
                   {q.adminNotes && (
-                    <div style={{ marginTop: "12px", background: "#f0fdf4", border: "1px solid #bbf7d0", padding: "10px 14px", borderRadius: "8px", fontSize: "13px", color: "#166534" }}>
+                    <div style={{ marginTop: "12px", background: "var(--sage-tint)", border: "1px solid #bbf7d0", padding: "10px 14px", borderRadius: "8px", fontSize: "13px", color: "var(--success)" }}>
                       <strong>Sales Team Note:</strong> {q.adminNotes}
                     </div>
                   )}
@@ -478,10 +478,10 @@ const OrderHistory = () => {
       ) : (
         /* ENQUIRIES TAB */
         enquiries.length === 0 ? (
-          <div style={{ textAlign: "center", padding: "80px 20px", background: "#ffffff", borderRadius: "16px", border: "1px solid #e2e8f0" }}>
-            <i className="fa-solid fa-envelope-open-text fa-3x" style={{ color: "#cbd5e1", marginBottom: "16px" }}></i>
-            <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#1e293b", margin: "0 0 8px" }}>No general enquiries submitted yet</h3>
-            <p style={{ color: "#64748b", margin: "0 0 24px", fontSize: "14px" }}>
+          <div style={{ textAlign: "center", padding: "80px 20px", background: "var(--paper)", borderRadius: "16px", border: "1px solid var(--line)" }}>
+            <i className="fa-solid fa-envelope-open-text fa-3x" style={{ color: "var(--line-strong)", marginBottom: "16px" }}></i>
+            <h3 style={{ fontSize: "20px", fontWeight: "700", color: "var(--ink)", margin: "0 0 8px" }}>No general enquiries submitted yet</h3>
+            <p style={{ color: "var(--muted)", margin: "0 0 24px", fontSize: "14px" }}>
               Looking for bespoke corporate gifting, custom curated sets, or festival lookbooks? Submit an enquiry.
             </p>
             <Link
@@ -489,8 +489,8 @@ const OrderHistory = () => {
               style={{
                 display: "inline-block",
                 padding: "12px 28px",
-                background: "#0d3b2e",
-                color: "#ffffff",
+                background: "var(--forest)",
+                color: "var(--paper)",
                 borderRadius: "24px",
                 textDecoration: "none",
                 fontWeight: "700",
@@ -506,28 +506,28 @@ const OrderHistory = () => {
               <div
                 key={enq.enquiryId}
                 style={{
-                  background: "#ffffff",
+                  background: "var(--paper)",
                   borderRadius: "14px",
-                  border: "1px solid #e2e8f0",
+                  border: "1px solid var(--line)",
                   padding: "20px 24px",
                   boxShadow: "0 2px 6px rgba(0,0,0,0.02)",
                 }}
               >
                 <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: "10px", marginBottom: "10px" }}>
                   <div>
-                    <h3 style={{ margin: 0, fontSize: "16px", fontWeight: "700", color: "#0f172a" }}>
+                    <h3 style={{ margin: 0, fontSize: "16px", fontWeight: "700", color: "var(--ink)" }}>
                       Category: {enq.category}
                     </h3>
-                    <span style={{ fontSize: "12px", color: "#64748b" }}>
+                    <span style={{ fontSize: "12px", color: "var(--muted)" }}>
                       Enquiry #{enq.enquiryId} · Submitted on {new Date(enq.createdAt).toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" })}
                     </span>
                   </div>
-                  <span style={{ background: "#ecfdf5", color: "#065f46", padding: "3px 10px", borderRadius: "12px", fontSize: "12px", fontWeight: "700" }}>
+                  <span style={{ background: "var(--sage-tint)", color: "var(--success)", padding: "3px 10px", borderRadius: "12px", fontSize: "12px", fontWeight: "700" }}>
                     Status: {enq.status || "Pending"}
                   </span>
                 </div>
 
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "8px", background: "#f8fafc", padding: "10px 14px", borderRadius: "8px", fontSize: "13px", color: "#334155" }}>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "8px", background: "var(--ivory)", padding: "10px 14px", borderRadius: "8px", fontSize: "13px", color: "var(--ink-soft)" }}>
                   <div><strong>Quantity:</strong> {enq.quantity}</div>
                   <div><strong>Company:</strong> {enq.company || "Not specified"}</div>
                   <div><strong>Branding:</strong> {enq.customBranding}</div>
@@ -535,7 +535,7 @@ const OrderHistory = () => {
                 </div>
 
                 {enq.notes && (
-                  <p style={{ margin: "10px 0 0", fontSize: "13px", color: "#475569" }}>
+                  <p style={{ margin: "10px 0 0", fontSize: "13px", color: "var(--ink-soft)" }}>
                     <strong>Requirement Note:</strong> "{enq.notes}"
                   </p>
                 )}

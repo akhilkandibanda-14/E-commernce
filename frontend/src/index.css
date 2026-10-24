@@ -1,7 +1,6 @@
 @layer base, component, page;
 @import "./_base.css";
 @import "./styles/container.css";
-@import "./Fonts/WEB/css/satoshi.css";
 @import "./styles/header.css";
 @import "./styles/buttons.css";
 @import "./styles/home/home.css";
@@ -21,4 +20,6 @@
 @import "./styles/admin-import.css";
 @import "./styles/auth-admin.css";
 @import "./styles/home/editorial-home.css";
-@import "./styles/enhanced.css";
+@import "./styles/enhanced.css";
+/* Design-system layer for Gifting Wellness; loaded last on purpose. */
+@import "./styles/theme.css";

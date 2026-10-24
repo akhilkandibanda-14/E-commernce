@@ -5,8 +5,8 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background: #ffffff;
-    border: 1px solid var(--border-light, #d8d4cc);
+    background: var(--paper);
+    border: 1px solid var(--border-light, var(--line));
     border-radius: var(--radius-sm, 4px);
     height: min-content;
     box-shadow: 0 4px 16px rgba(28, 28, 28, 0.03);
@@ -16,24 +16,24 @@
     justify-content: space-between;
     align-items: center;
     padding-bottom: 14px;
-    border-bottom: 1px solid var(--border-light, #d8d4cc);
+    border-bottom: 1px solid var(--border-light, var(--line));
   }
   .filters-heading h2 {
-    font-family: var(--font-heading, 'Playfair Display', serif);
+    font-family: var(--font-heading);
     font-size: 20px;
     font-weight: 600;
-    color: var(--text-primary, #1c1c1c);
+    color: var(--text-primary, var(--ink));
     margin: 0;
   }
   .filter-section h3,
   .filter-price h3,
   .filter-sizes h3 {
-    font-family: var(--font-body, 'Inter', sans-serif);
+    font-family: var(--font-body);
     font-size: 14px;
     font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--text-primary, #1c1c1c);
+    text-transform: none;
+    letter-spacing: 0.01em;
+    color: var(--text-primary, var(--ink));
     margin: 0 0 12px 0;
   }
   .filter-categories {
@@ -47,14 +47,14 @@
   }
   .filter-categories li a {
     font-size: 14px;
-    color: #555047;
+    color: var(--ink-soft);
     text-decoration: none;
     transition: color 0.15s ease;
     display: block;
     padding: 4px 0;
   }
   .filter-categories li a:hover {
-    color: var(--accent-forest, #244b3c);
+    color: var(--accent-forest, var(--forest));
     font-weight: 500;
   }
 
@@ -64,29 +64,29 @@
     gap: 8px;
   }
   .style-chip {
-    background: var(--bg-primary, #f8f6f1);
-    border: 1px solid var(--border-light, #d8d4cc);
+    background: var(--bg-primary, var(--ivory));
+    border: 1px solid var(--border-light, var(--line));
     border-radius: var(--radius-sm, 4px);
     padding: 6px 14px;
     font-size: 13px;
-    color: var(--text-primary, #1c1c1c);
+    color: var(--text-primary, var(--ink));
     cursor: pointer;
     transition: all 0.18s ease;
   }
   .style-chip:hover {
-    border-color: var(--accent-forest, #244b3c);
+    border-color: var(--accent-forest, var(--forest));
   }
   .style-chip.active {
-    background-color: var(--accent-forest, #244b3c);
-    color: #ffffff;
-    border-color: var(--accent-forest, #244b3c);
+    background-color: var(--accent-forest, var(--forest));
+    color: var(--paper);
+    border-color: var(--accent-forest, var(--forest));
   }
 
   .filter-price {
     display: flex;
     flex-direction: column;
     padding-top: 16px;
-    border-top: 1px solid var(--border-light, #d8d4cc);
+    border-top: 1px solid var(--border-light, var(--line));
   }
   .filter-price-num {
     display: flex;
@@ -98,19 +98,19 @@
   .filter-price-num-input {
     width: 90px;
     padding: 8px 10px;
-    border: 1px solid var(--border-light, #d8d4cc);
+    border: 1px solid var(--border-light, var(--line));
     border-radius: var(--radius-sm, 4px);
     text-align: center;
     font-size: 14px;
-    color: var(--text-primary, #1c1c1c);
-    background: var(--bg-primary, #f8f6f1);
+    color: var(--text-primary, var(--ink));
+    background: var(--bg-primary, var(--ivory));
   }
   .filter-price-num-input:focus {
     outline: none;
-    border-color: var(--accent-forest, #244b3c);
+    border-color: var(--accent-forest, var(--forest));
   }
   .price-dash {
-    color: #8c8880;
+    color: var(--muted);
   }
 
   .range-slider {
@@ -118,15 +118,15 @@
     margin-top: 6px;
   }
   .range-slider .range-slider__range {
-    background: var(--accent-forest, #244b3c) !important;
+    background: var(--accent-forest, var(--forest)) !important;
   }
   .range-slider .range-slider__thumb {
-    background: var(--accent-forest, #244b3c) !important;
+    background: var(--accent-forest, var(--forest)) !important;
   }
 
   .filter-sizes {
     padding-top: 16px;
-    border-top: 1px solid var(--border-light, #d8d4cc);
+    border-top: 1px solid var(--border-light, var(--line));
   }
   .sizes-list {
     display: flex;
@@ -135,9 +135,9 @@
     margin-top: 8px;
   }
   .size-active {
-    background-color: var(--accent-forest, #244b3c) !important;
-    color: #ffffff !important;
-    border-color: var(--accent-forest, #244b3c) !important;
+    background-color: var(--accent-forest, var(--forest)) !important;
+    color: var(--paper) !important;
+    border-color: var(--accent-forest, var(--forest)) !important;
   }
 
   .filter-buttons-row {
@@ -145,7 +145,7 @@
     gap: 10px;
     margin-top: 16px;
     padding-top: 16px;
-    border-top: 1px solid var(--border-light, #d8d4cc);
+    border-top: 1px solid var(--border-light, var(--line));
   }
   .filter-apply {
     flex: 1;
@@ -159,7 +159,7 @@
 
   .no-sizes-note {
     font-size: 13px;
-    color: #8c8880;
+    color: var(--muted);
     font-style: italic;
     line-height: 1.4;
     margin: 6px 0 0 0;
@@ -168,7 +168,7 @@
   @media (max-width: 1060px) {
     .filters-container {
       visibility: hidden;
-      background-color: #ffffff;
+      background-color: var(--paper);
       position: fixed;
       width: 320px;
       height: 100vh;

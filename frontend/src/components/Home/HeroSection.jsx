@@ -1,83 +1,61 @@
 import { Link } from "react-router-dom";
+import { openBulkEnquiry } from "../../utils/events";
+
+const HERO_IMAGE =
+  "https://images.unsplash.com/photo-1513885535751-8b9238bd345a?auto=format&fit=crop&w=1100&q=80";
+
+const promises = [
+  "Your logo printed or engraved",
+  "GST invoice on every order",
+  "Delivered across India",
+];
 
 const HeroSection = () => {
-  const scrollToStory = (e) => {
-    e.preventDefault();
-    const el = document.getElementById("brand-story");
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
-    <section className="hero-editorial-section" aria-label="Editorial Hero">
-      <div className="container hero-editorial-grid">
-        {/* Left Region: Editorial Typography & Actions */}
-        <div className="hero-editorial-content">
-          <div className="hero-kicker">
-            <span className="hero-kicker-dot"></span>
-            <span className="hero-kicker-text">Edition 2026 · Corporate & Festive Gifting</span>
-          </div>
-
-          <h1 className="hero-editorial-title">
-            Bespoke Hampers, Tech Kits & Branded Gifts.
+    <section className="gw-hero" aria-labelledby="gw-hero-title">
+      <div className="container gw-hero-grid">
+        <div className="gw-hero-copy">
+          <h1 id="gw-hero-title" className="gw-hero-title">
+            Gifts your clients and teams will keep.
           </h1>
-
-          <p className="hero-editorial-description">
-            Tailored corporate gifting, employee onboarding kits, festive hampers, and authorized branded merchandise with custom logo printing, official GST tax billing, and Pan-India delivery.
+          <p className="gw-hero-lead">
+            Hampers, onboarding kits, drinkware and merchandise from brands people know,
+            finished with your logo and delivered from Hyderabad.
           </p>
 
-          <div className="hero-editorial-actions">
-            <Link to="/products" className="btn-luxury btn-primary hero-primary-cta">
-              Explore Gifting Catalog <i className="fa-solid fa-arrow-right"></i>
+          <div className="gw-hero-actions">
+            <Link to="/products" className="btn-luxury btn-primary">
+              Browse the catalogue
             </Link>
-            <a
-              href="#brand-story"
-              onClick={scrollToStory}
-              className="btn-luxury btn-outline hero-secondary-cta"
-            >
-              Why Giftingwellness
-            </a>
+            <button type="button" className="btn-luxury btn-outline" onClick={() => openBulkEnquiry()}>
+              Request a bulk quote
+            </button>
           </div>
 
-          <div className="hero-editorial-highlights">
-            <div className="hero-highlight-item">
-              <span className="highlight-number">10,000+</span>
-              <span className="highlight-label">Curated Gift Items</span>
-            </div>
-            <div className="hero-highlight-divider" aria-hidden="true"></div>
-            <div className="hero-highlight-item">
-              <span className="highlight-number">100%</span>
-              <span className="highlight-label">Custom Logo Branding</span>
-            </div>
-            <div className="hero-highlight-divider" aria-hidden="true"></div>
-            <div className="hero-highlight-item">
-              <span className="highlight-number">Pan-India</span>
-              <span className="highlight-label">Doorstep Delivery</span>
-            </div>
-          </div>
+          <ul className="gw-hero-promises">
+            {promises.map((p) => (
+              <li key={p}>
+                <i className="fa-solid fa-check" aria-hidden="true"></i>
+                {p}
+              </li>
+            ))}
+          </ul>
         </div>
 
-        {/* Right Region: Asymmetric Editorial Collage */}
-        <div className="hero-editorial-media">
-          <div className="hero-collage-container">
-            {/* Dominant Lifestyle Anchor Image */}
-            <div className="hero-image-wrapper hero-anchor-image">
-              <img
-                src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=1200&q=85"
-                alt="Atelier luxury corporate gift hamper box with bespoke packaging"
-                className="hero-main-img"
-                loading="eager"
-              />
-              <div className="hero-image-badge">
-                <span className="badge-tag">Corporate Hamper Edition</span>
-                <span className="badge-title">Custom Logo Engraved & Gift Boxed</span>
-              </div>
-            </div>
-
-
+        <figure className="gw-hero-media">
+          <div className="gw-hero-arch">
+            <img
+              src={HERO_IMAGE}
+              alt="Stack of wrapped gift boxes tied with ribbon"
+              width="1100"
+              height="733"
+            />
           </div>
-        </div>
+          <figcaption className="gw-hero-tag">
+            <span className="gw-hero-tag-title">See it before you order</span>
+            <span className="gw-hero-tag-text">Free digital sample on bulk orders</span>
+          </figcaption>
+        </figure>
       </div>
     </section>
   );

@@ -1,19 +1,19 @@
 /* =========================================================================
    About Us Page Styles - Gifting Wellness
-   Aesthetic: Luxury Editorial, Warm Cream & Forest Green (#244b3c, #b65c45)
+   Aesthetic: Luxury Editorial, Warm Cream & Forest Green (var(--forest), var(--ribbon))
    ========================================================================= */
 
 .about-page {
-  background-color: var(--bg-primary, #fbf9f5);
-  color: var(--text-primary, #1c1c1c);
+  background-color: var(--bg-primary, var(--ivory));
+  color: var(--text-primary, var(--ink));
   min-height: 100vh;
 }
 
 /* 1. Hero Banner */
 .about-hero-section {
   position: relative;
-  background: linear-gradient(135deg, #1f3d32 0%, #152c24 100%);
-  color: #ffffff;
+  background: linear-gradient(135deg, var(--forest) 0%, var(--forest-deep) 100%);
+  color: var(--paper);
   padding: 80px 0 70px 0;
   overflow: hidden;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -49,29 +49,29 @@
   border-radius: 30px;
   font-size: 12px;
   font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #eae4d9;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  color: var(--linen);
   margin-bottom: 20px;
 }
 
 .about-hero-title {
-  font-family: var(--font-heading, "Playfair Display", serif);
+  font-family: var(--font-heading);
   font-size: clamp(2.4rem, 4.5vw, 3.8rem);
   font-weight: 600;
   line-height: 1.15;
-  color: #ffffff;
+  color: var(--paper);
   margin: 0 0 18px 0;
   letter-spacing: -0.015em;
 }
 
 .about-hero-subtitle {
   font-size: clamp(1.1rem, 2vw, 1.35rem);
-  color: #d8d4cc;
+  color: var(--line);
   line-height: 1.6;
   font-weight: 400;
   margin: 0 0 28px 0;
-  font-family: var(--font-heading, "Playfair Display", serif);
+  font-family: var(--font-heading);
   font-style: italic;
 }
 
@@ -88,8 +88,8 @@
   align-items: center;
   gap: 8px;
   padding: 13px 28px;
-  background: #b65c45;
-  color: #ffffff;
+  background: var(--ribbon);
+  color: var(--paper);
   border: none;
   border-radius: var(--radius-sm, 4px);
   font-weight: 600;
@@ -101,7 +101,7 @@
 }
 
 .about-hero-btn-primary:hover {
-  background: #a04e38;
+  background: var(--ribbon);
   transform: translateY(-1px);
   box-shadow: 0 8px 22px rgba(182, 92, 69, 0.4);
 }
@@ -112,7 +112,7 @@
   gap: 8px;
   padding: 13px 26px;
   background: transparent;
-  color: #ffffff;
+  color: var(--paper);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: var(--radius-sm, 4px);
   font-weight: 600;
@@ -124,13 +124,13 @@
 
 .about-hero-btn-secondary:hover {
   background: rgba(255, 255, 255, 0.12);
-  border-color: #ffffff;
+  border-color: var(--paper);
 }
 
 /* 2. Stats Strip */
 .about-stats-strip {
-  background: var(--bg-secondary, #eae4d9);
-  border-bottom: 1px solid var(--border-light, #d8d4cc);
+  background: var(--bg-secondary, var(--linen));
+  border-bottom: 1px solid var(--border-light, var(--line));
   padding: 28px 0;
 }
 
@@ -155,28 +155,28 @@
   top: 15%;
   height: 70%;
   width: 1px;
-  background: var(--border-light, #d8d4cc);
+  background: var(--border-light, var(--line));
 }
 
 .about-stat-number {
-  font-family: var(--font-heading, "Playfair Display", serif);
+  font-family: var(--font-heading);
   font-size: clamp(1.8rem, 2.8vw, 2.4rem);
   font-weight: 700;
-  color: var(--accent-forest, #244b3c);
+  color: var(--accent-forest, var(--forest));
   line-height: 1;
 }
 
 .about-stat-label {
   font-size: 13px;
   font-weight: 600;
-  color: var(--text-primary, #1c1c1c);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
+  color: var(--text-primary, var(--ink));
+  text-transform: none;
+  letter-spacing: 0.01em;
 }
 
 .about-stat-sub {
   font-size: 12px;
-  color: #6b6760;
+  color: var(--muted);
 }
 
 /* 3. Main Story Section (Founder & Origin) */
@@ -200,7 +200,7 @@
   border-radius: var(--radius-md, 8px);
   overflow: hidden;
   box-shadow: 0 20px 48px rgba(28, 28, 28, 0.1);
-  background: #ffffff;
+  background: var(--paper);
 }
 
 .about-story-img {
@@ -220,7 +220,7 @@
   padding: 20px 22px;
   border-radius: var(--radius-sm, 6px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  border-left: 4px solid var(--accent-forest, #244b3c);
+  border-left: 4px solid var(--accent-forest, var(--forest));
 }
 
 .founder-title-row {
@@ -231,24 +231,24 @@
 }
 
 .founder-name {
-  font-family: var(--font-heading, "Playfair Display", serif);
+  font-family: var(--font-heading);
   font-size: 19px;
   font-weight: 700;
-  color: var(--accent-forest, #244b3c);
+  color: var(--accent-forest, var(--forest));
 }
 
 .founder-role {
   font-size: 12px;
   font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #b65c45;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  color: var(--ribbon);
 }
 
 .founder-quote {
   font-size: 13px;
   line-height: 1.5;
-  color: #4a453e;
+  color: var(--ink-soft);
   margin: 0;
   font-style: italic;
 }
@@ -262,9 +262,9 @@
 .about-kicker {
   font-size: 13px;
   font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #b65c45;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  color: var(--ribbon);
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -274,25 +274,25 @@
   content: "";
   width: 24px;
   height: 2px;
-  background: #b65c45;
+  background: var(--ribbon);
 }
 
 .about-story-heading {
-  font-family: var(--font-heading, "Playfair Display", serif);
+  font-family: var(--font-heading);
   font-size: clamp(2.2rem, 3.4vw, 3rem);
   font-weight: 600;
   line-height: 1.2;
-  color: var(--text-primary, #1c1c1c);
+  color: var(--text-primary, var(--ink));
   margin: 0;
 }
 
 .about-lead-paragraph {
   font-size: 18px;
   line-height: 1.65;
-  color: var(--accent-forest, #244b3c);
+  color: var(--accent-forest, var(--forest));
   font-weight: 500;
-  font-family: var(--font-heading, "Playfair Display", serif);
-  border-left: 3px solid var(--accent-forest, #244b3c);
+  font-family: var(--font-heading);
+  border-left: 3px solid var(--accent-forest, var(--forest));
   padding-left: 18px;
   margin: 0;
 }
@@ -300,16 +300,16 @@
 .about-body-paragraph {
   font-size: 15.5px;
   line-height: 1.75;
-  color: #4a453e;
+  color: var(--ink-soft);
   margin: 0;
 }
 
 /* 4. Philosophy & Pillars Section */
 .about-philosophy-section {
   padding: 85px 0;
-  background-color: var(--bg-secondary, #eae4d9);
-  border-top: 1px solid var(--border-light, #d8d4cc);
-  border-bottom: 1px solid var(--border-light, #d8d4cc);
+  background-color: var(--bg-secondary, var(--linen));
+  border-top: 1px solid var(--border-light, var(--line));
+  border-bottom: 1px solid var(--border-light, var(--line));
 }
 
 .about-section-header {
@@ -319,17 +319,17 @@
 }
 
 .about-section-header h2 {
-  font-family: var(--font-heading, "Playfair Display", serif);
+  font-family: var(--font-heading);
   font-size: clamp(2rem, 3.2vw, 2.7rem);
   font-weight: 600;
-  color: var(--text-primary, #1c1c1c);
+  color: var(--text-primary, var(--ink));
   margin: 8px 0 14px 0;
   line-height: 1.2;
 }
 
 .about-section-header p {
   font-size: 16px;
-  color: #6b6760;
+  color: var(--muted);
   line-height: 1.65;
   margin: 0;
 }
@@ -341,7 +341,7 @@
 }
 
 .about-pillar-card {
-  background: #ffffff;
+  background: var(--paper);
   border-radius: var(--radius-md, 8px);
   padding: 36px 28px;
   box-shadow: 0 10px 28px rgba(28, 28, 28, 0.05);
@@ -355,7 +355,7 @@
 .about-pillar-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 16px 36px rgba(28, 28, 28, 0.09);
-  border-color: var(--accent-forest, #244b3c);
+  border-color: var(--accent-forest, var(--forest));
 }
 
 .pillar-icon-box {
@@ -363,7 +363,7 @@
   height: 52px;
   border-radius: 10px;
   background: rgba(36, 75, 60, 0.08);
-  color: var(--accent-forest, #244b3c);
+  color: var(--accent-forest, var(--forest));
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -372,17 +372,17 @@
 }
 
 .about-pillar-card h3 {
-  font-family: var(--font-heading, "Playfair Display", serif);
+  font-family: var(--font-heading);
   font-size: 21px;
   font-weight: 600;
-  color: var(--text-primary, #1c1c1c);
+  color: var(--text-primary, var(--ink));
   margin: 0;
 }
 
 .about-pillar-card p {
   font-size: 14.5px;
   line-height: 1.65;
-  color: #4a453e;
+  color: var(--ink-soft);
   margin: 0;
 }
 
@@ -403,7 +403,7 @@
   overflow: hidden;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
   aspect-ratio: 3 / 4;
-  background: #1c1c1c;
+  background: var(--ink);
 }
 
 .about-range-card img {
@@ -426,28 +426,28 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  color: #ffffff;
+  color: var(--paper);
 }
 
 .about-range-overlay h4 {
-  font-family: var(--font-heading, "Playfair Display", serif);
+  font-family: var(--font-heading);
   font-size: 19px;
   font-weight: 600;
   margin: 0 0 6px 0;
-  color: #ffffff;
+  color: var(--paper);
 }
 
 .about-range-overlay p {
   font-size: 13px;
-  color: #eae4d9;
+  color: var(--linen);
   line-height: 1.45;
   margin: 0;
 }
 
 /* 6. Grand Closing Commitment / Mission Banner */
 .about-closing-banner {
-  background: linear-gradient(135deg, #244b3c 0%, #152c24 100%);
-  color: #ffffff;
+  background: linear-gradient(135deg, var(--forest) 0%, var(--forest-deep) 100%);
+  color: var(--paper);
   padding: 75px 40px;
   border-radius: var(--radius-md, 8px);
   text-align: center;
@@ -476,26 +476,26 @@
 }
 
 .about-closing-quote-mark {
-  font-family: var(--font-heading, "Playfair Display", serif);
+  font-family: var(--font-heading);
   font-size: 50px;
   line-height: 1;
-  color: #b65c45;
+  color: var(--ribbon);
   margin-bottom: 12px;
 }
 
 .about-closing-tagline {
-  font-family: var(--font-heading, "Playfair Display", serif);
+  font-family: var(--font-heading);
   font-size: clamp(1.8rem, 3.2vw, 2.6rem);
   font-weight: 600;
   line-height: 1.25;
-  color: #ffffff;
+  color: var(--paper);
   margin: 0 0 18px 0;
 }
 
 .about-closing-sub {
   font-size: 16.5px;
   line-height: 1.7;
-  color: #d8d4cc;
+  color: var(--line);
   margin: 0 0 32px 0;
 }
 
@@ -509,7 +509,7 @@
 /* 7. Mission & Vision Section */
 .about-mission-vision-section {
   padding: 85px 0 75px 0;
-  background-color: var(--bg-primary, #fbf9f5);
+  background-color: var(--bg-primary, var(--ivory));
 }
 
 .mission-vision-grid {
@@ -521,7 +521,7 @@
 .mission-card,
 .vision-card {
   position: relative;
-  background: #ffffff;
+  background: var(--paper);
   border-radius: var(--radius-md, 10px);
   padding: 44px 36px;
   box-shadow: 0 12px 32px rgba(28, 28, 28, 0.06);
@@ -540,11 +540,11 @@
 }
 
 .mission-card {
-  border-top: 4px solid var(--accent-forest, #244b3c);
+  border-top: 4px solid var(--accent-forest, var(--forest));
 }
 
 .vision-card {
-  border-top: 4px solid #b65c45;
+  border-top: 4px solid var(--ribbon);
 }
 
 .mv-icon-badge {
@@ -559,27 +559,27 @@
 
 .mission-card .mv-icon-badge {
   background: rgba(36, 75, 60, 0.1);
-  color: var(--accent-forest, #244b3c);
+  color: var(--accent-forest, var(--forest));
 }
 
 .vision-card .mv-icon-badge {
   background: rgba(182, 92, 69, 0.1);
-  color: #b65c45;
+  color: var(--ribbon);
 }
 
 .mv-kicker {
   font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #8a857d;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  color: var(--muted);
 }
 
 .mv-title {
-  font-family: var(--font-heading, "Playfair Display", serif);
+  font-family: var(--font-heading);
   font-size: clamp(1.8rem, 2.5vw, 2.3rem);
   font-weight: 600;
-  color: var(--text-primary, #1c1c1c);
+  color: var(--text-primary, var(--ink));
   margin: 0;
   line-height: 1.2;
 }
@@ -587,7 +587,7 @@
 .mv-text {
   font-size: 16px;
   line-height: 1.7;
-  color: #4a453e;
+  color: var(--ink-soft);
   margin: 0;
   font-weight: 400;
 }
@@ -595,9 +595,9 @@
 /* 8. Why Choose Gifting Wellness Section */
 .why-choose-section {
   padding: 85px 0 95px 0;
-  background-color: var(--bg-secondary, #eae4d9);
-  border-top: 1px solid var(--border-light, #d8d4cc);
-  border-bottom: 1px solid var(--border-light, #d8d4cc);
+  background-color: var(--bg-secondary, var(--linen));
+  border-top: 1px solid var(--border-light, var(--line));
+  border-bottom: 1px solid var(--border-light, var(--line));
 }
 
 .why-choose-grid {
@@ -607,7 +607,7 @@
 }
 
 .why-choose-card {
-  background: #ffffff;
+  background: var(--paper);
   border-radius: var(--radius-md, 8px);
   padding: 32px 26px;
   box-shadow: 0 8px 24px rgba(28, 28, 28, 0.05);
@@ -622,7 +622,7 @@
 .why-choose-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 14px 32px rgba(28, 28, 28, 0.09);
-  border-color: var(--accent-forest, #244b3c);
+  border-color: var(--accent-forest, var(--forest));
 }
 
 .why-icon-box {
@@ -630,7 +630,7 @@
   height: 46px;
   border-radius: 10px;
   background: rgba(36, 75, 60, 0.08);
-  color: var(--accent-forest, #244b3c);
+  color: var(--accent-forest, var(--forest));
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -639,10 +639,10 @@
 }
 
 .why-choose-card h3 {
-  font-family: var(--font-heading, "Playfair Display", serif);
+  font-family: var(--font-heading);
   font-size: 19px;
   font-weight: 600;
-  color: var(--text-primary, #1c1c1c);
+  color: var(--text-primary, var(--ink));
   margin: 0;
   line-height: 1.3;
 }
@@ -650,7 +650,7 @@
 .why-choose-card p {
   font-size: 14px;
   line-height: 1.6;
-  color: #555047;
+  color: var(--ink-soft);
   margin: 0;
 }
 

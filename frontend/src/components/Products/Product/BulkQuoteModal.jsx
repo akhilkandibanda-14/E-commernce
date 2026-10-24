@@ -219,10 +219,10 @@ const BulkQuoteModal = ({ isOpen, onClose, product, selectedColor, selectedBrand
 
             <form onSubmit={handleSubmit} className="quote-form-grid">
               <div className="form-group">
-                <label className="form-label">
+                <label className="form-label" htmlFor="quote-companyName">
                   Company / Organization Name <span className="req">*</span>
                 </label>
-                <input
+                <input id="quote-companyName"
                   type="text"
                   name="companyName"
                   placeholder="e.g. Acme Technologies India Pvt Ltd"
@@ -234,10 +234,10 @@ const BulkQuoteModal = ({ isOpen, onClose, product, selectedColor, selectedBrand
               </div>
 
               <div className="form-group">
-                <label className="form-label">
+                <label className="form-label" htmlFor="quote-contactName">
                   Contact Person Name <span className="req">*</span>
                 </label>
-                <input
+                <input id="quote-contactName"
                   type="text"
                   name="contactName"
                   placeholder="e.g. Rajesh Sharma"
@@ -249,10 +249,10 @@ const BulkQuoteModal = ({ isOpen, onClose, product, selectedColor, selectedBrand
               </div>
 
               <div className="form-group">
-                <label className="form-label">
+                <label className="form-label" htmlFor="quote-email">
                   Work Email Address <span className="req">*</span>
                 </label>
-                <input
+                <input id="quote-email"
                   type="email"
                   name="email"
                   placeholder="rajesh@acmecorp.com"
@@ -264,10 +264,10 @@ const BulkQuoteModal = ({ isOpen, onClose, product, selectedColor, selectedBrand
               </div>
 
               <div className="form-group">
-                <label className="form-label">
+                <label className="form-label" htmlFor="quote-phone">
                   Phone Number (Mobile / WhatsApp) <span className="req">*</span>
                 </label>
-                <input
+                <input id="quote-phone"
                   type="tel"
                   name="phone"
                   placeholder="+91 98765 43210"
@@ -279,10 +279,10 @@ const BulkQuoteModal = ({ isOpen, onClose, product, selectedColor, selectedBrand
               </div>
 
               <div className="form-group">
-                <label className="form-label">
+                <label className="form-label" htmlFor="quote-quantity">
                   Estimated Order Quantity (Units) <span className="req">*</span>
                 </label>
-                <input
+                <input id="quote-quantity"
                   type="number"
                   name="quantity"
                   min="25"
@@ -297,10 +297,10 @@ const BulkQuoteModal = ({ isOpen, onClose, product, selectedColor, selectedBrand
               </div>
 
               <div className="form-group">
-                <label className="form-label">
+                <label className="form-label" htmlFor="quote-brandingOption">
                   Preferred Logo Branding Method
                 </label>
-                <select
+                <select id="quote-brandingOption"
                   name="brandingOption"
                   value={formData.brandingOption}
                   onChange={handleChange}
@@ -314,8 +314,8 @@ const BulkQuoteModal = ({ isOpen, onClose, product, selectedColor, selectedBrand
               </div>
 
               <div className="form-group">
-                <label className="form-label">Delivery Pincode / City</label>
-                <input
+                <label className="form-label" htmlFor="quote-pincode">Delivery Pincode / City</label>
+                <input id="quote-pincode"
                   type="text"
                   name="pincode"
                   placeholder="e.g. 560001 Bangalore"
@@ -326,8 +326,8 @@ const BulkQuoteModal = ({ isOpen, onClose, product, selectedColor, selectedBrand
               </div>
 
               <div className="form-group">
-                <label className="form-label">Company GSTIN (For 18% Tax Credit)</label>
-                <input
+                <label className="form-label" htmlFor="quote-customText">Company GSTIN (For 18% Tax Credit)</label>
+                <input id="quote-customText"
                   type="text"
                   name="customText"
                   placeholder="e.g. 29AAAAA0000A1Z5 (Optional)"
@@ -338,8 +338,8 @@ const BulkQuoteModal = ({ isOpen, onClose, product, selectedColor, selectedBrand
               </div>
 
               <div className="form-group full-width">
-                <label className="form-label">Event Date / Special Instructions</label>
-                <textarea
+                <label className="form-label" htmlFor="quote-notes">Event Date / Special Instructions</label>
+                <textarea id="quote-notes"
                   name="notes"
                   rows="2"
                   placeholder="e.g. Need by Oct 28 for Diwali employee gifting kit. Need individual name personalization if possible."

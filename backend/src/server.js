@@ -12,8 +12,8 @@ import authRouter from "./routes/auth.js";
 import uploadRouter from "./routes/upload.js";
 import siteContentRouter from "./routes/siteContent.js";
 import { validateAuthConfig, authenticateToken, requireAdmin, optionalAuth } from "./middleware/auth.js";
-import { quoteRequestLimiter } from "./middleware/rateLimiter.js";
-import { validateQuotePayload } from "./middleware/validation.js";
+import { quoteRequestLimiter, enquiryLimiter } from "./middleware/rateLimiter.js";
+import { validateQuotePayload, validateEnquiryPayload } from "./middleware/validation.js";
 import { connectDB, isMongoConnected } from "./db.js";
 import { BulkEnquiry } from "./models/BulkEnquiry.js";
 import {
@@ -198,7 +198,7 @@ export const createApp = ({ isUserPort = false, port = USER_PORT, peerPort = ADM
   });
 
   // Bulk Enquiry Endpoint (Corporate Gifting Lookbooks & Quotes)
-  app.post("/api/enquiries", optionalAuth, async (req, res) => {
+  app.post("/api/enquiries", optionalAuth, enquiryLimiter, validateEnquiryPayload, async (req, res) => {
     try {
       const { name, email, phone, company, category, quantity, customBranding, targetDate, notes } = req.body;
       const enquiryId = `ENQ-${Date.now().toString(36).toUpperCase()}-${Math.floor(100 + Math.random() * 900)}`;

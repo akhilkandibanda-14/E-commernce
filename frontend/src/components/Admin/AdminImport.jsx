@@ -490,15 +490,15 @@ const AdminImport = () => {
             <div className="admin-import-container">
               {/* Import Success Banner */}
               {importSuccessResult && (
-                <div className="import-card" style={{ borderColor: "#10b981", background: "#f0fdf4" }}>
+                <div className="import-card" style={{ borderColor: "var(--success)", background: "var(--sage-tint)" }}>
                   <div style={{ display: "flex", alignItems: "flex-start", gap: "16px" }}>
                     <div
                       style={{
                         width: 44,
                         height: 44,
                         borderRadius: "50%",
-                        background: "#10b981",
-                        color: "#fff",
+                        background: "var(--success)",
+                        color: "var(--paper)",
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
@@ -509,12 +509,12 @@ const AdminImport = () => {
                       <i className="fa-solid fa-check"></i>
                     </div>
                     <div style={{ flex: 1 }}>
-                      <h3 style={{ margin: "0 0 6px 0", color: "#065f46", fontSize: 18, fontWeight: 800 }}>
+                      <h3 style={{ margin: "0 0 6px 0", color: "var(--success)", fontSize: 18, fontWeight: 800 }}>
                         Import Committed Successfully!
                       </h3>
-                      <p style={{ margin: "0 0 12px 0", color: "#047857", fontSize: 13.5 }}>
+                      <p style={{ margin: "0 0 12px 0", color: "var(--success)", fontSize: 13.5 }}>
                         Snapshot ID:{" "}
-                        <code style={{ background: "#dcfce7", padding: "2px 6px", borderRadius: 4, fontWeight: 700 }}>
+                        <code style={{ background: "var(--sage-tint)", padding: "2px 6px", borderRadius: 4, fontWeight: 700 }}>
                           {importSuccessResult.importId}
                         </code>{" "}
                         — {importSuccessResult.message}
@@ -568,23 +568,23 @@ const AdminImport = () => {
 
               {/* Server Error / Conflict Banner */}
               {serverError && (
-                <div className="import-card" style={{ borderColor: "#f87171", background: "#fef2f2" }}>
+                <div className="import-card" style={{ borderColor: "#f87171", background: "var(--danger-tint)" }}>
                   <div style={{ display: "flex", alignItems: "flex-start", gap: "14px" }}>
                     <i
                       className="fa-solid fa-triangle-exclamation"
-                      style={{ fontSize: 24, color: "#dc2626", marginTop: 2 }}
+                      style={{ fontSize: 24, color: "var(--danger)", marginTop: 2 }}
                     ></i>
                     <div style={{ flex: 1 }}>
-                      <h4 style={{ margin: "0 0 4px 0", color: "#991b1b", fontSize: 15, fontWeight: 800 }}>
+                      <h4 style={{ margin: "0 0 4px 0", color: "var(--danger)", fontSize: 15, fontWeight: 800 }}>
                         Import Validation Rejected
                       </h4>
-                      <p style={{ margin: "0 0 10px 0", color: "#b91c1c", fontSize: 13 }}>
+                      <p style={{ margin: "0 0 10px 0", color: "var(--danger)", fontSize: 13 }}>
                         {serverError}
                       </p>
 
                       {serverConflictData?.conflicts && (
-                        <div style={{ background: "#ffffff", padding: "10px 14px", borderRadius: 8, border: "1px solid #fecaca", maxHeight: 180, overflowY: "auto" }}>
-                          <strong style={{ fontSize: 12, color: "#991b1b" }}>Detected Conflicts:</strong>
+                        <div style={{ background: "var(--paper)", padding: "10px 14px", borderRadius: 8, border: "1px solid #fecaca", maxHeight: 180, overflowY: "auto" }}>
+                          <strong style={{ fontSize: 12, color: "var(--danger)" }}>Detected Conflicts:</strong>
                           <ul style={{ margin: "6px 0 0 0", paddingLeft: 18, fontSize: 12, color: "#7f1d1d" }}>
                             {serverConflictData.conflicts.map((c, idx) => (
                               <li key={idx}>
@@ -596,8 +596,8 @@ const AdminImport = () => {
                       )}
 
                       {serverConflictData?.errors && (
-                        <div style={{ background: "#ffffff", padding: "10px 14px", borderRadius: 8, border: "1px solid #fecaca", maxHeight: 180, overflowY: "auto" }}>
-                          <strong style={{ fontSize: 12, color: "#991b1b" }}>Row-Level Errors:</strong>
+                        <div style={{ background: "var(--paper)", padding: "10px 14px", borderRadius: 8, border: "1px solid #fecaca", maxHeight: 180, overflowY: "auto" }}>
+                          <strong style={{ fontSize: 12, color: "var(--danger)" }}>Row-Level Errors:</strong>
                           <ul style={{ margin: "6px 0 0 0", paddingLeft: 18, fontSize: 12, color: "#7f1d1d" }}>
                             {serverConflictData.errors.map((e, idx) => (
                               <li key={idx}>
@@ -646,7 +646,7 @@ const AdminImport = () => {
 
                   {/* File Selection Errors */}
                   {fileErrors.length > 0 && (
-                    <div style={{ marginTop: 16, padding: "12px 16px", background: "#fef2f2", border: "1px solid #fecaca", borderRadius: 8, color: "#b91c1c", fontSize: 13 }}>
+                    <div style={{ marginTop: 16, padding: "12px 16px", background: "var(--danger-tint)", border: "1px solid #fecaca", borderRadius: 8, color: "var(--danger)", fontSize: 13 }}>
                       <strong>File Parse Error:</strong>
                       <ul style={{ margin: "6px 0 0 0", paddingLeft: 18 }}>
                         {fileErrors.map((err, i) => (
@@ -721,7 +721,7 @@ const AdminImport = () => {
                       >
                         <div className="strategy-card-header">
                           <span className="strategy-name">
-                            <i className="fa-solid fa-forward" style={{ color: "#d97706" }}></i> Skip Existing
+                            <i className="fa-solid fa-forward" style={{ color: "var(--warning)" }}></i> Skip Existing
                           </span>
                           <input
                             type="radio"
@@ -765,7 +765,7 @@ const AdminImport = () => {
                       >
                         <div className="strategy-card-header">
                           <span className="strategy-name">
-                            <i className="fa-solid fa-shield-xmark" style={{ color: "#dc2626" }}></i> Strict Error
+                            <i className="fa-solid fa-shield-xmark" style={{ color: "var(--danger)" }}></i> Strict Error
                           </span>
                           <input
                             type="radio"
@@ -811,14 +811,14 @@ const AdminImport = () => {
 
                   {/* Dry Run Server Authoritative Breakdown */}
                   {dryRunResult && (
-                    <div className="import-card" style={{ background: "#f8fafc", borderColor: "#bfdbfe" }}>
+                    <div className="import-card" style={{ background: "var(--ivory)", borderColor: "#bfdbfe" }}>
                       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 12 }}>
                         <div style={{ display: "flex", alignItems: "center", gap: 8, color: "#1e40af", fontWeight: 700, fontSize: 15 }}>
                           <i className="fa-solid fa-circle-check"></i> Server Dry-Run Validation Passed
                         </div>
                         <span className="badge-pill neutral">Mode: {dryRunResult.duplicateStrategy.toUpperCase()}</span>
                       </div>
-                      <p style={{ fontSize: 13, color: "#475569", margin: "0 0 12px 0" }}>
+                      <p style={{ fontSize: 13, color: "var(--ink-soft)", margin: "0 0 12px 0" }}>
                         Server simulated import of <strong>{dryRunResult.totalReceived}</strong> products. No changes were made to the live catalogue or files.
                       </p>
                       <div className="stats-banner" style={{ margin: 0 }}>
@@ -861,7 +861,7 @@ const AdminImport = () => {
                         </select>
                       </div>
 
-                      <div style={{ fontSize: 12.5, color: "#64748b" }}>
+                      <div style={{ fontSize: 12.5, color: "var(--muted)" }}>
                         Showing {filteredRows.length} of {parsedProducts.length} rows
                       </div>
                     </div>
@@ -888,7 +888,7 @@ const AdminImport = () => {
                             const hasError = r.errors.length > 0;
                             return (
                               <tr key={r.rowNum} className={hasError ? "has-error" : ""}>
-                                <td style={{ fontWeight: 600, color: "#64748b" }}>{r.rowNum}</td>
+                                <td style={{ fontWeight: 600, color: "var(--muted)" }}>{r.rowNum}</td>
                                 <td>
                                   {r.action === "add" && <span className="badge-pill add"><i className="fa-solid fa-plus"></i> Add</span>}
                                   {r.action === "update" && <span className="badge-pill update"><i className="fa-solid fa-rotate"></i> Update</span>}
@@ -897,15 +897,15 @@ const AdminImport = () => {
                                   {r.action === "error" && <span className="badge-pill error"><i className="fa-solid fa-triangle-exclamation"></i> Error</span>}
                                 </td>
                                 <td>
-                                  <code>{r.item.sku || <em style={{ color: "#94a3b8" }}>(auto)</em>}</code>
+                                  <code>{r.item.sku || <em style={{ color: "var(--muted)" }}>(auto)</em>}</code>
                                 </td>
                                 <td style={{ maxWidth: 220, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }} title={r.item.title}>
-                                  <strong>{r.item.title || <span style={{ color: "#ef4444" }}>Missing Title</span>}</strong>
+                                  <strong>{r.item.title || <span style={{ color: "var(--danger)" }}>Missing Title</span>}</strong>
                                 </td>
                                 <td style={{ fontWeight: 700 }}>
-                                  {r.item.price !== undefined ? `₹${r.item.price}` : <span style={{ color: "#ef4444" }}>Missing</span>}
+                                  {r.item.price !== undefined ? `₹${r.item.price}` : <span style={{ color: "var(--danger)" }}>Missing</span>}
                                 </td>
-                                <td style={{ color: "#64748b" }}>
+                                <td style={{ color: "var(--muted)" }}>
                                   {r.item.originalPrice ? `₹${r.item.originalPrice}` : "—"}
                                 </td>
                                 <td>
@@ -920,15 +920,15 @@ const AdminImport = () => {
                                 </td>
                                 <td>
                                   {hasError ? (
-                                    <span style={{ color: "#dc2626", fontWeight: 600, fontSize: 11.5 }}>
+                                    <span style={{ color: "var(--danger)", fontWeight: 600, fontSize: 11.5 }}>
                                       {r.errors.join("; ")}
                                     </span>
                                   ) : r.existingMatch ? (
-                                    <span style={{ color: "#d97706", fontSize: 11.5 }}>
+                                    <span style={{ color: "var(--warning)", fontSize: 11.5 }}>
                                       Matches #{r.existingMatch.id} ({r.existingMatch.sku})
                                     </span>
                                   ) : (
-                                    <span style={{ color: "#059669", fontSize: 11.5 }}>Ready to import</span>
+                                    <span style={{ color: "var(--success)", fontSize: 11.5 }}>Ready to import</span>
                                   )}
                                 </td>
                               </tr>
@@ -1006,10 +1006,10 @@ const AdminImport = () => {
               <div className="import-card">
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 16 }}>
                   <div>
-                    <h3 style={{ margin: 0, fontSize: 16, fontWeight: 800, color: "#0f172a" }}>
+                    <h3 style={{ margin: 0, fontSize: 16, fontWeight: 800, color: "var(--ink)" }}>
                       Catalogue Snapshots & Recovery Points
                     </h3>
-                    <p style={{ margin: "4px 0 0 0", fontSize: 13, color: "#64748b" }}>
+                    <p style={{ margin: "4px 0 0 0", fontSize: 13, color: "var(--muted)" }}>
                       Every bulk import automatically creates an immutable pre-import backup. You can safely rollback to the latest snapshot as long as no subsequent catalogue mutations have occurred.
                     </p>
                   </div>
@@ -1132,11 +1132,11 @@ const AdminImport = () => {
             <div className="modal-dialog" onClick={(e) => e.stopPropagation()}>
               <div className="modal-header">
                 <h3 className="modal-title">
-                  <i className="fa-solid fa-cloud-arrow-up" style={{ color: "#d97706" }}></i> Confirm Catalogue Import
+                  <i className="fa-solid fa-cloud-arrow-up" style={{ color: "var(--warning)" }}></i> Confirm Catalogue Import
                 </h3>
                 <button
                   type="button"
-                  style={{ background: "none", border: "none", fontSize: 18, cursor: "pointer", color: "#64748b" }}
+                  style={{ background: "none", border: "none", fontSize: 18, cursor: "pointer", color: "var(--muted)" }}
                   onClick={() => setShowImportConfirmModal(false)}
                 >
                   &times;
@@ -1163,7 +1163,7 @@ const AdminImport = () => {
                     type="checkbox"
                     checked={confirmCheckbox}
                     onChange={(e) => setConfirmCheckbox(e.target.checked)}
-                    style={{ marginTop: 2, accentColor: "#0f172a" }}
+                    style={{ marginTop: 2, accentColor: "var(--ink)" }}
                   />
                   <span>
                     I confirm that I have verified the preview and intend to update the live product catalogue.
@@ -1206,12 +1206,12 @@ const AdminImport = () => {
           <div className="modal-overlay" onClick={() => setRollbackTarget(null)}>
             <div className="modal-dialog" onClick={(e) => e.stopPropagation()}>
               <div className="modal-header">
-                <h3 className="modal-title" style={{ color: "#dc2626" }}>
+                <h3 className="modal-title" style={{ color: "var(--danger)" }}>
                   <i className="fa-solid fa-rotate-left"></i> Confirm Catalogue Rollback
                 </h3>
                 <button
                   type="button"
-                  style={{ background: "none", border: "none", fontSize: 18, cursor: "pointer", color: "#64748b" }}
+                  style={{ background: "none", border: "none", fontSize: 18, cursor: "pointer", color: "var(--muted)" }}
                   onClick={() => setRollbackTarget(null)}
                 >
                   &times;
@@ -1233,7 +1233,7 @@ const AdminImport = () => {
                   </ul>
                 </div>
 
-                <p style={{ fontSize: 12.5, color: "#64748b" }}>
+                <p style={{ fontSize: 12.5, color: "var(--muted)" }}>
                   Snapshot Timestamp: {new Date(rollbackTarget.timestamp).toLocaleString()}
                 </p>
               </div>
@@ -1250,7 +1250,7 @@ const AdminImport = () => {
                 <button
                   type="button"
                   className="btn-admin-cta"
-                  style={{ background: "#dc2626", borderColor: "#b91c1c", color: "#ffffff" }}
+                  style={{ background: "var(--danger)", borderColor: "var(--danger)", color: "var(--paper)" }}
                   disabled={rollingBack}
                   onClick={handleRollback}
                 >

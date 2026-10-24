@@ -6,7 +6,7 @@ const Dropdown = ({ dropdownShow }) => {
       <div className={`dropdown-sections-flex ${dropdownShow ? "active" : ""}`}>
         <div className="dropdown-col highlight-b2b-col">
           <p className="dropdown-col-title">
-            <i className="fa-solid fa-gift" style={{ marginRight: "6px", color: "#10b981" }}></i>
+            <i className="fa-solid fa-gift" style={{ marginRight: "6px", color: "var(--success)" }}></i>
             Corporate & Drinkware
           </p>
           <ul className="dropdown-items-flex">

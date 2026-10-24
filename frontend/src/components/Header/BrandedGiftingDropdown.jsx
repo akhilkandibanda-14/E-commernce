@@ -29,7 +29,7 @@ const BrandedGiftingDropdown = ({ isOpen, onClose }) => {
               className="btn-all-brands"
             >
               <span>View All Brands</span>
-              <i className="fa-solid fa-arrow-right"></i>
+             
             </Link>
           </div>
         </div>

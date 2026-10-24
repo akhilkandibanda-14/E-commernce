@@ -40,9 +40,6 @@ const HomeCategory = ({
   return (
     <div className="container home-category">
       <div className="home-category-header">
-        <span className="section-kicker">
-          {filterType === "newArrival" ? "Just Landed" : "Patron Proven"}
-        </span>
         <h2 className="category-heading title">{title}</h2>
         {subtitle && <p className="category-subheading">{subtitle}</p>}
       </div>
@@ -55,7 +52,7 @@ const HomeCategory = ({
 
       <div className="home-category-cta-row">
         <Link to="/products" className="btn-luxury btn-outline btn-category-view-all">
-          View All Products <i className="fa-solid fa-arrow-right"></i>
+          View all products
         </Link>
       </div>
     </div>

@@ -3,6 +3,7 @@ import SearchBar from "./SearchBar";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import { useWishlist } from "../../context/WishlistContext";
+import { DEMO_LOGIN_ENABLED } from "../../utils/env";
 
 const HeaderProfileBtn = ({ cart, handleMouseClick }) => {
   const {
@@ -306,7 +307,7 @@ const HeaderProfileBtn = ({ cart, handleMouseClick }) => {
                     <button
                       type="button"
                       className="btn-dropdown-primary"
-                      style={{ background: "#ffffff", color: "#1e293b", border: "1px solid #cbd5e1" }}
+                      style={{ background: "var(--paper)", color: "var(--ink)", border: "1px solid var(--line-strong)" }}
                       onClick={() => {
                         openClerkSignIn({ initialHint: "oauth_google" });
                         setMenuOpen(false);
@@ -342,6 +343,7 @@ const HeaderProfileBtn = ({ cart, handleMouseClick }) => {
 
                 <div className="dropdown-divider"></div>
 
+                {DEMO_LOGIN_ENABLED && (
                 <div className="dropdown-quick-test">
                   <span className="quick-test-label">⚡ 1-Click Demo Login:</span>
                   <div className="quick-test-row">
@@ -369,6 +371,7 @@ const HeaderProfileBtn = ({ cart, handleMouseClick }) => {
                     </button>
                   </div>
                 </div>
+                )}
               </div>
             )}
           </div>

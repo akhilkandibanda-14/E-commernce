@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useAuth } from "../../context/AuthContext";
 import { useNavigate, useSearchParams, Link } from "react-router-dom";
+import { DEMO_LOGIN_ENABLED } from "../../utils/env";
 
 const LoginPage = () => {
   const { user, isAdmin, login, quickLogin, register, loading } = useAuth();
@@ -137,8 +138,8 @@ const LoginPage = () => {
               </button>
             </div>
 
-            {/* Demo 1-Click login banner */}
-            {mode === "admin" ? (
+            {/* Demo 1-Click login banner (local development only) */}
+            {!DEMO_LOGIN_ENABLED ? null : mode === "admin" ? (
               <div className="page-demo-box admin-demo">
                 <div>
                   <strong>⚡ Instant Admin Access</strong>
@@ -227,7 +228,7 @@ const LoginPage = () => {
                   <input
                     id="lp-pass"
                     type={showPassword ? "text" : "password"}
-                    placeholder={mode === "admin" ? "admin123" : "••••••••"}
+                    placeholder="••••••••"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     required
@@ -259,6 +260,7 @@ const LoginPage = () => {
                 </div>
               )}
 
+              {DEMO_LOGIN_ENABLED && (
               <div className="form-info-note">
                 {mode === "admin" ? (
                   <span>
@@ -270,6 +272,7 @@ const LoginPage = () => {
                   </span>
                 )}
               </div>
+              )}
 
               <button
                 type="submit"

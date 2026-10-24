@@ -44,7 +44,6 @@ const FeaturedCategories = () => {
     <section className="featured-categories-section" aria-label="Featured Gifting Collections">
       <div className="container">
         <div className="section-header-editorial">
-          <span className="section-kicker">Core Gifting Categories</span>
           <h2 className="section-title-editorial title">Curated Gifts for Every Occasion.</h2>
           <p className="section-subtitle-editorial">
             Discover precision-branded executive merchandise, onboarding gift kits, and festive hampers.
@@ -74,7 +73,7 @@ const FeaturedCategories = () => {
                 <h3 className="collection-tile-title">{col.title}</h3>
                 <p className="collection-tile-desc">{col.description}</p>
                 <span className="collection-tile-cta">
-                  Explore Collection <i className="fa-solid fa-arrow-right"></i>
+                  Explore Collection
                 </span>
               </div>
             </Link>

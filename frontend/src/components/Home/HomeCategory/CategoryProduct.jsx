@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import StarRating from "../Reviews/StarRating";
 import { useWishlist } from "../../../context/WishlistContext";
+import { formatINR } from "../../../utils/format";
 
 const CategoryProduct = ({
   id,
@@ -18,6 +19,7 @@ const CategoryProduct = ({
   colors,
   sizes,
   isNew,
+  moq,
 }) => {
   const { isInWishlist, toggleWishlist, addToCart } = useWishlist();
   const [showSizePicker, setShowSizePicker] = useState(false);
@@ -33,9 +35,13 @@ const CategoryProduct = ({
     Array.isArray(images) && images.length > 1 ? images[1] : primaryImage;
 
   const numPrice = Number(price);
-  const ratingValue = rating?.rate || (typeof rating === "number" ? rating : 4.8);
-  const reviewCount = rating?.count || 84;
+  // Only show ratings the catalogue actually has; never invent a score.
+  const ratingValue = Number(rating?.rate ?? (typeof rating === "number" ? rating : 0));
+  const reviewCount = Number(rating?.count || 0);
   const isWishlisted = isInWishlist(id);
+  const productUrl = `/products/${encodeURIComponent(category || "casual")}/${id}`;
+  const hasMarkdown = originalPrice && Number(originalPrice) > numPrice;
+  const minOrder = Number(moq) > 1 ? Number(moq) : 0;
 
   // Available sizes or defaults
   const availableSizes =
@@ -52,30 +58,21 @@ const CategoryProduct = ({
     rating,
   };
 
-  const handleWishlistClick = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
+  const handleWishlistClick = () => {
     toggleWishlist(productData);
   };
 
-  const handleQuickAddClick = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-
+  const handleQuickAddClick = () => {
     // If product has multiple sizes, open the size selection interface
     if (availableSizes.length > 1) {
       setShowSizePicker(true);
-    } else {
+    } else if (addToCart) {
       // Direct add for single size
-      if (addToCart) {
-        addToCart(productData, 1, availableSizes[0] || "Standard");
-      }
+      addToCart(productData, 1, availableSizes[0] || "Standard");
     }
   };
 
-  const handleSelectSize = (e, size) => {
-    e.preventDefault();
-    e.stopPropagation();
+  const handleSelectSize = (size) => {
     if (addToCart) {
       addToCart(productData, 1, size);
     }
@@ -86,20 +83,21 @@ const CategoryProduct = ({
     <article
       className="product-card-luxury"
       onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => {
-        setIsHovered(false);
-        setShowSizePicker(false);
+      onMouseLeave={() => setIsHovered(false)}
+      // The size picker stays open until it is dismissed, so a small pointer slip doesn't lose it.
+      onBlur={(e) => {
+        if (!e.currentTarget.contains(e.relatedTarget)) setShowSizePicker(false);
+      }}
+      onKeyDown={(e) => {
+        if (e.key === "Escape") setShowSizePicker(false);
       }}
     >
-      <Link
-        to={`/products/${encodeURIComponent(category || "casual")}/${id}`}
-        className="product-link"
-      >
-        <div className="product-img-container">
-          {/* Primary & Alternate Image for gentle hover reveal */}
+      <div className="product-img-container">
+        {/* Image link is a duplicate of the title link, so keep it out of the tab order. */}
+        <Link to={productUrl} className="product-media-link" tabIndex={-1} aria-hidden="true">
           <img
             src={isHovered && secondaryImage ? secondaryImage : primaryImage}
-            alt={title}
+            alt=""
             loading="lazy"
             className="items-line-img"
             onError={(e) => {
@@ -107,121 +105,112 @@ const CategoryProduct = ({
               e.currentTarget.src = "/introImageCompressed.jfif";
             }}
           />
+        </Link>
 
-          {/* Badges: New Arrival / Sale */}
-          <div className="product-card-badges">
-            {isNew && <span className="product-new-badge">New</span>}
-            {discountPercent > 0 && (
-              <span className="product-discount-badge">-{discountPercent}%</span>
-            )}
+        <div className="product-card-badges">
+          {isNew && <span className="product-new-badge">New</span>}
+          {discountPercent > 0 && (
+            <span className="product-discount-badge">{discountPercent}% off</span>
+          )}
+        </div>
+
+        <button
+          type="button"
+          onClick={handleWishlistClick}
+          className={`product-wishlist-btn ${isWishlisted ? "active" : ""}`}
+          aria-label={isWishlisted ? `Remove ${title} from saved items` : `Save ${title}`}
+          aria-pressed={isWishlisted}
+        >
+          <i className={isWishlisted ? "fa-solid fa-heart" : "fa-regular fa-heart"} aria-hidden="true"></i>
+        </button>
+
+        {showSizePicker ? (
+          <div className="product-quick-size-selector" role="group" aria-label={`Choose a size for ${title}`}>
+            <div className="size-selector-header">
+              <span className="size-selector-title">Choose a size</span>
+              <button
+                type="button"
+                className="size-selector-close"
+                onClick={() => setShowSizePicker(false)}
+                aria-label="Close size options"
+              >
+                <i className="fa-solid fa-xmark" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div className="size-selector-buttons">
+              {availableSizes.map((sz) => (
+                <button
+                  key={sz}
+                  type="button"
+                  className="size-choice-btn"
+                  onClick={() => handleSelectSize(sz)}
+                  aria-label={`Add size ${sz} to bag`}
+                >
+                  {sz}
+                </button>
+              ))}
+            </div>
           </div>
-
-          {/* Interactive Wishlist Button */}
+        ) : (
           <button
             type="button"
-            onClick={handleWishlistClick}
-            className={`product-wishlist-btn ${isWishlisted ? "active" : ""}`}
-            aria-label={isWishlisted ? "Remove from wishlist" : "Add to wishlist"}
-            title={isWishlisted ? "Remove from wishlist" : "Add to wishlist"}
+            onClick={handleQuickAddClick}
+            className="product-quick-add-btn"
+            aria-label={`Add ${title} to bag`}
           >
-            <i className={isWishlisted ? "fa-solid fa-heart" : "fa-regular fa-heart"}></i>
+            <i className="fa-solid fa-bag-shopping" aria-hidden="true"></i> Add to bag
           </button>
+        )}
+      </div>
 
-          {/* Inline Size Picker Interface (appears when Quick Add requires size selection) */}
-          {showSizePicker ? (
-            <div
-              className="product-quick-size-selector"
-              onClick={(e) => {
-                e.preventDefault();
-                e.stopPropagation();
-              }}
-            >
-              <div className="size-selector-header">
-                <span className="size-selector-title">Select Size</span>
-                <button
-                  type="button"
-                  className="size-selector-close"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    setShowSizePicker(false);
-                  }}
-                  aria-label="Close size selector"
-                >
-                  ✕
-                </button>
-              </div>
-              <div className="size-selector-buttons">
-                {availableSizes.map((sz) => (
-                  <button
-                    key={sz}
-                    type="button"
-                    className="size-choice-btn"
-                    onClick={(e) => handleSelectSize(e, sz)}
-                    title={`Add size ${sz} to cart`}
-                  >
-                    {sz}
-                  </button>
-                ))}
-              </div>
-            </div>
-          ) : (
-            /* Quick Add Button */
-            <button
-              type="button"
-              onClick={handleQuickAddClick}
-              className="product-quick-add-btn"
-              aria-label={`Quick add ${title} to bag`}
-              title="Quick add to bag"
-            >
-              <i className="fa-solid fa-bag-shopping"></i> Quick Add
-            </button>
-          )}
-        </div>
+      <div className="product-card-body">
+        {brand && <span className="product-card-brand">{brand}</span>}
+        <h3 className="category-product-title">
+          <Link to={productUrl} className="product-title-link">
+            {title}
+          </Link>
+        </h3>
 
-        <div className="product-card-body">
-          {brand && <span className="product-card-brand">{brand}</span>}
-          <h3 className="category-product-title">{title}</h3>
+        {Array.isArray(colors) && colors.length > 0 && (
+          <div className="product-color-swatches" aria-label={`${colors.length} colours available`}>
+            {colors.slice(0, 4).map((c, i) => {
+              const hexVal = typeof c === "string" ? c : c.hex || "#333333";
+              const colorName = typeof c === "string" ? c : c.name || `Colour ${i + 1}`;
+              return (
+                <span
+                  key={i}
+                  className="color-swatch-dot"
+                  style={{ backgroundColor: hexVal }}
+                  title={colorName}
+                />
+              );
+            })}
+            {colors.length > 4 && (
+              <span className="color-swatch-more">+{colors.length - 4}</span>
+            )}
+          </div>
+        )}
 
-          {/* Color variant swatches if available */}
-          {Array.isArray(colors) && colors.length > 0 && (
-            <div className="product-color-swatches" aria-label="Available colors">
-              {colors.slice(0, 4).map((c, i) => {
-                const hexVal = typeof c === "string" ? c : c.hex || "#333333";
-                const colorName = typeof c === "string" ? c : c.name || `Color ${i + 1}`;
-                return (
-                  <span
-                    key={i}
-                    className="color-swatch-dot"
-                    style={{ backgroundColor: hexVal }}
-                    title={colorName}
-                  />
-                );
-              })}
-              {colors.length > 4 && (
-                <span className="color-swatch-more">+{colors.length - 4}</span>
-              )}
-            </div>
-          )}
-
+        {ratingValue > 0 && (
           <div className="product-card-rating">
             <StarRating rating={ratingValue} />
-            <span className="product-card-reviews-count">({reviewCount})</span>
+            {reviewCount > 0 && (
+              <span className="product-card-reviews-count">({reviewCount})</span>
+            )}
           </div>
+        )}
 
-          <div className="product-price-row">
-            <span className="category-product-price">₹{numPrice.toFixed(2)}</span>
-            {originalPrice && Number(originalPrice) > numPrice && (
-              <span className="product-original-price">
-                ₹{Number(originalPrice).toFixed(2)}
-              </span>
-            )}
-            {discountPercent > 0 && (
-              <span className="product-discount-pill">-{discountPercent}%</span>
-            )}
-          </div>
+        <div className="product-price-row">
+          <span className="category-product-price">{formatINR(numPrice)}</span>
+          {hasMarkdown && (
+            <span className="product-original-price">
+              <span className="sr-only">Was </span>
+              {formatINR(originalPrice)}
+            </span>
+          )}
         </div>
-      </Link>
+        {minOrder > 0 && <p className="product-card-moq">Min. order {minOrder} pcs</p>}
+      </div>
     </article>
   );
 };

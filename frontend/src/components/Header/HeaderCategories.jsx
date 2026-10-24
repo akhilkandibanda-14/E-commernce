@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useSiteContent } from "../../context/SiteContentContext";
 import ServicesDropdown from "./ServicesDropdown";
 import GiftingCategoriesMegaMenu from "./GiftingCategoriesMegaMenu";
@@ -11,14 +11,14 @@ const HeaderCategories = ({ onOpenBulkModal, onOpenCatalogueModal }) => {
   const { navigation } = useSiteContent();
   const [activeMenu, setActiveMenu] = useState(null);
   const timeoutRef = useRef(null);
-  const location = useLocation();
-  const navigate = useNavigate();
+  const hoverOpenedAt = useRef(0);
 
   const handleMouseEnter = (menuName) => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
     }
     setActiveMenu(menuName);
+    hoverOpenedAt.current = Date.now();
   };
 
   const handleMouseLeave = () => {
@@ -34,20 +34,26 @@ const HeaderCategories = ({ onOpenBulkModal, onOpenCatalogueModal }) => {
     setActiveMenu(null);
   };
 
-  const handleAboutClick = (e) => {
-    e.preventDefault();
-    closeMenu();
-    if (location.pathname === "/") {
-      const el = document.getElementById("brand-story");
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth" });
-      }
-    } else {
-      navigate("/");
-      setTimeout(() => {
-        const el = document.getElementById("brand-story");
-        if (el) el.scrollIntoView({ behavior: "smooth" });
-      }, 150);
+  const toggleMenu = (menuName) => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    // A click right after hover-open should not immediately close the menu again.
+    const justHovered = Date.now() - hoverOpenedAt.current < 600;
+    setActiveMenu((current) => (current === menuName && !justHovered ? null : menuName));
+  };
+
+  // Keyboard and touch users: Escape closes, and moving focus out of the nav closes.
+  const handleNavKeyDown = (e) => {
+    if (e.key === "Escape" && activeMenu) {
+      closeMenu();
+      e.currentTarget.querySelector("[aria-expanded=\"true\"]")?.focus();
+    }
+  };
+
+  const handleNavBlur = (e) => {
+    if (!e.currentTarget.contains(e.relatedTarget)) {
+      closeMenu();
     }
   };
 
@@ -59,7 +65,12 @@ const HeaderCategories = ({ onOpenBulkModal, onOpenCatalogueModal }) => {
   const bulkAction = navigation?.actions?.bulkEnquiry;
 
   return (
-    <nav className="header-nav luxury-gifting-nav" aria-label="Main Navigation">
+    <nav
+      className="header-nav luxury-gifting-nav"
+      aria-label="Main"
+      onKeyDown={handleNavKeyDown}
+      onBlur={handleNavBlur}
+    >
       <ul className="flex-header flex-categories gifting-nav-list">
         {navItems.map((item) => {
           // 1. Home
@@ -97,6 +108,7 @@ const HeaderCategories = ({ onOpenBulkModal, onOpenCatalogueModal }) => {
                   type="button"
                   className="nav-link-item nav-dropdown-btn"
                   aria-expanded={activeMenu === "services"}
+                  onClick={() => toggleMenu("services")}
                   aria-haspopup="true"
                 >
                   <span>{item.label || "Services"}</span>
@@ -124,6 +136,7 @@ const HeaderCategories = ({ onOpenBulkModal, onOpenCatalogueModal }) => {
                   type="button"
                   className="nav-link-item nav-dropdown-btn highlight-mega-trigger"
                   aria-expanded={activeMenu === "categories"}
+                  onClick={() => toggleMenu("categories")}
                   aria-haspopup="true"
                 >
                   <span className="category-gift-icon">
@@ -154,6 +167,7 @@ const HeaderCategories = ({ onOpenBulkModal, onOpenCatalogueModal }) => {
                   type="button"
                   className="nav-link-item nav-dropdown-btn"
                   aria-expanded={activeMenu === "branded"}
+                  onClick={() => toggleMenu("branded")}
                   aria-haspopup="true"
                 >
                   <span>{item.label || "Branded Gifting"}</span>
@@ -180,9 +194,12 @@ const HeaderCategories = ({ onOpenBulkModal, onOpenCatalogueModal }) => {
                   type="button"
                   className="nav-link-item nav-dropdown-btn festive-nav-trigger"
                   aria-expanded={activeMenu === "festive"}
+                  onClick={() => toggleMenu("festive")}
                   aria-haspopup="true"
                 >
-                  <span className="festive-sparkle-dot">{item.badge || "✨"}</span>
+                  {item.badge && /w/.test(item.badge) && (
+                    <span className="festive-sparkle-dot">{item.badge}</span>
+                  )}
                   <span>{item.label || "Festive Gifts"}</span>
                   <i className="fa-solid fa-chevron-down nav-chevron-icon"></i>
                 </button>
@@ -208,6 +225,7 @@ const HeaderCategories = ({ onOpenBulkModal, onOpenCatalogueModal }) => {
                   type="button"
                   className="nav-link-item nav-dropdown-btn"
                   aria-expanded={activeMenu === "contact"}
+                  onClick={() => toggleMenu("contact")}
                   aria-haspopup="true"
                 >
                   <span>{item.label || "Contact Us"}</span>

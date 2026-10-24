@@ -258,7 +258,7 @@ const Products = () => {
   }, [categoryQuery, subcategoryQuery, searchQuery, selectedStyle, params.category]);
 
   return (
-    <main id="main-content" className="products-container">
+    <main id="main-content" className="products-container products-page">
       <Path
         path={[
           {
@@ -283,7 +283,7 @@ const Products = () => {
             : []),
         ]}
       />
-      <div className="container products-flex">
+      <div className="container products-flex products-container-grid">
         <FiltersSidebar
           handleSizeClick={handleSizeClick}
           handleFilterClick={handleFilterClick}
@@ -308,7 +308,7 @@ const Products = () => {
               <h1 className="title">{pageTitle}</h1>
               <div className="active-cat-subcat-pills" style={{ display: "flex", gap: "8px", flexWrap: "wrap", marginTop: "8px", alignItems: "center" }}>
                 {categoryQuery && categoryQuery !== "all" && (
-                  <span className="active-filter-badge" style={{ display: "inline-flex", alignItems: "center", gap: "6px", background: "rgba(36, 75, 60, 0.08)", color: "#244b3c", padding: "4px 10px", border: "1px solid rgba(36, 75, 60, 0.2)", borderRadius: "14px", fontSize: "12px", fontWeight: "600" }}>
+                  <span className="active-filter-badge" style={{ display: "inline-flex", alignItems: "center", gap: "6px", background: "rgba(36, 75, 60, 0.08)", color: "var(--forest)", padding: "4px 10px", border: "1px solid rgba(36, 75, 60, 0.2)", borderRadius: "14px", fontSize: "12px", fontWeight: "600" }}>
                     <i className="fa-solid fa-shapes"></i> Category: <strong>{capitalize(categoryQuery)}</strong>
                     <button
                       type="button"
@@ -317,7 +317,7 @@ const Products = () => {
                         next.delete("category");
                         setSearchParams(next);
                       }}
-                      style={{ background: "none", border: "none", cursor: "pointer", color: "#244b3c", padding: "0 2px", fontWeight: "700" }}
+                      style={{ background: "none", border: "none", cursor: "pointer", color: "var(--forest)", padding: "0 2px", fontWeight: "700" }}
                       title="Clear category filter"
                     >
                       ✕
@@ -325,7 +325,7 @@ const Products = () => {
                   </span>
                 )}
                 {subcategoryQuery && (
-                  <span className="active-filter-badge subcategory-badge" style={{ display: "inline-flex", alignItems: "center", gap: "6px", background: "#244b3c", color: "#ffffff", padding: "4px 10px", borderRadius: "14px", fontSize: "12px", fontWeight: "600", boxShadow: "0 2px 6px rgba(36, 75, 60, 0.2)" }}>
+                  <span className="active-filter-badge subcategory-badge" style={{ display: "inline-flex", alignItems: "center", gap: "6px", background: "var(--forest)", color: "var(--paper)", padding: "4px 10px", borderRadius: "14px", fontSize: "12px", fontWeight: "600", boxShadow: "0 2px 6px rgba(36, 75, 60, 0.2)" }}>
                     <i className="fa-solid fa-tag"></i> Subcategory: <strong>{subcategoryQuery}</strong>
                     <button
                       type="button"
@@ -334,7 +334,7 @@ const Products = () => {
                         next.delete("subcategory");
                         setSearchParams(next);
                       }}
-                      style={{ background: "none", border: "none", cursor: "pointer", color: "#ffffff", padding: "0 2px", fontWeight: "700" }}
+                      style={{ background: "none", border: "none", cursor: "pointer", color: "var(--paper)", padding: "0 2px", fontWeight: "700" }}
                       title="Clear subcategory filter"
                     >
                       ✕
@@ -345,7 +345,7 @@ const Products = () => {
                   <button
                     onClick={() => setSearchParams({})}
                     className="btn-clear-search"
-                    style={{ fontSize: "12px", color: "#b65c45", background: "none", border: "none", cursor: "pointer", fontWeight: "600", textDecoration: "underline" }}
+                    style={{ fontSize: "12px", color: "var(--ribbon)", background: "none", border: "none", cursor: "pointer", fontWeight: "600", textDecoration: "underline" }}
                   >
                     Clear all filters ✕
                   </button>
@@ -472,7 +472,7 @@ const Products = () => {
             </div>
           ) : (
             <div className="products-empty-state">
-              <i className="fa-solid fa-shirt" style={{ fontSize: "3rem", color: "#d1d5db", marginBottom: "1rem" }}></i>
+              <i className="fa-solid fa-shirt" style={{ fontSize: "3rem", color: "var(--line-strong)", marginBottom: "1rem" }}></i>
               <h2>No clothing items matched your filter</h2>
               <p className="text--gray">Try clearing some filters or searching for something else.</p>
               <button

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 const FALLBACK_IMAGE = "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80";
 
-const Gallery = ({ mainImage, images }) => {
+const Gallery = ({ mainImage, images, title = "Product" }) => {
   const [currentImage, setCurrentImage] = useState(mainImage);
 
   useEffect(() => {
@@ -17,7 +17,7 @@ const Gallery = ({ mainImage, images }) => {
     <div className="gallery">
       <img
         src={currentImage}
-        alt="Main thumbnail"
+        alt={title}
         className="thumbnail-main"
         onError={(e) => {
           e.currentTarget.onerror = null;
@@ -28,9 +28,11 @@ const Gallery = ({ mainImage, images }) => {
         {images.map((image, index) => (
           <button
             key={index}
+            type="button"
             className="thumbnail-button"
             onClick={() => handleThumbnailClick(image)}
-            aria-label={`thumbnail ${index + 1}`}
+            aria-label={`Show image ${index + 1} of ${images.length}`}
+            aria-pressed={currentImage === image}
           >
             <img
               src={image}

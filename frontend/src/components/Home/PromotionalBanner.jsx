@@ -13,7 +13,7 @@ const PromotionalBanner = () => {
             </p>
             <div className="banner-cta-group">
               <Link to="/products?search=Festive" className="btn-luxury btn-banner-primary">
-                Explore Festive Hampers <i className="fa-solid fa-arrow-right"></i>
+                Explore Festive Hampers
               </Link>
               <span className="banner-shipping-hint">
                 <i className="fa-solid fa-truck-fast"></i> Complimentary corporate logo branding on orders of 50+ units

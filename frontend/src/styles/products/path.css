@@ -6,7 +6,7 @@
     margin-bottom: 20px;
   }
   .path-links > a:not(:last-child) {
-    color: #8f8f8f;
+    color: var(--muted);
   }
   .path-links > a:not(:first-child)::before {
     font-family: "Font Awesome 5 Free";

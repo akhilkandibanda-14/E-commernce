@@ -1,11 +1,11 @@
 @layer component {
   .luxury-footer {
-    background-color: var(--text-primary, #1c1c1c);
-    color: var(--bg-primary, #f8f6f1);
+    background-color: var(--text-primary, var(--ink));
+    color: var(--bg-primary, var(--ivory));
     padding-top: 64px;
     padding-bottom: 36px;
     border-top: 1px solid rgba(216, 212, 204, 0.15);
-    font-family: var(--font-body, 'Inter', sans-serif);
+    font-family: var(--font-body);
   }
 
   .footer-top-grid {
@@ -28,7 +28,7 @@
     align-items: center;
     gap: 12px;
     text-decoration: none;
-    color: var(--bg-primary, #f8f6f1);
+    color: var(--bg-primary, var(--ivory));
     transition: opacity 0.2s ease;
   }
   .footer-brand-logo:hover {
@@ -38,7 +38,7 @@
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    background: #ffffff;
+    background: var(--paper);
     object-fit: contain;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
     flex-shrink: 0;
@@ -48,26 +48,26 @@
     flex-direction: column;
   }
   .footer-brand-logo .logo-wordmark {
-    font-family: var(--font-body, 'Inter', sans-serif);
+    font-family: var(--font-body);
     font-size: 21px;
     font-weight: 800;
     letter-spacing: -0.01em;
-    color: #ffffff;
+    color: var(--paper);
     line-height: 1.15;
   }
   .footer-brand-logo .logo-subtitle {
     font-size: 9.5px;
-    letter-spacing: 0.12em;
-    color: #d11e24;
+    letter-spacing: 0.01em;
+    color: var(--ribbon);
     font-weight: 700;
-    text-transform: uppercase;
+    text-transform: none;
     margin-top: 2px;
   }
 
   .footer-brand-desc {
     font-size: 14px;
     line-height: 1.6;
-    color: #a8a49c;
+    color: var(--muted);
     margin: 0;
   }
 
@@ -84,14 +84,14 @@
     height: 36px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.06);
-    color: #d8d4cc;
+    color: var(--line);
     transition: all 0.2s ease;
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
   .footer-social-wrapper .soc-icon-link:hover {
-    background: var(--accent-forest, #244b3c);
-    color: #ffffff;
-    border-color: var(--accent-forest, #244b3c);
+    background: var(--accent-forest, var(--forest));
+    color: var(--paper);
+    border-color: var(--accent-forest, var(--forest));
     transform: translateY(-2px);
   }
 
@@ -102,11 +102,11 @@
   }
 
   .footer-column-heading {
-    font-family: var(--font-heading, 'Playfair Display', serif);
+    font-family: var(--font-heading);
     font-size: 16px;
     font-weight: 600;
     letter-spacing: 0.02em;
-    color: #ffffff;
+    color: var(--paper);
     margin: 0;
   }
 
@@ -119,19 +119,19 @@
     margin: 0;
   }
   .footer-links-list li a {
-    color: #a8a49c;
+    color: var(--muted);
     font-size: 14px;
     text-decoration: none;
     transition: color 0.18s ease;
     display: inline-block;
   }
   .footer-links-list li a:hover {
-    color: #ffffff;
+    color: var(--paper);
     padding-left: 2px;
   }
 
   .footer-story-link {
-    color: var(--bg-primary, #f8f6f1) !important;
+    color: var(--bg-primary, var(--ivory)) !important;
     font-weight: 500;
   }
 
@@ -147,7 +147,7 @@
 
   .footer-copyright-text {
     font-size: 13px;
-    color: #8c8880;
+    color: var(--muted);
   }
 
   .footer-payment-methods {
@@ -161,7 +161,7 @@
     align-items: center;
     gap: 6px;
     font-size: 12px;
-    color: #a8a49c;
+    color: var(--muted);
     background: rgba(255, 255, 255, 0.05);
     padding: 4px 10px;
     border-radius: 4px;

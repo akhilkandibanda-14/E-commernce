@@ -103,7 +103,8 @@ export const SiteContentProvider = ({ children }) => {
       localStorage.getItem("token") ||
       "";
 
-    if (!token) {
+    // Local development convenience only; production requires a real admin sign-in.
+    if (!token && import.meta.env.DEV) {
       try {
         const res = await fetch("/api/auth/login", {
           method: "POST",

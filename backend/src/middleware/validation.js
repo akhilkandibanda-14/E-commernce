@@ -337,6 +337,39 @@ export const validateQuotePayload = (req, res, next) => {
   next();
 };
 
+// Validates POST /api/enquiries (bulk enquiries and catalogue requests)
+export const validateEnquiryPayload = (req, res, next) => {
+  const { email, name, phone, company, notes } = req.body || {};
+
+  if (!email || typeof email !== "string" || !EMAIL_REGEX.test(email.trim())) {
+    return res.status(400).json({
+      success: false,
+      message: "A valid email address is required.",
+    });
+  }
+
+  const tooLong = [
+    ["name", name, 100],
+    ["phone", phone, 30],
+    ["company", company, 100],
+  ].find(([, value, max]) => value !== undefined && (typeof value !== "string" || value.trim().length > max));
+  if (tooLong) {
+    return res.status(400).json({
+      success: false,
+      message: `${tooLong[0][0].toUpperCase() + tooLong[0].slice(1)} cannot exceed ${tooLong[2]} characters.`,
+    });
+  }
+
+  if (notes && (typeof notes !== "string" || notes.length > 1000)) {
+    return res.status(400).json({
+      success: false,
+      message: "Notes cannot exceed 1,000 characters.",
+    });
+  }
+
+  next();
+};
+
 // Standard color names to HEX map
 export const KNOWN_COLORS = {
   "black": "#000000",

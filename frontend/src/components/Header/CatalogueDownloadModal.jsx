@@ -1,34 +1,64 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { CATALOGUES_LIST, CONTACT_INFO } from "../../data/navigationData";
+import { useAuth } from "../../context/AuthContext";
 
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+// Catalogues are sent by the sales team, so each request is logged as an enquiry.
 const CatalogueDownloadModal = ({ isOpen, onClose }) => {
-  const [downloadingId, setDownloadingId] = useState(null);
-  const [downloadedList, setDownloadedList] = useState({});
+  const { user, token } = useAuth();
+  const [email, setEmail] = useState("");
+  const [sendingId, setSendingId] = useState(null);
+  const [requested, setRequested] = useState({});
+  const [error, setError] = useState("");
+  const emailRef = useRef(null);
+
+  useEffect(() => {
+    if (!isOpen) return undefined;
+    if (user?.email) setEmail((prev) => prev || user.email);
+    const onKey = (e) => {
+      if (e.key === "Escape") onClose();
+    };
+    document.addEventListener("keydown", onKey);
+    emailRef.current?.focus();
+    return () => document.removeEventListener("keydown", onKey);
+  }, [isOpen, user, onClose]);
 
   if (!isOpen) return null;
 
-  const handleDownload = (catalog) => {
-    setDownloadingId(catalog.id);
-
-    // Simulate instant secure PDF brochure download
-    setTimeout(() => {
-      setDownloadingId(null);
-      setDownloadedList((prev) => ({ ...prev, [catalog.id]: true }));
-
-      // Create a programmatic download link of a text/pdf representation
-      const element = document.createElement("a");
-      const file = new Blob(
-        [
-          `GIFTINGWELLNESS CORPORATE & FESTIVE GIFTING CATALOGUE 2026\n=======================================================\nTitle: ${catalog.title}\nSubtitle: ${catalog.subtitle}\nVerified B2B Institutional Collection\n\nTo place orders or request samples, contact:\nPhone: ${CONTACT_INFO.phonePrimary}\nEmail: ${CONTACT_INFO.emailBulk}\nPan-India Delivery with GST Billing.\nWebsite: http://localhost:5173/`,
-        ],
-        { type: "text/plain" }
-      );
-      element.href = URL.createObjectURL(file);
-      element.download = `${catalog.id}-brochure-2026.txt`;
-      document.body.appendChild(element);
-      element.click();
-      document.body.removeChild(element);
-    }, 800);
+  const handleRequest = async (catalog) => {
+    const trimmed = email.trim().toLowerCase();
+    if (!EMAIL_REGEX.test(trimmed)) {
+      setError("Enter a valid work email so we know where to send the catalogue.");
+      emailRef.current?.focus();
+      return;
+    }
+    setError("");
+    setSendingId(catalog.id);
+    try {
+      const headers = { "Content-Type": "application/json" };
+      if (token) headers.Authorization = `Bearer ${token}`;
+      const res = await fetch("/api/enquiries", {
+        method: "POST",
+        headers,
+        body: JSON.stringify({
+          email: trimmed,
+          name: user?.name,
+          category: `Catalogue request: ${catalog.title}`,
+          notes: `Requested "${catalog.title}" from the catalogues menu.`,
+        }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        setError(data.message || "The request didn't go through. Try again in a moment.");
+        return;
+      }
+      setRequested((prev) => ({ ...prev, [catalog.id]: true }));
+    } catch {
+      setError("Couldn't reach the server. Check your connection and try again.");
+    } finally {
+      setSendingId(null);
+    }
   };
 
   return (
@@ -37,86 +67,95 @@ const CatalogueDownloadModal = ({ isOpen, onClose }) => {
         className="catalogue-modal-card"
         onClick={(e) => e.stopPropagation()}
         role="dialog"
+        aria-modal="true"
         aria-labelledby="catalogue-modal-title"
       >
         <button
           type="button"
           onClick={onClose}
           className="modal-close-btn"
-          aria-label="Close modal"
+          aria-label="Close catalogues"
         >
-          ✕
+          <i className="fa-solid fa-xmark" aria-hidden="true"></i>
         </button>
 
         <div className="catalogue-modal-header">
-          <div className="catalogue-kicker">
-            <i className="fa-solid fa-file-arrow-down"></i> Official Publications 2026
-          </div>
-          <h2 id="catalogue-modal-title">Download Product Catalogues</h2>
+          <h2 id="catalogue-modal-title">Request a catalogue</h2>
           <p>
-            Browse high-resolution lookbooks featuring complete specifications, color options, MOQ slabs, and custom logo branding guidelines.
+            Choose a catalogue and we&apos;ll email it to you with specifications, colour options and
+            minimum order quantities.
           </p>
+          <div className="form-group" style={{ marginTop: "16px" }}>
+            <label htmlFor="catalogue-email">Work email</label>
+            <input
+              id="catalogue-email"
+              ref={emailRef}
+              type="email"
+              autoComplete="email"
+              placeholder="name@company.com"
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+                if (error) setError("");
+              }}
+              aria-invalid={Boolean(error)}
+              aria-describedby={error ? "catalogue-email-error" : undefined}
+            />
+            {error && (
+              <p id="catalogue-email-error" className="form-error" role="alert">
+                {error}
+              </p>
+            )}
+          </div>
         </div>
 
-        <div className="catalogues-modal-list">
+        <ul className="catalogues-modal-list">
           {CATALOGUES_LIST.map((catalog) => {
-            const isDownloading = downloadingId === catalog.id;
-            const hasDownloaded = downloadedList[catalog.id];
+            const isSending = sendingId === catalog.id;
+            const isRequested = requested[catalog.id];
 
             return (
-              <div key={catalog.id} className="catalogue-item-card">
-                <div
-                  className="catalogue-file-icon"
-                  style={{ backgroundColor: `${catalog.color}15`, color: catalog.color }}
-                >
+              <li key={catalog.id} className="catalogue-item-card">
+                <div className="catalogue-file-icon" aria-hidden="true">
                   <i className={catalog.icon}></i>
                 </div>
 
                 <div className="catalogue-file-info">
-                  <h4 className="catalogue-item-title">{catalog.title}</h4>
+                  <h3 className="catalogue-item-title">{catalog.title}</h3>
                   <p className="catalogue-item-sub">{catalog.subtitle}</p>
-                  <div className="catalogue-meta-badges">
-                    <span className="cat-badge-size">{catalog.size}</span>
-                    <span className="cat-badge-pages">{catalog.pages}</span>
-                    <span className="cat-badge-verified">
-                      <i className="fa-solid fa-check"></i> 2026 Updated Edition
-                    </span>
-                  </div>
                 </div>
 
                 <div className="catalogue-file-action">
                   <button
                     type="button"
-                    onClick={() => handleDownload(catalog)}
-                    disabled={isDownloading}
-                    className={`btn-catalogue-download ${hasDownloaded ? "downloaded" : ""}`}
+                    onClick={() => handleRequest(catalog)}
+                    disabled={isSending || isRequested}
+                    className={`btn-catalogue-download ${isRequested ? "downloaded" : ""}`}
                   >
-                    {isDownloading ? (
+                    {isSending ? (
                       <span>
-                        <i className="fa-solid fa-spinner fa-spin"></i> Preparing...
+                        <i className="fa-solid fa-spinner fa-spin" aria-hidden="true"></i> Sending…
                       </span>
-                    ) : hasDownloaded ? (
+                    ) : isRequested ? (
                       <span>
-                        <i className="fa-solid fa-check"></i> Downloaded
+                        <i className="fa-solid fa-check" aria-hidden="true"></i> Requested
                       </span>
                     ) : (
-                      <span>
-                        <i className="fa-solid fa-arrow-down"></i> Download PDF
-                      </span>
+                      <span>Email me this</span>
                     )}
                   </button>
                 </div>
-              </div>
+              </li>
             );
           })}
-        </div>
+        </ul>
 
         <div className="catalogue-modal-footer">
           <div className="catalogue-whatsapp-box">
-            <i className="fa-brands fa-whatsapp whatsapp-icon"></i>
+            <i className="fa-brands fa-whatsapp whatsapp-icon" aria-hidden="true"></i>
             <div>
-              <strong>Prefer Catalogues on WhatsApp?</strong>
-              <p>Get instant PDF brochures sent directly to your phone number.</p>
+              <strong>Prefer WhatsApp?</strong>
+              <p>Message us and we&apos;ll send the catalogues to your phone.</p>
             </div>
             <a
               href={`https://wa.me/${CONTACT_INFO.whatsapp.replace(/[^0-9]/g, "")}?text=Please%20send%20me%20the%20complete%20Corporate%20Gifting%20Catalogues%20PDF`}
@@ -124,7 +163,7 @@ const CatalogueDownloadModal = ({ isOpen, onClose }) => {
               rel="noreferrer"
               className="btn-whatsapp-cat-link"
             >
-              Get on WhatsApp →
+              Message on WhatsApp
             </a>
           </div>
         </div>

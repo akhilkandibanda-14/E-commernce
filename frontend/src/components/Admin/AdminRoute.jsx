@@ -1,5 +1,6 @@
 import { useAuth } from "../../context/AuthContext";
 import { Link } from "react-router-dom";
+import { DEMO_LOGIN_ENABLED } from "../../utils/env";
 
 const AdminRoute = ({ children }) => {
   const { user, isAdmin, openAuthModal, quickLogin, loading } = useAuth();
@@ -28,13 +29,15 @@ const AdminRoute = ({ children }) => {
           </p>
 
           <div className="unauthorized-actions">
-            <button
-              type="button"
-              className="btn-admin-primary"
-              onClick={() => quickLogin("admin")}
-            >
-              <i className="fa-solid fa-key"></i> 1-Click Sign In as Store Admin
-            </button>
+            {DEMO_LOGIN_ENABLED && (
+              <button
+                type="button"
+                className="btn-admin-primary"
+                onClick={() => quickLogin("admin")}
+              >
+                <i className="fa-solid fa-key"></i> 1-Click Sign In as Store Admin
+              </button>
+            )}
             <button
               type="button"
               className="btn-admin-secondary"
