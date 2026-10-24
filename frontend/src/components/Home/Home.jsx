@@ -9,57 +9,54 @@ import PromotionalBanner from "./PromotionalBanner";
 import ShoppingReassurance from "./ShoppingReassurance";
 import CustomerTestimonials from "./CustomerTestimonials";
 import NewsletterSection from "./NewsletterSection";
+import { useSiteContent } from "../../context/SiteContentContext";
 
+// Every section's text, images and visibility are editable in Admin → Content & CMS → Home page.
 const Home = () => {
+  const { homePage } = useSiteContent();
+  const show = (key) => homePage.sections?.[key] !== false;
+
   return (
     <main id="main-content" className="home-page luxury-storefront">
-      {/* 01: Hero Section - Bespoke Hampers, Tech Kits & Branded Gifts */}
-      <HeroSection />
+      {show("hero") && <HeroSection />}
 
-      {/* 02: Trust & Value Strip - Logo Branding, B2B GST, Pan-India Logistics, Volume Pricing */}
-      <TrustValueStrip />
+      {show("trustStrip") && <TrustValueStrip />}
 
-      {/* 03: Four Bespoke Services - Corporate, Employee, Return, Event Gifting */}
-      <GiftingServicesSection />
+      {show("services") && <GiftingServicesSection />}
 
-      {/* 04: Core Gifting Categories - Drinkware, Bags, Tech, Festive */}
-      <FeaturedCategories />
+      {show("featuredCollections") && <FeaturedCategories />}
 
-      {/* 05: Trending Corporate Bestsellers */}
-      <section className="home-best-sellers-section" aria-label="Trending Corporate Bestsellers">
-        <HomeCategory
-          title="Trending Corporate Bestsellers"
-          subtitle="Handpicked executive drinkware, onboarding kits, and custom-branded gifts."
-          filterType="bestSeller"
-        />
-      </section>
+      {show("bestSellers") && (
+        <section className="home-best-sellers-section" aria-label={homePage.bestSellers.title}>
+          <HomeCategory
+            title={homePage.bestSellers.title}
+            subtitle={homePage.bestSellers.subtitle}
+            filterType="bestSeller"
+          />
+        </section>
+      )}
 
-      {/* 06: Authorized 22+ Corporate Brand Partners */}
-      <BrandedGiftingShowcase />
+      {show("brands") && <BrandedGiftingShowcase />}
 
-      {/* 07: Why 500+ Corporate Brands Partner With Giftingwellness */}
-      <BrandStorySection />
+      {show("brandStory") && <BrandStorySection />}
 
-      {/* 08: Seasonal & Festive Gifting Campaign Banner */}
-      <PromotionalBanner />
+      {show("promoBanner") && <PromotionalBanner />}
 
-      {/* 09: New Season Gifting Arrivals */}
-      <section className="home-new-arrivals-section" aria-label="New Gifting Arrivals">
-        <HomeCategory
-          title="New Season Gifting Arrivals"
-          subtitle="Innovative tech gadgets, insulated drinkware, and sustainable gift sets recently added."
-          filterType="newArrival"
-        />
-      </section>
+      {show("newArrivals") && (
+        <section className="home-new-arrivals-section" aria-label={homePage.newArrivals.title}>
+          <HomeCategory
+            title={homePage.newArrivals.title}
+            subtitle={homePage.newArrivals.subtitle}
+            filterType="newArrival"
+          />
+        </section>
+      )}
 
-      {/* 10: Enterprise Assurance & Corporate Policies */}
-      <ShoppingReassurance />
+      {show("reassurance") && <ShoppingReassurance />}
 
-      {/* 11: Verified Client Reflections & Testimonials */}
-      <CustomerTestimonials />
+      {show("testimonials") && <CustomerTestimonials />}
 
-      {/* 12: Corporate Lookbook 2026 Subscription */}
-      <NewsletterSection />
+      {show("newsletter") && <NewsletterSection />}
     </main>
   );
 };

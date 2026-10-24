@@ -11,6 +11,7 @@ import couponsRouter from "./routes/coupons.js";
 import authRouter from "./routes/auth.js";
 import uploadRouter from "./routes/upload.js";
 import siteContentRouter from "./routes/siteContent.js";
+import { analyticsRouter, adminRouter } from "./routes/admin.js";
 import { validateAuthConfig, authenticateToken, requireAdmin, optionalAuth } from "./middleware/auth.js";
 import { quoteRequestLimiter, enquiryLimiter } from "./middleware/rateLimiter.js";
 import { validateQuotePayload, validateEnquiryPayload } from "./middleware/validation.js";
@@ -299,6 +300,8 @@ export const createApp = ({ isUserPort = false, port = USER_PORT, peerPort = ADM
   app.use("/api/orders", ordersRouter);
   app.use("/api/coupons", couponsRouter);
   app.use("/api/site-content", siteContentRouter);
+  app.use("/api/analytics", analyticsRouter);
+  app.use("/api/admin", adminRouter);
 
   // 404 handler for unknown API routes
   app.use("/api/*", (req, res) => {

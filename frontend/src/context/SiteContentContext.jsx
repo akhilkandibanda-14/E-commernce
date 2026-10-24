@@ -1,5 +1,6 @@
 import { getAdminApiUrl } from "../utils/apiConfig";
-import { createContext, useContext, useState, useEffect, useCallback } from "react";
+import { createContext, useContext, useState, useEffect, useCallback, useMemo } from "react";
+import { mergeHomePage } from "../data/homePageDefaults";
 import {
   BRANDED_GIFTING as DEFAULT_BRANDS,
   SERVICES_DATA as DEFAULT_SERVICES,
@@ -348,6 +349,27 @@ export const SiteContentProvider = ({ children }) => {
     return data.aboutUs;
   };
 
+  // Save one or more home page sections, e.g. { hero: {...} } or { sections: { promoBanner: false } }.
+  const updateHomePage = async (sectionsUpdate) => {
+    const token = await getAuthToken();
+    const res = await fetch(getAdminApiUrl("/api/site-content/home-page"), {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify(sectionsUpdate),
+    });
+
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok || !data.success) {
+      throw new Error(data.message || "Failed to update the home page");
+    }
+
+    await fetchSiteContent();
+    return data.homePage;
+  };
+
   const updateServices = async (servicesList) => {
     const token = await getAuthToken();
     const res = await fetch(getAdminApiUrl("/api/site-content/services"), {
@@ -583,6 +605,8 @@ export const SiteContentProvider = ({ children }) => {
     return data.content;
   };
 
+  const homePage = useMemo(() => mergeHomePage(content.homePage), [content.homePage]);
+
   return (
     <SiteContentContext.Provider
       value={{
@@ -595,6 +619,10 @@ export const SiteContentProvider = ({ children }) => {
         announcement: content.announcement || DEFAULT_ANNOUNCEMENT,
         navigation: content.navigation || DEFAULT_NAVIGATION,
         giftingCategories: content.giftingCategories || DEFAULT_GIFTING_CATEGORIES,
+        // Home page sections: admin overrides merged over the built-in defaults.
+        homePage,
+        homePageOverrides: content.homePage || {},
+        updateHomePage,
         loading,
         lastUpdated,
         refreshContent: fetchSiteContent,

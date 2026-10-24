@@ -1,33 +1,36 @@
 import { Link } from "react-router-dom";
+import { useSiteContent } from "../../context/SiteContentContext";
 
 const PromotionalBanner = () => {
+  const { homePage } = useSiteContent();
+  const banner = homePage.promoBanner;
+
   return (
-    <section className="promotional-campaign-section" aria-label="Festive Gifting Campaign">
+    <section className="promotional-campaign-section" aria-label={banner.title}>
       <div className="container">
         <div className="promotional-banner-card">
           <div className="promotional-banner-content">
-            <span className="banner-kicker">Diwali & Festive 2026 Collection</span>
-            <h2 className="banner-headline">Bespoke Hampers for Valued Clients & Teams.</h2>
-            <p className="banner-subtext">
-              Early-bird bookings are now open. Enjoy customized packaging, company greeting cards, and guaranteed delivery dates for your festival celebrations.
-            </p>
+            {banner.kicker && <span className="banner-kicker">{banner.kicker}</span>}
+            <h2 className="banner-headline">{banner.title}</h2>
+            {banner.text && <p className="banner-subtext">{banner.text}</p>}
             <div className="banner-cta-group">
-              <Link to="/products?search=Festive" className="btn-luxury btn-banner-primary">
-                Explore Festive Hampers
-              </Link>
-              <span className="banner-shipping-hint">
-                <i className="fa-solid fa-truck-fast"></i> Complimentary corporate logo branding on orders of 50+ units
-              </span>
+              {banner.ctaText && (
+                <Link to={banner.ctaLink || "/products"} className="btn-luxury btn-banner-primary">
+                  {banner.ctaText}
+                </Link>
+              )}
+              {banner.note && (
+                <span className="banner-shipping-hint">
+                  <i className="fa-solid fa-truck-fast" aria-hidden="true"></i> {banner.note}
+                </span>
+              )}
             </div>
           </div>
-          <div className="promotional-banner-media">
-            <img
-              src="https://images.unsplash.com/photo-1513885535751-8b9238bd345a?auto=format&fit=crop&w=1200&q=85"
-              alt="Artisanal Diwali and festive corporate gift hamper"
-              className="banner-media-img"
-              loading="lazy"
-            />
-          </div>
+          {banner.image && (
+            <div className="promotional-banner-media">
+              <img src={banner.image} alt={banner.imageAlt || ""} className="banner-media-img" loading="lazy" />
+            </div>
+          )}
         </div>
       </div>
     </section>

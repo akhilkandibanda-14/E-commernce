@@ -33,6 +33,8 @@ import { SiteContentProvider } from "./context/SiteContentContext";
 import WishlistDrawer from "./components/Wishlist/WishlistDrawer";
 import AboutUs from "./components/About/AboutUs";
 import LegalPolicyPage from "./components/Misc/LegalPolicyPage";
+import ManageUsers from "./components/Admin/ManageUsers";
+import { trackPageView } from "./utils/analytics";
 
 function App() {
   const [cart, setCart] = useState(() => {
@@ -129,6 +131,8 @@ function App() {
             <Route path="/admin/orders" element={<ManageOrders />} />
             <Route path="/admin/quotes" element={<ManageEnquiries />} />
             <Route path="/admin/add-product" element={<AddProduct />} />
+            <Route path="/admin/edit-product/:id" element={<AddProduct />} />
+            <Route path="/admin/users" element={<ManageUsers />} />
             <Route path="/admin/import" element={<AdminImport />} />
             <Route path="/admin/site-content" element={<ManageSiteContent />} />
             <Route path="/products" element={<Products />}>
@@ -168,6 +172,8 @@ function App() {
             <Route path="/admin/orders" element={<ManageOrders />} />
             <Route path="/admin/quotes" element={<ManageEnquiries />} />
             <Route path="/admin/add-product" element={<AddProduct />} />
+            <Route path="/admin/edit-product/:id" element={<AddProduct />} />
+            <Route path="/admin/users" element={<ManageUsers />} />
             <Route path="/admin/import" element={<AdminImport />} />
             <Route path="/admin/site-content" element={<ManageSiteContent />} />
             <Route path="/terms" element={<LegalPolicyPage />} />
@@ -193,6 +199,11 @@ function App() {
 
 function Root({ cart, removeFromCart, toast, setToast, isPortalAdmin }) {
   const location = useLocation();
+
+  // Anonymous page-view count for Admin → Users & visitors (skips admin pages).
+  useEffect(() => {
+    trackPageView(location.pathname);
+  }, [location.pathname]);
   const isAdminRoute = isPortalAdmin || location.pathname.startsWith("/admin");
 
   return (

@@ -1,6 +1,6 @@
 import { getAdminApiUrl } from "../../utils/apiConfig";
 import { useState, useRef, useMemo, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import { useSiteContent } from "../../context/SiteContentContext";
 import { GIFTING_CATEGORIES as FALLBACK_CATEGORIES } from "../../data/navigationData";
@@ -88,6 +88,12 @@ const PRESET_TEMPLATES = [
 const AddProduct = () => {
   const { token } = useAuth();
   const { giftingCategories } = useSiteContent();
+  // Same form edits an existing product at /admin/edit-product/:id.
+  const { id: editId } = useParams();
+  const isEdit = Boolean(editId);
+  const [loadingProduct, setLoadingProduct] = useState(isEdit);
+  const [loadError, setLoadError] = useState("");
+  const [existingImages, setExistingImages] = useState([]);
 
   const activeCategories = useMemo(() => {
     return Array.isArray(giftingCategories) && giftingCategories.length > 0
@@ -162,6 +168,57 @@ const AddProduct = () => {
       setCustomSubcategory("");
     }
   }, [category, currentSubcategories, subcategory]);
+
+  // Edit mode: load the product and fill the form.
+  useEffect(() => {
+    if (!isEdit) return undefined;
+    let cancelled = false;
+    (async () => {
+      try {
+        const res = await fetch(getAdminApiUrl(`/api/products/${encodeURIComponent(editId)}`));
+        const data = await res.json().catch(() => ({}));
+        const p = data.product || data;
+        if (!res.ok || !p || !p.id) throw new Error(data.message || "That product could not be found.");
+        if (cancelled) return;
+        const catName = String(p.category || "").toLowerCase();
+        const cat = activeCategories.find((c) => c.name.toLowerCase() === catName || c.id.toLowerCase() === catName);
+        const subKnown = cat?.subcategories?.some(
+          (s) => s.name.toLowerCase() === String(p.subcategory || "").toLowerCase()
+        );
+        setTitle(p.title || "");
+        setBrand(p.brand || "");
+        setSku(p.sku || "");
+        setCategory(p.category || "");
+        // Keep an unlisted subcategory as a custom value so the sync below doesn't replace it.
+        setSubcategory(p.subcategory ? (subKnown ? p.subcategory : "__custom__") : "");
+        setCustomSubcategory(p.subcategory && !subKnown ? p.subcategory : "");
+        setStyle(p.style || "corporate");
+        setPrice(p.price != null ? String(p.price) : "");
+        setOriginalPrice(
+          p.originalPrice != null && Number(p.originalPrice) !== Number(p.price) ? String(p.originalPrice) : ""
+        );
+        setMoq(p.moq != null ? String(p.moq) : "1");
+        setDeliveryDays(p.deliveryDays || "2–4 Days");
+        const imgs = Array.isArray(p.images) ? p.images.filter(Boolean) : [];
+        setImage(p.image || p.img || imgs[0] || "");
+        setExistingImages(imgs);
+        setDescription(p.description || "");
+        setFeatures(Array.isArray(p.features) ? p.features.join("\n") : "");
+        setSelectedSizes(Array.isArray(p.sizes) && p.sizes.length ? p.sizes : ["Free Size"]);
+        setIsNew(Boolean(p.isNew));
+        setIsBestSeller(Boolean(p.isBestSeller));
+      } catch (err) {
+        if (!cancelled) setLoadError(err.message);
+      } finally {
+        if (!cancelled) setLoadingProduct(false);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+    // Load once per product id; categories are only used to classify the subcategory.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [editId]);
 
   const effectiveSubcategory =
     subcategory === "__custom__" ? customSubcategory.trim() : subcategory.trim();
@@ -336,7 +393,8 @@ const AddProduct = () => {
         deliveryDays,
         image: finalImage,
         img: finalImage,
-        images: [finalImage],
+        // Keep any extra gallery photos when editing; the chosen image becomes the first one.
+        images: isEdit ? [finalImage, ...existingImages.filter((i) => i !== finalImage)] : [finalImage],
         description: description.trim(),
         features: features
           .split("\n")
@@ -347,19 +405,22 @@ const AddProduct = () => {
         isBestSeller,
       };
 
-      const res = await fetch(getAdminApiUrl("/api/products"), {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify(payload),
-      });
+      const res = await fetch(
+        getAdminApiUrl(isEdit ? `/api/products/${encodeURIComponent(editId)}` : "/api/products"),
+        {
+          method: isEdit ? "PUT" : "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify(payload),
+        }
+      );
 
       const data = await res.json();
 
       if (!res.ok || !data.success) {
-        throw new Error(data.message || "Failed to create product.");
+        throw new Error(data.message || (isEdit ? "Failed to save changes." : "Failed to create product."));
       }
 
       setCreatedProduct(data.product);
@@ -415,16 +476,26 @@ const AddProduct = () => {
           <div className="admin-breadcrumb-bar">
             <div>
               <h1 className="admin-page-title">
-                <i className="fa-solid fa-circle-plus"></i> Add New Product to Store
+                <i className={isEdit ? "fa-solid fa-pen-to-square" : "fa-solid fa-circle-plus"}></i>{" "}
+                {isEdit ? "Edit product" : "Add New Product to Store"}
               </h1>
               <p className="admin-page-desc">
-                Publish a new item directly to the live catalog. It will immediately be available for shopping and filtering.
+                {isEdit
+                  ? "Change the details, price or photo. Saving updates the live product straight away."
+                  : "Publish a new item directly to the live catalog. It will immediately be available for shopping and filtering."}
               </p>
             </div>
             <Link to="/admin" className="btn-admin-outline">
               ← Return to Catalog Table
             </Link>
           </div>
+
+          {isEdit && loadingProduct && <p className="gw-loading">Loading product…</p>}
+          {loadError && (
+            <p className="form-error" role="alert">
+              {loadError} <Link to="/admin">Back to the catalogue</Link>
+            </p>
+          )}
 
           {/* Success Banner */}
           {createdProduct && (
@@ -433,9 +504,9 @@ const AddProduct = () => {
                 <i className="fa-solid fa-circle-check"></i>
               </div>
               <div className="success-text-col">
-                <h3>Product Successfully Published!</h3>
+                <h3>{isEdit ? "Changes saved" : "Product Successfully Published!"}</h3>
                 <p>
-                  <strong>{createdProduct.title}</strong> has been added to the store catalog under the <em>{createdProduct.category}</em> category
+                  <strong>{createdProduct.title}</strong> {isEdit ? "is updated in" : "has been added to"} the store catalog under the <em>{createdProduct.category}</em> category
                   {createdProduct.subcategory ? <> · <strong>{createdProduct.subcategory}</strong> subcategory</> : null}.
                 </p>
                 <div className="success-action-btns">
@@ -932,11 +1003,11 @@ const AddProduct = () => {
                   >
                     {submitting ? (
                       <span>
-                        <i className="fa-solid fa-circle-notch fa-spin"></i> Publishing to Catalog...
+                        <i className="fa-solid fa-circle-notch fa-spin"></i> {isEdit ? "Saving…" : "Publishing to Catalog..."}
                       </span>
                     ) : (
                       <span>
-                        <i className="fa-solid fa-cloud-arrow-up"></i> Publish Product to Catalog
+                        <i className="fa-solid fa-cloud-arrow-up"></i> {isEdit ? "Save changes" : "Publish Product to Catalog"}
                       </span>
                     )}
                   </button>

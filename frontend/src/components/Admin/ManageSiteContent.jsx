@@ -5,6 +5,8 @@ import AdminHeader from "./AdminHeader";
 import AdminRoute from "./AdminRoute";
 import ManageGiftingCategories from "./ManageGiftingCategories";
 import { ManageServicesDropdown, ManageFestiveDropdown } from "./ManageNavDropdowns";
+import ManageHomePage from "./ManageHomePage";
+import ImageField from "./ImageField";
 import "../../styles/admin/admin-content.css";
 
 const ManageSiteContentContent = () => {
@@ -32,7 +34,7 @@ const ManageSiteContentContent = () => {
     resetDefaults,
   } = useSiteContent();
 
-  const [activeTab, setActiveTab] = useState("nav"); // Default to Navigation Bar editor!
+  const [activeTab, setActiveTab] = useState("home"); // Home page editor first; it covers most of the site.
   const [searchTerm, setSearchTerm] = useState("");
   const [toastMessage, setToastMessage] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -376,9 +378,10 @@ const ManageSiteContentContent = () => {
             <span className="admin-badge-kicker">
               <i className="fa-solid fa-sliders"></i> Full Store Control
             </span>
-            <h1 className="admin-main-heading">Navigation Bar & Brand Manager</h1>
+            <h1 className="admin-main-heading">Site content</h1>
             <p className="admin-main-subtext">
-              Complete administrative authority over the Customer Navigation Bar, Brand Partners, "About Us" Story, Services, and Corporate Details. All changes sync in real-time.
+              Edit what customers see: the home page, navigation, categories, services, festive gifts, brands,
+              the brand story and contact details. Changes go live as soon as you save.
             </p>
           </div>
 
@@ -405,6 +408,15 @@ const ManageSiteContentContent = () => {
 
         {/* Navigation Tabs */}
         <div className="admin-content-tabs-bar">
+          <button
+            type="button"
+            className={`admin-content-tab ${activeTab === "home" ? "active" : ""}`}
+            onClick={() => setActiveTab("home")}
+          >
+            <i className="fa-solid fa-house"></i>
+            <span>Home page</span>
+          </button>
+
           <button
             type="button"
             className={`admin-content-tab ${activeTab === "nav" ? "active" : ""}`}
@@ -477,6 +489,12 @@ const ManageSiteContentContent = () => {
         {/* ============================================================== */}
         {/* TAB 0: WHOLE NAVIGATION BAR EDITOR */}
         {/* ============================================================== */}
+        {activeTab === "home" && (
+          <section className="admin-tab-content">
+            <ManageHomePage />
+          </section>
+        )}
+
         {activeTab === "nav" && (
           <section className="admin-tab-content nav-tab-pane">
             {/* Live Navigation Bar Preview Box */}
@@ -1016,14 +1034,11 @@ const ManageSiteContentContent = () => {
                 </div>
 
                 <div className="form-row">
-                  <div className="form-group half-col">
-                    <label className="form-label">Media Showcase Image URL</label>
-                    <input
-                      type="url"
+                  <div className="half-col">
+                    <ImageField
+                      label="Brand story image"
                       value={aboutForm.image || ""}
-                      onChange={(e) => setAboutForm({ ...aboutForm, image: e.target.value })}
-                      className="form-input"
-                      placeholder="https://..."
+                      onChange={(url) => setAboutForm({ ...aboutForm, image: url })}
                     />
                   </div>
                   <div className="form-group half-col">

@@ -2,3 +2,6 @@ node_modules/
 .env
 logs/
 *.log
+
+# Visitor statistics (runtime data)
+src/data/analytics.json

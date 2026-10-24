@@ -1,7 +1,7 @@
 import express from "express";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-import { findUserByEmail, createUser } from "../data/users.js";
+import { findUserByEmail, createUser, recordLogin } from "../data/users.js";
 import { authenticateToken, getJwtSecret, JWT_ALGORITHM } from "../middleware/auth.js";
 import { authLoginLimiter, authRegisterLimiter } from "../middleware/rateLimiter.js";
 
@@ -65,6 +65,7 @@ router.post("/login", authLoginLimiter, (req, res) => {
       });
     }
 
+    recordLogin(user.id);
     const token = generateToken(user);
 
     res.json({

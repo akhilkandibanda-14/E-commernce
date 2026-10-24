@@ -359,6 +359,14 @@ const AdminDashboard = () => {
                               >
                                 <i className="fa-solid fa-arrow-up-right-from-square"></i>
                               </Link>
+                              <Link
+                                to={`/admin/edit-product/${encodeURIComponent(p.id)}`}
+                                className="btn-table-view btn-table-edit"
+                                title="Edit this product"
+                                aria-label={`Edit ${p.title}`}
+                              >
+                                <i className="fa-solid fa-pen-to-square"></i>
+                              </Link>
                               <button
                                 type="button"
                                 className="btn-table-delete"

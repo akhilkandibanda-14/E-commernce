@@ -147,4 +147,13 @@ export const updateUserProfile = (id, updates) => {
   return user;
 };
 
+/** Stamp a successful sign-in so the admin Users page can show "last signed in". */
+export const recordLogin = (id) => {
+  const user = findUserById(id);
+  if (!user) return;
+  user.lastLoginAt = new Date().toISOString();
+  saveUsersToDisk();
+  syncUserToMongo(user).catch(() => {});
+};
+
 loadUsersFromDisk();

@@ -6,6 +6,7 @@ import {
   updateBrand,
   deleteBrand,
   updateAboutUs,
+  updateHomePage,
   updateServices,
   updateFestiveGifts,
   updateContactInfo,
@@ -155,6 +156,26 @@ router.put("/about-us", requireAdmin, (req, res) => {
     res.status(400).json({
       success: false,
       message: err.message || "Failed to update About Us content",
+    });
+  }
+});
+
+/**
+ * PUT /api/site-content/home-page
+ * Admin: Update home page sections, e.g. { hero: {...}, sections: { promoBanner: false } }
+ */
+router.put("/home-page", requireAdmin, (req, res) => {
+  try {
+    const homePage = updateHomePage(req.body);
+    res.json({
+      success: true,
+      message: "Home page updated successfully",
+      homePage,
+    });
+  } catch (err) {
+    res.status(400).json({
+      success: false,
+      message: err.message || "Failed to update home page",
     });
   }
 });

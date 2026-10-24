@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { useAuth } from "../../context/AuthContext";
+import { useSiteContent } from "../../context/SiteContentContext";
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 // Sends a catalogue request to the same enquiries inbox the sales team already works from.
 const NewsletterSection = () => {
   const { token } = useAuth();
+  const { homePage } = useSiteContent();
+  const copy = homePage.newsletter;
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState("idle"); // 'idle' | 'loading' | 'success' | 'error'
   const [errorMessage, setErrorMessage] = useState("");
@@ -58,12 +61,9 @@ const NewsletterSection = () => {
       <div className="container">
         <div className="newsletter-editorial-card">
           <h2 id="newsletter-title" className="newsletter-headline title">
-            Get the corporate catalogue
+            {copy.title}
           </h2>
-          <p className="newsletter-subtext">
-            Tell us where to send it. Our team emails the current catalogue with volume pricing,
-            usually within two working hours.
-          </p>
+          {copy.text && <p className="newsletter-subtext">{copy.text}</p>}
 
           {status === "success" ? (
             <div className="newsletter-success-state" role="status">
@@ -118,7 +118,7 @@ const NewsletterSection = () => {
                       <i className="fa-solid fa-circle-notch fa-spin" aria-hidden="true"></i> Sending…
                     </>
                   ) : (
-                    "Send me the catalogue"
+                    copy.buttonText || "Send me the catalogue"
                   )}
                 </button>
               </div>

@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import { DEFAULT_SITE_CONTENT } from "./defaultSiteContent.js";
+import { normalizeHomePage, sanitizeHomePageUpdate } from "./homePageSchema.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -109,6 +110,8 @@ const normalizeSiteContent = (raw) => {
         },
       },
     },
+    // Admin overrides for home page sections; defaults live in the storefront.
+    homePage: normalizeHomePage(raw.homePage),
     updatedAt: raw.updatedAt || new Date().toISOString(),
   };
 };
@@ -248,6 +251,18 @@ export const updateAboutUs = (aboutUsData) => {
 /**
  * Update Services list
  */
+/**
+ * Update one or more home page sections (hero, banners, testimonials, visibility, ...).
+ * Each section sent replaces the saved version of that section.
+ */
+export const updateHomePage = (sectionsUpdate) => {
+  const current = loadSiteContent();
+  const cleaned = sanitizeHomePageUpdate(sectionsUpdate);
+  const homePage = { ...(current.homePage || {}), ...cleaned };
+  saveSiteContent({ ...current, homePage });
+  return loadSiteContent().homePage;
+};
+
 export const updateServices = (servicesList) => {
   if (!Array.isArray(servicesList)) {
     throw new Error("Services must be an array");
