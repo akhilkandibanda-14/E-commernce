@@ -23,16 +23,14 @@ const CategoryProduct = ({
 }) => {
   const { isInWishlist, toggleWishlist, addToCart } = useWishlist();
   const [showSizePicker, setShowSizePicker] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
 
+  // Cards always show the main photo. (Swapping to the second gallery photo on hover
+  // showed unrelated pictures for some products; the product page has the full gallery.)
   const primaryImage =
     image ||
     img ||
     (Array.isArray(images) && images[0]) ||
     "/introImageCompressed.jfif";
-
-  const secondaryImage =
-    Array.isArray(images) && images.length > 1 ? images[1] : primaryImage;
 
   const numPrice = Number(price);
   // Only show ratings the catalogue actually has; never invent a score.
@@ -82,8 +80,6 @@ const CategoryProduct = ({
   return (
     <article
       className="product-card-luxury"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
       // The size picker stays open until it is dismissed, so a small pointer slip doesn't lose it.
       onBlur={(e) => {
         if (!e.currentTarget.contains(e.relatedTarget)) setShowSizePicker(false);
@@ -96,7 +92,7 @@ const CategoryProduct = ({
         {/* Image link is a duplicate of the title link, so keep it out of the tab order. */}
         <Link to={productUrl} className="product-media-link" tabIndex={-1} aria-hidden="true">
           <img
-            src={isHovered && secondaryImage ? secondaryImage : primaryImage}
+            src={primaryImage}
             alt=""
             loading="lazy"
             className="items-line-img"

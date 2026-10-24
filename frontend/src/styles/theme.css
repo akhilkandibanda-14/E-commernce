@@ -2271,3 +2271,36 @@ p {
     flex-direction: column;
   }
 }
+
+/* Featured collections: the large tile shows its picture beside the text in a tall frame,
+   so portrait product photos (bottles, flasks) aren't cropped to a thin strip. */
+.tile-featured-large {
+  flex-direction: row;
+}
+.tile-featured-large .collection-tile-media {
+  flex: 0 0 52%;
+  min-height: 0;
+}
+.tile-featured-large .collection-tile-content {
+  flex: 1;
+  justify-content: flex-end;
+  padding: var(--space-6) var(--space-5);
+}
+@media (max-width: 1100px) {
+  .tile-featured-large .collection-tile-media {
+    flex-basis: 46%;
+  }
+}
+@media (max-width: 900px) {
+  .tile-featured-large {
+    flex-direction: column;
+  }
+  .tile-featured-large .collection-tile-media {
+    flex: none;
+    aspect-ratio: 4 / 5;
+    max-height: 520px;
+  }
+  .tile-featured-large .collection-tile-content {
+    padding: var(--space-5);
+  }
+}
