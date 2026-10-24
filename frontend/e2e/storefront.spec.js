@@ -289,6 +289,33 @@ test.describe("Forms and accounts", () => {
     await expect(page.locator("main")).toBeVisible();
   });
 
+  test("email sign-in survives a page refresh", async ({ page }) => {
+    await clearStorage(page);
+    await signInAsCustomer(page);
+    await page.goto("/");
+    await expect(page.locator(".top-auth-logged")).toBeVisible();
+    await page.reload();
+    await page.waitForTimeout(1500); // let the session check against /api/auth/me finish
+    await expect(page.locator(".top-auth-logged")).toBeVisible();
+    expect(await page.evaluate(() => Boolean(localStorage.getItem("shop_auth_token")))).toBe(true);
+  });
+
+  test("a saved Google (Clerk) session is not re-checked against our login API on reload", async ({ page }) => {
+    // Clerk tokens expire in ~60s, so checking a saved one against /api/auth/me after a reload
+    // returned 401 and signed people out. ClerkBridge restores these sessions instead.
+    const meCalls = [];
+    page.on("request", (r) => r.url().includes("/api/auth/me") && meCalls.push(r.url()));
+    await page.goto("/");
+    await page.evaluate(() => {
+      const b64 = (o) => btoa(JSON.stringify(o)).replace(/=+$/, "");
+      localStorage.setItem("shop_auth_token", `${b64({ alg: "RS256", typ: "JWT" })}.${b64({ sub: "user_x" })}.sig`);
+      localStorage.setItem("shop_auth_user", JSON.stringify({ id: "user_x", name: "G User", isClerk: true }));
+    });
+    await page.reload();
+    await page.waitForTimeout(1500);
+    expect(meCalls).toEqual([]);
+  });
+
   test("checkout places an order with totals that match the server", async ({ page }) => {
     await clearStorage(page);
     await signInAsCustomer(page);

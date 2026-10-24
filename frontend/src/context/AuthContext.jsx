@@ -4,6 +4,21 @@ import { DEMO_LOGIN_ENABLED } from "../utils/env";
 
 const AuthContext = createContext(null);
 
+// Clerk issues RS256 tokens; our own login issues HS256. A saved Clerk user also marks it.
+const isClerkSession = (token, savedUserJson) => {
+  try {
+    if (savedUserJson && JSON.parse(savedUserJson)?.isClerk) return true;
+  } catch {
+    // ignore unreadable saved user
+  }
+  try {
+    const header = JSON.parse(atob(token.split(".")[0].replace(/-/g, "+").replace(/_/g, "/")));
+    return header?.alg === "RS256";
+  } catch {
+    return false;
+  }
+};
+
 const isSameUser = (a, b) =>
   Boolean(a && b) &&
   a.id === b.id &&
@@ -56,6 +71,10 @@ export const AuthProvider = ({ children, clerkEnabled = false }) => {
     const verifySession = async () => {
       const savedToken = localStorage.getItem(STORAGE_KEY_TOKEN);
       if (!savedToken) return;
+      // Google/Clerk sessions are restored by ClerkBridge. Their saved token is usually
+      // expired after a reload (Clerk tokens live ~60s), so checking it here would wrongly
+      // sign the person out.
+      if (isClerkSession(savedToken, localStorage.getItem(STORAGE_KEY_USER))) return;
 
       try {
         const res = await fetch("/api/auth/me", {
@@ -64,13 +83,16 @@ export const AuthProvider = ({ children, clerkEnabled = false }) => {
           },
         });
 
+        // Ignore the answer if the person signed in or out while this request was in flight.
+        const stillSameSession = localStorage.getItem(STORAGE_KEY_TOKEN) === savedToken;
+
         if (res.ok) {
           const data = await res.json();
-          if (isMounted && data.success && data.user) {
+          if (isMounted && stillSameSession && data.success && data.user) {
             setUser(data.user);
           }
         } else if (res.status === 401 || res.status === 403) {
-          if (isMounted) {
+          if (isMounted && stillSameSession) {
             setUser(null);
             setToken(null);
             localStorage.removeItem(STORAGE_KEY_USER);

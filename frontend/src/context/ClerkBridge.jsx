@@ -41,8 +41,13 @@ export const ClerkBridge = ({ onClerkStateChange, registerClerkActions }) => {
       if (!cancelled) onChangeRef.current?.(state);
     };
 
-    if (isSignedIn && clerkUser) {
-      getToken()
+    let refreshTimer = null;
+    const onVisible = () => {
+      if (document.visibilityState === "visible") syncSignedIn();
+    };
+
+    function syncSignedIn() {
+      return getToken()
         .then((token) => {
           const primaryEmail =
             clerkUser.primaryEmailAddress?.emailAddress ||
@@ -70,6 +75,14 @@ export const ClerkBridge = ({ onClerkStateChange, registerClerkActions }) => {
         .catch((err) => {
           console.warn("[ClerkBridge] Could not retrieve session token:", err);
         });
+    }
+
+    if (isSignedIn && clerkUser) {
+      syncSignedIn();
+      // Clerk session tokens expire after about a minute. Refresh before that, and when the
+      // tab comes back into view, so API calls always carry a valid token.
+      refreshTimer = setInterval(syncSignedIn, 45 * 1000);
+      document.addEventListener("visibilitychange", onVisible);
     } else {
       onClerkStateChange({
         user: null,
@@ -80,6 +93,8 @@ export const ClerkBridge = ({ onClerkStateChange, registerClerkActions }) => {
     // Ignore a token that resolves after the session already changed (e.g. sign-out mid-request).
     return () => {
       cancelled = true;
+      clearInterval(refreshTimer);
+      document.removeEventListener("visibilitychange", onVisible);
     };
     // clerkUser is read inside but intentionally keyed by id/updatedAt to avoid re-running on new object identities.
     // eslint-disable-next-line react-hooks/exhaustive-deps
