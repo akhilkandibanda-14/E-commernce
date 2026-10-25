@@ -25,9 +25,9 @@
   height: 48px;
 }
 
-/* For small dropdowns that want relative anchor */
-.gifting-nav-list .nav-item.dropdown-parent:not(.mega-parent) {
-  position: relative;
+/* For wide dropdowns: parent nav items are position static so menus center cleanly across the navbar */
+.gifting-nav-list .nav-item.dropdown-parent {
+  position: static;
 }
 
 .nav-link-item,
@@ -178,6 +178,8 @@
               visibility 0.2s;
   z-index: 1500;
   overflow: hidden;
+  box-sizing: border-box;
+  max-height: calc(100vh - 130px);
 }
 
 /* Transparent hover bridge so mouse doesn't drop off */
@@ -433,6 +435,8 @@
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  overflow-y: auto;
+  max-height: calc(100vh - 140px);
   animation: megaPanelSmoothIn 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 

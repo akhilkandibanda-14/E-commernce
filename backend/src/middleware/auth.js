@@ -32,6 +32,21 @@ export const JWT_SECRET = process.env.JWT_SECRET ? process.env.JWT_SECRET.trim()
 // Supported signing and verification algorithm for internal JWTs
 export const JWT_ALGORITHM = "HS256";
 
+// Known administrator email addresses with permanent admin access
+export const ADMIN_EMAILS = [
+  "admin@giftingwellness.com",
+  "admin@shop.co",
+  "22273cm046@gmail.com",
+  ...(process.env.ADMIN_EMAILS
+    ? process.env.ADMIN_EMAILS.split(",").map((e) => e.trim().toLowerCase())
+    : []),
+];
+
+export const isEmailAdmin = (email) => {
+  if (!email || typeof email !== "string") return false;
+  return ADMIN_EMAILS.includes(email.trim().toLowerCase());
+};
+
 // Clerk secret retrieval helper
 export const getClerkSecretKey = () => {
   const key = process.env.CLERK_SECRET_KEY;
@@ -86,6 +101,9 @@ const verifyClerkToken = async (token) => {
         userRecord.emailAddresses?.[0]?.emailAddress ||
         "";
 
+      const isAdmin =
+        userRecord.publicMetadata?.role === "admin" || isEmailAdmin(primaryEmail);
+
       userProfile = {
         id: userRecord.id,
         name:
@@ -95,7 +113,7 @@ const verifyClerkToken = async (token) => {
           "Customer",
         email: primaryEmail,
         avatar: userRecord.imageUrl || null,
-        role: userRecord.publicMetadata?.role === "admin" ? "admin" : "customer",
+        role: isAdmin ? "admin" : "customer",
         isClerk: true,
       };
 
@@ -106,12 +124,18 @@ const verifyClerkToken = async (token) => {
     }
   }
 
+  const fallbackEmail = verified.email || `${verified.sub}@clerk.user`;
+  const isFallbackAdmin =
+    verified.role === "admin" ||
+    verified.metadata?.role === "admin" ||
+    isEmailAdmin(fallbackEmail);
+
   userProfile = {
     id: verified.sub,
     name: verified.name || verified.first_name || "Customer",
-    email: verified.email || `${verified.sub}@clerk.user`,
+    email: fallbackEmail,
     avatar: verified.picture || null,
-    role: verified.role || verified.metadata?.role || "customer",
+    role: isFallbackAdmin ? "admin" : "customer",
     isClerk: true,
   };
 
@@ -255,7 +279,12 @@ export const optionalAuth = async (req, res, next) => {
 // Middleware to strictly enforce Admin role (Returns 403 Forbidden for non-admins)
 export const requireAdmin = (req, res, next) => {
   authenticateToken(req, res, () => {
-    if (req.user && req.user.role === "admin") {
+    const isUserAdmin =
+      req.user && (req.user.role === "admin" || isEmailAdmin(req.user.email));
+    if (isUserAdmin) {
+      if (req.user && req.user.role !== "admin") {
+        req.user.role = "admin";
+      }
       next();
     } else {
       return res.status(403).json({

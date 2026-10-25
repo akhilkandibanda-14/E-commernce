@@ -1,5 +1,5 @@
 import express from "express";
-import { requireAdmin, getClerkClient } from "../middleware/auth.js";
+import { requireAdmin, getClerkClient, isEmailAdmin } from "../middleware/auth.js";
 import { createRateLimiter } from "../middleware/rateLimiter.js";
 import { usersStore } from "../data/users.js";
 import { getAllOrders } from "../data/ordersStore.js";
@@ -58,11 +58,13 @@ const loadClerkUsers = async () => {
     const users = all.map((u) => {
       const primary =
         u.emailAddresses?.find((e) => e.id === u.primaryEmailAddressId) || u.emailAddresses?.[0];
+      const email = (primary?.emailAddress || "").toLowerCase();
+      const isAdmin = u.publicMetadata?.role === "admin" || isEmailAdmin(email);
       return {
         id: u.id,
         name: [u.firstName, u.lastName].filter(Boolean).join(" ") || u.username || "",
-        email: (primary?.emailAddress || "").toLowerCase(),
-        role: u.publicMetadata?.role === "admin" ? "admin" : "user",
+        email,
+        role: isAdmin ? "admin" : "user",
         signInMethod: "Google (Clerk)",
         avatar: u.imageUrl || null,
         createdAt: u.createdAt ? new Date(u.createdAt).toISOString() : null,

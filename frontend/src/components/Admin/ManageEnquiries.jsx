@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import AdminHeader from "./AdminHeader";
 import AdminRoute from "./AdminRoute";
@@ -195,6 +196,25 @@ const ManageEnquiries = () => {
                 <i className="fa-solid fa-envelope-open-text" style={{ marginRight: "6px" }}></i>
                 General Enquiries ({enquiries.length})
               </button>
+              <Link
+                to="/admin/catalogue-requests"
+                style={{
+                  padding: "10px 18px",
+                  borderRadius: "8px",
+                  border: "1px solid var(--forest)",
+                  background: "var(--paper)",
+                  color: "var(--forest)",
+                  fontWeight: "700",
+                  fontSize: "14px",
+                  textDecoration: "none",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "6px",
+                }}
+              >
+                <i className="fa-solid fa-file-arrow-down"></i>
+                Catalogue Requests
+              </Link>
             </div>
 
             <div style={{ position: "relative", minWidth: "260px" }}>

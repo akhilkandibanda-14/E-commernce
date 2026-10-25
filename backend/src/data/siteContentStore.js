@@ -156,7 +156,18 @@ export const saveSiteContent = (content) => {
 
   try {
     fs.writeFileSync(tmpPath, JSON.stringify(normalized, null, 2), "utf-8");
-    fs.renameSync(tmpPath, SITE_CONTENT_FILE);
+    try {
+      fs.renameSync(tmpPath, SITE_CONTENT_FILE);
+    } catch (renameErr) {
+      if (renameErr.code === "EPERM" || renameErr.code === "EBUSY") {
+        fs.copyFileSync(tmpPath, SITE_CONTENT_FILE);
+        try {
+          fs.unlinkSync(tmpPath);
+        } catch (_) {}
+      } else {
+        throw renameErr;
+      }
+    }
     siteContentCache = normalized;
     return siteContentCache;
   } catch (err) {

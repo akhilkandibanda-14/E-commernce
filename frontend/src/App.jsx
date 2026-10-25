@@ -27,6 +27,7 @@ import AdminPortNotice from "./components/Admin/AdminPortNotice";
 import ManageSiteContent from "./components/Admin/ManageSiteContent";
 import ManageOrders from "./components/Admin/ManageOrders";
 import ManageEnquiries from "./components/Admin/ManageEnquiries";
+import ManageCatalogueRequests from "./components/Admin/ManageCatalogueRequests";
 import OrderHistory from "./components/Account/OrderHistory";
 import { WishlistProvider } from "./context/WishlistContext";
 import { SiteContentProvider } from "./context/SiteContentContext";
@@ -130,6 +131,8 @@ function App() {
             <Route path="/admin" element={<AdminDashboard />} />
             <Route path="/admin/orders" element={<ManageOrders />} />
             <Route path="/admin/quotes" element={<ManageEnquiries />} />
+            <Route path="/admin/catalogue-requests" element={<ManageCatalogueRequests />} />
+            <Route path="/admin/catalogues" element={<ManageCatalogueRequests />} />
             <Route path="/admin/add-product" element={<AddProduct />} />
             <Route path="/admin/edit-product/:id" element={<AddProduct />} />
             <Route path="/admin/users" element={<ManageUsers />} />
@@ -171,6 +174,8 @@ function App() {
             <Route path="/admin" element={<AdminDashboard />} />
             <Route path="/admin/orders" element={<ManageOrders />} />
             <Route path="/admin/quotes" element={<ManageEnquiries />} />
+            <Route path="/admin/catalogue-requests" element={<ManageCatalogueRequests />} />
+            <Route path="/admin/catalogues" element={<ManageCatalogueRequests />} />
             <Route path="/admin/add-product" element={<AddProduct />} />
             <Route path="/admin/edit-product/:id" element={<AddProduct />} />
             <Route path="/admin/users" element={<ManageUsers />} />

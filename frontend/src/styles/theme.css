@@ -455,6 +455,7 @@ p {
 
 /* Row 2: navigation */
 .gw-header-nav {
+  position: relative;
   border-top: 1px solid var(--line);
 }
 .gw-header-nav .header-nav {
@@ -566,7 +567,7 @@ p {
 
 /* Dropdown panels share one surface treatment. */
 .gifting-header .dropdown-parent {
-  position: relative;
+  position: static;
 }
 .gifting-header .mega-menu-dropdown,
 .gifting-header .nav-dropdown-panel,

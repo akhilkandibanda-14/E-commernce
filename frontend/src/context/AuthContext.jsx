@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, useEffect, useCallback, useRef } from "react";
 import ClerkBridge from "./ClerkBridge.jsx";
-import { DEMO_LOGIN_ENABLED } from "../utils/env";
+import { DEMO_LOGIN_ENABLED, isEmailAdmin } from "../utils/env";
 
 const AuthContext = createContext(null);
 
@@ -120,7 +120,16 @@ export const AuthProvider = ({ children, clerkEnabled = false }) => {
 
   const handleClerkStateChange = useCallback(({ user: cUser, token: cToken, isSignedIn }) => {
     if (isSignedIn && cUser) {
-      setUser((prev) => (isSameUser(prev, cUser) ? prev : cUser));
+      const isUserAdmin = cUser.role === "admin" || isEmailAdmin(cUser.email);
+      const effectiveUser =
+        isUserAdmin && cUser.role !== "admin" ? { ...cUser, role: "admin" } : cUser;
+
+      // If already signed in as admin (e.g. 1-click or credentials), never downgrade to customer
+      if (userRef.current?.role === "admin" && !isUserAdmin) {
+        return;
+      }
+
+      setUser((prev) => (isSameUser(prev, effectiveUser) ? prev : effectiveUser));
       setToken((prev) => (prev === cToken ? prev : cToken));
     } else if (!isSignedIn && userRef.current?.isClerk) {
       setUser(null);
@@ -249,7 +258,7 @@ export const AuthProvider = ({ children, clerkEnabled = false }) => {
   const value = {
     user,
     token,
-    isAdmin: user?.role === "admin",
+    isAdmin: Boolean(user && (user.role === "admin" || isEmailAdmin(user.email))),
     isLoggedIn: !!user,
     isClerkUser: Boolean(user?.isClerk),
     isClerkEnabled: Boolean(clerkEnabled),

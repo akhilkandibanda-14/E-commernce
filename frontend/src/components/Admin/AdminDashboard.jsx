@@ -15,6 +15,7 @@ const AdminDashboard = () => {
   const [deleteId, setDeleteId] = useState(null);
   const [deleting, setDeleting] = useState(false);
   const [actionNotice, setActionNotice] = useState(null);
+  const [catalogueReqCount, setCatalogueReqCount] = useState(0);
 
   const fetchCatalog = async () => {
     try {
@@ -33,7 +34,17 @@ const AdminDashboard = () => {
 
   useEffect(() => {
     fetchCatalog();
-  }, []);
+    if (token) {
+      fetch(getAdminApiUrl("/api/catalogue-requests"), {
+        headers: { Authorization: `Bearer ${token}` },
+      })
+        .then((r) => r.json())
+        .then((d) => {
+          if (d.success && d.requests) setCatalogueReqCount(d.requests.length);
+        })
+        .catch(() => {});
+    }
+  }, [token]);
 
   const handleDelete = async (id, title) => {
     if (!window.confirm(`Are you sure you want to permanently delete "${title}"?`)) {
@@ -119,6 +130,15 @@ const AdminDashboard = () => {
               </p>
             </div>
             <div className="admin-header-actions" style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+              <Link to="/admin/catalogue-requests" className="btn-admin-outline" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
+                <i className="fa-solid fa-file-arrow-down" style={{ color: "var(--forest)" }}></i>
+                <span>Catalogue Requests</span>
+                {catalogueReqCount > 0 && (
+                  <span style={{ background: "var(--forest)", color: "#fff", padding: "1px 7px", borderRadius: "10px", fontSize: "11px", fontWeight: "700" }}>
+                    {catalogueReqCount}
+                  </span>
+                )}
+              </Link>
               <Link to="/admin/import" className="btn-admin-outline">
                 <i className="fa-solid fa-file-import"></i> Bulk Import
               </Link>
@@ -158,6 +178,16 @@ const AdminDashboard = () => {
               </div>
             </div>
 
+            <Link to="/admin/catalogue-requests" className="kpi-card" style={{ textDecoration: "none", color: "inherit", cursor: "pointer" }}>
+              <div className="kpi-icon-wrap kpi-amber">
+                <i className="fa-solid fa-file-arrow-down"></i>
+              </div>
+              <div className="kpi-content">
+                <span className="kpi-label">Catalogue Requests</span>
+                <span className="kpi-number">{catalogueReqCount}</span>
+              </div>
+            </Link>
+
             <div className="kpi-card">
               <div className="kpi-icon-wrap kpi-purple">
                 <i className="fa-solid fa-mug-hot"></i>
@@ -166,18 +196,6 @@ const AdminDashboard = () => {
                 <span className="kpi-label">Drinkware & Gifts</span>
                 <span className="kpi-number">
                   {products.filter((p) => p.category === "drinkware").length}
-                </span>
-              </div>
-            </div>
-
-            <div className="kpi-card">
-              <div className="kpi-icon-wrap kpi-amber">
-                <i className="fa-solid fa-shirt"></i>
-              </div>
-              <div className="kpi-content">
-                <span className="kpi-label">Apparel Items</span>
-                <span className="kpi-number">
-                  {products.filter((p) => p.category?.includes("clothing")).length}
                 </span>
               </div>
             </div>

@@ -25,6 +25,12 @@ import {
   getAllEnquiries,
   getQuotesByUserIdOrEmail,
   getEnquiriesByUserIdOrEmail,
+  updateEnquiryStatus,
+  deleteEnquiry,
+  saveCatalogueRequest,
+  getAllCatalogueRequests,
+  updateCatalogueRequestStatus,
+  deleteCatalogueRequest,
 } from "./data/quotesStore.js";
 import { sendQuoteNotificationEmail } from "./services/emailService.js";
 
@@ -201,7 +207,7 @@ export const createApp = ({ isUserPort = false, port = USER_PORT, peerPort = ADM
   // Bulk Enquiry Endpoint (Corporate Gifting Lookbooks & Quotes)
   app.post("/api/enquiries", optionalAuth, enquiryLimiter, validateEnquiryPayload, async (req, res) => {
     try {
-      const { name, email, phone, company, category, quantity, customBranding, targetDate, notes } = req.body;
+      const { name, email, phone, company, category, quantity, customBranding, targetDate, notes, type, catalogueId, catalogueTitle } = req.body;
       const enquiryId = `ENQ-${Date.now().toString(36).toUpperCase()}-${Math.floor(100 + Math.random() * 900)}`;
 
       const newEnquiry = {
@@ -218,10 +224,31 @@ export const createApp = ({ isUserPort = false, port = USER_PORT, peerPort = ADM
         targetDate: targetDate ? String(targetDate).trim() : "",
         notes: notes ? String(notes).trim().slice(0, 1000) : "",
         status: "pending",
+        adminNotes: "",
         createdAt: new Date().toISOString(),
       };
 
       await saveEnquiry(newEnquiry);
+
+      // If this enquiry was a catalogue request, also index it as a catalogue request
+      if (type === "catalogue_request" || (category && category.toLowerCase().includes("catalogue"))) {
+        await saveCatalogueRequest({
+          requestId: enquiryId,
+          userId: newEnquiry.userId,
+          userEmail: newEnquiry.userEmail,
+          name: newEnquiry.name,
+          email: newEnquiry.email,
+          phone: newEnquiry.phone,
+          company: newEnquiry.company,
+          catalogueId: catalogueId || "corp-master-2026",
+          catalogueTitle: catalogueTitle || category.replace(/^Catalogue request:\s*/i, "") || "Corporate Gifting Catalogue",
+          notes: newEnquiry.notes || "Requested catalogue download.",
+          status: "pending",
+          adminNotes: "",
+          createdAt: newEnquiry.createdAt,
+          updatedAt: newEnquiry.createdAt,
+        });
+      }
 
       res.status(201).json({
         success: true,
@@ -246,6 +273,130 @@ export const createApp = ({ isUserPort = false, port = USER_PORT, peerPort = ADM
     }
     const enquiries = getAllEnquiries();
     res.json({ success: true, count: enquiries.length, enquiries });
+  });
+
+  // Admin PATCH /api/enquiries/:id/status
+  app.patch("/api/enquiries/:id/status", authenticateToken, async (req, res) => {
+    if (req.user.role !== "admin") {
+      return res.status(403).json({ success: false, message: "Administrative access required." });
+    }
+    const { status, adminNotes } = req.body || {};
+    const updated = await updateEnquiryStatus(req.params.id, { status, adminNotes });
+    if (!updated) {
+      return res.status(404).json({ success: false, message: "Enquiry not found." });
+    }
+    res.json({ success: true, message: "Enquiry status updated successfully", enquiry: updated });
+  });
+
+  // Admin DELETE /api/enquiries/:id
+  app.delete("/api/enquiries/:id", authenticateToken, async (req, res) => {
+    if (req.user.role !== "admin") {
+      return res.status(403).json({ success: false, message: "Administrative access required." });
+    }
+    const deleted = await deleteEnquiry(req.params.id);
+    if (!deleted) {
+      return res.status(404).json({ success: false, message: "Enquiry not found." });
+    }
+    res.json({ success: true, message: "Enquiry deleted successfully" });
+  });
+
+  // ==================== CATALOGUE DOWNLOAD REQUESTS ENDPOINTS ====================
+
+  // Customer POST /api/catalogue-requests - Submit request to admin to download catalogue
+  app.post("/api/catalogue-requests", optionalAuth, enquiryLimiter, async (req, res) => {
+    try {
+      const { name, email, phone, company, catalogueId, catalogueTitle, notes } = req.body || {};
+
+      if (!email || typeof email !== "string" || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) {
+        return res.status(400).json({ success: false, message: "A valid work email address is required." });
+      }
+
+      const requestId = `CAT-REQ-${Date.now().toString(36).toUpperCase()}-${Math.floor(100 + Math.random() * 900)}`;
+      const resolvedTitle = catalogueTitle ? String(catalogueTitle).trim() : "Corporate Gifting Master Catalogue 2026";
+
+      const newRequest = {
+        requestId,
+        userId: req.user?.id || null,
+        userEmail: req.user?.email || null,
+        name: name ? String(name).trim().slice(0, 100) : "Customer",
+        email: email.trim().toLowerCase(),
+        phone: phone ? String(phone).trim().slice(0, 30) : "",
+        company: company ? String(company).trim().slice(0, 100) : "",
+        catalogueId: catalogueId ? String(catalogueId).trim() : "corp-master-2026",
+        catalogueTitle: resolvedTitle,
+        notes: notes ? String(notes).trim().slice(0, 1000) : "I would like to download the catalogue.",
+        status: "pending",
+        adminNotes: "",
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+      };
+
+      await saveCatalogueRequest(newRequest);
+
+      // Also persist to enquiries so unified leads queries remain consistent
+      const newEnquiry = {
+        enquiryId: requestId,
+        userId: req.user?.id || null,
+        userEmail: req.user?.email || null,
+        name: newRequest.name,
+        email: newRequest.email,
+        phone: newRequest.phone,
+        company: newRequest.company,
+        category: `Catalogue request: ${resolvedTitle}`,
+        quantity: "1 Catalogue",
+        customBranding: "N/A",
+        targetDate: "",
+        notes: newRequest.notes,
+        status: "pending",
+        adminNotes: "",
+        createdAt: newRequest.createdAt,
+      };
+      await saveEnquiry(newEnquiry);
+
+      res.status(201).json({
+        success: true,
+        message: "Your request to download the catalogue has been sent to our admin team! You will receive the catalogue link promptly.",
+        requestId,
+        request: newRequest,
+      });
+    } catch (err) {
+      console.error("[CatalogueRequests] Error submitting request:", err);
+      res.status(500).json({ success: false, message: "Failed to submit catalogue request." });
+    }
+  });
+
+  // Admin GET /api/catalogue-requests - List all catalogue download requests
+  app.get("/api/catalogue-requests", authenticateToken, (req, res) => {
+    if (req.user.role !== "admin") {
+      return res.status(403).json({ success: false, message: "Administrative access required." });
+    }
+    const requests = getAllCatalogueRequests();
+    res.json({ success: true, count: requests.length, requests });
+  });
+
+  // Admin PATCH /api/catalogue-requests/:id/status - Approve, update status & admin notes
+  app.patch("/api/catalogue-requests/:id/status", authenticateToken, async (req, res) => {
+    if (req.user.role !== "admin") {
+      return res.status(403).json({ success: false, message: "Administrative access required." });
+    }
+    const { status, adminNotes } = req.body || {};
+    const updated = await updateCatalogueRequestStatus(req.params.id, { status, adminNotes });
+    if (!updated) {
+      return res.status(404).json({ success: false, message: "Catalogue request not found." });
+    }
+    res.json({ success: true, message: "Catalogue request status updated successfully", request: updated });
+  });
+
+  // Admin DELETE /api/catalogue-requests/:id
+  app.delete("/api/catalogue-requests/:id", authenticateToken, async (req, res) => {
+    if (req.user.role !== "admin") {
+      return res.status(403).json({ success: false, message: "Administrative access required." });
+    }
+    const deleted = await deleteCatalogueRequest(req.params.id);
+    if (!deleted) {
+      return res.status(404).json({ success: false, message: "Catalogue request not found." });
+    }
+    res.json({ success: true, message: "Catalogue request deleted successfully" });
   });
 
   // Mount auth router

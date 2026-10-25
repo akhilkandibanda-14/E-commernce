@@ -79,6 +79,12 @@ const AdminHeader = () => {
               <i className="fa-solid fa-comments-dollar"></i> Quotes & Leads
             </Link>
             <Link
+              to="/admin/catalogue-requests"
+              className={`admin-nav-link ${location.pathname === "/admin/catalogue-requests" ? "active" : ""}`}
+            >
+              <i className="fa-solid fa-file-arrow-down"></i> Catalogue Requests
+            </Link>
+            <Link
               to="/admin/users"
               className={`admin-nav-link ${location.pathname === "/admin/users" ? "active" : ""}`}
             >

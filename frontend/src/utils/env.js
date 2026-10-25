@@ -10,3 +10,18 @@ export const IS_ADMIN_PORTAL =
 // Admin sign-in is offered only on the admin portal or on an /admin page, never elsewhere on the shop.
 export const isAdminSignInContext = (pathname = window.location.pathname) =>
   IS_ADMIN_PORTAL || pathname.startsWith("/admin");
+
+// Known administrator email addresses with permanent admin access
+export const ADMIN_EMAILS = [
+  "admin@giftingwellness.com",
+  "admin@shop.co",
+  "22273cm046@gmail.com",
+  ...(import.meta.env.VITE_ADMIN_EMAILS
+    ? import.meta.env.VITE_ADMIN_EMAILS.split(",").map((e) => e.trim().toLowerCase())
+    : []),
+];
+
+export const isEmailAdmin = (email) => {
+  if (!email || typeof email !== "string") return false;
+  return ADMIN_EMAILS.includes(email.trim().toLowerCase());
+};

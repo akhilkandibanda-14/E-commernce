@@ -3,33 +3,33 @@
     "id": "usr_admin_01",
     "name": "Store Administrator",
     "email": "admin@shop.co",
-    "passwordHash": "$2b$10$kT/1sjEzey/VAeWzQecoR.dp.N9Ej/d3/wWxuMCsIA0iH.cO87wUO",
+    "passwordHash": "$2b$10$q8iIqyFRI70gqNmFULft1uyZwkdp/gBVOwa6JoARAjw7rasriozfe",
     "role": "admin",
-    "createdAt": "2026-10-24T13:37:34.407Z"
+    "createdAt": "2026-10-25T07:58:31.293Z"
   },
   {
     "id": "usr_admin_02",
     "name": "Store Administrator",
     "email": "admin@giftingwellness.com",
-    "passwordHash": "$2b$10$TK7cO3E82JliNwIqVwQu6OQcPbIbzLzO7ODjoVmC1N.mUzNkJYTDC",
+    "passwordHash": "$2b$10$acU4tkT4kivzH4JRZbb.beZvpsh01iOixrVthTchqM/LxkJdVqMXy",
     "role": "admin",
-    "createdAt": "2026-10-24T13:37:34.462Z"
+    "createdAt": "2026-10-25T07:58:31.369Z"
   },
   {
     "id": "usr_user_01",
     "name": "Alex Morgan",
     "email": "user@shop.co",
-    "passwordHash": "$2b$10$IxNYT54XF8CEqfC2cRUW..z1U6rQetPtiidBYHwUAcxTXYByi9Mvm",
+    "passwordHash": "$2b$10$rysGkYqCh93X39jlsc4rZOdeaJBGLRF/0XKCOu.LpzKL9reDe4itm",
     "role": "user",
-    "createdAt": "2026-10-24T13:37:34.516Z"
+    "createdAt": "2026-10-25T07:58:31.452Z"
   },
   {
     "id": "usr_user_02",
     "name": "Corporate Client",
     "email": "user@giftingwellness.com",
-    "passwordHash": "$2b$10$VWc1ZX6EU8QfvMNRLzUty.lCIqL.7L8d6hIsZsEIjiCvR71s5y4Ta",
+    "passwordHash": "$2b$10$1EkXKR1Vm/HS1rk5KD5PHe3NAzo2XDZCSqwF1pwuQpOX5w4HgdNDa",
     "role": "user",
-    "createdAt": "2026-10-24T13:37:34.571Z"
+    "createdAt": "2026-10-25T07:58:31.535Z"
   },
   {
     "id": "usr_1792782378733_863",
@@ -820,5 +820,495 @@
     "company": "",
     "phone": "",
     "createdAt": "2026-10-24T13:37:35.743Z"
+  },
+  {
+    "id": "usr_1792858342611_572",
+    "name": "Customer B",
+    "email": "cust_b_1792858342611@test.com",
+    "passwordHash": "$2b$10$WGGqw4DKPEqcQaXIYEck2e.4tLIz/.oEr/Lx6TNOY0ZD2npF2pzHm",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-24T16:12:22.672Z"
+  },
+  {
+    "id": "usr_1792858346736_704",
+    "name": "Privilege Escalation Attacker",
+    "email": "attacker_1792858346732@test.com",
+    "passwordHash": "$2b$10$KV3c.1w9PNaM1t.IDzK65e1mxXgDesFsY0ilf7fqJ3vnKYlz6EOia",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-24T16:12:26.798Z"
+  },
+  {
+    "id": "usr_1792858347412_420",
+    "name": "User 0",
+    "email": "reg_limit_1792858347410_0@test.com",
+    "passwordHash": "$2b$10$cC5bIxoO//5z.q86cMqnje0KhS4XEAnLOKtiBJ/F/6.4R0OH389Rq",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-24T16:12:27.470Z"
+  },
+  {
+    "id": "usr_1792858347475_851",
+    "name": "User 1",
+    "email": "reg_limit_1792858347473_1@test.com",
+    "passwordHash": "$2b$10$t512g92ayGuwtSaooceMG.539JHZ.JxSmP93wP/z1B9fJhsT11W3q",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-24T16:12:27.533Z"
+  },
+  {
+    "id": "usr_1792858347536_646",
+    "name": "User 2",
+    "email": "reg_limit_1792858347536_2@test.com",
+    "passwordHash": "$2b$10$FuEe8jMOP/Wgvam6b3N2ueLiw2lqsNqHE1pe6Y6W0m9jZDFP9rng2",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-24T16:12:27.594Z"
+  },
+  {
+    "id": "usr_1792858347597_918",
+    "name": "User 3",
+    "email": "reg_limit_1792858347596_3@test.com",
+    "passwordHash": "$2b$10$ca71Bng9AxaV.0HL03cGheI9zDg/nA5tjLxTBCogjb2TKY/CQRffW",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-24T16:12:27.654Z"
+  },
+  {
+    "id": "usr_1792858347657_613",
+    "name": "User 4",
+    "email": "reg_limit_1792858347657_4@test.com",
+    "passwordHash": "$2b$10$cua5.Gz4wIM6l8Zo7o0fuuROivhJtLutUVZJyPEm4Nxu.t55Xj7Eu",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-24T16:12:27.714Z"
+  },
+  {
+    "id": "usr_1792862261825_776",
+    "name": "Customer B",
+    "email": "cust_b_1792862261825@test.com",
+    "passwordHash": "$2b$10$QHkBurDvgWbuXipbxj8xTeBwULmAjdrHJ4KllYdR1.8eHA9LDjG4e",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-24T17:17:42.245Z"
+  },
+  {
+    "id": "usr_1792862269381_49",
+    "name": "Privilege Escalation Attacker",
+    "email": "attacker_1792862269378@test.com",
+    "passwordHash": "$2b$10$wsYfIPqOrcmQaYk4oSThCOInfwsYCjELRqmiK2m7sTiXuVw1UC5Z6",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-24T17:17:49.449Z"
+  },
+  {
+    "id": "usr_1792862270121_133",
+    "name": "User 0",
+    "email": "reg_limit_1792862270119_0@test.com",
+    "passwordHash": "$2b$10$UEK.6/hJnomW5GAKRGCQQOJh2CVOpfoFigHXhg9kSxG1AfYOfpoca",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-24T17:17:50.179Z"
+  },
+  {
+    "id": "usr_1792862270185_819",
+    "name": "User 1",
+    "email": "reg_limit_1792862270183_1@test.com",
+    "passwordHash": "$2b$10$Or/FnbrUFvzfhLpJ.bRyEuinuCZeu2ft0pUh8gIw7ww7wM6JH5NPi",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-24T17:17:50.243Z"
+  },
+  {
+    "id": "usr_1792862270247_255",
+    "name": "User 2",
+    "email": "reg_limit_1792862270246_2@test.com",
+    "passwordHash": "$2b$10$guhWXgHTCKK9UAJp6nqCPuPVIQOJxIT/07MVVylHlao/AMBy4QWPW",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-24T17:17:50.306Z"
+  },
+  {
+    "id": "usr_1792862270309_13",
+    "name": "User 3",
+    "email": "reg_limit_1792862270308_3@test.com",
+    "passwordHash": "$2b$10$G3gv7oK63m5wZUxsLpRT9.qrCCyo5V3mJOCQkSpYGlwZ2NX6WpTmG",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-24T17:17:50.369Z"
+  },
+  {
+    "id": "usr_1792862270372_850",
+    "name": "User 4",
+    "email": "reg_limit_1792862270372_4@test.com",
+    "passwordHash": "$2b$10$Du6/ZQyvN2Wl8OFrQ0VErewp58jCaNVQDdetWJ6VmGUjGQLFhXch.",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-24T17:17:50.433Z"
+  },
+  {
+    "id": "usr_1792911957034_843",
+    "name": "Customer B",
+    "email": "cust_b_1792911957034@test.com",
+    "passwordHash": "$2b$10$79EkZxmKeE3kLM0KC8ixlOsDI/slDUZ3ooI7io4uuX3z7tkorSNxC",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-25T07:05:57.099Z"
+  },
+  {
+    "id": "usr_1792911960971_662",
+    "name": "Privilege Escalation Attacker",
+    "email": "attacker_1792911960967@test.com",
+    "passwordHash": "$2b$10$BwVic2mcEY7fPCspEgDZbOhBQpzZja.nkPRxxLfSHlPP5KR2E4sXW",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-25T07:06:01.034Z"
+  },
+  {
+    "id": "usr_1792911961654_585",
+    "name": "User 0",
+    "email": "reg_limit_1792911961652_0@test.com",
+    "passwordHash": "$2b$10$DNSteimK1PRiJlVZfGcmkOI6a9kmDY95MGnzwWPvUpmva5XSHBoJe",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-25T07:06:01.713Z"
+  },
+  {
+    "id": "usr_1792911961718_701",
+    "name": "User 1",
+    "email": "reg_limit_1792911961716_1@test.com",
+    "passwordHash": "$2b$10$jwGZ/0Cty1dXzwYU/dvZ6ee80B8b0T2JT0DCblumAhLrJn6qVBQ6q",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-25T07:06:01.775Z"
+  },
+  {
+    "id": "usr_1792911961778_329",
+    "name": "User 2",
+    "email": "reg_limit_1792911961777_2@test.com",
+    "passwordHash": "$2b$10$pAEaGO1cBsDC6JKLeIH6Iu.5fB3X1NeprBA9oCOJBAxZ5imTIr1Ni",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-25T07:06:01.835Z"
+  },
+  {
+    "id": "usr_1792911961838_261",
+    "name": "User 3",
+    "email": "reg_limit_1792911961837_3@test.com",
+    "passwordHash": "$2b$10$nzyqyNxat3KY2PTKW8j51uDotBI8GvkE1Aa/wabbWOMaLFAHp.I62",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-25T07:06:01.894Z"
+  },
+  {
+    "id": "usr_1792911961898_407",
+    "name": "User 4",
+    "email": "reg_limit_1792911961898_4@test.com",
+    "passwordHash": "$2b$10$Vl0MYlSJASzFRpBFp6DoqeCVhdriuzIc1V29AbS5twuvOTdAPCVqW",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-25T07:06:01.957Z"
+  },
+  {
+    "id": "usr_1792912387670_306",
+    "name": "Customer B",
+    "email": "cust_b_1792912387670@test.com",
+    "passwordHash": "$2b$10$GdFK8l.PWSm01t9Pp8mYxur3SwB/r.79D3pmSbfJ9CGYVeJz4oOkG",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-25T07:13:07.731Z"
+  },
+  {
+    "id": "usr_1792912391233_449",
+    "name": "Privilege Escalation Attacker",
+    "email": "attacker_1792912391230@test.com",
+    "passwordHash": "$2b$10$lOUJahNNEcGaB9lvqSW1F.KaHw7txxYMnHe/cV6lYs.kY6PDp7Ueu",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-25T07:13:11.296Z"
+  },
+  {
+    "id": "usr_1792912391890_189",
+    "name": "User 0",
+    "email": "reg_limit_1792912391888_0@test.com",
+    "passwordHash": "$2b$10$xaR2Kgag4lWDO4mwxmyCNeZg3eFJhg52U8IpgvFfkV.PKuIG4Q9zC",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-25T07:13:11.948Z"
+  },
+  {
+    "id": "usr_1792912391952_802",
+    "name": "User 1",
+    "email": "reg_limit_1792912391951_1@test.com",
+    "passwordHash": "$2b$10$EDRqhMxDMGVPHP71ooNFBelSVdq6KQclXEXmdsJ2oM9GUZsWFz/32",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-25T07:13:12.007Z"
+  },
+  {
+    "id": "usr_1792912392010_292",
+    "name": "User 2",
+    "email": "reg_limit_1792912392010_2@test.com",
+    "passwordHash": "$2b$10$4hNqkkP9gbEgD8wAkPZCyeg188unWDRFtDGZTBTTjgen3070Vyewa",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-25T07:13:12.067Z"
+  },
+  {
+    "id": "usr_1792912392070_451",
+    "name": "User 3",
+    "email": "reg_limit_1792912392070_3@test.com",
+    "passwordHash": "$2b$10$By9dvXFdKenNp/a6u9K8Uu.eVu9TT3t0J8vxHOPc3LShvMzDz4BkW",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-25T07:13:12.127Z"
+  },
+  {
+    "id": "usr_1792912392130_238",
+    "name": "User 4",
+    "email": "reg_limit_1792912392129_4@test.com",
+    "passwordHash": "$2b$10$yWOn0Sr0f54hWWLGGIEjK.N4kZpFpUr9U3nvjNOqF0IR//MUcas.K",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-25T07:13:12.188Z"
+  },
+  {
+    "id": "usr_1792913741971_680",
+    "name": "Customer B",
+    "email": "cust_b_1792913741970@test.com",
+    "passwordHash": "$2b$10$DwCFoz9VMFhwcczGnAAFpepNbHwJjtMnXzoPPBoGo/PojRG9bs7Be",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-25T07:35:42.036Z"
+  },
+  {
+    "id": "usr_1792913747164_997",
+    "name": "Privilege Escalation Attacker",
+    "email": "attacker_1792913747160@test.com",
+    "passwordHash": "$2b$10$FYho91Pp17e/4de2fpE0MO8a3wcAvHW/AMjnIAjhzziKbeFloNLIC",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-25T07:35:47.237Z"
+  },
+  {
+    "id": "usr_1792913747894_147",
+    "name": "User 0",
+    "email": "reg_limit_1792913747890_0@test.com",
+    "passwordHash": "$2b$10$azv4A9Rrj/hNgixJzBxc1Obv/LVaMO9liI4qlz2iLKU573AfnCIXK",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-25T07:35:47.959Z"
+  },
+  {
+    "id": "usr_1792913747969_314",
+    "name": "User 1",
+    "email": "reg_limit_1792913747965_1@test.com",
+    "passwordHash": "$2b$10$ykbsWeJNyuAyo00E1F9L..RR8yV8vNmxziTa8Iznnx.nXh5bU1hie",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-25T07:35:48.047Z"
+  },
+  {
+    "id": "usr_1792913748054_971",
+    "name": "User 2",
+    "email": "reg_limit_1792913748052_2@test.com",
+    "passwordHash": "$2b$10$r9tm3n1Og9cLl9DlskjKAuGAXqM156ykLir4TmRKm.mIeZYJnue2G",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-25T07:35:48.120Z"
+  },
+  {
+    "id": "usr_1792913748123_859",
+    "name": "User 3",
+    "email": "reg_limit_1792913748122_3@test.com",
+    "passwordHash": "$2b$10$STxhrQLPnofLp2RpwpX5juX5PaAs5/3r5R8MJv0qKbiPOF0hZkFoy",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-25T07:35:48.189Z"
+  },
+  {
+    "id": "usr_1792913748193_170",
+    "name": "User 4",
+    "email": "reg_limit_1792913748192_4@test.com",
+    "passwordHash": "$2b$10$kwJmdUj0J8oplv6lxoiP1O62CStA3wFe4jY0E6/H5VzyoelfdeAtq",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-25T07:35:48.250Z"
+  },
+  {
+    "id": "usr_1792914323805_4",
+    "name": "Customer B",
+    "email": "cust_b_1792914323805@test.com",
+    "passwordHash": "$2b$10$QiHp83b/eS.kd5RFjjsWE.JG6.DQvv0jlW3z1jH8if9llE3qNzay2",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-25T07:45:23.869Z"
+  },
+  {
+    "id": "usr_1792914327967_624",
+    "name": "Privilege Escalation Attacker",
+    "email": "attacker_1792914327962@test.com",
+    "passwordHash": "$2b$10$J1GPkHa48V.H1ROmPD7q6etJl6Ts4k1mK7qVaahoxqw4Y4sFRBk2e",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-25T07:45:28.030Z"
+  },
+  {
+    "id": "usr_1792914328641_594",
+    "name": "User 0",
+    "email": "reg_limit_1792914328638_0@test.com",
+    "passwordHash": "$2b$10$pfs56wtKtwC9XV6x9uDy7eIzsqd2Lo6gGm1pDRO9e/.EypOeR2Xoq",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-25T07:45:28.698Z"
+  },
+  {
+    "id": "usr_1792914328703_183",
+    "name": "User 1",
+    "email": "reg_limit_1792914328701_1@test.com",
+    "passwordHash": "$2b$10$zucWEjYQrOqGQB5HJO.9LOUmonr9KfLiDPOkldzvuyoIK8ILA.qG6",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-25T07:45:28.764Z"
+  },
+  {
+    "id": "usr_1792914328769_776",
+    "name": "User 2",
+    "email": "reg_limit_1792914328768_2@test.com",
+    "passwordHash": "$2b$10$smB227Ivf.ho54tONqATJedhxEIS.JuV5ZPnyE8edGpneSo2EYBgu",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-25T07:45:28.829Z"
+  },
+  {
+    "id": "usr_1792914328833_215",
+    "name": "User 3",
+    "email": "reg_limit_1792914328832_3@test.com",
+    "passwordHash": "$2b$10$GcqTRHClESIdka4/.guO1.1O3s3TS0a9YkL3b3msFgMHp7zExkdJ2",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-25T07:45:28.896Z"
+  },
+  {
+    "id": "usr_1792914328900_187",
+    "name": "User 4",
+    "email": "reg_limit_1792914328899_4@test.com",
+    "passwordHash": "$2b$10$ppq3RbJrWH35iu8ExXit5uyraca38PJVXuFyG5Dtr8kEA7HBuh18i",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-25T07:45:28.958Z"
+  },
+  {
+    "id": "usr_1792915104792_116",
+    "name": "Customer B",
+    "email": "cust_b_1792915104791@test.com",
+    "passwordHash": "$2b$10$5FkM044KM2VMxxVs/C4b6eGPeFV/ZMNb9L4ngri/iCcr6A2fv9Lwy",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-25T07:58:24.960Z"
+  },
+  {
+    "id": "usr_1792915111973_42",
+    "name": "Privilege Escalation Attacker",
+    "email": "attacker_1792915111967@test.com",
+    "passwordHash": "$2b$10$PGJEmxZnh7u5w8DpvKDLK.Mk.tu7YGwXLH3nwBSuR4YYwRtps.w1y",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-25T07:58:32.068Z"
+  },
+  {
+    "id": "usr_1792915112918_396",
+    "name": "User 0",
+    "email": "reg_limit_1792915112914_0@test.com",
+    "passwordHash": "$2b$10$6Blt3aQ/Be56F4NNGL860Oz.caKUejexi.ISnhcW6yktC4l/tmIQ2",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-25T07:58:33.000Z"
+  },
+  {
+    "id": "usr_1792915113008_354",
+    "name": "User 1",
+    "email": "reg_limit_1792915113004_1@test.com",
+    "passwordHash": "$2b$10$L8s4HiUQp2WN9h2fRiE0uu7anAixd87s0cVrvyZgFOhQqKG5SKFOO",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-25T07:58:33.084Z"
+  },
+  {
+    "id": "usr_1792915113090_895",
+    "name": "User 2",
+    "email": "reg_limit_1792915113087_2@test.com",
+    "passwordHash": "$2b$10$i0jofqwui1BAqqcIFjPhZOlnlumns.4AysnLndr9I55lwdDyBLDU2",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-25T07:58:33.183Z"
+  },
+  {
+    "id": "usr_1792915113190_792",
+    "name": "User 3",
+    "email": "reg_limit_1792915113188_3@test.com",
+    "passwordHash": "$2b$10$JBSBKImxCwMH.bEv5rPik.DCvae5DHHQZeLo9hl4F7axjZp6l8xOC",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-25T07:58:33.289Z"
+  },
+  {
+    "id": "usr_1792915113301_99",
+    "name": "User 4",
+    "email": "reg_limit_1792915113299_4@test.com",
+    "passwordHash": "$2b$10$/Eq/83WcV56zTc/1aUpzJ.0q01j7srDqKh.XnlrxwzU2jEf/QNSu.",
+    "role": "user",
+    "company": "",
+    "phone": "",
+    "createdAt": "2026-10-25T07:58:33.457Z"
   }
 ]

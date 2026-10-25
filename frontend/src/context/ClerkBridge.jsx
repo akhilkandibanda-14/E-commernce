@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useUser, useAuth as useClerkAuth, useClerk } from "@clerk/clerk-react";
+import { isEmailAdmin } from "../utils/env";
 
 /**
  * ClerkBridge Component
@@ -54,6 +55,9 @@ export const ClerkBridge = ({ onClerkStateChange, registerClerkActions }) => {
             clerkUser.emailAddresses?.[0]?.emailAddress ||
             "";
 
+          const isAdmin =
+            clerkUser.publicMetadata?.role === "admin" || isEmailAdmin(primaryEmail);
+
           const normalizedUser = {
             id: clerkUser.id,
             name:
@@ -62,7 +66,7 @@ export const ClerkBridge = ({ onClerkStateChange, registerClerkActions }) => {
               (primaryEmail ? primaryEmail.split("@")[0] : "Customer"),
             email: primaryEmail,
             avatar: clerkUser.imageUrl || null,
-            role: clerkUser.publicMetadata?.role === "admin" ? "admin" : "customer",
+            role: isAdmin ? "admin" : "customer",
             isClerk: true,
           };
 
