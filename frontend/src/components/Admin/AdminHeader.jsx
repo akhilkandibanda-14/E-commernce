@@ -70,7 +70,7 @@ const AdminHeader = () => {
               to="/admin/orders"
               className={`admin-nav-link ${location.pathname === "/admin/orders" ? "active" : ""}`}
             >
-              <i className="fa-solid fa-boxes-packing"></i> Orders
+              <i className="fa-solid fa-clipboard-list"></i> Order Enquiries
             </Link>
             <Link
               to="/admin/quotes"

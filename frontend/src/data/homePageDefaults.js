@@ -2,7 +2,8 @@
 // site content (homePage); anything not overridden falls back to these values.
 
 export const HOME_SECTIONS = [
-  { key: "hero", label: "Hero" },
+  { key: "heroCarousel", label: "Hero Carousel" },
+  { key: "hero", label: "Static Hero banner" },
   { key: "trustStrip", label: "Trust strip" },
   { key: "services", label: "Gifting services" },
   { key: "featuredCollections", label: "Featured collections" },
@@ -18,6 +19,59 @@ export const HOME_SECTIONS = [
 
 export const HOME_PAGE_DEFAULTS = {
   sections: Object.fromEntries(HOME_SECTIONS.map((s) => [s.key, true])),
+
+  heroCarousel: {
+    enabled: true,
+    autoplay: true,
+    interval: 5,
+    slides: [
+      {
+        id: "slide-1",
+        badge: "Christmas Special · 20% Off Bulk Orders",
+        title: "Christmas Bulk Orders For Clients & Teams",
+        subtitle: "Celebrate the festive season with curated luxury gift hampers, insulated bottles, gourmet treats, and keepsake gift boxes finished with your company logo branding.",
+        primaryCtaText: "Explore Christmas Hampers",
+        primaryCtaLink: "/products?search=Hamper",
+        secondaryCtaText: "Request Bulk Quote",
+        secondaryCtaLink: "/cart",
+        image: "/uploads/carousel-christmas-bulk-orders.jpg",
+        imageAlt: "Christmas Bulk Orders - 20% Off on Bulk Orders for Clients & Teams",
+        tagTitle: "20% Off Bulk Orders",
+        tagText: "Flat 20% discount on institutional corporate orders",
+        isActive: true,
+      },
+      {
+        id: "slide-2",
+        badge: "Diwali Celebration · 20% Off Bulk Orders",
+        title: "Diwali Bulk Orders For Valued Clients & Teams",
+        subtitle: "Handcrafted brass diyas, artisanal sweets, gourmet dry fruits, and bespoke corporate celebration hampers. Delivered with custom greeting cards pan-India.",
+        primaryCtaText: "Browse Diwali Hampers",
+        primaryCtaLink: "/products?search=Festive",
+        secondaryCtaText: "Send Order Enquiry",
+        secondaryCtaLink: "/cart",
+        image: "/uploads/carousel-diwali-bulk-orders.jpg",
+        imageAlt: "Diwali Bulk Orders - 20% Off on Bulk Orders for Valued Clients & Teams",
+        tagTitle: "Festive Bestseller",
+        tagText: "Free digital sample proof with custom corporate packaging",
+        isActive: true,
+      },
+      {
+        id: "slide-3",
+        badge: "New Year 2026 · 20% Off Bulk Orders",
+        title: "New Year 2026 Bulk Orders & Executive Kits",
+        subtitle: "Start the new year with premium welcome merchandise, smart drinkware, custom-printed desk accessories, and branded team celebration gifts.",
+        primaryCtaText: "View New Year Catalogue",
+        primaryCtaLink: "/products",
+        secondaryCtaText: "Get Volume Pricing",
+        secondaryCtaLink: "/cart",
+        image: "/uploads/carousel-new-year-bulk-orders.jpg",
+        imageAlt: "New Year 2026 Bulk Orders - 20% Off on Bulk Orders",
+        tagTitle: "Pan-India Multi-City",
+        tagText: "Direct doorstep delivery to remote teams across India",
+        isActive: true,
+      },
+    ],
+  },
 
   hero: {
     title: "Gifts your clients and teams will keep.",

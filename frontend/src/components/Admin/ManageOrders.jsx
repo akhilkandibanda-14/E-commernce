@@ -6,12 +6,13 @@ import AdminRoute from "./AdminRoute";
 import { getAdminApiUrl } from "../../utils/apiConfig";
 
 const STATUS_CONFIG = {
-  confirmed: { label: "Confirmed", bg: "var(--sage-tint)", color: "var(--success)", border: "#a7f3d0", icon: "fa-circle-check" },
-  in_production: { label: "In Production", bg: "var(--champagne-tint)", color: "var(--warning)", border: "#fde68a", icon: "fa-industry" },
+  pending: { label: "Enquiry Received", bg: "var(--champagne-tint)", color: "#854d0e", border: "#fef08a", icon: "fa-clock" },
+  quote_sent: { label: "Quote Sent", bg: "#eff6ff", color: "#1d4ed8", border: "#bfdbfe", icon: "fa-envelope-open-text" },
+  confirmed: { label: "Confirmed by Client", bg: "var(--sage-tint)", color: "var(--success)", border: "#a7f3d0", icon: "fa-circle-check" },
+  in_production: { label: "In Production / Branding", bg: "var(--champagne-tint)", color: "var(--warning)", border: "#fde68a", icon: "fa-industry" },
   dispatched: { label: "Dispatched", bg: "#eff6ff", color: "#1e40af", border: "#bfdbfe", icon: "fa-truck-fast" },
   delivered: { label: "Delivered", bg: "var(--sage-tint)", color: "var(--success)", border: "#bbf7d0", icon: "fa-box-check" },
-  cancelled: { label: "Cancelled", bg: "var(--danger-tint)", color: "var(--danger)", border: "#fecaca", icon: "fa-circle-xmark" },
-  pending: { label: "Pending", bg: "var(--champagne-tint)", color: "#854d0e", border: "#fef08a", icon: "fa-clock" },
+  cancelled: { label: "Cancelled / Closed", bg: "var(--danger-tint)", color: "var(--danger)", border: "#fecaca", icon: "fa-circle-xmark" },
 };
 
 const ManageOrders = () => {
@@ -20,9 +21,11 @@ const ManageOrders = () => {
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedStatus, setSelectedStatus] = useState("all");
-  const [activeOrder, setActiveOrder] = useState(null); // for tracking/status edit modal
+  const [activeOrder, setActiveOrder] = useState(null);
   const [statusForm, setStatusForm] = useState({
     status: "",
+    quoteAmount: "",
+    adminNotes: "",
     courier: "",
     trackingNumber: "",
     trackingUrl: "",
@@ -46,7 +49,7 @@ const ManageOrders = () => {
         setOrders(data.orders || []);
       }
     } catch (err) {
-      console.error("Failed to load orders:", err);
+      console.error("Failed to load order enquiries:", err);
     } finally {
       setLoading(false);
     }
@@ -59,7 +62,9 @@ const ManageOrders = () => {
   const handleOpenEdit = (order) => {
     setActiveOrder(order);
     setStatusForm({
-      status: order.status || "confirmed",
+      status: order.status || "pending",
+      quoteAmount: order.quoteAmount !== undefined ? String(order.quoteAmount) : "",
+      adminNotes: order.adminNotes || "",
       courier: order.tracking?.courier || "",
       trackingNumber: order.tracking?.trackingNumber || "",
       trackingUrl: order.tracking?.trackingUrl || "",
@@ -80,6 +85,8 @@ const ManageOrders = () => {
         },
         body: JSON.stringify({
           status: statusForm.status,
+          quoteAmount: statusForm.quoteAmount ? Number(statusForm.quoteAmount) : undefined,
+          adminNotes: statusForm.adminNotes.trim(),
           tracking: {
             courier: statusForm.courier.trim(),
             trackingNumber: statusForm.trackingNumber.trim(),
@@ -93,26 +100,35 @@ const ManageOrders = () => {
         setOrders((prev) =>
           prev.map((o) => (o.orderId === activeOrder.orderId ? data.order : o))
         );
-        showToast(`Order #${activeOrder.orderId} updated to "${statusForm.status}"`);
+        showToast(`Order Enquiry #${activeOrder.orderId} updated to "${statusForm.status}"`);
         setActiveOrder(null);
       } else {
         alert(data.message || "Failed to update order status");
       }
     } catch (err) {
-      alert("Error updating order: " + err.message);
+      alert("Error updating order enquiry: " + err.message);
     } finally {
       setUpdating(false);
     }
   };
 
+  // Helper to compute total items in an order
+  const getOrderTotalItems = (ord) => {
+    if (ord.totalQuantity) return Number(ord.totalQuantity);
+    return (ord.items || []).reduce((sum, it) => sum + (Number(it.quantity) || 1), 0);
+  };
+
   // Filtered orders
   const filteredOrders = orders.filter((o) => {
+    const q = searchTerm.toLowerCase();
     const matchesSearch =
       searchTerm.trim() === "" ||
-      o.orderId?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      o.customer?.fullName?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      o.customer?.email?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      o.customer?.phone?.includes(searchTerm);
+      o.orderId?.toLowerCase().includes(q) ||
+      o.customer?.fullName?.toLowerCase().includes(q) ||
+      o.customer?.email?.toLowerCase().includes(q) ||
+      o.customer?.company?.toLowerCase().includes(q) ||
+      o.customer?.phone?.includes(searchTerm) ||
+      o.notes?.toLowerCase().includes(q);
 
     const matchesStatus =
       selectedStatus === "all" || o.status === selectedStatus;
@@ -120,13 +136,15 @@ const ManageOrders = () => {
     return matchesSearch && matchesStatus;
   });
 
-  // Calculate order stats
+  // Calculate stats
   const totalVolume = orders.reduce((sum, o) => sum + (o.pricing?.total || 0), 0);
-  const activeFulfillmentCount = orders.filter((o) =>
-    ["confirmed", "in_production", "pending"].includes(o.status)
+  const pendingCount = orders.filter((o) => o.status === "pending").length;
+  const inProgressCount = orders.filter((o) =>
+    ["quote_sent", "confirmed", "in_production"].includes(o.status)
   ).length;
   const dispatchedCount = orders.filter((o) => o.status === "dispatched").length;
   const deliveredCount = orders.filter((o) => o.status === "delivered").length;
+  const totalUnitsAll = orders.reduce((sum, o) => sum + getOrderTotalItems(o), 0);
 
   return (
     <AdminRoute>
@@ -138,10 +156,10 @@ const ManageOrders = () => {
           <div className="admin-breadcrumb-bar">
             <div>
               <h1 className="admin-page-title">
-                <i className="fa-solid fa-boxes-packing"></i> Order Fulfillment & Tracking
+                <i className="fa-solid fa-clipboard-list"></i> Order Enquiries & Quotations
               </h1>
               <p className="admin-page-desc">
-                Review placed orders, customer shipping details, corporate branding requirements, and courier dispatches.
+                Review incoming client order enquiries, requested item quantities, shipping details, and issue official corporate proposals.
               </p>
             </div>
             <div className="admin-header-actions">
@@ -149,7 +167,7 @@ const ManageOrders = () => {
                 type="button"
                 className="btn-admin-action"
                 onClick={fetchOrders}
-                title="Refresh live orders"
+                title="Refresh live enquiries"
               >
                 <i className="fa-solid fa-arrows-rotate"></i> Refresh
               </button>
@@ -164,25 +182,25 @@ const ManageOrders = () => {
           )}
 
           {/* Stats Bar */}
-          <div className="admin-stats-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "16px", marginBottom: "24px" }}>
+          <div className="admin-stats-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "16px", marginBottom: "24px" }}>
             <div className="admin-stat-card" style={{ background: "var(--paper)", padding: "18px", borderRadius: "12px", border: "1px solid var(--line)", boxShadow: "0 2px 4px rgba(0,0,0,0.02)" }}>
-              <span style={{ fontSize: "12px", color: "var(--muted)", textTransform: "uppercase", fontWeight: "600" }}>Total Orders</span>
+              <span style={{ fontSize: "12px", color: "var(--muted)", textTransform: "uppercase", fontWeight: "600" }}>Total Enquiries</span>
               <p style={{ fontSize: "28px", fontWeight: "800", color: "var(--ink)", margin: "6px 0 0" }}>{orders.length}</p>
             </div>
             <div className="admin-stat-card" style={{ background: "var(--paper)", padding: "18px", borderRadius: "12px", border: "1px solid var(--line)", boxShadow: "0 2px 4px rgba(0,0,0,0.02)" }}>
-              <span style={{ fontSize: "12px", color: "var(--warning)", textTransform: "uppercase", fontWeight: "600" }}>In Production / Pending</span>
-              <p style={{ fontSize: "28px", fontWeight: "800", color: "var(--warning)", margin: "6px 0 0" }}>{activeFulfillmentCount}</p>
+              <span style={{ fontSize: "12px", color: "#854d0e", textTransform: "uppercase", fontWeight: "600" }}>Pending Review</span>
+              <p style={{ fontSize: "28px", fontWeight: "800", color: "#854d0e", margin: "6px 0 0" }}>{pendingCount}</p>
             </div>
             <div className="admin-stat-card" style={{ background: "var(--paper)", padding: "18px", borderRadius: "12px", border: "1px solid var(--line)", boxShadow: "0 2px 4px rgba(0,0,0,0.02)" }}>
-              <span style={{ fontSize: "12px", color: "#1d4ed8", textTransform: "uppercase", fontWeight: "600" }}>Dispatched</span>
-              <p style={{ fontSize: "28px", fontWeight: "800", color: "#1d4ed8", margin: "6px 0 0" }}>{dispatchedCount}</p>
+              <span style={{ fontSize: "12px", color: "var(--forest)", textTransform: "uppercase", fontWeight: "700" }}>Total Items Requested</span>
+              <p style={{ fontSize: "28px", fontWeight: "800", color: "var(--forest)", margin: "6px 0 0" }}>{totalUnitsAll} pcs</p>
             </div>
             <div className="admin-stat-card" style={{ background: "var(--paper)", padding: "18px", borderRadius: "12px", border: "1px solid var(--line)", boxShadow: "0 2px 4px rgba(0,0,0,0.02)" }}>
-              <span style={{ fontSize: "12px", color: "var(--success)", textTransform: "uppercase", fontWeight: "600" }}>Delivered</span>
-              <p style={{ fontSize: "28px", fontWeight: "800", color: "var(--success)", margin: "6px 0 0" }}>{deliveredCount}</p>
+              <span style={{ fontSize: "12px", color: "#1d4ed8", textTransform: "uppercase", fontWeight: "600" }}>In Progress / Quoted</span>
+              <p style={{ fontSize: "28px", fontWeight: "800", color: "#1d4ed8", margin: "6px 0 0" }}>{inProgressCount}</p>
             </div>
             <div className="admin-stat-card" style={{ background: "var(--paper)", padding: "18px", borderRadius: "12px", border: "1px solid var(--line)", boxShadow: "0 2px 4px rgba(0,0,0,0.02)" }}>
-              <span style={{ fontSize: "12px", color: "var(--muted)", textTransform: "uppercase", fontWeight: "600" }}>Gross Order Volume</span>
+              <span style={{ fontSize: "12px", color: "var(--muted)", textTransform: "uppercase", fontWeight: "600" }}>Indicative Value</span>
               <p style={{ fontSize: "28px", fontWeight: "800", color: "var(--forest)", margin: "6px 0 0" }}>₹{totalVolume.toFixed(2)}</p>
             </div>
           </div>
@@ -192,7 +210,7 @@ const ManageOrders = () => {
             <div style={{ flex: "1", minWidth: "260px", position: "relative" }}>
               <input
                 type="text"
-                placeholder="Search by Order ID, customer, email, phone..."
+                placeholder="Search by Enquiry ID, customer, email, phone, company, notes..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 style={{ width: "100%", padding: "10px 14px 10px 36px", border: "1px solid var(--line-strong)", borderRadius: "8px", fontSize: "14px" }}
@@ -201,7 +219,7 @@ const ManageOrders = () => {
             </div>
 
             <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
-              {["all", "confirmed", "in_production", "dispatched", "delivered", "cancelled"].map((st) => (
+              {["all", "pending", "quote_sent", "confirmed", "in_production", "dispatched", "delivered", "cancelled"].map((st) => (
                 <button
                   key={st}
                   type="button"
@@ -219,28 +237,32 @@ const ManageOrders = () => {
                     textTransform: "capitalize",
                   }}
                 >
-                  {st === "all" ? "All Orders" : st.replace("_", " ")}
+                  {st === "all" ? "All Enquiries" : st.replace("_", " ")}
                 </button>
               ))}
             </div>
           </div>
 
-          {/* Orders List Table */}
+          {/* Orders List */}
           {loading ? (
             <div style={{ textAlign: "center", padding: "60px 20px" }}>
               <i className="fa-solid fa-circle-notch fa-spin fa-2x" style={{ color: "var(--forest)" }}></i>
-              <p style={{ marginTop: "12px", color: "var(--muted)" }}>Loading orders...</p>
+              <p style={{ marginTop: "12px", color: "var(--muted)" }}>Loading order enquiries...</p>
             </div>
           ) : filteredOrders.length === 0 ? (
             <div style={{ textAlign: "center", padding: "60px 20px", background: "var(--paper)", borderRadius: "12px", border: "1px solid var(--line)" }}>
-              <i className="fa-solid fa-box-open fa-3x" style={{ color: "var(--line-strong)", marginBottom: "16px" }}></i>
-              <h3 style={{ fontSize: "18px", color: "var(--ink)", margin: "0 0 6px" }}>No orders found</h3>
-              <p style={{ color: "var(--muted)", margin: 0 }}>There are no orders matching your current search or filter criteria.</p>
+              <i className="fa-solid fa-clipboard-question fa-3x" style={{ color: "var(--line-strong)", marginBottom: "16px" }}></i>
+              <h3 style={{ fontSize: "18px", color: "var(--ink)", margin: "0 0 6px" }}>No order enquiries found</h3>
+              <p style={{ color: "var(--muted)", margin: 0 }}>There are no enquiries matching your current search or filter criteria.</p>
             </div>
           ) : (
             <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
               {filteredOrders.map((ord) => {
-                const conf = STATUS_CONFIG[ord.status] || STATUS_CONFIG.confirmed;
+                const conf = STATUS_CONFIG[ord.status] || STATUS_CONFIG.pending;
+                const totalUnits = getOrderTotalItems(ord);
+                const rawPhone = ord.customer?.phone ? ord.customer.phone.replace(/[^\d+]/g, "") : "";
+                const cleanPhone = rawPhone.startsWith("+") ? rawPhone.slice(1) : (rawPhone.length === 10 ? `91${rawPhone}` : rawPhone);
+
                 return (
                   <div
                     key={ord.orderId}
@@ -255,9 +277,9 @@ const ManageOrders = () => {
                     {/* Order Top Bar */}
                     <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "flex-start", gap: "12px", borderBottom: "1px solid var(--linen)", paddingBottom: "14px", marginBottom: "14px" }}>
                       <div>
-                        <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                        <div style={{ display: "flex", alignItems: "center", gap: "10px", flexWrap: "wrap" }}>
                           <h2 style={{ fontSize: "18px", fontWeight: "700", color: "var(--ink)", margin: 0 }}>
-                            Order #{ord.orderId}
+                            Enquiry #{ord.orderId}
                           </h2>
                           <span
                             style={{
@@ -275,17 +297,37 @@ const ManageOrders = () => {
                           >
                             <i className={`fa-solid ${conf.icon}`}></i> {conf.label}
                           </span>
+
+                          {/* PROMINENT TOTAL ITEMS COUNT BADGE */}
+                          <span
+                            style={{
+                              display: "inline-flex",
+                              alignItems: "center",
+                              gap: "6px",
+                              padding: "4px 12px",
+                              borderRadius: "16px",
+                              fontSize: "13px",
+                              fontWeight: "800",
+                              background: "#ecfdf5",
+                              color: "#065f46",
+                              border: "1px solid #a7f3d0",
+                            }}
+                          >
+                            <i className="fa-solid fa-boxes-stacked"></i> {totalUnits} Items Requested
+                          </span>
                         </div>
-                        <span style={{ fontSize: "12px", color: "var(--muted)" }}>
-                          Placed on {new Date(ord.createdAt).toLocaleString("en-IN", { dateStyle: "medium", timeStyle: "short" })}
+                        <span style={{ fontSize: "12px", color: "var(--muted)", display: "block", marginTop: "4px" }}>
+                          Submitted on {new Date(ord.createdAt).toLocaleString("en-IN", { dateStyle: "medium", timeStyle: "short" })}
                         </span>
                       </div>
 
                       <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
                         <div style={{ textAlign: "right" }}>
-                          <span style={{ fontSize: "12px", color: "var(--muted)" }}>Total Amount</span>
+                          <span style={{ fontSize: "12px", color: "var(--muted)" }}>
+                            {ord.quoteAmount ? "Official Quoted Price" : "Indicative Total"}
+                          </span>
                           <p style={{ fontSize: "20px", fontWeight: "800", color: "var(--forest)", margin: 0 }}>
-                            ₹{Number(ord.pricing?.total || 0).toFixed(2)}
+                            ₹{Number(ord.quoteAmount || ord.pricing?.total || 0).toFixed(2)}
                           </p>
                         </div>
 
@@ -306,7 +348,7 @@ const ManageOrders = () => {
                             gap: "6px",
                           }}
                         >
-                          <i className="fa-solid fa-pen-to-square"></i> Update Status
+                          <i className="fa-solid fa-pen-to-square"></i> Update Status & Quote
                         </button>
                       </div>
                     </div>
@@ -315,57 +357,109 @@ const ManageOrders = () => {
                     <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "16px" }}>
                       {/* Customer Details */}
                       <div style={{ background: "var(--ivory)", padding: "14px", borderRadius: "8px" }}>
-                        <h4 style={{ fontSize: "13px", textTransform: "uppercase", color: "var(--muted)", margin: "0 0 8px" }}>
-                          <i className="fa-solid fa-user-tag"></i> Customer & Shipping
-                        </h4>
-                        <p style={{ margin: "0 0 4px", fontWeight: "700", color: "var(--ink)" }}>{ord.customer?.fullName}</p>
-                        <p style={{ margin: "0 0 4px", fontSize: "13px", color: "var(--ink-soft)" }}>
-                          <i className="fa-solid fa-envelope" style={{ marginRight: "6px" }}></i>
-                          {ord.customer?.email}
-                        </p>
-                        {ord.customer?.phone && (
-                          <p style={{ margin: "0 0 4px", fontSize: "13px", color: "var(--ink-soft)" }}>
-                            <i className="fa-solid fa-phone" style={{ marginRight: "6px" }}></i>
-                            {ord.customer?.phone}
-                          </p>
-                        )}
+                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px" }}>
+                          <h4 style={{ fontSize: "13px", textTransform: "uppercase", color: "var(--muted)", margin: 0 }}>
+                            <i className="fa-solid fa-user-tag"></i> Customer & Contact Details
+                          </h4>
+                          <span style={{ fontSize: "11px", fontWeight: "700", color: "var(--forest)", background: "var(--paper)", padding: "2px 6px", borderRadius: "4px" }}>
+                            No Online Payment
+                          </span>
+                        </div>
+
+                        <p style={{ margin: "0 0 4px", fontWeight: "700", color: "var(--ink)", fontSize: "15px" }}>{ord.customer?.fullName}</p>
+                        
                         {ord.customer?.company && (
-                          <p style={{ margin: "0 0 4px", fontSize: "13px", color: "var(--ink-soft)" }}>
+                          <p style={{ margin: "0 0 6px", fontSize: "13px", fontWeight: "600", color: "var(--forest)" }}>
                             <i className="fa-solid fa-building" style={{ marginRight: "6px" }}></i>
                             {ord.customer?.company}
+                            {ord.customer?.gstin && <span style={{ marginLeft: "8px", color: "var(--muted)", fontWeight: "normal" }}>· GST: {ord.customer.gstin}</span>}
                           </p>
                         )}
-                        <p style={{ margin: "6px 0 0", fontSize: "13px", color: "var(--ink-soft)" }}>
+
+                        <p style={{ margin: "0 0 6px", fontSize: "13px", color: "var(--ink-soft)" }}>
+                          <i className="fa-solid fa-envelope" style={{ marginRight: "6px" }}></i>
+                          <a href={`mailto:${ord.customer?.email}`} style={{ color: "var(--forest)", textDecoration: "underline" }}>
+                            {ord.customer?.email}
+                          </a>
+                        </p>
+
+                        {ord.customer?.phone && (
+                          <div style={{ margin: "0 0 8px", fontSize: "13px", display: "flex", alignItems: "center", gap: "8px", flexWrap: "wrap" }}>
+                            <span>
+                              <i className="fa-solid fa-phone" style={{ marginRight: "6px" }}></i>
+                              <a href={`tel:${ord.customer.phone}`} style={{ color: "var(--forest)", fontWeight: "600" }}>
+                                {ord.customer.phone}
+                              </a>
+                            </span>
+
+                            {cleanPhone && (
+                              <a
+                                href={`https://wa.me/${cleanPhone}?text=Hi%20${encodeURIComponent(ord.customer?.fullName || "")},%20this%20is%20Giftingwellness%20regarding%20your%20Order%20Enquiry%20%23${encodeURIComponent(ord.orderId)}%20for%20${totalUnits}%20items.`}
+                                target="_blank"
+                                rel="noreferrer"
+                                style={{
+                                  display: "inline-flex",
+                                  alignItems: "center",
+                                  gap: "4px",
+                                  background: "#25D366",
+                                  color: "#ffffff",
+                                  padding: "2px 8px",
+                                  borderRadius: "12px",
+                                  fontSize: "11px",
+                                  fontWeight: "700",
+                                  textDecoration: "none",
+                                }}
+                              >
+                                <i className="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+                              </a>
+                            )}
+                          </div>
+                        )}
+
+                        <p style={{ margin: "6px 0 0", fontSize: "13px", color: "var(--ink-soft)", lineHeight: 1.4 }}>
                           <i className="fa-solid fa-location-dot" style={{ marginRight: "6px", color: "var(--forest)" }}></i>
                           {ord.customer?.address}, {ord.customer?.city} - {ord.customer?.postalCode}
                         </p>
                       </div>
 
-                      {/* Gifting & Personalization Details */}
-                      <div style={{ background: "var(--ivory)", padding: "14px", borderRadius: "8px" }}>
-                        <h4 style={{ fontSize: "13px", textTransform: "uppercase", color: "var(--muted)", margin: "0 0 8px" }}>
-                          <i className="fa-solid fa-gift"></i> Gifting & Branding Info
-                        </h4>
-                        {ord.gifting?.isGift ? (
-                          <div style={{ display: "flex", flexDirection: "column", gap: "4px", fontSize: "13px", color: "var(--ink-soft)" }}>
-                            <span style={{ fontWeight: "600", color: "var(--forest)" }}>🎁 Gift Order</span>
-                            {ord.gifting?.recipientName && (
-                              <p style={{ margin: 0 }}>To: <strong>{ord.gifting.recipientName}</strong></p>
-                            )}
-                            {ord.gifting?.senderName && (
-                              <p style={{ margin: 0 }}>From: <strong>{ord.gifting.senderName}</strong></p>
-                            )}
-                            {ord.gifting?.giftMessage && (
-                              <p style={{ margin: "4px 0", fontStyle: "italic", background: "var(--paper)", padding: "6px 10px", borderRadius: "6px", border: "1px dashed var(--line-strong)" }}>
-                                "{ord.gifting.giftMessage}"
+                      {/* Gifting & Custom Notes */}
+                      <div style={{ background: "var(--ivory)", padding: "14px", borderRadius: "8px", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+                        <div>
+                          <h4 style={{ fontSize: "13px", textTransform: "uppercase", color: "var(--muted)", margin: "0 0 8px" }}>
+                            <i className="fa-solid fa-comment-dots"></i> Client Instructions & Notes
+                          </h4>
+                          
+                          {(ord.notes || ord.customer?.notes) ? (
+                            <div style={{ background: "#fffbeb", border: "1px dashed #fde68a", padding: "10px 12px", borderRadius: "6px", color: "#92400e", fontSize: "13px", fontStyle: "italic", marginBottom: "8px" }}>
+                              "{ord.notes || ord.customer.notes}"
+                            </div>
+                          ) : (
+                            <p style={{ fontSize: "13px", color: "var(--muted)", fontStyle: "italic", margin: "0 0 8px" }}>
+                              No special customization notes provided.
+                            </p>
+                          )}
+
+                          {ord.gifting?.isGift && (
+                            <div style={{ fontSize: "12px", color: "var(--forest)", fontWeight: "600", marginTop: "4px" }}>
+                              🎁 Marked as Gift {ord.gifting.giftWrap ? "· Gift Wrap Requested" : ""}
+                              {ord.gifting.giftMessage && <p style={{ margin: "2px 0 0", fontStyle: "italic", color: "var(--ink-soft)" }}>Note: "{ord.gifting.giftMessage}"</p>}
+                            </div>
+                          )}
+                        </div>
+
+                        {/* Admin Internal Quotation / Status Notes */}
+                        {(ord.adminNotes || ord.quoteAmount) && (
+                          <div style={{ background: "#eff6ff", border: "1px solid #bfdbfe", padding: "8px 12px", borderRadius: "6px", marginTop: "8px" }}>
+                            <span style={{ fontSize: "11px", fontWeight: "700", color: "#1d4ed8", textTransform: "uppercase" }}>Admin Follow-up Note:</span>
+                            {ord.quoteAmount && (
+                              <p style={{ margin: "2px 0", fontSize: "12px", fontWeight: "700", color: "#1e40af" }}>
+                                Quoted Amount: ₹{Number(ord.quoteAmount).toFixed(2)}
                               </p>
                             )}
-                            {ord.gifting?.giftWrap && (
-                              <span style={{ color: "var(--warning)", fontWeight: "600" }}>🎀 Premium Gift Wrap Requested</span>
+                            {ord.adminNotes && (
+                              <p style={{ margin: "2px 0 0", fontSize: "12px", color: "#1e3a8a" }}>{ord.adminNotes}</p>
                             )}
                           </div>
-                        ) : (
-                          <p style={{ margin: 0, fontSize: "13px", color: "var(--muted)" }}>Standard Direct Shipment</p>
                         )}
 
                         {/* Courier Tracking snippet */}
@@ -391,9 +485,17 @@ const ManageOrders = () => {
                     </div>
 
                     {/* Order Items Table */}
-                    <div style={{ marginTop: "14px" }}>
-                      <span style={{ fontSize: "12px", fontWeight: "700", color: "var(--muted)", textTransform: "uppercase" }}>Order Items ({ord.items?.length || 0}):</span>
-                      <div style={{ marginTop: "8px", border: "1px solid var(--line)", borderRadius: "8px", overflow: "hidden" }}>
+                    <div style={{ marginTop: "16px" }}>
+                      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px" }}>
+                        <span style={{ fontSize: "13px", fontWeight: "700", color: "var(--ink)", textTransform: "uppercase" }}>
+                          Enquiry Products Breakdown ({ord.items?.length || 0} Distinct Products):
+                        </span>
+                        <span style={{ fontSize: "13px", fontWeight: "800", color: "var(--forest)" }}>
+                          Total: {totalUnits} Units
+                        </span>
+                      </div>
+
+                      <div style={{ border: "1px solid var(--line)", borderRadius: "8px", overflow: "hidden" }}>
                         {ord.items?.map((it, idx) => (
                           <div
                             key={idx}
@@ -428,11 +530,22 @@ const ManageOrders = () => {
                               </div>
                             </div>
                             <div style={{ textAlign: "right" }}>
-                              <span style={{ fontSize: "13px", fontWeight: "600" }}>
-                                {it.quantity} × ₹{Number(it.price).toFixed(2)}
+                              <span
+                                style={{
+                                  display: "inline-block",
+                                  padding: "3px 10px",
+                                  borderRadius: "12px",
+                                  background: "#ecfdf5",
+                                  color: "#065f46",
+                                  fontWeight: "800",
+                                  fontSize: "14px",
+                                  border: "1px solid #a7f3d0",
+                                }}
+                              >
+                                {it.quantity} pcs
                               </span>
-                              <p style={{ margin: 0, fontSize: "14px", fontWeight: "700", color: "var(--forest)" }}>
-                                ₹{Number(it.lineTotal || it.quantity * it.price).toFixed(2)}
+                              <p style={{ margin: "4px 0 0", fontSize: "12px", color: "var(--muted)" }}>
+                                @ ₹{Number(it.price).toFixed(2)} = ₹{Number(it.lineTotal || it.quantity * it.price).toFixed(2)}
                               </p>
                             </div>
                           </div>
@@ -463,16 +576,23 @@ const ManageOrders = () => {
                 style={{
                   background: "var(--paper)",
                   borderRadius: "14px",
-                  maxWidth: "520px",
+                  maxWidth: "540px",
                   width: "100%",
                   padding: "24px",
                   boxShadow: "0 20px 25px -5px rgba(0,0,0,0.2)",
+                  maxHeight: "90vh",
+                  overflowY: "auto",
                 }}
               >
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px" }}>
-                  <h3 style={{ margin: 0, fontSize: "18px", fontWeight: "700", color: "var(--ink)" }}>
-                    Update Fulfillment · Order #{activeOrder.orderId}
-                  </h3>
+                  <div>
+                    <h3 style={{ margin: 0, fontSize: "18px", fontWeight: "700", color: "var(--ink)" }}>
+                      Manage Order Enquiry #{activeOrder.orderId}
+                    </h3>
+                    <p style={{ margin: "2px 0 0", fontSize: "12px", color: "var(--muted)" }}>
+                      Customer: {activeOrder.customer?.fullName} ({getOrderTotalItems(activeOrder)} Total Units)
+                    </p>
+                  </div>
                   <button
                     type="button"
                     onClick={() => setActiveOrder(null)}
@@ -485,37 +605,53 @@ const ManageOrders = () => {
                 <form onSubmit={handleUpdateStatus}>
                   <div style={{ marginBottom: "16px" }}>
                     <label style={{ display: "block", fontSize: "13px", fontWeight: "600", color: "var(--ink-soft)", marginBottom: "6px" }}>
-                      Order Status:
+                      Enquiry Status:
                     </label>
                     <select
                       value={statusForm.status}
                       onChange={(e) => setStatusForm({ ...statusForm, status: e.target.value })}
                       style={{ width: "100%", padding: "10px", borderRadius: "8px", border: "1px solid var(--line-strong)", fontSize: "14px" }}
                     >
-                      <option value="confirmed">Confirmed (Paid / Approved)</option>
-                      <option value="in_production">In Production / Branding</option>
+                      <option value="pending">Enquiry Received (Pending Review)</option>
+                      <option value="quote_sent">Quote / Proposal Sent to Client</option>
+                      <option value="confirmed">Confirmed by Client</option>
+                      <option value="in_production">In Production / Custom Branding</option>
                       <option value="dispatched">Dispatched (In Transit)</option>
                       <option value="delivered">Delivered</option>
-                      <option value="cancelled">Cancelled</option>
+                      <option value="cancelled">Cancelled / Closed</option>
                     </select>
                   </div>
 
-                  <div style={{ marginBottom: "14px" }}>
-                    <label style={{ display: "block", fontSize: "13px", fontWeight: "600", color: "var(--ink-soft)", marginBottom: "6px" }}>
-                      Courier Partner Name:
-                    </label>
-                    <input
-                      type="text"
-                      placeholder="e.g. Delhivery, BlueDart, Shiprocket, DTDC"
-                      value={statusForm.courier}
-                      onChange={(e) => setStatusForm({ ...statusForm, courier: e.target.value })}
-                      style={{ width: "100%", padding: "10px", borderRadius: "8px", border: "1px solid var(--line-strong)", fontSize: "14px" }}
-                    />
+                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px", marginBottom: "14px" }}>
+                    <div>
+                      <label style={{ display: "block", fontSize: "13px", fontWeight: "600", color: "var(--ink-soft)", marginBottom: "6px" }}>
+                        Quoted Price (₹ Optional):
+                      </label>
+                      <input
+                        type="number"
+                        placeholder="e.g. 45000"
+                        value={statusForm.quoteAmount}
+                        onChange={(e) => setStatusForm({ ...statusForm, quoteAmount: e.target.value })}
+                        style={{ width: "100%", padding: "10px", borderRadius: "8px", border: "1px solid var(--line-strong)", fontSize: "14px" }}
+                      />
+                    </div>
+                    <div>
+                      <label style={{ display: "block", fontSize: "13px", fontWeight: "600", color: "var(--ink-soft)", marginBottom: "6px" }}>
+                        Courier Partner:
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="e.g. BlueDart, Delhivery"
+                        value={statusForm.courier}
+                        onChange={(e) => setStatusForm({ ...statusForm, courier: e.target.value })}
+                        style={{ width: "100%", padding: "10px", borderRadius: "8px", border: "1px solid var(--line-strong)", fontSize: "14px" }}
+                      />
+                    </div>
                   </div>
 
                   <div style={{ marginBottom: "14px" }}>
                     <label style={{ display: "block", fontSize: "13px", fontWeight: "600", color: "var(--ink-soft)", marginBottom: "6px" }}>
-                      Tracking / Waybill Number (AWB):
+                      Tracking / Waybill (AWB #):
                     </label>
                     <input
                       type="text"
@@ -526,7 +662,7 @@ const ManageOrders = () => {
                     />
                   </div>
 
-                  <div style={{ marginBottom: "20px" }}>
+                  <div style={{ marginBottom: "14px" }}>
                     <label style={{ display: "block", fontSize: "13px", fontWeight: "600", color: "var(--ink-soft)", marginBottom: "6px" }}>
                       Courier Tracking URL:
                     </label>
@@ -536,6 +672,19 @@ const ManageOrders = () => {
                       value={statusForm.trackingUrl}
                       onChange={(e) => setStatusForm({ ...statusForm, trackingUrl: e.target.value })}
                       style={{ width: "100%", padding: "10px", borderRadius: "8px", border: "1px solid var(--line-strong)", fontSize: "14px" }}
+                    />
+                  </div>
+
+                  <div style={{ marginBottom: "20px" }}>
+                    <label style={{ display: "block", fontSize: "13px", fontWeight: "600", color: "var(--ink-soft)", marginBottom: "6px" }}>
+                      Admin Internal Follow-up Notes:
+                    </label>
+                    <textarea
+                      rows={2}
+                      placeholder="e.g. Sent formal quotation on email with 15% corporate discount. Client approved mockup."
+                      value={statusForm.adminNotes}
+                      onChange={(e) => setStatusForm({ ...statusForm, adminNotes: e.target.value })}
+                      style={{ width: "100%", padding: "10px", borderRadius: "8px", border: "1px solid var(--line-strong)", fontSize: "14px", resize: "vertical" }}
                     />
                   </div>
 
@@ -552,7 +701,7 @@ const ManageOrders = () => {
                       disabled={updating}
                       style={{ padding: "10px 20px", borderRadius: "8px", border: "none", background: "var(--forest)", color: "var(--paper)", fontWeight: "600", cursor: "pointer" }}
                     >
-                      {updating ? "Saving Changes..." : "Save Fulfillment Details"}
+                      {updating ? "Saving Changes..." : "Save Enquiry Details"}
                     </button>
                   </div>
                 </form>

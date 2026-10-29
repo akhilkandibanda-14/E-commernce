@@ -6,7 +6,7 @@ import { capitalize } from "../Helpers/Helpers";
 import { useAuth } from "../../context/AuthContext";
 import { formatINR } from "../../utils/format";
 
-const Cart = ({ cart, decreaseQuantity, increaseQuantity, removeFromCart, clearCart }) => {
+const Cart = ({ cart, decreaseQuantity, increaseQuantity, updateQuantity, removeFromCart, clearCart }) => {
   const { user, token, isLoggedIn, openAuthModal } = useAuth();
 
   const [promoInput, setPromoInput] = useState("");
@@ -15,14 +15,14 @@ const Cart = ({ cart, decreaseQuantity, increaseQuantity, removeFromCart, clearC
   const [promoError, setPromoError] = useState("");
   const [deliveryFee, setDeliveryFee] = useState(15);
 
-  // Checkout modal states
+  // Enquiry modal states
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
   const [checkoutStep, setCheckoutStep] = useState("form"); // "form" | "processing" | "success"
   const [orderData, setOrderData] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [checkoutError, setCheckoutError] = useState("");
 
-  // Idempotency key per logical checkout session
+  // Idempotency key per logical session
   const [idempotencyKey, setIdempotencyKey] = useState(
     () => `idem_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`
   );
@@ -36,7 +36,7 @@ const Cart = ({ cart, decreaseQuantity, increaseQuantity, removeFromCart, clearC
     city: "",
     postalCode: "",
     gstin: "",
-    paymentMethod: "card",
+    notes: "",
     isGift: false,
     recipientName: "",
     senderName: user?.name || "",
@@ -61,8 +61,8 @@ const Cart = ({ cart, decreaseQuantity, increaseQuantity, removeFromCart, clearC
     return cart.reduce((acc, item) => acc + Number(item.price) * item.quantity, 0);
   };
 
+  const totalItemCount = cart.reduce((acc, item) => acc + (Number(item.quantity) || 1), 0);
   const subtotal = calculateSubtotal();
-  // Mirrors the server calculation in backend/src/routes/orders.js so the total shown is the total charged.
   const effectiveDeliveryFee = subtotal > 0 ? deliveryFee : 0;
   const discountAmount = Number(((subtotal * discountPercent) / 100).toFixed(2));
   const total = Math.max(0, subtotal - discountAmount + effectiveDeliveryFee);
@@ -81,7 +81,6 @@ const Cart = ({ cart, decreaseQuantity, increaseQuantity, removeFromCart, clearC
       });
       const data = await res.json();
       if (res.ok && data.success) {
-        // Only one code applies to an order (server rule), so a new code replaces the previous one.
         setDiscountPercent(Number(data.discountPercent) || 0);
         setDeliveryFee(data.freeShipping ? 0 : 15);
         setPromoApplied(data.code);
@@ -108,16 +107,13 @@ const Cart = ({ cart, decreaseQuantity, increaseQuantity, removeFromCart, clearC
     e.preventDefault();
     if (isSubmitting) return;
 
-    // 1. Guard: Authentication check
-    if (!token) {
-      setCheckoutError("Please sign in or create an account to complete your order.");
-      openAuthModal("user");
+    if (!cart || cart.length === 0) {
+      setCheckoutError("Your cart is empty. Please add items before submitting an enquiry.");
       return;
     }
 
-    // 2. Guard: Empty cart
-    if (!cart || cart.length === 0) {
-      setCheckoutError("Your cart is empty. Please add items before checking out.");
+    if (!formData.fullName.trim() || !formData.email.trim()) {
+      setCheckoutError("Please enter your full name and email address.");
       return;
     }
 
@@ -125,14 +121,20 @@ const Cart = ({ cart, decreaseQuantity, increaseQuantity, removeFromCart, clearC
     setCheckoutError("");
     setCheckoutStep("processing");
 
+    // Seamlessly support both authenticated users and guest visitors
+    const targetUrl = token ? "/api/orders" : "/api/orders/enquiry";
+    const headers = {
+      "Content-Type": "application/json",
+      "Idempotency-Key": idempotencyKey,
+    };
+    if (token) {
+      headers["Authorization"] = `Bearer ${token}`;
+    }
+
     try {
-      const response = await fetch("/api/orders", {
+      const response = await fetch(targetUrl, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-          "Idempotency-Key": idempotencyKey,
-        },
+        headers,
         body: JSON.stringify({
           customer: {
             fullName: formData.fullName.trim(),
@@ -143,7 +145,9 @@ const Cart = ({ cart, decreaseQuantity, increaseQuantity, removeFromCart, clearC
             city: formData.city.trim(),
             postalCode: formData.postalCode.trim(),
             gstin: formData.gstin.trim(),
+            notes: formData.notes.trim(),
           },
+          notes: formData.notes.trim(),
           gifting: {
             isGift: Boolean(formData.isGift),
             recipientName: formData.recipientName.trim(),
@@ -161,7 +165,7 @@ const Cart = ({ cart, decreaseQuantity, increaseQuantity, removeFromCart, clearC
             customLogoText: item.customLogoText,
           })),
           promoCode: promoApplied || null,
-          paymentMethod: formData.paymentMethod,
+          paymentMethod: "order_enquiry (no online payment)",
         }),
       });
 
@@ -170,36 +174,32 @@ const Cart = ({ cart, decreaseQuantity, increaseQuantity, removeFromCart, clearC
         data = await response.json();
       } catch (parseErr) {
         throw new Error(
-          "Received an unexpected, non-JSON response from the server. Please try again."
+          "Received an unexpected response from the server. Please check your connection and try again."
         );
       }
 
-      // Check for backend failure (validation error, 401, 404, 500, etc.)
       if (!response.ok || !data?.success || !data?.order?.orderId) {
         const errorMsg =
           data?.message ||
-          `Order placement failed with status ${response.status}. Please check your details and try again.`;
+          `Submission failed with status ${response.status}. Please check your details and try again.`;
         throw new Error(errorMsg);
       }
 
-      // ONLY on verified backend success:
       setOrderData(data.order);
       setCheckoutStep("success");
-      setIsCheckoutOpen(false); // Close modal to unveil main confirmed view
+      setIsCheckoutOpen(false);
 
       if (clearCart) {
         clearCart();
       }
 
-      // Refresh idempotency key for future checkouts
       setIdempotencyKey(
         `idem_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`
       );
     } catch (err) {
-      // PRESERVE CART, PRESERVE FORM DATA, SHOW ERROR, ALLOW SAFE RETRY
       setCheckoutError(
         err.message ||
-          "Could not complete your order. Your cart items have been preserved. Please try again."
+          "Could not submit your order enquiry. Your items have been preserved. Please try again."
       );
       setCheckoutStep("form");
     } finally {
@@ -242,59 +242,110 @@ const Cart = ({ cart, decreaseQuantity, increaseQuantity, removeFromCart, clearC
                       </p>
                     </div>
                   </div>
-                  <div className="cart-product-controls">
+
+                  <div className="cart-product-buttons">
                     <button
-                      onClick={() => removeFromCart(item.idWithSize)}
-                      aria-label="Remove item"
                       className="btn-trash"
+                      aria-label="Remove item"
+                      onClick={() => removeFromCart(item.idWithSize || item)}
                     >
-                      <i className="fa-solid fa-trash-can" style={{ color: "var(--danger)" }}></i>
+                      <i className="fa-solid fa-trash-can"></i>
                     </button>
                     <QuantityControls
-                      handleDecrease={() => decreaseQuantity(item)}
-                      handleIncrease={() => increaseQuantity(item)}
-                      quantity={item.quantity}
+                      amount={item.quantity}
+                      decreaseQuantity={() => decreaseQuantity(item)}
+                      increaseQuantity={() => increaseQuantity(item)}
+                      onQuantityChange={(newQty) => updateQuantity && updateQuantity(item, newQty)}
                     />
                   </div>
                 </div>
               ))}
             </div>
 
-            {/* Order Summary */}
-            <div className="order-container">
-              <h2 className="title--sm text--bold">Order Summary</h2>
+            {/* Order Summary & Enquiry Action */}
+            <div className="cart-summary-container">
+              <h2 className="title--sm">Order Summary</h2>
 
-              {/* Complimentary Shipping Progress Banner */}
-              <div className="order-breakdown">
-                <div className="order-layout">
-                  <p className="text--gray text--marginless">Subtotal</p>
-                  <p className="text--bold text--marginless">{formatINR(subtotal)}</p>
+              {/* Total Number of Items Highlight Badge */}
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  background: "#ecfdf5",
+                  padding: "12px 16px",
+                  borderRadius: "10px",
+                  border: "1px solid #a7f3d0",
+                  marginBottom: "16px",
+                }}
+              >
+                <span style={{ fontSize: "14px", fontWeight: "700", color: "#065f46" }}>
+                  <i className="fa-solid fa-boxes-stacked" style={{ marginRight: "8px" }}></i>
+                  Total Items / Quantity:
+                </span>
+                <span style={{ fontSize: "16px", fontWeight: "800", color: "#065f46" }}>
+                  {totalItemCount} pcs
+                </span>
+              </div>
+
+              <div className="cart-summary-text-container">
+                <div className="cart-summary-text">
+                  <p className="text--marginless text--gray">Distinct Products</p>
+                  <p className="text--marginless text--bold">{cart.length}</p>
                 </div>
-                <div className="order-layout">
-                  <p className="text--gray text--marginless">
-                    Discount ({discountPercent}%)
-                  </p>
-                  <p className="text--bold text--marginless" style={{ color: "var(--accent-terracotta, var(--ribbon))" }}>
-                    -{formatINR(discountAmount)}
+
+                <div className="cart-summary-text">
+                  <p className="text--marginless text--gray">Indicative Subtotal</p>
+                  <p className="text--marginless text--bold">{formatINR(subtotal)}</p>
+                </div>
+
+                {discountAmount > 0 && (
+                  <div className="cart-summary-text">
+                    <p className="text--marginless text--gray">Estimated Discount (-{discountPercent}%)</p>
+                    <p className="text--marginless text--bold text--red">
+                      -{formatINR(discountAmount)}
+                    </p>
+                  </div>
+                )}
+
+                <div className="cart-summary-text">
+                  <p className="text--marginless text--gray">Estimated Delivery</p>
+                  <p className="text--marginless text--bold">
+                    {effectiveDeliveryFee === 0 ? "FREE" : formatINR(effectiveDeliveryFee)}
                   </p>
                 </div>
-                <div className="order-layout">
-                  <p className="text--gray text--marginless">Delivery Fee</p>
-                  <p className="text--bold text--marginless">
-                    {effectiveDeliveryFee === 0 ? "Free" : formatINR(effectiveDeliveryFee)}
+
+                <hr className="line" />
+
+                <div className="cart-summary-text cart-total">
+                  <p className="text--marginless text--bold">Estimated Total</p>
+                  <p className="text--marginless text--bold text--lg">
+                    {formatINR(total)}
                   </p>
-                </div>
-                <hr className="order-hr" />
-                <div className="order-layout total-row">
-                  <p className="text--lg text--bold">Total</p>
-                  <p className="text--xl text--bold">{formatINR(total)}</p>
                 </div>
               </div>
 
-              {/* Promo Code Form */}
+              <div
+                style={{
+                  background: "var(--ivory)",
+                  border: "1px solid var(--line)",
+                  borderRadius: "8px",
+                  padding: "12px",
+                  fontSize: "12px",
+                  color: "var(--ink-soft)",
+                  lineHeight: "1.5",
+                  marginTop: "14px",
+                  marginBottom: "14px",
+                }}
+              >
+                <i className="fa-solid fa-shield-halved" style={{ color: "var(--forest)", marginRight: "6px" }}></i>
+                <strong>Zero Online Payment:</strong> This submits an <strong>Order Enquiry</strong>. Our team will review stock, custom branding, and send an official invoice/quote.
+              </div>
+
+              {/* Promo code form */}
               <form onSubmit={handleApplyPromo} className="promo-form">
-                <div className="promo-input-wrapper">
-                  <i className="fa-solid fa-tag tag-icon"></i>
+                <div className="promo-input-container">
+                  <i className="fa-solid fa-tag promo-icon"></i>
                   <input
                     type="text"
                     placeholder="Add promo code"
@@ -318,37 +369,56 @@ const Cart = ({ cart, decreaseQuantity, increaseQuantity, removeFromCart, clearC
               <button
                 onClick={handleOpenCheckout}
                 className="btn-pill btn-black checkout-btn"
+                style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "8px" }}
               >
-                Go to Checkout{" "}
-                <span>
-                 
-                </span>
+                <span>Submit Order Enquiry ({totalItemCount} items)</span>
+                <i className="fa-solid fa-arrow-right"></i>
               </button>
             </div>
           </div>
         </main>
       ) : orderData && checkoutStep === "success" ? (
-        /* Verified Backend Order Confirmed View */
+        /* Order Enquiry Confirmed View */
         <main className="cart-page-container container order-success-page">
           <div className="order-success-card">
-            <div className="success-icon-badge">
+            <div className="success-icon-badge" style={{ background: "#ecfdf5", color: "#059669", border: "2px solid #a7f3d0" }}>
               <i className="fa-solid fa-check"></i>
             </div>
-            <h1 className="title--lg">THANK YOU FOR YOUR ORDER!</h1>
-            <p className="order-subtitle">
-              Your order <strong>{orderData.orderId || orderData.orderNumber}</strong> has been confirmed.
-            </p>
-            <p className="text--gray">
-              Estimated delivery by <strong>{orderData.estimatedDelivery || orderData.deliveryDate}</strong> to{" "}
-              {orderData.customer?.address}, {orderData.customer?.city}.
+            <h1 className="title--lg" style={{ color: "var(--forest)", marginTop: "12px" }}>
+              ORDER ENQUIRY RECEIVED!
+            </h1>
+            <p className="order-subtitle" style={{ fontSize: "16px", fontWeight: "700" }}>
+              Enquiry Reference: <strong>{orderData.orderId || orderData.orderNumber}</strong>
             </p>
 
+            <div
+              style={{
+                background: "#f0fdf4",
+                border: "1px solid #bbf7d0",
+                padding: "16px 20px",
+                borderRadius: "10px",
+                margin: "20px 0",
+                color: "#166534",
+                fontSize: "14px",
+                lineHeight: 1.6,
+              }}
+            >
+              <i className="fa-solid fa-envelope-circle-check" style={{ fontSize: "20px", marginRight: "8px", verticalAlign: "middle" }}></i>
+              An email notification has been dispatched to our sales & corporate gifting team with your request for <strong>{orderData.totalQuantity || orderData.items?.length || 0} items</strong>. An acknowledgement email was sent to <strong>{orderData.customer?.email}</strong>. Our team will contact you within 2 business hours with an official quote and delivery schedule.
+            </div>
+
             <div className="order-items-receipt">
-              <h3>Items Purchased ({orderData.items?.length || 0})</h3>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "1px solid var(--line)", paddingBottom: "8px", marginBottom: "12px" }}>
+                <h3 style={{ margin: 0, fontSize: "15px" }}>Requested Products ({orderData.items?.length || 0})</h3>
+                <span style={{ fontSize: "14px", fontWeight: "800", color: "var(--forest)" }}>
+                  Total: {orderData.totalQuantity || orderData.items?.reduce((s, it) => s + (it.quantity || 1), 0)} Units
+                </span>
+              </div>
+
               {orderData.items?.map((it, idx) => (
                 <div key={it.idWithSize || `${it.id}-${it.size || idx}`} className="receipt-row">
                   <span>
-                    {it.quantity}x {it.title} ({String(it.size || "M").toUpperCase()})
+                    <strong>{it.quantity}x</strong> {it.title} ({String(it.size || "Standard").toUpperCase()})
                   </span>
                   <span>
                     {formatINR(Number(it.lineTotal || Number(it.price) * it.quantity))}
@@ -357,15 +427,19 @@ const Cart = ({ cart, decreaseQuantity, increaseQuantity, removeFromCart, clearC
               ))}
               <hr />
               <div className="receipt-row total">
-                <span>Total Paid</span>
+                <span>Indicative Total</span>
                 <span>
                   {formatINR(Number(orderData.pricing?.total ?? orderData.total ?? 0))}
                 </span>
               </div>
             </div>
 
+            <p style={{ fontSize: "13px", color: "var(--muted)", margin: "16px 0 24px" }}>
+              Shipping address: {orderData.customer?.fullName}, {orderData.customer?.address}, {orderData.customer?.city} - {orderData.customer?.postalCode} · Phone: {orderData.customer?.phone || "N/A"}
+            </p>
+
             <Link to="/products" className="btn-pill btn-black btn-return-shop">
-              Continue Shopping
+              Browse More Catalogue Gifts
             </Link>
           </div>
         </main>
@@ -376,7 +450,7 @@ const Cart = ({ cart, decreaseQuantity, increaseQuantity, removeFromCart, clearC
             <i className="fa-solid fa-bag-shopping empty-cart-icon"></i>
             <h1 className="title--lg empty-cart-title">Your shopping bag is empty</h1>
             <p className="empty-cart-desc">
-              Add gifts from the catalogue, or request a bulk quote for larger orders.
+              Add gifts from the catalogue, specify the number of items needed, and submit an order enquiry.
             </p>
             <Link to="/products" className="btn-luxury btn-primary">
               Browse the catalogue
@@ -385,12 +459,15 @@ const Cart = ({ cart, decreaseQuantity, increaseQuantity, removeFromCart, clearC
         </main>
       )}
 
-      {/* Checkout Modal */}
+      {/* Order Enquiry Modal */}
       {isCheckoutOpen && (
         <div className="checkout-modal-overlay">
-          <div className="checkout-modal-card">
+          <div className="checkout-modal-card" style={{ maxWidth: "680px" }}>
             <div className="checkout-modal-header">
-              <h2 className="title--sm">Checkout & Shipping</h2>
+              <h2 className="title--sm">
+                <i className="fa-solid fa-clipboard-list" style={{ color: "var(--forest)", marginRight: "8px" }}></i>
+                Submit Order Enquiry
+              </h2>
               <button
                 type="button"
                 className="checkout-modal-close"
@@ -406,24 +483,24 @@ const Cart = ({ cart, decreaseQuantity, increaseQuantity, removeFromCart, clearC
               </button>
             </div>
 
-            {/* Authentication Notice if customer is not logged in */}
-            {!isLoggedIn && (
-              <div className="checkout-auth-banner">
-                <div className="checkout-auth-banner-text">
-                  <i className="fa-solid fa-user-lock"></i>
-                  <span>
-                    You are not signed in. Please sign in to securely submit your order.
-                  </span>
-                </div>
-                <button
-                  type="button"
-                  onClick={() => openAuthModal("user")}
-                  className="btn-pill btn-black checkout-auth-btn"
-                >
-                  Sign In / Register
-                </button>
+            {/* Informational Banner */}
+            <div
+              style={{
+                background: "#ecfdf5",
+                border: "1px solid #a7f3d0",
+                padding: "12px 16px",
+                borderRadius: "8px",
+                margin: "14px 0",
+                display: "flex",
+                gap: "10px",
+                alignItems: "flex-start",
+              }}
+            >
+              <i className="fa-solid fa-circle-info" style={{ color: "#059669", fontSize: "16px", marginTop: "2px" }}></i>
+              <div style={{ fontSize: "13px", color: "#065f46", lineHeight: 1.5 }}>
+                <strong>No payment is collected online.</strong> Review your requested item quantities and submit your contact details below. Our corporate gifting executive will email an official quotation with volume slab discounts.
               </div>
-            )}
+            </div>
 
             {/* Error Banner on submission/validation error */}
             {checkoutError && (
@@ -435,10 +512,74 @@ const Cart = ({ cart, decreaseQuantity, increaseQuantity, removeFromCart, clearC
 
             {checkoutStep === "form" && (
               <form onSubmit={handlePlaceOrder} className="checkout-form">
+                {/* Items & Number of items review box */}
+                <div
+                  style={{
+                    background: "var(--ivory)",
+                    borderRadius: "8px",
+                    border: "1px solid var(--line)",
+                    padding: "14px",
+                    marginBottom: "16px",
+                  }}
+                >
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px" }}>
+                    <span style={{ fontSize: "12px", fontWeight: "700", textTransform: "uppercase", color: "var(--muted)" }}>
+                      Items in this Enquiry ({cart.length} Products):
+                    </span>
+                    <span style={{ fontSize: "13px", fontWeight: "800", color: "var(--forest)" }}>
+                      Total: {totalItemCount} Units
+                    </span>
+                  </div>
+
+                  <div style={{ display: "flex", flexDirection: "column", gap: "8px", maxHeight: "160px", overflowY: "auto" }}>
+                    {cart.map((item) => (
+                      <div
+                        key={item.idWithSize}
+                        style={{
+                          display: "flex",
+                          justifyContent: "space-between",
+                          alignItems: "center",
+                          fontSize: "13px",
+                          padding: "6px 0",
+                          borderBottom: "1px dashed var(--line)",
+                        }}
+                      >
+                        <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                          <img
+                            src={item.image || (item.images && item.images[0]) || "/casual.jpg"}
+                            alt={item.title}
+                            style={{ width: "32px", height: "32px", objectFit: "cover", borderRadius: "4px" }}
+                          />
+                          <div>
+                            <strong style={{ color: "var(--ink)" }}>{item.title}</strong>
+                            <span style={{ color: "var(--muted)", marginLeft: "6px", fontSize: "12px" }}>
+                              ({item.size || "Standard"})
+                            </span>
+                          </div>
+                        </div>
+                        <span
+                          style={{
+                            fontWeight: "800",
+                            color: "#065f46",
+                            background: "#ecfdf5",
+                            padding: "3px 10px",
+                            borderRadius: "12px",
+                            border: "1px solid #a7f3d0",
+                          }}
+                        >
+                          {item.quantity} pcs
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Customer Contact and Shipping Fields */}
                 <div className="checkout-fields-grid">
                   <div className="form-group full-width">
-                    <label htmlFor="checkout-fullName">Full Name</label>
-                    <input id="checkout-fullName"
+                    <label htmlFor="checkout-fullName">Full Name *</label>
+                    <input
+                      id="checkout-fullName"
                       type="text"
                       name="fullName"
                       required
@@ -449,63 +590,27 @@ const Cart = ({ cart, decreaseQuantity, increaseQuantity, removeFromCart, clearC
                     />
                   </div>
 
-                  <div className="form-group full-width">
-                    <label htmlFor="checkout-email">Email Address</label>
-                    <input id="checkout-email"
+                  <div className="form-group">
+                    <label htmlFor="checkout-email">Email Address (for quote delivery) *</label>
+                    <input
+                      id="checkout-email"
                       type="email"
                       name="email"
                       required
-                      placeholder="alex@example.com"
+                      placeholder="alex@company.com"
                       value={formData.email}
                       onChange={handleFormChange}
                       disabled={isSubmitting}
                     />
                   </div>
 
-                  <div className="form-group full-width">
-                    <label htmlFor="checkout-address">Shipping Address</label>
-                    <input id="checkout-address"
-                      type="text"
-                      name="address"
-                      required
-                      placeholder="123 Fashion Blvd, Apt 4B"
-                      value={formData.address}
-                      onChange={handleFormChange}
-                      disabled={isSubmitting}
-                    />
-                  </div>
-
                   <div className="form-group">
-                    <label htmlFor="checkout-city">City</label>
-                    <input id="checkout-city"
-                      type="text"
-                      name="city"
-                      required
-                      placeholder="New York"
-                      value={formData.city}
-                      onChange={handleFormChange}
-                      disabled={isSubmitting}
-                    />
-                  </div>
-
-                  <div className="form-group">
-                    <label htmlFor="checkout-postalCode">Postal Code</label>
-                    <input id="checkout-postalCode"
-                      type="text"
-                      name="postalCode"
-                      required
-                      placeholder="10001"
-                      value={formData.postalCode}
-                      onChange={handleFormChange}
-                      disabled={isSubmitting}
-                    />
-                  </div>
-
-                  <div className="form-group">
-                    <label htmlFor="checkout-phone">Contact Phone (for delivery courier)</label>
-                    <input id="checkout-phone"
+                    <label htmlFor="checkout-phone">Contact Phone / WhatsApp *</label>
+                    <input
+                      id="checkout-phone"
                       type="tel"
                       name="phone"
+                      required
                       placeholder="+91 98765 43210"
                       value={formData.phone}
                       onChange={handleFormChange}
@@ -513,12 +618,13 @@ const Cart = ({ cart, decreaseQuantity, increaseQuantity, removeFromCart, clearC
                     />
                   </div>
 
-                  <div className="form-group">
+                  <div className="form-group full-width">
                     <label htmlFor="checkout-company">Company / Organization (Optional)</label>
-                    <input id="checkout-company"
+                    <input
+                      id="checkout-company"
                       type="text"
                       name="company"
-                      placeholder="e.g. Acme Corporation"
+                      placeholder="e.g. Acme Tech Solutions Pvt Ltd"
                       value={formData.company}
                       onChange={handleFormChange}
                       disabled={isSubmitting}
@@ -526,14 +632,80 @@ const Cart = ({ cart, decreaseQuantity, increaseQuantity, removeFromCart, clearC
                   </div>
 
                   <div className="form-group full-width">
-                    <label htmlFor="checkout-gstin">GSTIN for 18% B2B Tax Credit (Optional)</label>
-                    <input id="checkout-gstin"
+                    <label htmlFor="checkout-address">Delivery Address / Destination *</label>
+                    <input
+                      id="checkout-address"
+                      type="text"
+                      name="address"
+                      required
+                      placeholder="e.g. 100 Corporate Park, 4th Floor"
+                      value={formData.address}
+                      onChange={handleFormChange}
+                      disabled={isSubmitting}
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="checkout-city">City *</label>
+                    <input
+                      id="checkout-city"
+                      type="text"
+                      name="city"
+                      required
+                      placeholder="e.g. Mumbai, Bengaluru, Delhi"
+                      value={formData.city}
+                      onChange={handleFormChange}
+                      disabled={isSubmitting}
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="checkout-postalCode">Postal Code (PIN) *</label>
+                    <input
+                      id="checkout-postalCode"
+                      type="text"
+                      name="postalCode"
+                      required
+                      placeholder="e.g. 560001"
+                      value={formData.postalCode}
+                      onChange={handleFormChange}
+                      disabled={isSubmitting}
+                    />
+                  </div>
+
+                  <div className="form-group full-width">
+                    <label htmlFor="checkout-gstin">GSTIN for Corporate B2B Invoicing (Optional)</label>
+                    <input
+                      id="checkout-gstin"
                       type="text"
                       name="gstin"
                       placeholder="e.g. 36AABCU9603R1ZM"
                       value={formData.gstin}
                       onChange={handleFormChange}
                       disabled={isSubmitting}
+                    />
+                  </div>
+
+                  <div className="form-group full-width">
+                    <label htmlFor="checkout-notes">
+                      Customization & Branding Instructions / Delivery Requirements (Optional)
+                    </label>
+                    <textarea
+                      id="checkout-notes"
+                      name="notes"
+                      rows={2}
+                      placeholder="e.g. Please quote with laser-etched company logo on all units. Delivery needed by Nov 20th for our annual meet."
+                      value={formData.notes}
+                      onChange={handleFormChange}
+                      disabled={isSubmitting}
+                      style={{
+                        width: "100%",
+                        padding: "10px 12px",
+                        border: "1px solid var(--line-strong)",
+                        borderRadius: "8px",
+                        fontSize: "13px",
+                        resize: "vertical",
+                      }}
                     />
                   </div>
                 </div>
@@ -548,14 +720,14 @@ const Cart = ({ cart, decreaseQuantity, increaseQuantity, removeFromCart, clearC
                       onChange={(e) => setFormData({ ...formData, isGift: e.target.checked })}
                       disabled={isSubmitting}
                     />
-                    <span>This order is a gift</span>
+                    <span>Include personalized gift note or packaging</span>
                   </label>
 
                   {formData.isGift && (
                     <div style={{ marginTop: "14px", display: "flex", flexDirection: "column", gap: "10px" }}>
                       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px" }}>
                         <div>
-                          <label style={{ display: "block", fontSize: "12px", color: "var(--ink-soft)", marginBottom: "4px" }}>To (Recipient Name)</label>
+                          <label style={{ display: "block", fontSize: "12px", color: "var(--ink-soft)", marginBottom: "4px" }}>Recipient / Team Name</label>
                           <input
                             type="text"
                             name="recipientName"
@@ -566,7 +738,7 @@ const Cart = ({ cart, decreaseQuantity, increaseQuantity, removeFromCart, clearC
                           />
                         </div>
                         <div>
-                          <label style={{ display: "block", fontSize: "12px", color: "var(--ink-soft)", marginBottom: "4px" }}>From (Your / Company Name)</label>
+                          <label style={{ display: "block", fontSize: "12px", color: "var(--ink-soft)", marginBottom: "4px" }}>Sender / Company Name</label>
                           <input
                             type="text"
                             name="senderName"
@@ -579,7 +751,7 @@ const Cart = ({ cart, decreaseQuantity, increaseQuantity, removeFromCart, clearC
                       </div>
 
                       <div>
-                        <label style={{ display: "block", fontSize: "12px", color: "var(--ink-soft)", marginBottom: "4px" }}>Personal Gift Message Card</label>
+                        <label style={{ display: "block", fontSize: "12px", color: "var(--ink-soft)", marginBottom: "4px" }}>Gift Message</label>
                         <textarea
                           name="giftMessage"
                           rows={2}
@@ -598,83 +770,18 @@ const Cart = ({ cart, decreaseQuantity, increaseQuantity, removeFromCart, clearC
                             checked={formData.giftWrap}
                             onChange={(e) => setFormData({ ...formData, giftWrap: e.target.checked })}
                           />
-                          <span>Add gift wrapping</span>
-                        </label>
-                        <label style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "13px", color: "var(--ink-soft)", cursor: "pointer" }}>
-                          <input
-                            type="checkbox"
-                            name="hidePricingOnSlip"
-                            checked={formData.hidePricingOnSlip}
-                            onChange={(e) => setFormData({ ...formData, hidePricingOnSlip: e.target.checked })}
-                          />
-                          <span>Hide prices on the packing slip</span>
+                          <span>Add premium gift wrap presentation</span>
                         </label>
                       </div>
                     </div>
                   )}
                 </div>
 
-                <div className="payment-method-section">
-                  <label className="section-label">Payment Method</label>
-                  <div className="payment-options">
-                    <label
-                      className={`payment-pill ${
-                        formData.paymentMethod === "card" ? "selected" : ""
-                      }`}
-                    >
-                      <input
-                        type="radio"
-                        name="paymentMethod"
-                        value="card"
-                        checked={formData.paymentMethod === "card"}
-                        onChange={handleFormChange}
-                        disabled={isSubmitting}
-                      />
-                      <i className="fa-regular fa-credit-card"></i> Card
-                    </label>
-
-                    <label
-                      className={`payment-pill ${
-                        formData.paymentMethod === "cod" ? "selected" : ""
-                      }`}
-                    >
-                      <input
-                        type="radio"
-                        name="paymentMethod"
-                        value="cod"
-                        checked={formData.paymentMethod === "cod"}
-                        onChange={handleFormChange}
-                        disabled={isSubmitting}
-                      />
-                      <i className="fa-solid fa-truck-fast"></i> Cash on Delivery
-                    </label>
-
-                    <label
-                      className={`payment-pill ${
-                        formData.paymentMethod === "upi" ? "selected" : ""
-                      }`}
-                    >
-                      <input
-                        type="radio"
-                        name="paymentMethod"
-                        value="upi"
-                        checked={formData.paymentMethod === "upi"}
-                        onChange={handleFormChange}
-                        disabled={isSubmitting}
-                      />
-                      <i className="fa-solid fa-qrcode"></i> UPI / Pay
-                    </label>
-                  </div>
-                </div>
-
-                <div className="checkout-summary-bar">
-                  <span>Total Due:</span>
-                  <strong className="summary-total">{formatINR(total)}</strong>
-                </div>
-
-                <div className="checkout-demo-notice">
-                  <i className="fa-solid fa-circle-info"></i>
-                  <span>Test Mode Demonstration: This order is verified and recorded on the server database. No live payment gateway charge will occur.</span>
+                <div className="checkout-summary-bar" style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                  <span>Total Items to Quote: <strong>{totalItemCount} pcs</strong></span>
+                  <span style={{ fontSize: "14px", color: "var(--muted)" }}>
+                    Indicative Total: <strong className="summary-total" style={{ color: "var(--forest)", marginLeft: "4px" }}>{formatINR(total)}</strong>
+                  </span>
                 </div>
 
                 <button
@@ -683,14 +790,15 @@ const Cart = ({ cart, decreaseQuantity, increaseQuantity, removeFromCart, clearC
                   className={`btn-pill btn-black btn-pay-now ${
                     isSubmitting ? "btn-submitting" : ""
                   }`}
+                  style={{ marginTop: "16px" }}
                 >
                   {isSubmitting ? (
                     <>
                       <span className="button-spinner"></span>
-                      Securing Order...
+                      Submitting Enquiry to Admin...
                     </>
                   ) : (
-                    `Place order (${formatINR(total)})`
+                    `Submit Order Enquiry (${totalItemCount} Items)`
                   )}
                 </button>
               </form>
@@ -699,9 +807,9 @@ const Cart = ({ cart, decreaseQuantity, increaseQuantity, removeFromCart, clearC
             {checkoutStep === "processing" && (
               <div className="checkout-processing-state">
                 <div className="spinner"></div>
-                <h3 className="title--sm">Securing your order...</h3>
+                <h3 className="title--sm">Submitting your order enquiry...</h3>
                 <p className="text--gray">
-                  Contacting backend server and recording your order.
+                  Notifying the corporate sales team and preparing your confirmation receipt.
                 </p>
               </div>
             )}

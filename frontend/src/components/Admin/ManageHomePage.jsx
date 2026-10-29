@@ -7,9 +7,39 @@ import ImageField from "./ImageField";
 // or { list: [...fields] } for repeatable items. Keep in sync with backend/src/data/homePageSchema.js.
 const EDITORS = [
   {
+    key: "heroCarousel",
+    title: "Hero Carousel (Banner Slider)",
+    help: "The top rotating hero banner. Upload images directly from your device, customize titles, badges, and action buttons. Reorder slides using the arrows.",
+    fields: [
+      { name: "autoplay", label: "Autoplay slides automatically", type: "bool" },
+      { name: "interval", label: "Autoplay rotation interval (in seconds, e.g. 5)", type: "number" },
+      {
+        name: "slides",
+        label: "Carousel Slides",
+        type: {
+          list: [
+            { name: "badge", label: "Top category/badge text (e.g. Luxury Corporate Gifting)", type: "text" },
+            { name: "title", label: "Slide Headline", type: "text" },
+            { name: "subtitle", label: "Intro text / subtitle", type: "long" },
+            { name: "primaryCtaText", label: "Primary button label", type: "text" },
+            { name: "primaryCtaLink", label: "Primary button link", type: "link" },
+            { name: "secondaryCtaText", label: "Secondary button label (e.g. Send Order Enquiry)", type: "text" },
+            { name: "secondaryCtaLink", label: "Secondary button link", type: "link" },
+            { name: "image", label: "Banner Image (Upload high-res photo from device or paste URL)", type: "image" },
+            { name: "imageAlt", label: "Image description (for screen readers)", type: "text" },
+            { name: "tagTitle", label: "Badge card headline (e.g. Free Digital Mockup)", type: "text" },
+            { name: "tagText", label: "Badge card description (e.g. Samples before dispatch)", type: "text" },
+            { name: "isActive", label: "Display this slide on live site", type: "bool" },
+          ],
+        },
+        itemLabel: "slide",
+      },
+    ],
+  },
+  {
     key: "hero",
-    title: "Hero",
-    help: "The first thing visitors see at the top of the home page.",
+    title: "Static Hero banner (Fallback)",
+    help: "Static single banner shown if Carousel is hidden or empty.",
     fields: [
       { name: "title", label: "Headline", type: "text" },
       { name: "lead", label: "Intro text", type: "long" },
@@ -153,7 +183,12 @@ const EDITORS = [
 ];
 
 const blankItem = (fields) =>
-  Object.fromEntries(fields.map((f) => [f.name, f.type === "rating" ? 5 : ""]));
+  Object.fromEntries(
+    fields.map((f) => [
+      f.name,
+      f.name === "isActive" ? true : f.type === "rating" ? 5 : f.type === "bool" ? false : ""
+    ])
+  );
 
 const FieldInput = ({ field, value, onChange }) => {
   const id = useId();
@@ -213,12 +248,66 @@ const ListEditor = ({ field, items, onChange }) => {
     <fieldset className="gw-list-editor">
       <legend className="form-label">{field.label}</legend>
       {items.map((item, i) => (
-        <div key={i} className="gw-list-item">
+        <div key={i} className={`gw-list-item ${item.isActive === false ? "gw-list-item-inactive" : ""}`}>
           <div className="gw-list-item-head">
-            <strong>
-              {field.itemLabel} {i + 1}
-              {item.title || item.name ? `: ${item.title || item.name}` : ""}
-            </strong>
+            <div style={{ display: "flex", alignItems: "center", gap: "10px", minWidth: 0, overflow: "hidden" }}>
+              {item.image ? (
+                <img
+                  src={item.image}
+                  alt=""
+                  style={{
+                    width: "42px",
+                    height: "42px",
+                    objectFit: "cover",
+                    borderRadius: "6px",
+                    border: "1px solid rgba(0,0,0,0.12)",
+                    flexShrink: 0,
+                  }}
+                />
+              ) : (
+                <div
+                  style={{
+                    width: "42px",
+                    height: "42px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    background: "rgba(0,0,0,0.04)",
+                    borderRadius: "6px",
+                    color: "#888",
+                    flexShrink: 0,
+                  }}
+                >
+                  <i className="fa-regular fa-image" style={{ fontSize: "16px" }}></i>
+                </div>
+              )}
+              <div style={{ display: "flex", flexDirection: "column", minWidth: 0 }}>
+                <strong style={{ whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+                  {field.itemLabel} {i + 1}
+                  {item.title || item.name ? `: ${item.title || item.name}` : ""}
+                </strong>
+                {item.badge && (
+                  <span style={{ fontSize: "11px", color: "var(--forest, #2d4a3e)", fontWeight: 600 }}>
+                    {item.badge}
+                  </span>
+                )}
+              </div>
+              {item.isActive !== undefined && (
+                <span
+                  style={{
+                    fontSize: "11px",
+                    padding: "2px 8px",
+                    borderRadius: "12px",
+                    fontWeight: 600,
+                    marginLeft: "4px",
+                    backgroundColor: item.isActive !== false ? "rgba(45, 74, 62, 0.1)" : "rgba(220, 53, 69, 0.1)",
+                    color: item.isActive !== false ? "var(--forest, #2d4a3e)" : "#dc3545",
+                  }}
+                >
+                  {item.isActive !== false ? "Active" : "Hidden"}
+                </span>
+              )}
+            </div>
             <div className="gw-list-item-actions">
               <button type="button" className="btn-admin-outline" onClick={() => move(i, -1)} disabled={i === 0} aria-label={`Move ${field.itemLabel} ${i + 1} up`}>
                 <i className="fa-solid fa-arrow-up" aria-hidden="true"></i>

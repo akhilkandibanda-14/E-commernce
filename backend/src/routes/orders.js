@@ -196,21 +196,26 @@ router.post("/", authenticateToken, orderCreationLimiter, (req, res) => {
     const deliveryFee = freeShipping || subtotal === 0 ? 0 : 15;
     const total = Number(Math.max(0, subtotal - discountAmount + deliveryFee).toFixed(2));
 
-    // 5. Build authoritative order record
-    const orderId = `SHOP-${Math.floor(100000 + Math.random() * 900000)}`;
+    // 5. Build authoritative order enquiry record
+    const orderId = `SHOP-ENQ-${Math.floor(100000 + Math.random() * 900000)}`;
     const createdAt = new Date().toISOString();
     const deliveryDate = new Date();
     deliveryDate.setDate(deliveryDate.getDate() + 4);
+    const totalQuantity = verifiedItems.reduce((acc, it) => acc + (it.quantity || 1), 0);
+    const customerNotes = typeof req.body.notes === "string" ? req.body.notes.trim() : (typeof customer.notes === "string" ? customer.notes.trim() : "");
 
     const newOrder = {
       orderId,
+      orderType: "order_enquiry",
+      totalQuantity,
+      notes: customerNotes,
       userId: req.user.id,
       user: {
         id: req.user.id,
         name: req.user.name,
         email: req.user.email,
       },
-      status: "confirmed",
+      status: "pending",
       createdAt,
       estimatedDelivery: deliveryDate.toLocaleDateString("en-US", {
         month: "short",
@@ -226,6 +231,7 @@ router.post("/", authenticateToken, orderCreationLimiter, (req, res) => {
         city,
         postalCode,
         gstin: gstin || "",
+        notes: customerNotes,
       },
       gifting: {
         isGift: Boolean(gifting?.isGift),
@@ -245,7 +251,8 @@ router.post("/", authenticateToken, orderCreationLimiter, (req, res) => {
         total,
         promoCode: validatedPromoCode,
       },
-      paymentMethod: paymentMethod || "card",
+      paymentMethod: paymentMethod || "order_enquiry (no online payment)",
+      paymentStatus: "pending",
     };
 
     // 6. Record order in memory and durable persistence store (disk & MongoDB)
@@ -255,7 +262,7 @@ router.post("/", authenticateToken, orderCreationLimiter, (req, res) => {
 
     const responsePayload = {
       success: true,
-      message: "Order placed successfully!",
+      message: "Order enquiry submitted successfully! Our sales team will email your quote shortly.",
       order: newOrder,
     };
 
@@ -274,6 +281,154 @@ router.post("/", authenticateToken, orderCreationLimiter, (req, res) => {
     if (storeKey) {
       idempotencyStore.delete(storeKey);
     }
+    res.status(500).json({ success: false, message: error.message });
+  }
+});
+
+// POST /api/orders/enquiry - Public / Guest Order Enquiry (No Login Required)
+router.post("/enquiry", orderCreationLimiter, (req, res) => {
+  try {
+    const { customer, items, notes, gifting } = req.body;
+
+    if (!customer || typeof customer !== "object") {
+      return res.status(400).json({
+        success: false,
+        message: "Customer contact details are required.",
+      });
+    }
+
+    const fullName = typeof customer.fullName === "string" ? customer.fullName.trim() : "";
+    const email = typeof customer.email === "string" ? customer.email.trim() : "";
+    const phone = typeof customer.phone === "string" ? customer.phone.trim() : "";
+    const address = typeof customer.address === "string" ? customer.address.trim() : "";
+    const city = typeof customer.city === "string" ? customer.city.trim() : "";
+    const postalCode = typeof customer.postalCode === "string" ? customer.postalCode.trim() : "";
+    const company = typeof customer.company === "string" ? customer.company.trim() : "";
+    const gstin = typeof customer.gstin === "string" ? customer.gstin.trim() : "";
+    const customerNotes = typeof notes === "string" ? notes.trim() : (typeof customer.notes === "string" ? customer.notes.trim() : "");
+
+    if (!fullName || !email) {
+      return res.status(400).json({
+        success: false,
+        message: "Your full name and email address are required to submit an order enquiry.",
+      });
+    }
+
+    if (!items || !Array.isArray(items) || items.length === 0) {
+      return res.status(400).json({
+        success: false,
+        message: "Order enquiry must contain at least one item.",
+      });
+    }
+
+    const verifiedItems = [];
+    for (const it of items) {
+      if (!it || it.id === undefined || it.id === null) {
+        return res.status(400).json({
+          success: false,
+          message: "Each enquiry item must specify a valid product ID.",
+        });
+      }
+
+      const product = findCatalogProductById(it.id);
+      if (!product) {
+        return res.status(404).json({
+          success: false,
+          message: `Product #${it.id} was not found in the catalog or is no longer available.`,
+        });
+      }
+
+      const qty = Number(it.quantity);
+      if (!Number.isInteger(qty) || qty <= 0 || qty > 10000) {
+        return res.status(400).json({
+          success: false,
+          message: `Invalid quantity "${it.quantity}" for product "${product.title}". Quantity must be a positive integer.`,
+        });
+      }
+
+      const unitPrice = Number(product.price);
+      const chosenSize = it.size ? normalizeSize(it.size) : (product.sizes?.[0] || "Standard");
+      const lineTotal = Number((unitPrice * qty).toFixed(2));
+
+      verifiedItems.push({
+        id: product.id,
+        title: product.title,
+        price: unitPrice,
+        quantity: qty,
+        size: chosenSize,
+        selectedColor: it.selectedColor || (product.colors?.[0] || null),
+        selectedBranding: it.selectedBranding || null,
+        customLogoText: it.customLogoText || null,
+        image: product.img || (product.images && product.images[0]) || null,
+        category: product.category || "general",
+        lineTotal,
+      });
+    }
+
+    const subtotal = Number(
+      verifiedItems.reduce((acc, it) => acc + it.price * it.quantity, 0).toFixed(2)
+    );
+    const totalQuantity = verifiedItems.reduce((acc, it) => acc + it.quantity, 0);
+
+    const orderId = `SHOP-ENQ-${Math.floor(100000 + Math.random() * 900000)}`;
+    const createdAt = new Date().toISOString();
+    const guestUserId = `guest_${Date.now()}`;
+
+    const newOrder = {
+      orderId,
+      orderType: "order_enquiry",
+      totalQuantity,
+      notes: customerNotes,
+      userId: guestUserId,
+      user: {
+        id: guestUserId,
+        name: fullName,
+        email,
+      },
+      status: "pending",
+      createdAt,
+      estimatedDelivery: "Pending Quote Confirmation",
+      customer: {
+        fullName,
+        email,
+        phone: phone || "",
+        company: company || "",
+        address: address || "To be provided",
+        city: city || "To be provided",
+        postalCode: postalCode || "",
+        gstin: gstin || "",
+        notes: customerNotes,
+      },
+      gifting: {
+        isGift: Boolean(gifting?.isGift),
+        senderName: gifting?.senderName ? String(gifting.senderName).trim().slice(0, 100) : "",
+        recipientName: gifting?.recipientName ? String(gifting.recipientName).trim().slice(0, 100) : "",
+        giftMessage: gifting?.giftMessage ? String(gifting.giftMessage).trim().slice(0, 500) : "",
+        giftWrap: Boolean(gifting?.giftWrap),
+        hidePricingOnSlip: Boolean(gifting?.hidePricingOnSlip),
+      },
+      items: verifiedItems,
+      pricing: {
+        subtotal,
+        discount: 0,
+        discountPercent: 0,
+        deliveryFee: 0,
+        total: subtotal,
+      },
+      paymentMethod: "order_enquiry (no online payment)",
+      paymentStatus: "pending",
+    };
+
+    ordersStore.set(orderId, newOrder);
+    persistOrder(newOrder).catch((e) => console.warn("Order persist notice:", e.message));
+    sendOrderConfirmationEmail(newOrder).catch((e) => console.warn("Order email notice:", e.message));
+
+    res.status(201).json({
+      success: true,
+      message: "Order enquiry submitted successfully! Our sales team will email your quote shortly.",
+      order: newOrder,
+    });
+  } catch (error) {
     res.status(500).json({ success: false, message: error.message });
   }
 });
@@ -351,14 +506,14 @@ router.patch("/:orderId/status", authenticateToken, async (req, res) => {
     }
 
     const { orderId } = req.params;
-    const { status, tracking } = req.body;
+    const { status, tracking, adminNotes, quoteAmount } = req.body;
 
     const order = ordersStore.get(orderId);
     if (!order) {
       return res.status(404).json({ success: false, message: `Order #${orderId} was not found.` });
     }
 
-    const validStatuses = ["pending", "confirmed", "in_production", "dispatched", "delivered", "cancelled"];
+    const validStatuses = ["pending", "quote_sent", "confirmed", "in_production", "dispatched", "delivered", "cancelled"];
     if (status && !validStatuses.includes(status)) {
       return res.status(400).json({
         success: false,
@@ -366,7 +521,7 @@ router.patch("/:orderId/status", authenticateToken, async (req, res) => {
       });
     }
 
-    const updated = await persistOrderStatus(orderId, { status, tracking });
+    const updated = await persistOrderStatus(orderId, { status, tracking, adminNotes, quoteAmount });
     if (updated) {
       ordersStore.set(orderId, updated);
       if (status === "dispatched" && tracking?.trackingNumber) {

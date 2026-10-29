@@ -1,0 +1,213 @@
+/* ==========================================================================
+   Hero Carousel Styles - Atelier Gifting Solutions
+   ========================================================================== */
+
+.gw-hero-carousel-container {
+  position: relative;
+  outline: none;
+  user-select: none;
+  padding-bottom: var(--space-8, 48px);
+}
+
+.gw-hero-carousel-wrapper {
+  position: relative;
+}
+
+.gw-carousel-slides {
+  position: relative;
+  min-height: 560px;
+}
+
+/* Individual Slide Transition */
+.gw-carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px) scale(0.995);
+  transition: opacity 700ms cubic-bezier(0.16, 1, 0.3, 1),
+              transform 700ms cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 700ms ease;
+  pointer-events: none;
+}
+
+.gw-carousel-slide.active {
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+  z-index: 2;
+}
+
+/* Slide Kicker / Category Badge */
+.gw-carousel-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: rgba(45, 74, 62, 0.08);
+  border: 1px solid rgba(45, 74, 62, 0.18);
+  border-radius: 999px;
+  font-size: var(--text-xs, 12px);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--forest, #2d4a3e);
+  margin-bottom: var(--space-4, 16px);
+  animation: gw-fade-in 450ms var(--ease-out, ease-out) both;
+}
+
+.gw-carousel-kicker i {
+  color: var(--champagne-deep, #c29d59);
+  font-size: 11px;
+}
+
+/* Carousel Media Arch subtle entrance */
+.gw-carousel-slide.active .gw-hero-arch img {
+  animation: gw-image-scale 1000ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes gw-image-scale {
+  from {
+    transform: scale(1.04);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Carousel Bottom Navigation Strip */
+.gw-carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4, 16px);
+  margin-top: var(--space-6, 24px);
+  z-index: 10;
+  position: relative;
+}
+
+/* Circular Arrow Buttons */
+.gw-carousel-arrow {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--paper, #fff);
+  border: 1px solid var(--line, rgba(0, 0, 0, 0.12));
+  color: var(--forest-deep, #1b352a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 250ms ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.gw-carousel-arrow:hover {
+  background: var(--forest, #2d4a3e);
+  color: var(--linen, #f8f6f0);
+  border-color: var(--forest, #2d4a3e);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(45, 74, 62, 0.2);
+}
+
+.gw-carousel-arrow:active {
+  transform: translateY(0);
+}
+
+/* Pagination Dots */
+.gw-carousel-indicators {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--line, rgba(0, 0, 0, 0.08));
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.gw-carousel-dot {
+  position: relative;
+  width: 24px;
+  height: 8px;
+  border-radius: 4px;
+  background: rgba(45, 74, 62, 0.2);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  overflow: hidden;
+  transition: width 300ms ease, background-color 300ms ease;
+}
+
+.gw-carousel-dot.active {
+  width: 42px;
+  background: var(--forest, #2d4a3e);
+}
+
+/* Animated Progress Fill on Active Dot */
+.gw-carousel-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  background: var(--champagne-deep, #d4af37);
+  border-radius: 4px;
+  animation: gw-carousel-bar linear forwards;
+}
+
+@keyframes gw-carousel-bar {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Slide Index Counter */
+.gw-carousel-counter {
+  font-family: var(--font-mono, monospace);
+  font-size: 13px;
+  color: var(--ink-soft, #555);
+  letter-spacing: 0.05em;
+  padding: 4px 8px;
+}
+
+.gw-carousel-counter strong {
+  color: var(--forest-deep, #1b352a);
+  font-size: 14px;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 900px) {
+  .gw-carousel-slides {
+    min-height: auto;
+  }
+  
+  .gw-carousel-slide {
+    position: relative;
+    display: none;
+    transform: none;
+  }
+  
+  .gw-carousel-slide.active {
+    display: block;
+  }
+  
+  .gw-carousel-controls {
+    margin-top: var(--space-4, 16px);
+  }
+  
+  .gw-carousel-arrow {
+    width: 38px;
+    height: 38px;
+    font-size: 13px;
+  }
+}

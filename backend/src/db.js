@@ -1,8 +1,16 @@
 import dotenv from "dotenv";
 dotenv.config();
+import dns from "dns";
 import mongoose from "mongoose";
 import { PRODUCTS } from "./data/products.js";
 import { INITIAL_USERS } from "./data/users.js";
+
+// Ensure Node can resolve MongoDB Atlas SRV records when local router/ISP DNS drops or refuses querySrv (ECONNREFUSED)
+try {
+  dns.setServers(["8.8.8.8", "1.1.1.1"]);
+} catch (dnsErr) {
+  // Ignore if custom dns servers cannot be configured
+}
 
 let isConnected = false;
 
@@ -36,6 +44,26 @@ export const connectDB = async () => {
 
     return true;
   } catch (err) {
+    // If querySrv failed, try setting DNS fallback explicitly and reconnect once
+    if (err.message && err.message.includes("querySrv")) {
+      try {
+        console.warn("⚠️ Local DNS failed to resolve MongoDB SRV record. Retrying with Google/Cloudflare public DNS...");
+        dns.setServers(["8.8.8.8", "1.1.1.1"]);
+        const conn = await mongoose.connect(uri, {
+          serverSelectionTimeoutMS: 8000,
+        });
+        isConnected = true;
+        console.log(`🍃 MongoDB Atlas connected: ${conn.connection.host}/${conn.connection.name}`);
+        seedInitialData().catch((seedErr) => {
+          console.warn("MongoDB initial seed notice:", seedErr.message);
+        });
+        return true;
+      } catch (retryErr) {
+        console.error("❌ MongoDB Atlas connection error after retry:", retryErr.message);
+        return false;
+      }
+    }
+
     console.error("❌ MongoDB Atlas connection error:", err.message);
     return false;
   }

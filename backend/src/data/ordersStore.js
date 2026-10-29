@@ -103,15 +103,17 @@ export const getOrdersByUserId = (userId) => {
 };
 
 /**
- * Update order status and tracking details
+ * Update order status, tracking details, and admin notes
  */
-export const updateOrderStatus = async (orderId, { status, tracking }) => {
+export const updateOrderStatus = async (orderId, { status, tracking, adminNotes, quoteAmount }) => {
   const existing = ordersMap.get(orderId);
   if (!existing) return null;
 
   const updated = {
     ...existing,
     ...(status ? { status } : {}),
+    ...(adminNotes !== undefined ? { adminNotes } : {}),
+    ...(quoteAmount !== undefined ? { quoteAmount: Number(quoteAmount) } : {}),
     tracking: {
       ...(existing.tracking || {}),
       ...(tracking || {}),

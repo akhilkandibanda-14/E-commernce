@@ -1,4 +1,5 @@
 import HeroSection from "./HeroSection";
+import HeroCarousel from "./HeroCarousel";
 import TrustValueStrip from "./TrustValueStrip";
 import GiftingServicesSection from "./GiftingServicesSection";
 import FeaturedCategories from "./FeaturedCategories";
@@ -18,7 +19,7 @@ const Home = () => {
 
   return (
     <main id="main-content" className="home-page luxury-storefront">
-      {show("hero") && <HeroSection />}
+      {show("heroCarousel") ? <HeroCarousel /> : show("hero") && <HeroSection />}
 
       {show("trustStrip") && <TrustValueStrip />}
 

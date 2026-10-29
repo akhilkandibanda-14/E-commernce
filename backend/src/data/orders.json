@@ -24329,5 +24329,4387 @@
       "promoCode": null
     },
     "paymentMethod": "card"
+  },
+  {
+    "orderId": "SHOP-941834",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "confirmed",
+    "createdAt": "2026-10-29T08:03:22.958Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "card"
+  },
+  {
+    "orderId": "SHOP-301035",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "confirmed",
+    "createdAt": "2026-10-29T08:03:23.012Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "card"
+  },
+  {
+    "orderId": "SHOP-965718",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "confirmed",
+    "createdAt": "2026-10-29T08:03:23.029Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "card"
+  },
+  {
+    "orderId": "SHOP-331700",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "confirmed",
+    "createdAt": "2026-10-29T08:03:23.041Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "card"
+  },
+  {
+    "orderId": "SHOP-300931",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "confirmed",
+    "createdAt": "2026-10-29T08:03:23.053Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "card"
+  },
+  {
+    "orderId": "SHOP-391407",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "confirmed",
+    "createdAt": "2026-10-29T08:03:23.062Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "card"
+  },
+  {
+    "orderId": "SHOP-523561",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "confirmed",
+    "createdAt": "2026-10-29T08:03:23.075Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "card"
+  },
+  {
+    "orderId": "SHOP-634925",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "confirmed",
+    "createdAt": "2026-10-29T08:03:23.086Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "card"
+  },
+  {
+    "orderId": "SHOP-631898",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "confirmed",
+    "createdAt": "2026-10-29T08:03:23.098Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "card"
+  },
+  {
+    "orderId": "SHOP-674204",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "confirmed",
+    "createdAt": "2026-10-29T08:03:23.107Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "card"
+  },
+  {
+    "orderId": "SHOP-739587",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "confirmed",
+    "createdAt": "2026-10-29T08:03:23.120Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "card"
+  },
+  {
+    "orderId": "SHOP-918489",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "confirmed",
+    "createdAt": "2026-10-29T08:03:23.129Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "card"
+  },
+  {
+    "orderId": "SHOP-764683",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "confirmed",
+    "createdAt": "2026-10-29T08:03:23.142Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "card"
+  },
+  {
+    "orderId": "SHOP-331013",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "confirmed",
+    "createdAt": "2026-10-29T08:03:23.154Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "card"
+  },
+  {
+    "orderId": "SHOP-671042",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "confirmed",
+    "createdAt": "2026-10-29T08:03:23.166Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "card"
+  },
+  {
+    "orderId": "SHOP-589068",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "confirmed",
+    "createdAt": "2026-10-29T08:03:23.176Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "card"
+  },
+  {
+    "orderId": "SHOP-764642",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "confirmed",
+    "createdAt": "2026-10-29T08:03:23.190Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "card"
+  },
+  {
+    "orderId": "SHOP-946298",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "confirmed",
+    "createdAt": "2026-10-29T08:03:23.202Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "card"
+  },
+  {
+    "orderId": "SHOP-603274",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "confirmed",
+    "createdAt": "2026-10-29T08:03:23.217Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "card"
+  },
+  {
+    "orderId": "SHOP-623840",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "confirmed",
+    "createdAt": "2026-10-29T08:03:23.231Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "card"
+  },
+  {
+    "orderId": "SHOP-381960",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "confirmed",
+    "createdAt": "2026-10-29T08:03:26.952Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "Corporate Buyer",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "Business Park Tower 4",
+      "city": "Bengaluru",
+      "postalCode": "560001",
+      "gstin": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1120681,
+        "title": "Custom Steel Flask 750ml",
+        "price": 1250,
+        "quantity": 2,
+        "size": "M",
+        "selectedColor": null,
+        "image": null,
+        "category": "drinkware",
+        "lineTotal": 2500
+      }
+    ],
+    "pricing": {
+      "subtotal": 2500,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 2515,
+      "promoCode": null
+    },
+    "paymentMethod": "card"
+  },
+  {
+    "orderId": "SHOP-439179",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "confirmed",
+    "createdAt": "2026-10-29T08:03:41.754Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "Alex Morgan",
+      "email": "alex@example.com",
+      "phone": "",
+      "company": "",
+      "address": "456 Avenue, Suite 10",
+      "city": "San Francisco",
+      "postalCode": "94107",
+      "gstin": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 2,
+        "size": "L",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 240
+      },
+      {
+        "id": 2,
+        "title": "Skinny Fit Jeans",
+        "price": 240,
+        "quantity": 1,
+        "size": "M",
+        "selectedColor": {
+          "name": "Dark Indigo",
+          "hex": "#1e293b"
+        },
+        "image": "https://images.unsplash.com/photo-1542272604-780c96856592?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 240
+      }
+    ],
+    "pricing": {
+      "subtotal": 480,
+      "discount": 96,
+      "discountPercent": 20,
+      "deliveryFee": 15,
+      "total": 399,
+      "promoCode": "SHOP20"
+    },
+    "paymentMethod": "card"
+  },
+  {
+    "orderId": "SHOP-241843",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "confirmed",
+    "createdAt": "2026-10-29T08:03:41.810Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "Attacker",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "123 Nowhere",
+      "city": "Metropolis",
+      "postalCode": "00000",
+      "gstin": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 3,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 360
+      }
+    ],
+    "pricing": {
+      "subtotal": 360,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 375,
+      "promoCode": null
+    },
+    "paymentMethod": "card"
+  },
+  {
+    "orderId": "SHOP-250929",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "confirmed",
+    "createdAt": "2026-10-29T08:03:41.937Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "Alex",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "Street 1",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "M",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "card"
+  },
+  {
+    "orderId": "SHOP-682297",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "confirmed",
+    "createdAt": "2026-10-29T08:03:42.113Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "Customer A",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "Road A",
+      "city": "Town A",
+      "postalCode": "11111",
+      "gstin": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "card"
+  },
+  {
+    "orderId": "SHOP-ENQ-748110",
+    "orderType": "order_enquiry",
+    "totalQuantity": 1,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:13:33.192Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-982260",
+    "orderType": "order_enquiry",
+    "totalQuantity": 1,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:13:33.269Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-848435",
+    "orderType": "order_enquiry",
+    "totalQuantity": 1,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:13:33.296Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-946813",
+    "orderType": "order_enquiry",
+    "totalQuantity": 1,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:13:33.320Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-770350",
+    "orderType": "order_enquiry",
+    "totalQuantity": 1,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:13:33.347Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-513615",
+    "orderType": "order_enquiry",
+    "totalQuantity": 1,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:13:33.357Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-119958",
+    "orderType": "order_enquiry",
+    "totalQuantity": 1,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:13:33.368Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-736101",
+    "orderType": "order_enquiry",
+    "totalQuantity": 1,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:13:33.377Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-172559",
+    "orderType": "order_enquiry",
+    "totalQuantity": 1,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:13:33.386Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-624482",
+    "orderType": "order_enquiry",
+    "totalQuantity": 1,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:13:33.396Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-418697",
+    "orderType": "order_enquiry",
+    "totalQuantity": 1,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:13:33.406Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-785203",
+    "orderType": "order_enquiry",
+    "totalQuantity": 1,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:13:33.418Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-392807",
+    "orderType": "order_enquiry",
+    "totalQuantity": 1,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:13:33.428Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-433774",
+    "orderType": "order_enquiry",
+    "totalQuantity": 1,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:13:33.437Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-848977",
+    "orderType": "order_enquiry",
+    "totalQuantity": 1,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:13:33.449Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-847915",
+    "orderType": "order_enquiry",
+    "totalQuantity": 1,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:13:33.458Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-211757",
+    "orderType": "order_enquiry",
+    "totalQuantity": 1,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:13:33.468Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-706854",
+    "orderType": "order_enquiry",
+    "totalQuantity": 1,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:13:33.476Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-291644",
+    "orderType": "order_enquiry",
+    "totalQuantity": 1,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:13:33.485Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-422981",
+    "orderType": "order_enquiry",
+    "totalQuantity": 1,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:13:33.493Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-298103",
+    "orderType": "order_enquiry",
+    "totalQuantity": 2,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:14:08.847Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "Corporate Buyer",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "Business Park Tower 4",
+      "city": "Bengaluru",
+      "postalCode": "560001",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1120681,
+        "title": "Custom Steel Flask 750ml",
+        "price": 1250,
+        "quantity": 2,
+        "size": "M",
+        "selectedColor": null,
+        "image": null,
+        "category": "drinkware",
+        "lineTotal": 2500
+      }
+    ],
+    "pricing": {
+      "subtotal": 2500,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 2515,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-143134",
+    "orderType": "order_enquiry",
+    "totalQuantity": 150,
+    "notes": "Please send formal quotation for 150 gift boxes with customized laser engraving on bottles.",
+    "userId": "guest_1793261728998",
+    "user": {
+      "id": "guest_1793261728998",
+      "name": "Corporate Test Buyer",
+      "email": "motapalukulaadithya6@gmail.com"
+    },
+    "status": "quote_sent",
+    "createdAt": "2026-10-29T08:15:28.998Z",
+    "estimatedDelivery": "Pending Quote Confirmation",
+    "customer": {
+      "fullName": "Corporate Test Buyer",
+      "email": "motapalukulaadithya6@gmail.com",
+      "phone": "+91 98765 43210",
+      "company": "Acme Wellness Pvt Ltd",
+      "address": "100 Business Tech Park",
+      "city": "Hyderabad",
+      "postalCode": "500081",
+      "gstin": "36AABCU9603R1ZM",
+      "notes": "Please send formal quotation for 150 gift boxes with customized laser engraving on bottles."
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 150,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "selectedBranding": null,
+        "customLogoText": null,
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 18000
+      }
+    ],
+    "pricing": {
+      "subtotal": 18000,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 0,
+      "total": 18000
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending",
+    "adminNotes": "Sent quotation with 10% corporate volume discount via email",
+    "quoteAmount": 16500,
+    "tracking": {},
+    "updatedAt": "2026-10-29T08:16:22.001Z"
+  },
+  {
+    "orderId": "SHOP-ENQ-132524",
+    "orderType": "order_enquiry",
+    "totalQuantity": 1,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:21:18.362Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-373223",
+    "orderType": "order_enquiry",
+    "totalQuantity": 1,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:21:18.407Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-402893",
+    "orderType": "order_enquiry",
+    "totalQuantity": 1,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:21:18.422Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-920860",
+    "orderType": "order_enquiry",
+    "totalQuantity": 1,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:21:18.436Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-466924",
+    "orderType": "order_enquiry",
+    "totalQuantity": 1,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:21:18.450Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-128602",
+    "orderType": "order_enquiry",
+    "totalQuantity": 1,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:21:18.475Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-683906",
+    "orderType": "order_enquiry",
+    "totalQuantity": 1,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:21:18.488Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-588722",
+    "orderType": "order_enquiry",
+    "totalQuantity": 1,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:21:18.501Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-481303",
+    "orderType": "order_enquiry",
+    "totalQuantity": 1,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:21:18.519Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-553583",
+    "orderType": "order_enquiry",
+    "totalQuantity": 1,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:21:18.533Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-438974",
+    "orderType": "order_enquiry",
+    "totalQuantity": 1,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:21:18.548Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-568346",
+    "orderType": "order_enquiry",
+    "totalQuantity": 1,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:21:18.560Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-805032",
+    "orderType": "order_enquiry",
+    "totalQuantity": 1,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:21:18.576Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-647584",
+    "orderType": "order_enquiry",
+    "totalQuantity": 1,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:21:18.590Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-401531",
+    "orderType": "order_enquiry",
+    "totalQuantity": 1,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:21:18.602Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-210152",
+    "orderType": "order_enquiry",
+    "totalQuantity": 1,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:21:18.615Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-270782",
+    "orderType": "order_enquiry",
+    "totalQuantity": 1,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:21:18.625Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-359325",
+    "orderType": "order_enquiry",
+    "totalQuantity": 1,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:21:18.635Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-874359",
+    "orderType": "order_enquiry",
+    "totalQuantity": 1,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:21:18.645Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-992970",
+    "orderType": "order_enquiry",
+    "totalQuantity": 1,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:21:18.653Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "User",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "St",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-102784",
+    "orderType": "order_enquiry",
+    "totalQuantity": 2,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:21:22.184Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "Corporate Buyer",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "Business Park Tower 4",
+      "city": "Bengaluru",
+      "postalCode": "560001",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1120681,
+        "title": "Custom Steel Flask 750ml",
+        "price": 1250,
+        "quantity": 2,
+        "size": "M",
+        "selectedColor": null,
+        "image": null,
+        "category": "drinkware",
+        "lineTotal": 2500
+      }
+    ],
+    "pricing": {
+      "subtotal": 2500,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 2515,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-652236",
+    "orderType": "order_enquiry",
+    "totalQuantity": 3,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:21:40.217Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "Alex Morgan",
+      "email": "alex@example.com",
+      "phone": "",
+      "company": "",
+      "address": "456 Avenue, Suite 10",
+      "city": "San Francisco",
+      "postalCode": "94107",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 2,
+        "size": "L",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 240
+      },
+      {
+        "id": 2,
+        "title": "Skinny Fit Jeans",
+        "price": 240,
+        "quantity": 1,
+        "size": "M",
+        "selectedColor": {
+          "name": "Dark Indigo",
+          "hex": "#1e293b"
+        },
+        "image": "https://images.unsplash.com/photo-1542272604-780c96856592?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 240
+      }
+    ],
+    "pricing": {
+      "subtotal": 480,
+      "discount": 96,
+      "discountPercent": 20,
+      "deliveryFee": 15,
+      "total": 399,
+      "promoCode": "SHOP20"
+    },
+    "paymentMethod": "card",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-524337",
+    "orderType": "order_enquiry",
+    "totalQuantity": 3,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:21:40.271Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "Attacker",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "123 Nowhere",
+      "city": "Metropolis",
+      "postalCode": "00000",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 3,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 360
+      }
+    ],
+    "pricing": {
+      "subtotal": 360,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 375,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-158206",
+    "orderType": "order_enquiry",
+    "totalQuantity": 1,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:21:40.355Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "Alex",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "Street 1",
+      "city": "City",
+      "postalCode": "12345",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "M",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-928499",
+    "orderType": "order_enquiry",
+    "totalQuantity": 1,
+    "notes": "",
+    "userId": "usr_user_01",
+    "user": {
+      "id": "usr_user_01",
+      "name": "Alex Morgan",
+      "email": "user@shop.co"
+    },
+    "status": "pending",
+    "createdAt": "2026-10-29T08:21:40.463Z",
+    "estimatedDelivery": "Nov 2, 2026",
+    "customer": {
+      "fullName": "Customer A",
+      "email": "user@shop.co",
+      "phone": "",
+      "company": "",
+      "address": "Road A",
+      "city": "Town A",
+      "postalCode": "11111",
+      "gstin": "",
+      "notes": ""
+    },
+    "gifting": {
+      "isGift": false,
+      "senderName": "",
+      "recipientName": "",
+      "giftMessage": "",
+      "giftWrap": false,
+      "giftWrapType": "Standard",
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "T-shirt with Tape Details",
+        "price": 120,
+        "quantity": 1,
+        "size": "S",
+        "selectedColor": {
+          "name": "Olive",
+          "hex": "#4F4631"
+        },
+        "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "category": "men's clothing",
+        "lineTotal": 120
+      }
+    ],
+    "pricing": {
+      "subtotal": 120,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 15,
+      "total": 135,
+      "promoCode": null
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending"
+  },
+  {
+    "orderId": "SHOP-ENQ-530330",
+    "orderType": "order_enquiry",
+    "totalQuantity": 3,
+    "notes": "Full customized names",
+    "userId": "guest_1793263598682",
+    "user": {
+      "id": "guest_1793263598682",
+      "name": "Aditya Kollapudi",
+      "email": "ADITYAKOLLAPUDI@GMAIL.COM"
+    },
+    "status": "quote_sent",
+    "createdAt": "2026-10-29T08:46:38.682Z",
+    "estimatedDelivery": "Pending Quote Confirmation",
+    "customer": {
+      "fullName": "Aditya Kollapudi",
+      "email": "ADITYAKOLLAPUDI@GMAIL.COM",
+      "phone": "+918985843691",
+      "company": "CBIT",
+      "address": "11-6-10 , RUPAKULA VARI STREET",
+      "city": "BAPATLA",
+      "postalCode": "522101",
+      "gstin": "",
+      "notes": "Full customized names"
+    },
+    "gifting": {
+      "isGift": true,
+      "senderName": "Adithya",
+      "recipientName": "Akhil",
+      "giftMessage": "I love You!!",
+      "giftWrap": true,
+      "hidePricingOnSlip": false
+    },
+    "items": [
+      {
+        "id": 1792746334325,
+        "title": "harry potter printed MUG",
+        "price": 450,
+        "quantity": 1,
+        "size": "Free Size",
+        "selectedColor": "#000000",
+        "selectedBranding": null,
+        "customLogoText": null,
+        "image": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&auto=format&fit=crop&q=80",
+        "category": "Mugs",
+        "lineTotal": 450
+      },
+      {
+        "id": 1120680,
+        "title": "Atelier Alpine Pure Aluminium Water Bottle 750ml",
+        "price": 349,
+        "quantity": 1,
+        "size": "750ml Standard",
+        "selectedColor": "#e2e8f0",
+        "selectedBranding": null,
+        "customLogoText": null,
+        "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=800&q=80",
+        "category": "Bottles",
+        "lineTotal": 349
+      },
+      {
+        "id": 1120680,
+        "title": "Atelier Alpine Pure Aluminium Water Bottle 750ml",
+        "price": 349,
+        "quantity": 1,
+        "size": "Standard",
+        "selectedColor": "Default",
+        "selectedBranding": "uv",
+        "customLogoText": null,
+        "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=800&q=80",
+        "category": "Bottles",
+        "lineTotal": 349
+      }
+    ],
+    "pricing": {
+      "subtotal": 1148,
+      "discount": 0,
+      "discountPercent": 0,
+      "deliveryFee": 0,
+      "total": 1148
+    },
+    "paymentMethod": "order_enquiry (no online payment)",
+    "paymentStatus": "pending",
+    "adminNotes": "15% discount",
+    "quoteAmount": 1100,
+    "tracking": {
+      "courier": "Delhivery",
+      "trackingNumber": "Dedkk",
+      "trackingUrl": "https://google.com"
+    },
+    "updatedAt": "2026-10-29T08:48:29.090Z"
   }
 ]

@@ -2096,6 +2096,11 @@ p {
   background: var(--ivory);
   padding: var(--space-4);
 }
+.gw-list-item.gw-list-item-inactive {
+  opacity: 0.7;
+  border-style: dashed;
+  background: rgba(0, 0, 0, 0.02);
+}
 .gw-list-item-head {
   display: flex;
   flex-wrap: wrap;

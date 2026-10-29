@@ -351,6 +351,51 @@ test("Site Content & Brands API Suite", async (t) => {
     assert.equal(delSubRes.status, 200);
   });
 
+  await t.test("14. Admin Port updates heroCarousel slides with uploaded images and customer port reads it", async () => {
+    const adminToken = getAdminToken();
+
+    const carouselPayload = {
+      heroCarousel: {
+        enabled: true,
+        autoplay: true,
+        interval: 6,
+        slides: [
+          {
+            badge: "Executive Hampers 2026",
+            title: "Handcrafted Luxury Gift Sets",
+            subtitle: "Custom debossed leather planners and vacuum insulated flasks",
+            primaryCtaText: "Explore Gifts",
+            primaryCtaLink: "/products",
+            secondaryCtaText: "Send Enquiry",
+            secondaryCtaLink: "/cart",
+            image: "/uploads/carousel-slide-test.jpg",
+            imageAlt: "Luxury Gift Sets",
+            tagTitle: "Pan India Delivery",
+            tagText: "Within 3 business days",
+            isActive: true,
+          },
+        ],
+      },
+    };
+
+    const updateRes = await makeRequest(adminApp, "PUT", "/api/site-content/home-page", {
+      headers: { authorization: `Bearer ${adminToken}` },
+      body: carouselPayload,
+    });
+
+    assert.equal(updateRes.status, 200);
+    assert.equal(updateRes.body.success, true);
+    assert.equal(updateRes.body.homePage.heroCarousel.interval, 6);
+    assert.equal(updateRes.body.homePage.heroCarousel.slides.length, 1);
+    assert.equal(updateRes.body.homePage.heroCarousel.slides[0].badge, "Executive Hampers 2026");
+    assert.equal(updateRes.body.homePage.heroCarousel.slides[0].image, "/uploads/carousel-slide-test.jpg");
+
+    // Verify Customer port reads updated carousel content
+    const customerGetRes = await makeRequest(userApp, "GET", "/api/site-content");
+    assert.equal(customerGetRes.status, 200);
+    assert.equal(customerGetRes.body.content.homePage.heroCarousel.slides[0].badge, "Executive Hampers 2026");
+  });
+
   // Cleanup: restore defaults
   resetSiteContentToDefaults();
 });

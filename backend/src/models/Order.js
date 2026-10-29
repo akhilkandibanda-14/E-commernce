@@ -29,10 +29,13 @@ const orderSchema = new mongoose.Schema(
     },
     status: {
       type: String,
-      enum: ["pending", "confirmed", "in_production", "dispatched", "delivered", "cancelled"],
-      default: "confirmed",
+      enum: ["pending", "quote_sent", "confirmed", "in_production", "dispatched", "delivered", "cancelled"],
+      default: "pending",
       index: true,
     },
+    orderType: { type: String, default: "order_enquiry" },
+    totalQuantity: { type: Number, default: 1 },
+    notes: { type: String, default: "" },
     estimatedDelivery: { type: String },
     customer: {
       fullName: { type: String, required: true },
@@ -43,6 +46,7 @@ const orderSchema = new mongoose.Schema(
       city: { type: String, required: true },
       postalCode: { type: String, required: true },
       gstin: { type: String },
+      notes: { type: String },
     },
     items: [orderItemSchema],
     gifting: {

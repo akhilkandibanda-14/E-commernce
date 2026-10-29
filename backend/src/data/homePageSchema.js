@@ -7,7 +7,7 @@ const LONG_TEXT_MAX = 2000;
 const LIST_MAX = 12;
 
 const SECTION_KEYS = [
-  "hero", "trustStrip", "newArrivals", "featuredCollections", "bestSellers", "services",
+  "heroCarousel", "hero", "trustStrip", "newArrivals", "featuredCollections", "bestSellers", "services",
   "brands", "promoBanner", "brandStory", "testimonials", "reassurance", "newsletter",
 ];
 
@@ -15,10 +15,49 @@ const SECTION_KEYS = [
 // "strings" (list of text), or { list: {...item fields} }.
 const SCHEMA = {
   sections: Object.fromEntries(SECTION_KEYS.map((k) => [k, "bool"])),
+  heroCarousel: {
+    enabled: "bool",
+    autoplay: "bool",
+    interval: "number",
+    slides: {
+      list: {
+        id: "text",
+        badge: "text",
+        title: "text",
+        subtitle: "long",
+        primaryCtaText: "text",
+        primaryCtaLink: "link",
+        secondaryCtaText: "text",
+        secondaryCtaLink: "link",
+        image: "url",
+        imageAlt: "text",
+        tagTitle: "text",
+        tagText: "text",
+        isActive: "bool",
+      },
+    },
+  },
   hero: {
     title: "text", lead: "long", primaryCtaText: "text", primaryCtaLink: "link",
     secondaryCtaText: "text", image: "url", imageAlt: "text", tagTitle: "text", tagText: "text",
     promises: "strings",
+    slides: {
+      list: {
+        id: "text",
+        badge: "text",
+        title: "text",
+        subtitle: "long",
+        primaryCtaText: "text",
+        primaryCtaLink: "link",
+        secondaryCtaText: "text",
+        secondaryCtaLink: "link",
+        image: "url",
+        imageAlt: "text",
+        tagTitle: "text",
+        tagText: "text",
+        isActive: "bool",
+      },
+    },
   },
   trustStrip: { items: { list: { icon: "icon", title: "text", description: "long" } } },
   newArrivals: { title: "text", subtitle: "long" },
@@ -50,7 +89,10 @@ const cleanValue = (type, value, path) => {
   if (type === "number") {
     const n = Number(value);
     if (!Number.isFinite(n)) throw new Error(`${path} must be a number.`);
-    return Math.max(0, Math.min(5, n));
+    if (path.includes("rating")) {
+      return Math.max(0, Math.min(5, n));
+    }
+    return Math.max(1, Math.min(60, n));
   }
   if (type === "strings") {
     if (!Array.isArray(value)) throw new Error(`${path} must be a list.`);

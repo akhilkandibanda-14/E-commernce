@@ -98,8 +98,20 @@ function App() {
 
   const increaseQuantity = (item) => changeQuantity(item, 1);
 
+  const updateQuantity = (item, newQty) => {
+    const itemIdWithSize = item.idWithSize || `${item.id}-${item.size}`;
+    setCart((prev) =>
+      prev.map((cartItem) =>
+        cartItem.idWithSize === itemIdWithSize
+          ? { ...cartItem, quantity: Math.max(1, parseInt(newQty, 10) || 1) }
+          : cartItem
+      )
+    );
+  };
+
   const removeFromCart = (itemIdWithSize) => {
-    setCart((prev) => prev.filter((item) => item.idWithSize !== itemIdWithSize));
+    const targetKey = typeof itemIdWithSize === "object" ? (itemIdWithSize.idWithSize || `${itemIdWithSize.id}-${itemIdWithSize.size}`) : itemIdWithSize;
+    setCart((prev) => prev.filter((item) => item.idWithSize !== targetKey));
   };
 
   const clearCart = () => {
@@ -164,6 +176,7 @@ function App() {
                   cart={cart}
                   decreaseQuantity={decreaseQuantity}
                   increaseQuantity={increaseQuantity}
+                  updateQuantity={updateQuantity}
                   removeFromCart={removeFromCart}
                   clearCart={clearCart}
                 />
